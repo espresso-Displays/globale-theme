@@ -56,9 +56,9 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "heading": "Description",
+            "icon": "clipboard",
+            "content": "<p>{{ product.metafields.custom.bundled_product_description.value }}<\/p>",
             "page": ""
           }
         },
