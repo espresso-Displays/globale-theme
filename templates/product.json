@@ -59,6 +59,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_WVM9Y3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's in the box?",
+            "icon": "box",
+            "content": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}",
+            "page": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -75,6 +84,7 @@
         "variant_picker",
         "collapsible-row-1",
         "collapsible-row-3",
+        "collapsible_tab_WVM9Y3",
         "buy_buttons"
       ],
       "settings": {
