@@ -78,10 +78,58 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_NRNP9P": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GhAV6i": {
+          "type": "heading",
+          "settings": {
+            "heading": "The best portable monitor for travelling professionals",
+            "heading_size": "h2"
+          }
+        },
+        "text_E9ndz7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>espresso Displays are engineered to meet the demands of modern professionals. <\/p><p>Our ultra-thin, high-resolution monitors ensure you have a reliable, high-quality display wherever you need it, making remote work and travel more productive and enjoyable<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_nVjR3k": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GhAV6i",
+        "text_E9ndz7",
+        "button_nVjR3k"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image-espresso-standpro-lifestyle-pf.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "multicolumn_x6QJGN"
+    "multicolumn_x6QJGN",
+    "image_with_text_NRNP9P"
   ]
 }
