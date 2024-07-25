@@ -50,7 +50,7 @@
                       {%- for discount in cart.cart_level_discount_applications -%}
                         <li class="discounts__discount discounts__discount--position">
                           {%- render 'icon-discount' -%}
-                          {{ discount.title }}
+                          {{ discount.title | escape }}
                           (-{{ discount.total_allocated_amount | money }})
                         </li>
                       {%- endfor -%}
