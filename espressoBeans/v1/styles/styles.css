@@ -1,0 +1,4 @@
+/* styles.css */
+:root {
+    --minHeightContent:calc(100vh - 95px);
+}

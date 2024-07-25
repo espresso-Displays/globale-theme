@@ -1,0 +1,70 @@
+<div class="section-nav-desktop hidden lg:flex  w-full max-w-content-max-w bg-lm-background-1 text-lm-on-neutral-1 text-label-medium z-[29] shadow-[0px_8px_34px_-8px_rgba(0,0,0,0.1)] top-[95px] h-[60px]">
+  <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] w-full h-full">
+      <div class="content-block w-full h-full">
+        <div
+          id=""
+          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+        >
+          <div id="" class="layout-flex relative col-span-4 lg:col-span-12 flex flex-row w-full h-[60px]">
+            <ul class="list-none flex flex-row justify-between items-center h-full w-full">
+              {% for block in section.blocks %}
+                <div class="h-full bg-lm-background-1 list-none">
+                  <div
+                    draggable="false"
+                    class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300"
+                  >
+                    <span
+                      class="absolute -bottom-0 left-1/2 h-[2px] bg-lm-on-neutral-1-hover w-1/2 transition-all duration-300"
+                    ></span
+                    ><span
+                      class="absolute -bottom-0 right-1/2 h-[2px] bg-lm-on-neutral-1-hover w-1/2 transition-all duration-300"
+                    ></span>
+                    <li class="product-nav-item !mx-0">
+                      <a href="{{ block.settings.nav_item_id }}">
+                        {{- block.settings.nav_item_title -}}
+                      </a>
+                    </li>
+                  </div>
+                </div>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer="true" src="{{ 'pdp-product-nav.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Product Navigation",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "nav_item",
+      "name": "Nav Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "nav_item_title",
+          "label": "Nav Item Title"
+        },
+        {
+          "type": "text",
+          "id": "nav_item_id",
+          "label": "Nav Item ID"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Navigation",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

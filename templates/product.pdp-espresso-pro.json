@@ -1,0 +1,66 @@
+{
+    "sections": {
+        "section-1": {
+          "type": "pdp-main-product"
+        },
+        "product-nav": {
+          "type": "pdp-product-nav"
+        },
+        "section-2": {
+          "type": "pdp-overview"
+        },
+        "marquee_block": {
+          "type": "marquee"
+        },
+        "section-3": {
+          "type": "pdp-espresso-pro-color"
+        },
+        "section-4": {
+          "type": "pdp-espresso-pro-color-2"
+        },
+        "section-5": {
+          "type": "pdp-live-touch"
+        },
+        "section-6": {
+          "type": "about-jot"
+        },
+        "section-7": {
+          "type": "two-column-text"
+        },
+        "section-8": {
+          "type": "pdp-why-espresso"
+        },
+        "section-9": {
+          "type": "pdp-accessories"
+        },
+        "section-10": {
+          "type": "pdp-compatibility"
+        },
+        "section-11": {
+          "type": "meet-espresso-flow"
+        },
+        // "section-12": {
+        //   "type": "pdp-compare"
+        // },
+        "review": {
+          "type": "product-review"
+        }
+    },
+    "order": [
+      "section-1",
+      "product-nav",
+      "section-2",
+      "marquee_block",
+      "section-3",
+      "section-4",
+      "section-5",
+      "section-6",
+      "section-7",
+      "section-8",
+      "section-9",
+      "section-10",
+      "section-11",
+      "review"
+    ]
+  }
+  

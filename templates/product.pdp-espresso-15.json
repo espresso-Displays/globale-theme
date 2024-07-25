@@ -1,0 +1,55 @@
+{
+    "sections": {
+        "section-1": {
+          "type": "pdp-main-product"
+        },
+        "product-nav": {
+          "type": "pdp-product-nav"
+        },
+        "section-2": {
+          "type": "pdp-overview"
+        },
+        "marquee_block": {
+          "type": "marquee"
+        },
+        "section-7": {
+          "type": "two-column-text"
+        },
+        "section-8": {
+          "type": "pdp-why-espresso"
+        },
+        "section-9": {
+          "type": "pdp-accessories"
+        },
+        "section-10": {
+          "type": "pdp-compatibility"
+        },
+        "jot": {
+            "type": "about-jot"
+        },
+        "section-11": {
+          "type": "meet-espresso-flow"
+        },
+        "section-12": {
+          "type": "pdp-compare"
+        },
+        "review": {
+          "type": "product-review"
+        }
+    },
+    "order": [
+      "section-1",
+      "product-nav",
+      "section-2",
+      "marquee_block",
+      "section-7",
+      "section-8",
+      "section-9",
+      "section-10",
+      "jot",
+      "section-11",
+      "section-12",
+      "review"
+    ]
+  }
+  

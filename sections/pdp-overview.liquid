@@ -1,0 +1,99 @@
+<div id="section-overview" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-background-1 pt-[24px] pb-[0px] lg:pt-[80px] lg:pb-[80px] text-lm-on-background-1">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div id="" class="layout-flex relative h-full col-span-4 lg:col-span-12 flex flex-col gap-[32px] lg:gap-[56px]">
+          <div class="content-container flex flex-col gap-[32px] lg:gap-[56px]">
+            <div
+              id=""
+              class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-[32px] lg:gap-[24px]"
+            >
+              <h2 class="col-span-4 lg:col-span-7 text-display-medium">
+                {{ section.settings.text_field_1 }}
+              </h2>
+              <div class="col-start-1 lg:col-start-9 col-span-4 lg:col-span-4 text-body-medium flex flex-col justify-start ">
+                {{ section.settings.text_field_2 }}
+              </div>
+            </div>
+            <div class="col-span-4 lg:col-span-3 text-display-small">{{ section.settings.text_field_3 }}</div>
+          </div>
+          {% if section.settings.video_file %}
+            <video
+              id="video-espresso-17pdp-4"
+              autoplay=""
+              loop=""
+              playsinline=""
+              controls=""
+              preload="metadata"
+              poster="/assets/videos/video-espresso-17pdp-4.webp"
+              class="w-screen lg:w-full"
+              alt="video-espresso-17pdp-4"
+              aria-label="video-espresso-17pdp-4"
+            >
+              <track src="/assets/videos/no_captions.vtt" kind="captions" srclang="en" label="english_captions">
+
+              <source src="{{ section.settings.video_file | file_url }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          {% endif %}
+
+          {% if section.settings.image %}
+            <div class="h-full min-h-0 w-full lg:w-full">
+              <img
+                src="{{ section.settings.image | img_url: 'large' }}"
+                class="w-full h-full object-contain overflow-clip origin-top-left pointer-events-none"
+                draggable="false"
+                class=""
+                fetchpriority="auto"
+                alt="{{ section.settings.image.alt }}"
+              >
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PDP section 2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_field_1",
+      "label": "Text Field 1"
+    },
+    {
+      "type": "text",
+      "id": "text_field_2",
+      "label": "Text Field 2"
+    },
+    {
+      "type": "text",
+      "id": "text_field_3",
+      "label": "Text Field 3"
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Video File"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "PDP section 2",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

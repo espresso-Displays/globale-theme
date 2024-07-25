@@ -1,0 +1,99 @@
+<div id="section-whyespresso" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-background-1 text-lm-on-background-1 py-[24px] lg:py-[72px]">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div class="section group-image-with-info col-span-full flex flex-col gap-[24px] lg:gap-[24px]" id="">
+          {% for block in section.blocks %}
+            {% assign remainder = forloop.index0 | modulo: 2 %}
+            <div
+              class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max lg:gap-x-[20px] section image-with-info gap-[16px] grid-rows-2 lg:grid-rows-none lg:auto-rows-max"
+            >
+              <div
+                class="
+                  layout-flex relative h-full col-span-4 lg:col-span-6 flex flex-col media order-first
+                  {% if remainder == 0 %}lg:order-last{% else %}lg:order-first{% endif %}
+                "
+              >
+                <div class="media">
+                  <div class="image h-full min-h-0 w-full">
+                    <img
+                      alt="display 17 simple aesthetic"
+                      decoding="async"
+                      loading="eager"
+                      src="{{ block.settings.grid_item_image | img_url: 'large' }}"
+                      width="100"
+                      height="auto"
+                      class=""
+                      draggable="false"
+                      style="width: 100%;"
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                id=""
+                class="layout-grid relative h-full col-span-4 lg:col-span-6 grid grid-cols-4 lg:grid-cols-6 lg:gap-x-[20px] auto-rows-auto gap-[48px] bg-neutral-90 px-[32px] lg:px-[0px]"
+              >
+                <div
+                  class="
+                    {% if remainder == 0 %}
+                    layout-flex relative h-full col-start-1 lg:col-start-2 col-span-4 lg:col-span-4 content-container flex flex-col justify-center gap-[32px] lg:gap-[32px] py-[32px] lg:py-[32px]
+                    {% else %}
+                    layout-flex relative h-full col-start-1 lg:col-start-2 col-span-4 lg:col-span-4 content-container flex flex-col justify-center gap-[32px] lg:gap-[32px] py-[32px] lg:py-[32px]
+                    {% endif %}
+                  "
+                >
+                  <h2 class="heading text-heading-large currentColor">{{ block.settings.grid_item_title }}</h2>
+                  <div class="description text-body-medium currentColor">
+                    <div class="">
+                      {{ block.settings.grid_item_description }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why espresso",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "grid_item",
+      "name": "Grid Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "grid_item_title",
+          "label": "Grid Item Title"
+        },
+        {
+          "type": "text",
+          "id": "grid_item_description",
+          "label": "Grid Item Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "grid_item_image",
+          "label": "Grid Item Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why espresso",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

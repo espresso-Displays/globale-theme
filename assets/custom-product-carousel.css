@@ -1,0 +1,43 @@
+/* Carousel styles */
+.product-carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 2rem auto;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item {
+    /* min-width: 100%;  */
+    box-sizing: border-box;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+
+ 
