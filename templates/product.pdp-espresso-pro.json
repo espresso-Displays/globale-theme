@@ -81,11 +81,27 @@
             "nav_item_title": "Features",
             "nav_item_id": "#section-features"
           }
+        },
+        "nav_item_RDfFHc": {
+          "type": "nav_item",
+          "settings": {
+            "nav_item_title": "Why espresso",
+            "nav_item_id": "#section-whyespresso"
+          }
+        },
+        "nav_item_iWNGY8": {
+          "type": "nav_item",
+          "settings": {
+            "nav_item_title": "Accessories",
+            "nav_item_id": "#section-accessories"
+          }
         }
       },
       "block_order": [
         "nav_item_QXfWHF",
-        "nav_item_k6YcEN"
+        "nav_item_k6YcEN",
+        "nav_item_RDfFHc",
+        "nav_item_iWNGY8"
       ],
       "settings": {
       }
