@@ -26,7 +26,8 @@
       "settings": {
         "text_field_1": "The world’s most interactive portable display.",
         "text_field_2": "Engineered for your performance. Unlock creative potential and productivity anywhere.",
-        "text_field_3": "Now in 4K."
+        "text_field_3": "Now in 4K.",
+        "video_file": "shopify:\/\/files\/videos\/video-espresso-17pdp-4.mp4"
       }
     },
     "marquee_block": {
