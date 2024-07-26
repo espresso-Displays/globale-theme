@@ -11,6 +11,31 @@
   "sections": {
     "section-1": {
       "type": "pdp-main-product",
+      "blocks": {
+        "benefit_item_3CCiMa": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and easy to set up."
+          }
+        },
+        "benefit_item_z3t3jw": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Connect and start working in seconds."
+          }
+        },
+        "benefit_item_8iBBpx": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_item_3CCiMa",
+        "benefit_item_z3t3jw",
+        "benefit_item_8iBBpx"
+      ],
       "settings": {
         "selected_product": "espresso-pro",
         "trustpilot_sku": ""
