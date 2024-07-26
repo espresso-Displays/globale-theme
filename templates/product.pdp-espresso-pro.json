@@ -29,12 +29,20 @@
           "settings": {
             "benefit_item_title": "Boost productivity with extra screen space."
           }
+        },
+        "accordion_item_B7xWPc": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Key features",
+            "accordion_description": "<ul><li>Rich and immersive 4K panel<\/li><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Vibrant 450 nits peak brightness<\/li><li>1.07 billion colours with 100% DCI-P3<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
+          }
         }
       },
       "block_order": [
         "benefit_item_3CCiMa",
         "benefit_item_z3t3jw",
-        "benefit_item_8iBBpx"
+        "benefit_item_8iBBpx",
+        "accordion_item_B7xWPc"
       ],
       "settings": {
         "selected_product": "espresso-pro",
