@@ -24,9 +24,9 @@
     "section-2": {
       "type": "pdp-overview",
       "settings": {
-        "text_field_1": "",
-        "text_field_2": "",
-        "text_field_3": ""
+        "text_field_1": "The world’s most interactive portable display.",
+        "text_field_2": "Engineered for your performance. Unlock creative potential and productivity anywhere.",
+        "text_field_3": "Now in 4K."
       }
     },
     "marquee_block": {
