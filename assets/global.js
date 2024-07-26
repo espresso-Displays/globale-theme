@@ -1266,3 +1266,23 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+document.querySelectorAll('.collection-variant-button').forEach((button) => {
+  button.addEventListener('click', function () {
+    const variantId = this.getAttribute('data-variant-id');
+    const productElement = this.closest('.product');
+    const form = productElement.querySelector('.collection-quick-add-to-cart');
+
+    // Remove selected class from all variant buttons
+    productElement.querySelectorAll('.collection-variant-button').forEach((btn) => {
+      btn.classList.remove('bg-lm-inverse-primary-click');
+    });
+
+    // Add selected class to the clicked variant button
+    this.classList.remove('bg-lm-on-neutral-3');
+    this.classList.add('bg-lm-inverse-primary-click');
+
+    // Store the selected variant ID in the form
+    form.querySelector("input[name='id']").value = variantId;
+  });
+});

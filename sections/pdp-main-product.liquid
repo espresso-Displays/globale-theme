@@ -1,12 +1,5 @@
 {{ 'pdp-accordion.css' | asset_url | stylesheet_tag }}
 
-
-{% assign product = all_products[section.settings.selected_product] %}
-
-{% if product == blank %}
-  <p>Please select a product in the theme editor to display its information.</p>
-{% endif %}
-
 <div id="section-0" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
   <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px]">
     <div class="content-block w-full h-full">
@@ -86,8 +79,16 @@
                 </div>
                 <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
                   <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
-                    
-                    {% render "custom-add-to-cart", product:product %}
+                    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      show_pickup_availability: true
+                    -%} 
+                    {% comment %} {% render "custom-add-to-cart", product:product %} {% endcomment %}
                  
                   </div>
                 </div>

@@ -13,6 +13,7 @@ class CartDrawer extends HTMLElement {
     cartLink.setAttribute('aria-haspopup', 'dialog');
     cartLink.addEventListener('click', (event) => {
       event.preventDefault();
+      console.log(cartLink);
       this.open(cartLink);
     });
     cartLink.addEventListener('keydown', (event) => {
@@ -26,6 +27,7 @@ class CartDrawer extends HTMLElement {
   open(triggeredBy) {
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
+
     if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
     // here the animation doesn't seem to always get triggered. A timeout seem to help
     setTimeout(() => {
@@ -130,3 +132,16 @@ class CartDrawerItems extends CartItems {
 }
 
 customElements.define('cart-drawer-items', CartDrawerItems);
+
+document.addEventListener('theme:cart:popdown', (e) => {
+  const listener = (e) => {
+    console.log(e);
+    document.querySelector('[data-drawer="drawer-cart"]').dispatchEvent(
+      new CustomEvent('theme:drawer:open', {
+        bubbles: false,
+      })
+    );
+    document.removeEventListener('theme:cart:change', listener);
+  };
+  document.addEventListener('theme:cart:change', listener);
+});

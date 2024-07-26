@@ -1,24 +1,25 @@
-{% comment %}
-  <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
-  {%- if settings.predictive_search_enabled -%}
-    <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-  {%- endif -%}
-  {%- if section.settings.menu_type_desktop == 'mega' -%}
-    <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
-  {%- endif -%}
-{% endcomment %}
-
-{%- if settings.cart_type == 'drawer' -%}
-  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
-  {{ 'component-cart.css' | asset_url | stylesheet_tag }}
-  {{ 'component-totals.css' | asset_url | stylesheet_tag }}
-  {{ 'component-price.css' | asset_url | stylesheet_tag }}
-  {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link
+  rel="stylesheet"
+  href="{{ 'component-cart-notification.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
+{%- if section.settings.menu_type_desktop == 'mega' -%}
+  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+
+{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {% comment %}
   <style>
     header-drawer {
@@ -79,8 +80,7 @@
       }
     }
   </style>
-{% endcomment %}
-{% comment %}
+
   {%- style -%}
     .header {
       padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
@@ -110,9 +110,9 @@
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
-{%- if settings.cart_type == 'drawer' -%}
-  <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
+
+<script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+
 {% comment %}
   <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
     <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
@@ -154,7 +154,7 @@
       endif
     -%}
 {% endcomment %}
-<header class="header-mobile sticky z-[201]  w-full top-[35px] h-[60px] lg:hidden max-w-screen ">
+<header class="header-mobile sticky z-[201]  w-full top-[35px] h-[60px] max-w-[100vw] lg:hidden   ">
   <nav
     class="grid grid-cols-3 items-center bg-neutral-0 text-neutral-101 text-label-medium h-full"
     style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"
@@ -176,37 +176,46 @@
       </div>
     </div>
     <div class="flex flex-row justify-self-end h-full">
-      <div class="flex items-center justify-center cursor-pointer px-[10px] h-full hover:bg-lm-background-4/40 active:bg-lm-background-4/60 event-cart event-any-view-mini-cart">
-        <div class="">
-          <a
-            href="{{ routes.cart_url }}"
-            class="header__icon header__icon--cart link focus-inset"
-            id="cart-icon-bubble"
-          >
-            {%- liquid
-              if cart == empty
-                render 'icon-cart-empty'
-              else
-                render 'icon-cart'
-              endif
-            -%}
-            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-            {%- if cart != empty -%}
-              <div class="cart-count-bubble">
-                {%- if cart.item_count < 100 -%}
-                  <span aria-hidden="true">{{ cart.item_count }}</span>
-                {%- endif -%}
-                <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-              </div>
-            {%- endif -%}
-          </a>
-        </div>
+      <div class="flex items-center justify-center cursor-pointer px-[10px] h-full hover:bg-lm-background-4/40 active:bg-lm-background-4/60 ">
+        <button
+          type="button"
+
+          class="header__icon header__icon--cart link focus-inset w-6 h-6 flex items-center justify-center"
+          id="cart-icon-bubble"
+        >
+          {%- liquid
+            render 'icon-cart'
+          -%}
+
+          {%- if cart != empty -%}
+            <div class="cart-count-bubble">
+              {%- if cart.item_count < 100 -%}
+                <div class=" relative w-0 h-0 pointer-events-none">
+                  <div class="badge bg-none absolute top-[0px] right-[1px] border-none w-[12px]  z-10 ">
+                    <div class="text-lm-on-background-1 text-center w-full text-[8px] font-[600]">
+                      {{ cart.item_count }}
+                    </div>
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="relative bottom-[17px] lg:bottom-[19px] z-[-1] pointer-events-none"
+                    >
+                      <rect width="11" height="11" fill="none"></rect><circle id="Ellipse 48" cx="5.5" cy="5.5" r="5.5" fill="white"></circle>
+                    </svg>
+                  </div>
+                </div>
+                {% comment %} <span aria-hidden="true">{{ cart.item_count }}</span> {% endcomment %}
+              {%- endif -%}
+              <span class="visually-hidden hidden">
+                {{- 'sections.header.cart_count' | t: count: cart.item_count -}}
+              </span>
+            </div>
+          {%- endif -%}
+        </button>
       </div>
-      {% comment %}
-        <div class=" h-full w-[50px] flex flex-col justify-center z-10 hover:bg-lm-background-4/40 active:bg-lm-background-4/60">
-          <img class="w-[25px] h-[25px] mx-auto rounded-full" draggable="false" alt="Australia" src="/images/flags/au.svg">
-        </div>
-      {% endcomment %}
     </div>
   </nav>
 </header>
@@ -287,7 +296,6 @@
                                         {%- for grandchildlink in childlink.links -%}
                                           <li class="py-2 pl-2 cursor-pointer">
                                             <a
-                                              id=""
                                               href="{{  link.handle }}"
                                               class=""
                                             >
@@ -412,27 +420,50 @@
                   </div>
                 {% endcomment %}
                 <li class="flex flex-row h-full">
-                  <div class="flex items-center justify-center cursor-pointer px-[10px] h-full hover:bg-lm-background-4/40 active:bg-lm-background-4/60 event-cart event-any-view-mini-cart">
-                    <div class="w-full pointer-events-none">
-                      <svg
-                        version="1.0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        preserveAspectRatio="xMidYMid meet"
-                        class="undefined max-h-[100px] block min-w-[20px] relative left-[3px] pointer-events-none"
-                      >
-                        <g id="shopping-bag-icon"><path id="Vector" d="M11.4485 4.02828H10.428C10.3186 3.21726 9.92225 2.47228 9.31079 1.92837C8.69933 1.38446 7.91324 1.07762 7.095 1.06348C6.27676 1.07762 5.49067 1.38446 4.87921 1.92837C4.26775 2.47228 3.8714 3.21726 3.762 4.02828H2.742C2.18079 4.02865 1.64266 4.2517 1.24575 4.64846C0.848836 5.04522 0.625583 5.58327 0.625 6.14448V13.86C0.625503 14.4211 0.848605 14.9591 1.24535 15.356C1.64209 15.7528 2.18006 15.976 2.7412 15.9767H11.4482C12.0094 15.9762 12.5476 15.753 12.9444 15.3562C13.3413 14.9593 13.5645 14.4212 13.565 13.86V6.14448C13.5644 5.58335 13.3412 5.04538 12.9444 4.64863C12.5476 4.25189 12.0096 4.02878 11.4485 4.02828ZM7.095 2.16308C7.62241 2.17454 8.13012 2.36565 8.53418 2.7048C8.93825 3.04395 9.21448 3.51084 9.3172 4.02828H4.8728C4.97552 3.51084 5.25175 3.04395 5.65582 2.7048C6.05988 2.36565 6.56759 2.17454 7.095 2.16308ZM12.465 13.86C12.4647 14.1296 12.3575 14.388 12.167 14.5787C11.9764 14.7693 11.718 14.8767 11.4484 14.8771H2.7415C2.47194 14.8766 2.21356 14.7693 2.02301 14.5786C1.83246 14.388 1.72529 14.1295 1.725 13.86V6.14448C1.72532 5.87496 1.83253 5.61656 2.02311 5.42598C2.21369 5.2354 2.47208 5.12819 2.7416 5.12788H11.4486C11.7181 5.12825 11.9764 5.23548 12.167 5.42605C12.3575 5.61663 12.4647 5.87499 12.465 6.14448V13.86Z" fill="currentColor"></path></g>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class=" h-full w-[50px] flex flex-col justify-center z-10 hover:bg-lm-background-4/40 active:bg-lm-background-4/60">
+                  <div class="flex flex-row justify-self-end h-full">
+                    <a
+                      href="/cart"
+                      class="header__icon header__icon--cart focus-inset w-6 h-6 flex items-center justify-center flex items-center justify-center cursor-pointer px-[10px] h-full hover:bg-lm-background-4/40 active:bg-lm-background-4/60 px-4"
+                      id="cart-icon-bubble"
+                    >
+                      {%- liquid
+                        render 'icon-cart'
+                      -%}
+
+                      {%- if cart != empty -%}
+                        <div class="cart-count-bubble">
+                          {%- if cart.item_count < 100 -%}
+                            <div class=" relative w-0 h-0 pointer-events-none">
+                              <div class="badge bg-none absolute top-[0px] right-[1px] border-none w-[12px]  z-10 ">
+                                <div class="text-lm-on-background-1 text-center w-full text-[8px] font-[600]">
+                                  {{ cart.item_count }}
+                                </div>
+                                <svg
+                                  width="12"
+                                  height="12"
+                                  viewBox="0 0 11 11"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="relative bottom-[17px] lg:bottom-[19px] z-[-1] pointer-events-none"
+                                >
+                                  <rect width="11" height="11" fill="none"></rect><circle id="Ellipse 48" cx="5.5" cy="5.5" r="5.5" fill="white"></circle>
+                                </svg>
+                              </div>
+                            </div>
+
+                            <span aria-hidden="true" class="hidden">{{ cart.item_count }}</span>
+                          {%- endif -%}
+                          <span class="visually-hidden hidden">
+                            {{- 'sections.header.cart_count' | t: count: cart.item_count -}}
+                          </span>
+                        </div>
+                      {%- endif -%}
+                    </a>
+
                     {% comment %}
-                      <img
-                        class="w-[25px] h-[25px] mx-auto rounded-full"
-                        draggable="false"
-                        alt="Australia"
-                        src="/images/flags/au.svg"
-                      >
+                      <div class=" h-full w-[50px] flex flex-col justify-center z-10 hover:bg-lm-background-4/40 active:bg-lm-background-4/60">
+                        <img class="w-[25px] h-[25px] mx-auto rounded-full" draggable="false" alt="Australia" src="/images/flags/au.svg">
+                      </div>
                     {% endcomment %}
                   </div>
                 </li>

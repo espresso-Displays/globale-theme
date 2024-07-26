@@ -17,162 +17,164 @@
   }
 {%- endstyle -%}
 
-<div
-  class="w-[1800px] max-w-full relative flex flex-col items-center py-[32px] lg:py-[72px]"
-  id="main-cart-footer"
-  data-id="{{ section.id }}"
->
-  <div class="relative w-full flex flex-col gap-[32px] lg:gap-[40px] max-w-[950px] px-[10px]">
-    <div class="cart__footer isolate section-{{ section.id }}-padding">
-      {%- if settings.show_cart_note -%}
-        <cart-note class="cart__note field">
-          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
-          <textarea
-            class="text-area field__input"
-            name="note"
-            form="cart"
-            id="Cart-note"
-            placeholder="{{ 'sections.cart.note' | t }}"
-          >{{ cart.note }}</textarea>
-        </cart-note>
-      {%- endif -%}
+{% if cart != empty %}
+  <div
+    class="w-[1800px] max-w-full relative flex flex-col items-center py-[32px] lg:py-[72px]"
+    id="main-cart-footer"
+    data-id="{{ section.id }}"
+  >
+    <div class="relative w-full flex flex-col gap-[32px] lg:gap-[40px] max-w-[950px] px-[10px]">
+      <div class="cart__footer isolate section-{{ section.id }}-padding">
+        {%- if settings.show_cart_note -%}
+          <cart-note class="cart__note field">
+            <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+            <textarea
+              class="text-area field__input"
+              name="note"
+              form="cart"
+              id="Cart-note"
+              placeholder="{{ 'sections.cart.note' | t }}"
+            >{{ cart.note }}</textarea>
+          </cart-note>
+        {%- endif -%}
 
-      <div class="cart__blocks !w-full ">
-        {% for block in section.blocks %}
-          {%- case block.type -%}
-            {%- when '@app' -%}
-              {% render block %}
-            {%- when 'subtotal' -%}
-              <div class="js-contents" {{ block.shopify_attributes }}>
-                <div>
-                  {%- if cart.cart_level_discount_applications.size > 0 -%}
-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- for discount in cart.cart_level_discount_applications -%}
-                        <li class="discounts__discount discounts__discount--position">
-                          {%- render 'icon-discount' -%}
-                          {{ discount.title | escape }}
-                          (-{{ discount.total_allocated_amount | money }})
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                </div>
+        <div class="cart__blocks !w-full ">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+              {%- when 'subtotal' -%}
+                <div class="js-contents" {{ block.shopify_attributes }}>
+                  <div>
+                    {%- if cart.cart_level_discount_applications.size > 0 -%}
+                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                        {%- for discount in cart.cart_level_discount_applications -%}
+                          <li class="discounts__discount discounts__discount--position">
+                            {%- render 'icon-discount' -%}
+                            {{ discount.title | escape }}
+                            (-{{ discount.total_allocated_amount | money }})
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </div>
 
-                <div class="bg-lm-background-1 border-y border-neutral-80 z-[19]">
-                  <section aria-labelledby="summary-heading" class="py-[16px]">
-                    <dl class="">
-                      <div class="flex items-center justify-between text-label-large">
-                        <div class="text-heading-medium">Total</div>
-                        <div data-test="total" class="text-heading-medium">
-                          <div class="flex flex-row text-center justify-center">
-                            <div id="productPrice" class="text-center justify-center">
-                              {{ cart.total_price | money_with_currency }}
+                  <div class="bg-lm-background-1 border-y border-neutral-80 z-[19]">
+                    <section aria-labelledby="summary-heading" class="py-[16px]">
+                      <dl class="">
+                        <div class="flex items-center justify-between text-label-large">
+                          <div class="text-heading-medium">Total</div>
+                          <div data-test="total" class="text-heading-medium">
+                            <div class="flex flex-row text-center justify-center">
+                              <div id="productPrice" class="text-center justify-center">
+                                {{ cart.total_price | money_with_currency }}
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </dl>
-                  </section>
+                      </dl>
+                    </section>
+                  </div>
+
+                  {% comment %}
+                    <small class="tax-note caption-large rte">
+                      {%- if cart.duties_included and cart.taxes_included -%}
+                        {%- if shop.shipping_policy.body == blank -%}
+                          {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
+                        {%- else -%}
+                          {{
+                            'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
+                            | t: link: shop.shipping_policy.url
+                          }}
+                        {%- endif -%}
+                      {%- elsif cart.duties_included == false and cart.taxes_included -%}
+                        {%- if shop.shipping_policy.body == blank -%}
+                          {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
+                        {%- else -%}
+                          {{
+                            'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
+                            | t: link: shop.shipping_policy.url
+                          }}
+                        {%- endif -%}
+                      {%- elsif cart.duties_included and cart.taxes_included == false -%}
+                        {%- if shop.shipping_policy.body == blank -%}
+                          {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+                        {%- else -%}
+                          {{
+                            'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
+                            | t: link: shop.shipping_policy.url
+                          }}
+                        {%- endif -%}
+                      {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
+                        {%- if shop.shipping_policy.body == blank -%}
+                          {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+                        {%- else -%}
+                          {{
+                            'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
+                            | t: link: shop.shipping_policy.url
+                          }}
+                        {%- endif -%}
+                      {%- endif -%}
+                    </small>
+                  {% endcomment %}
+                </div>
+              {%- else -%}
+                <div class="flex gap-[20px] w-full justify-between lg:justify-end items-center bg-lm-background-1 pt-[32px] flex-col lg:flex-row">
+                  <div class=" w-full lg:auto flex lg:justify-end" {{ block.shopify_attributes }}>
+                    <button
+                      type="submit"
+                      id="checkout"
+                      class="cart__checkout-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-full lg:w-[275px] h-[48px] px-[16px] py-[8px] text-label-large cursor-pointer"
+                      name="checkout"
+                      {% if cart == empty %}
+                        disabled
+                      {% endif %}
+                      form="cart"
+                    >
+                      {{ 'sections.cart.checkout' | t }}
+                    </button>
+                  </div>
                 </div>
 
-                {% comment %}
-                  <small class="tax-note caption-large rte">
-                    {%- if cart.duties_included and cart.taxes_included -%}
-                      {%- if shop.shipping_policy.body == blank -%}
-                        {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
-                      {%- else -%}
-                        {{
-                          'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
-                          | t: link: shop.shipping_policy.url
-                        }}
-                      {%- endif -%}
-                    {%- elsif cart.duties_included == false and cart.taxes_included -%}
-                      {%- if shop.shipping_policy.body == blank -%}
-                        {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
-                      {%- else -%}
-                        {{
-                          'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
-                          | t: link: shop.shipping_policy.url
-                        }}
-                      {%- endif -%}
-                    {%- elsif cart.duties_included and cart.taxes_included == false -%}
-                      {%- if shop.shipping_policy.body == blank -%}
-                        {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-                      {%- else -%}
-                        {{
-                          'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                          | t: link: shop.shipping_policy.url
-                        }}
-                      {%- endif -%}
-                    {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
-                      {%- if shop.shipping_policy.body == blank -%}
-                        {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-                      {%- else -%}
-                        {{
-                          'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                          | t: link: shop.shipping_policy.url
-                        }}
-                      {%- endif -%}
-                    {%- endif -%}
-                  </small>
-                {% endcomment %}
-              </div>
-            {%- else -%}
-              <div class="flex gap-[20px] w-full justify-between lg:justify-end items-center bg-lm-background-1 pt-[32px] flex-col lg:flex-row">
-                <div class=" w-full lg:auto flex lg:justify-end" {{ block.shopify_attributes }}>
-                  <button
-                    type="submit"
-                    id="checkout"
-                    class="cart__checkout-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-full lg:w-[275px] h-[48px] px-[16px] py-[8px] text-label-large cursor-pointer"
-                    name="checkout"
-                    {% if cart == empty %}
-                      disabled
-                    {% endif %}
-                    form="cart"
-                  >
-                    {{ 'sections.cart.checkout' | t }}
-                  </button>
-                </div>
-              </div>
+                {%- if additional_checkout_buttons -%}
+                  <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                    {{ content_for_additional_checkout_buttons }}
+                  </div>
+                {%- endif -%}
+            {%- endcase -%}
+          {% endfor %}
 
-              {%- if additional_checkout_buttons -%}
-                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-                  {{ content_for_additional_checkout_buttons }}
-                </div>
-              {%- endif -%}
-          {%- endcase -%}
-        {% endfor %}
-
-        <div id="cart-errors"></div>
+          <div id="cart-errors"></div>
+        </div>
       </div>
-    </div>
-    <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
-      <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center lg:px-[70px] bg-neutral-90 text-neutral-10 py-[20px] px-[16px]">
-        <div class="content-block w-full h-full">
-          <div
-            id=""
-            class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
-          >
+      <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+        <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center lg:px-[70px] bg-neutral-90 text-neutral-10 py-[20px] px-[16px]">
+          <div class="content-block w-full h-full">
             <div
               id=""
-              class="layout-flex relative h-full col-start-1 lg:col-start-3 col-span-4 lg:col-span-8 flex flex-col gap-[20px] items-center"
+              class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
             >
-              <div class="text-heading-small text-center">Still have questions or unsure about your purchase?</div>
-              <a
-                href="https://www.videoask.com/fl310awkd"
-                draggable="false"
-                rel="noopener noreferrer"
-                target="_blank"
-                class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-full lg:w-[275px] h-[48px] px-[16px] py-[8px] text-label-large cursor-pointer event-cart-specialist"
-                >Speak to a specialist</a
+              <div
+                id=""
+                class="layout-flex relative h-full col-start-1 lg:col-start-3 col-span-4 lg:col-span-8 flex flex-col gap-[20px] items-center"
               >
+                <div class="text-heading-small text-center">Still have questions or unsure about your purchase?</div>
+                <a
+                  href="https://www.videoask.com/fl310awkd"
+                  draggable="false"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-full lg:w-[275px] h-[48px] px-[16px] py-[8px] text-label-large cursor-pointer event-cart-specialist"
+                  >Speak to a specialist</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+{% endif %}
 
 {% schema %}
 {
