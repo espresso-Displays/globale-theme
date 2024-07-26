@@ -36,13 +36,29 @@
             "accordion_title": "Key features",
             "accordion_description": "<ul><li>Rich and immersive 4K panel<\/li><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Vibrant 450 nits peak brightness<\/li><li>1.07 billion colours with 100% DCI-P3<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
           }
+        },
+        "accordion_item_d3VwDV": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What's in the box",
+            "accordion_description": "<ul><li>espresso 17 Pro portable touchscreen<\/li><li>1m espresso USB-C to USB-C cable<\/li><li>espresso Stand Pro<\/li><li>Microfibre cleaning cloth<\/li><\/ul>"
+          }
+        },
+        "accordion_item_DjprEA": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "",
+            "accordion_description": ""
+          }
         }
       },
       "block_order": [
         "benefit_item_3CCiMa",
         "benefit_item_z3t3jw",
         "benefit_item_8iBBpx",
-        "accordion_item_B7xWPc"
+        "accordion_item_B7xWPc",
+        "accordion_item_d3VwDV",
+        "accordion_item_DjprEA"
       ],
       "settings": {
         "selected_product": "espresso-pro",
