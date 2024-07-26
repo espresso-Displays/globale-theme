@@ -67,6 +67,26 @@
     },
     "product-nav": {
       "type": "pdp-product-nav",
+      "blocks": {
+        "nav_item_QXfWHF": {
+          "type": "nav_item",
+          "settings": {
+            "nav_item_title": "Overview",
+            "nav_item_id": "#section-overview"
+          }
+        },
+        "nav_item_k6YcEN": {
+          "type": "nav_item",
+          "settings": {
+            "nav_item_title": "Features",
+            "nav_item_id": "#section-features"
+          }
+        }
+      },
+      "block_order": [
+        "nav_item_QXfWHF",
+        "nav_item_k6YcEN"
+      ],
       "settings": {
       }
     },
