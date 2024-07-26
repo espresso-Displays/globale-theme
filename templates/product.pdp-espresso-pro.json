@@ -1,66 +1,107 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-    "sections": {
-        "section-1": {
-          "type": "pdp-main-product"
-        },
-        "product-nav": {
-          "type": "pdp-product-nav"
-        },
-        "section-2": {
-          "type": "pdp-overview"
-        },
-        "marquee_block": {
-          "type": "marquee"
-        },
-        "section-3": {
-          "type": "pdp-espresso-pro-color"
-        },
-        "section-4": {
-          "type": "pdp-espresso-pro-color-2"
-        },
-        "section-5": {
-          "type": "pdp-live-touch"
-        },
-        "section-6": {
-          "type": "about-jot"
-        },
-        "section-7": {
-          "type": "two-column-text"
-        },
-        "section-8": {
-          "type": "pdp-why-espresso"
-        },
-        "section-9": {
-          "type": "pdp-accessories"
-        },
-        "section-10": {
-          "type": "pdp-compatibility"
-        },
-        "section-11": {
-          "type": "meet-espresso-flow"
-        },
-        // "section-12": {
-        //   "type": "pdp-compare"
-        // },
-        "review": {
-          "type": "product-review"
-        }
+  "sections": {
+    "section-1": {
+      "type": "pdp-main-product",
+      "settings": {
+        "selected_product": "espresso-pro",
+        "trustpilot_sku": ""
+      }
     },
-    "order": [
-      "section-1",
-      "product-nav",
-      "section-2",
-      "marquee_block",
-      "section-3",
-      "section-4",
-      "section-5",
-      "section-6",
-      "section-7",
-      "section-8",
-      "section-9",
-      "section-10",
-      "section-11",
-      "review"
-    ]
-  }
-  
+    "product-nav": {
+      "type": "pdp-product-nav",
+      "settings": {
+      }
+    },
+    "section-2": {
+      "type": "pdp-overview",
+      "settings": {
+        "text_field_1": "",
+        "text_field_2": "",
+        "text_field_3": ""
+      }
+    },
+    "marquee_block": {
+      "type": "marquee",
+      "settings": {
+      }
+    },
+    "section-3": {
+      "type": "pdp-espresso-pro-color",
+      "settings": {
+      }
+    },
+    "section-4": {
+      "type": "pdp-espresso-pro-color-2",
+      "settings": {
+      }
+    },
+    "section-5": {
+      "type": "pdp-live-touch",
+      "settings": {
+      }
+    },
+    "section-6": {
+      "type": "about-jot",
+      "settings": {
+      }
+    },
+    "section-7": {
+      "type": "two-column-text",
+      "settings": {
+        "text_field_1": "",
+        "text_field_2": ""
+      }
+    },
+    "section-8": {
+      "type": "pdp-why-espresso",
+      "settings": {
+      }
+    },
+    "section-9": {
+      "type": "pdp-accessories",
+      "settings": {
+      }
+    },
+    "section-10": {
+      "type": "pdp-compatibility",
+      "settings": {
+      }
+    },
+    "section-11": {
+      "type": "meet-espresso-flow",
+      "settings": {
+      }
+    },
+    "review": {
+      "type": "product-review",
+      "settings": {
+        "product_id": ""
+      }
+    }
+  },
+  "order": [
+    "section-1",
+    "product-nav",
+    "section-2",
+    "marquee_block",
+    "section-3",
+    "section-4",
+    "section-5",
+    "section-6",
+    "section-7",
+    "section-8",
+    "section-9",
+    "section-10",
+    "section-11",
+    "review"
+  ]
+}
