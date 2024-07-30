@@ -25,7 +25,7 @@
           "type": "pdp-compatibility"
         },
         "jot": {
-            "type": "about-jot"
+          "type": "about-jot"
         },
         "section-11": {
           "type": "meet-espresso-flow"
@@ -35,6 +35,9 @@
         },
         "review": {
           "type": "product-review"
+        },
+        "section-faq": {
+          "type": "faqs"
         }
     },
     "order": [
@@ -49,7 +52,8 @@
       "jot",
       "section-11",
       "section-12",
-      "review"
+      "review",
+      "section-faq"
     ]
   }
   

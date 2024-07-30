@@ -3,32 +3,43 @@
     <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] w-full h-full">
       <div class="content-block w-full h-full">
         <div
-          id=""
           class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
         >
-          <div id="" class="layout-flex relative col-span-4 lg:col-span-12 flex flex-row w-full h-[60px]">
-            <ul class="list-none flex flex-row justify-between items-center h-full w-full">
-              {% for block in section.blocks %}
+          <div class="layout-flex relative col-span-4 lg:col-span-12 flex flex-row w-full h-[60px]">
+            <div class=" flex flex-row justify-between items-center h-full w-full">
+              {% for metafield in product.metafields.custom.navigation.value %}
                 <div class="h-full bg-lm-background-1 list-none">
                   <div
                     draggable="false"
-                    class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300"
+                    class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
                   >
-                    <span
-                      class="absolute -bottom-0 left-1/2 h-[2px] bg-lm-on-neutral-1-hover w-1/2 transition-all duration-300"
-                    ></span
-                    ><span
-                      class="absolute -bottom-0 right-1/2 h-[2px] bg-lm-on-neutral-1-hover w-1/2 transition-all duration-300"
-                    ></span>
-                    <li class="product-nav-item !mx-0">
-                      <a href="{{ block.settings.nav_item_id }}">
-                        {{- block.settings.nav_item_title -}}
+                    <div class="product-nav-item !mx-0">
+                      <a href="{{ metafield.html_id.value }}">
+                        {{- metafield.title.value -}}
                       </a>
-                    </li>
+                    </div>
                   </div>
                 </div>
               {% endfor %}
-            </ul>
+              <div class="h-full bg-lm-background-1">
+                <div
+                  draggable="false"
+                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover"
+                >
+                  <div class="product-nav-item !mx-0">
+                    <form class="" method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                      <input
+                        type="submit"
+                        value="Buy now"
+                        class="relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-inverse-on-primary text-label-medium-heavy cursor-pointer"
+                      >
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -42,24 +53,7 @@
 {
   "name": "Product Navigation",
   "settings": [],
-  "blocks": [
-    {
-      "type": "nav_item",
-      "name": "Nav Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "nav_item_title",
-          "label": "Nav Item Title"
-        },
-        {
-          "type": "text",
-          "id": "nav_item_id",
-          "label": "Nav Item ID"
-        }
-      ]
-    }
-  ],
+  "blocks": [],
   "presets": [
     {
       "name": "Product Navigation",

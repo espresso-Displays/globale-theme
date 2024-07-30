@@ -131,11 +131,17 @@
       "settings": {
       }
     },
+    "section-compare": {
+      "type": "pdp-compare"
+    },
     "review": {
       "type": "product-review",
       "settings": {
         "product_id": ""
       }
+    },
+    "section-faq": {
+      "type": "faqs"
     }
   },
   "order": [
@@ -152,6 +158,8 @@
     "section-9",
     "section-10",
     "section-11",
-    "review"
+    "section-compare",
+    "review",
+    "section-faq"
   ]
 }

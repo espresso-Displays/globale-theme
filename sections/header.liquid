@@ -250,7 +250,7 @@
                         <a
                           draggable="false"
                           class="relative px-[15px] h-full w-full flex flex-col justify-center hover:text-lm-on-neutral-3-hover hover:pb-[5px] hover:transition-all duration-300 group"
-                          href="/collections/displays"
+                          href="{{ link.url }}"
                         >
                           <li class="whitespace-nowrap">{{ link.title | escape }}</li>
                           <span
@@ -260,57 +260,59 @@
                             class="absolute -bottom-0 right-1/2 w-0 h-[1px] bg-lm-on-neutral-3-hover group-hover:w-1/2 group-hover:transition-all duration-300"
                           ></span
                         ></a>
-                        <ul
-                          class="nav-dropdown absolute bg-neutral-0 p-6 top-[100%] w-[200px] transition-all"
-                          role="list"
-                          tabindex="-1"
-                          style="display:none;opacity:0;"
-                        >
-                          {%- for childlink in link.links -%}
-                            <li>
-                              {%- if childlink.links == blank -%}
-                                <a
-                                  id=""
-                                  class="font-bold"
-                                >
-                                  {{ childlink.title | escape }}
-                                </a>
-                              {%- else -%}
-                                <div id="" class="">
-                                  <div
-                                    id="childlink-{{ childlink.handle | escape }}"
+                        {% if link.links.size > 0 %}
+                          <ul
+                            class="nav-dropdown absolute bg-neutral-0 p-6 top-[100%] w-[200px] transition-all"
+                            role="list"
+                            tabindex="-1"
+                            style="display:none;opacity:0;"
+                          >
+                            {%- for childlink in link.links -%}
+                              <li class="pb-2 hover:text-lm-on-neutral-3-hover">
+                                {%- if childlink.links == blank -%}
+                                  <a
+                                    href="{{ childlink.url }}"
                                     class=""
                                   >
-                                    <button
+                                    {{ childlink.title | escape }}
+                                  </a>
+                                {%- else -%}
+                                  <div id="" class="">
+                                    <div
+                                      id="childlink-{{ childlink.handle | escape }}"
                                       class=""
                                     >
-                                      <span class="font-bold">{{ childlink.title | escape }}</span>
-                                    </button>
-
-                                    <div class="">
-                                      <ul
+                                      <button
                                         class=""
-                                        role="list"
-                                        tabindex="-1"
                                       >
-                                        {%- for grandchildlink in childlink.links -%}
-                                          <li class="py-2 pl-2 cursor-pointer">
-                                            <a
-                                              href="{{  link.handle }}"
-                                              class=""
-                                            >
-                                              {{ grandchildlink.title | escape }}
-                                            </a>
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
+                                        <span class="font-bold">{{ childlink.title | escape }}</span>
+                                      </button>
+
+                                      <div class="">
+                                        <ul
+                                          class=""
+                                          role="list"
+                                          tabindex="-1"
+                                        >
+                                          {%- for grandchildlink in childlink.links -%}
+                                            <li class="py-2 pl-2 cursor-pointer">
+                                              <a
+                                                href="{{  link.handle }}"
+                                                class=""
+                                              >
+                                                {{ grandchildlink.title | escape }}
+                                              </a>
+                                            </li>
+                                          {%- endfor -%}
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              {%- endif -%}
-                            </li>
-                          {%- endfor -%}
-                        </ul>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {% endif %}
                       </div>
 
                     {%- else -%}

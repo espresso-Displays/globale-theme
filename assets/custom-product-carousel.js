@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       carousel.style.transform = `translateX(${-index * 100}%)`;
 
-      thumbnails.forEach((thumb) => thumb.classList.remove('border-2'));
-      thumbnails[index].classList.add('border-2');
+      thumbnails.forEach((thumb) => {
+        thumb.style.borderWidth = '0px';
+      });
+      thumbnails[index].style.borderWidth = '2px';
       thumbnails[index].classList.add('border-lm-primary');
     }
 
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Initialize the first thumbnail as active
-    thumbnails[0].classList.add('border-2');
+    thumbnails[index].style.borderWidth = '2px';
     thumbnails[0].classList.add('border-lm-primary');
   });
 });

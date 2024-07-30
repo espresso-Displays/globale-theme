@@ -1,5 +1,5 @@
 <div id="section-overview" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
-  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-background-1 pt-[24px] pb-[0px] lg:pt-[80px] lg:pb-[80px] text-lm-on-background-1">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[24px] pb-[0px] lg:pt-[80px] lg:pb-[80px] text-lm-on-background-1">
     <div class="content-block w-full h-full">
       <div
         id=""
@@ -28,7 +28,7 @@
               playsinline=""
               controls=""
               preload="metadata"
-              poster="/assets/videos/video-espresso-17pdp-4.webp"
+              poster="{{ section.settings.video_poster | image_url }}"
               class="w-screen lg:w-full"
               alt="video-espresso-17pdp-4"
               aria-label="video-espresso-17pdp-4"
@@ -81,6 +81,11 @@
       "type": "video",
       "id": "video_file",
       "label": "Video File"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster"
     },
     {
       "type": "image_picker",

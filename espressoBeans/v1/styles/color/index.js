@@ -87,10 +87,8 @@ const color_system = {
 
   'es-sys-color-lm-inverse-secondary': palette['es-ref-palette-secondary101'],
   'es-sys-color-lm-inverse-on-secondary': palette['es-ref-palette-secondary40'],
-  'es-sys-color-lm-inverse-secondary-hover':
-    palette['es-ref-palette-secondary90'],
-  'es-sys-color-lm-inverse-secondary-click':
-    palette['es-ref-palette-secondary80'],
+  'es-sys-color-lm-inverse-secondary-hover': palette['es-ref-palette-secondary90'],
+  'es-sys-color-lm-inverse-secondary-click': palette['es-ref-palette-secondary80'],
   'es-sys-color-lm-outline-secondary': palette['es-ref-palette-secondary40'],
 
   'es-sys-color-lm-neutral': palette['es-ref-palette-neutral00'],
@@ -205,6 +203,7 @@ const color_system = {
 };
 
 const ColorsTW = {
+  transparent: 'transparent',
   'lm-primary': color_system['es-sys-color-lm-primary'],
   'lm-on-primary': color_system['es-sys-color-lm-on-primary'],
   'lm-primary-hover': color_system['es-sys-color-lm-primary-hover'],
@@ -212,10 +211,8 @@ const ColorsTW = {
 
   'lm-inverse-primary': color_system['es-sys-color-lm-inverse-primary'],
   'lm-inverse-on-primary': color_system['es-sys-color-lm-inverse-on-primary'],
-  'lm-inverse-primary-hover':
-    color_system['es-sys-color-lm-inverse-primary-hover'],
-  'lm-inverse-primary-click':
-    color_system['es-sys-color-lm-inverse-primary-click'],
+  'lm-inverse-primary-hover': color_system['es-sys-color-lm-inverse-primary-hover'],
+  'lm-inverse-primary-click': color_system['es-sys-color-lm-inverse-primary-click'],
   'lm-outline-primary': color_system['es-sys-color-lm-outline-primary'],
 
   'lm-secondary': color_system['es-sys-color-lm-secondary'],
@@ -226,12 +223,9 @@ const ColorsTW = {
   'lm-on-secondary-hover': color_system['es-sys-color-lm-on-secondary-hover'],
 
   'lm-inverse-secondary': color_system['es-sys-color-lm-inverse-secondary'],
-  'lm-inverse-on-secondary':
-    color_system['es-sys-color-lm-inverse-on-secondary'],
-  'lm-inverse-secondary-hover':
-    color_system['es-sys-color-lm-inverse-secondary-hover'],
-  'lm-inverse-secondary-click':
-    color_system['es-sys-color-lm-inverse-secondary-click'],
+  'lm-inverse-on-secondary': color_system['es-sys-color-lm-inverse-on-secondary'],
+  'lm-inverse-secondary-hover': color_system['es-sys-color-lm-inverse-secondary-hover'],
+  'lm-inverse-secondary-click': color_system['es-sys-color-lm-inverse-secondary-click'],
   'lm-outline-secondary': color_system['es-sys-color-lm-outline-secondary'],
 
   'lm-neutral': color_system['es-sys-color-lm-neutral'],
@@ -241,10 +235,8 @@ const ColorsTW = {
 
   'lm-inverse-neutral': color_system['es-sys-color-lm-inverse-neutral'],
   'lm-inverse-on-neutral': color_system['es-sys-color-lm-inverse-on-neutral'],
-  'lm-inverse-neutral-hover':
-    color_system['es-sys-color-lm-inverse-neutral-hover'],
-  'lm-inverse-neutral-click':
-    color_system['es-sys-color-lm-inverse-neutral-click'],
+  'lm-inverse-neutral-hover': color_system['es-sys-color-lm-inverse-neutral-hover'],
+  'lm-inverse-neutral-click': color_system['es-sys-color-lm-inverse-neutral-click'],
   'lm-outline-neutral': color_system['es-sys-color-lm-outline-neutral'],
 
   // 'lm-tertiary': color_system['es-sys-color-lm-tertiary'],
@@ -352,4 +344,4 @@ const getColorHex = (twColorSystemToken) => {
   return ColorsTW[twColorSystemToken];
 };
 
-export {ColorsTW, getColorHex};
+export { ColorsTW, getColorHex };

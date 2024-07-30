@@ -315,21 +315,29 @@
         margin-top: -2px;
         background-color: inherit;
         transform-origin: 50% 50%;
-        transition: all .25s
+        transition: all .25s;
+        background-color: black;
     }
     
     .accordion-toggle:before {
         transform: rotate(-90deg);
-        opacity: 0
+        opacity: 0;
+        background-color: black;
     }
     
     .accordion-toggle.collapsed:before {
         transform: rotate(0);
-        opacity: 1
+        opacity: 1;
+        background-color: black;
     }
     
     .accordion-toggle.collapsed:after {
-        transform: rotate(-90deg)
+        transform: rotate(-90deg);
+        background-color: black;
+    }
+
+    .accordion-content ul li {
+        list-style-type: disc;
     }
     
   }

@@ -1271,7 +1271,7 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
   button.addEventListener('click', function () {
     const variantId = this.getAttribute('data-variant-id');
     const productElement = this.closest('.product');
-    const form = productElement.querySelector('.collection-quick-add-to-cart');
+    const form = document.querySelector('.collection-quick-add-to-cart');
 
     // Remove selected class from all variant buttons
     productElement.querySelectorAll('.collection-variant-button').forEach((btn) => {
@@ -1284,5 +1284,59 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
 
     // Store the selected variant ID in the form
     form.querySelector("input[name='id']").value = variantId;
+    const priceSpan = document.querySelector('.product-variant-price-display');
+    if (priceSpan) {
+      const priceVariant = this.getAttribute('data-variant-price');
+      priceSpan.textContent = formatMoney(priceVariant);
+    }
   });
 });
+
+// Function to format money according to Shopify's standard
+function formatMoney(cents, format = '${{amount}}') {
+  if (typeof cents == 'string') {
+    cents = cents.replace('.', '');
+  }
+  var value = '';
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = format;
+
+  function defaultOption(opt, def) {
+    return typeof opt == 'undefined' ? def : opt;
+  }
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ',');
+    decimal = defaultOption(decimal, '.');
+
+    if (isNaN(number) || number == null) {
+      return 0;
+    }
+
+    number = (number / 100.0).toFixed(precision);
+
+    var parts = number.split('.');
+    var dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
+    var centsAmount = parts[1] ? decimal + parts[1] : '';
+
+    return dollarsAmount + centsAmount;
+  }
+
+  switch (formatString.match(placeholderRegex)[1]) {
+    case 'amount':
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case 'amount_no_decimals':
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case 'amount_with_comma_separator':
+      value = formatWithDelimiters(cents, 2, '.', ',');
+      break;
+    case 'amount_no_decimals_with_comma_separator':
+      value = formatWithDelimiters(cents, 0, '.', ',');
+      break;
+  }
+
+  return formatString.replace(placeholderRegex, value);
+}
