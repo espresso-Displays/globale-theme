@@ -73,8 +73,8 @@
     "section-2": {
       "type": "pdp-overview",
       "settings": {
-        "text_field_1": "",
-        "text_field_2": "",
+        "text_field_1": "Designed for you.",
+        "text_field_2": "Built with premium materials. Blending tough aerospace aluminium and hardened glass. Engineered for life on the go.",
         "text_field_3": ""
       }
     },
@@ -92,6 +92,18 @@
     },
     "section-8": {
       "type": "pdp-why-espresso",
+      "blocks": {
+        "grid_item_yGbyyG": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "",
+            "grid_item_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_yGbyyG"
+      ],
       "settings": {
       }
     },
