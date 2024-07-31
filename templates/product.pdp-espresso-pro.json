@@ -67,9 +67,8 @@
     },
     "product-nav": {
       "type": "pdp-product-nav",
-      "block_order": [],
-      "settings": {}
-      
+      "settings": {
+      }
     },
     "section-2": {
       "type": "pdp-overview",
@@ -133,16 +132,19 @@
       }
     },
     "section-compare": {
-      "type": "pdp-compare"
+      "type": "pdp-compare",
+      "settings": {
+      }
     },
     "review": {
       "type": "product-review",
       "settings": {
-        "product_id": ""
       }
     },
     "section-faq": {
-      "type": "faqs"
+      "type": "faqs",
+      "settings": {
+      }
     }
   },
   "order": [

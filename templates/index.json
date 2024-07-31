@@ -1,41 +1,74 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "image_banner": {
       "type": "image-banner",
+      "settings": {
+      }
     },
     "marquee_block": {
       "type": "marquee",
+      "settings": {
+      }
     },
     "excellence_block": {
-      "type": "excellence"
+      "type": "excellence",
+      "settings": {
+      }
     },
     "trustpilot": {
-      "type": "trustpilot-all"
+      "type": "trustpilot-all",
+      "settings": {
+      }
     },
     "benefit_block": {
-      "type": "benefits"
+      "type": "benefits",
+      "settings": {
+      }
     },
     "about_jot_block": {
-      "type": "about-jot"
+      "type": "about-jot",
+      "settings": {
+      }
     },
     "espresso_for_mac_block": {
-      "type": "espresso-for-mac"
+      "type": "espresso-for-mac",
+      "settings": {
+      }
     },
     "markup_documents_block": {
-      "type": "markup-documents"
+      "type": "markup-documents",
+      "settings": {
+      }
     },
     "virtual_whiteboard_block": {
-      "type": "virtual-whiteboard"
+      "type": "virtual-whiteboard",
+      "settings": {
+      }
     },
     "master_productivity_block": {
-      "type": "master-productivity"
+      "type": "master-productivity",
+      "settings": {
+      }
     },
     "meet_espresso_flow_block": {
-      "type": "meet-espresso-flow"
+      "type": "meet-espresso-flow",
+      "settings": {
+      }
     },
     "compatibility_index_page_block": {
-      "type": "compatibility-index-page"
-    },
+      "type": "compatibility-index-page",
+      "settings": {
+      }
+    }
   },
   "order": [
     "image_banner",

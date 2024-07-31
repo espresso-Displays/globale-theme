@@ -10,22 +10,34 @@
 {
   "sections": {
     "section-1": {
-      "type": "custom-main-product"
+      "type": "custom-main-product",
+      "settings": {
+      }
     },
     "whats-included": {
-      "type": "product-whats-included"
+      "type": "product-whats-included",
+      "settings": {
+      }
     },
     "check-compatibility": {
       "type": "pdp-compatibility",
+      "settings": {
+      }
     },
     "jot": {
-      "type": "about-jot"
+      "type": "about-jot",
+      "settings": {
+      }
     },
     "review": {
-      "type": "product-review"
+      "type": "product-review",
+      "settings": {
+      }
     },
     "section-faq": {
-      "type": "faqs"
+      "type": "faqs",
+      "settings": {
+      }
     }
   },
   "order": [
