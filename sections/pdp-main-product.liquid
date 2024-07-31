@@ -18,11 +18,39 @@
                 <h1 class="text-heading-large">{{ product.title }}</h1>
                 <h2 class="text-subheading-large">{{ product.description }}</h2>
               </div>
+
+              <div
+                class="product flex flex-col justify-between flex-wrap-reverse "
+                data-product-id="{{ product.id }}"
+              >
+                {% if product.variants.size > 1 %}
+                  <div class=" flex items-center gap-4">
+                    {% for variant in product.variants %}
+                      {% comment %} <a href="{{ product.url }}?variant={{ variant.id }}"> {% endcomment %}
+                      <button
+                        draggable="false"
+                        type="button"
+                        class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                        data-variant-id="{{ variant.id }}"
+                        data-variant-price="{{ variant.price }}"
+                      >
+                        {{ variant.title }}
+                      </button>
+                      {% comment %} </a> {% endcomment %}
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  <input type="hidden" name="variant-id" value="{{ product.variants.first.id }}">
+                {% endif %}
+              </div>
+
               <div class="flex flex-row gap-[24px] items-center">
                 <div class="flex flex-col gap-[12px] w-[50%]">
                   <div class="text-heading-large">
                     <font class="text-lm-on-background-1"
-                      ><span> {{ product.price | money }}</span></font
+                      ><span class="product-variant-price-display">
+                        {{ product.selected_or_first_available_variant.price | money -}}
+                      </span></font
                     >
                   </div>
                 </div>
