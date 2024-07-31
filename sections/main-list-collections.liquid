@@ -1,10 +1,10 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
-
 <div class="page-width">
-  <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ section.settings.title }}
-  </h1>
+  {% comment %}
+    <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ section.settings.title }}
+    </h1>
+  {% endcomment %}
+
   {%- liquid
     case section.settings.sort
       when 'products_high', 'products_low'
@@ -23,29 +23,31 @@
       assign paginate_by = 28
     endif
   -%}
-  {%- paginate collections by paginate_by -%}
-    <ul
-      class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-      role="list"
-    >
-      {%- for collection in collections -%}
-        <li
-          class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {% render 'card-collection',
-            card_collection: collection,
-            media_aspect_ratio: section.settings.image_ratio,
-            columns: 3
-          %}
-        </li>
-      {%- endfor -%}
-    </ul>
-    {% render 'pagination', paginate: paginate %}
-  {%- endpaginate -%}
+
+  <div class="content bg-lm-background-1 text-lm-on-background-1 flex flex-col">
+    <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+      <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-neutral-1 min-h-[100vh] pb-[108px]">
+        {%- paginate collections by paginate_by -%}
+          <div
+            class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] gap-y-[24px] pt-[82px] w-full"
+          >
+            {%- for collection in collections -%}
+              <div
+                class="layout-flex relative h-full col-span-4 lg:col-span-4 flex flex-col"
+              >
+                {% render 'card-collection',
+                  card_collection: collection,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  columns: 3
+                %}
+              </div>
+            {%- endfor -%}
+          </div>
+          {% render 'pagination', paginate: paginate %}
+        {%- endpaginate -%}
+      </div>
+    </div>
+  </div>
 </div>
 {% schema %}
 {

@@ -10,14 +10,17 @@
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
+<div class="w-screen h-[90vh] flex items-center justify-center flex-col gap-6">
+  <p class="font-medium text-[32px]">
     {{ 'templates.404.subtext' | t }}
   </p>
-  <h1 class="title">
+  <h1 class="font-bold text-[32px]">
     {{ 'templates.404.title' | t }}
   </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
+  <a
+    href="{{ routes.all_products_collection_url }}"
+    class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit h-[48px] cursor-pointer"
+  >
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
