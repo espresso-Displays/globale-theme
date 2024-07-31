@@ -75,7 +75,9 @@
       "settings": {
         "text_field_1": "Designed for you.",
         "text_field_2": "Built with premium materials. Blending tough aerospace aluminium and hardened glass. Engineered for life on the go.",
-        "text_field_3": ""
+        "text_field_3": "",
+        "video_file": "shopify:\/\/files\/videos\/video-espresso-13-15pdp-2_compressed.mp4",
+        "video_poster": "shopify:\/\/shop_images\/video-espresso-13-15pdp-2.webp"
       }
     },
     "marquee_block": {
