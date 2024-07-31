@@ -1,0 +1,109 @@
+{% if product.selected_or_first_available_variant.metafields.custom.section_1 %}
+  <div>
+    <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+      <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px]">
+        <div class="content-block w-full h-full">
+          <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
+            <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] py-[24px] lg:py-[80px]">
+              {% assign section_1 = product.selected_or_first_available_variant.metafields.custom.section_1.value %}
+              {% assign section_2 = product.selected_or_first_available_variant.metafields.custom.section_2.value %}
+              <div class="layout-flex relative h-full col-span-4 lg:col-span-6 flex flex-col">
+                <div class="text-display-medium">{{ section_1.title.value }}</div>
+              </div>
+              <div class="layout-flex relative h-full col-span-1 lg:col-span-1 flex flex-col"></div>
+              <div class="layout-flex relative h-full col-span-4 lg:col-span-5 flex flex-col">
+                <div class="text-heading-small">
+                  {{ section_1.subtitle.value }}
+                </div>
+              </div>
+              <div
+                class="layout-flex relative h-full col-span-4 lg:col-span-12 flex flex-col py-[24px] lg:py-[40px]"
+              >
+                <div class="flex justify-center lg:h-[720px] min-h-0">
+                  {% assign file_url = section_1.media.value %}
+
+                  {% if file_url %}
+                    {% assign file_extension = file_url | split: '.' | last | downcase %}
+
+                    {% case file_extension %}
+                      {% when 'jpg', 'jpeg', 'png', 'gif' %}
+                        <img
+                          class=""
+                          height="auto"
+                          width="auto"
+                          src="{{ file_url | image_url }}"
+                          alt="{{ file_url.alt | escape }}"
+                        >
+
+                      {% when 'videodrop' %}
+                        <video
+                          autoplay=""
+                          loop=""
+                          playsinline=""
+                          controls=""
+                          preload="metadata"
+                          poster="{{ section_1.video_cover.value | image_url }}"
+                          class="object-cover"
+                        >
+                          <source src="{{ file_url }}" type="video/{{ file_extension }}">
+                          Your browser does not support the video tag.
+                        </video>
+
+                      {% else %}
+                        <p>Unsupported media type.</p>
+                    {% endcase %}
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="layout-flex relative h-full col-span-4 lg:col-span-6 flex flex-col">
+                <div class="flex justify-center w-full min-h-0 rounded-lg overflow-clip">
+                  {% assign file_url = section_2.media.value %}
+
+                  {% if file_url %}
+                    {% assign file_extension = file_url | split: '.' | last | downcase %}
+
+                    {% case file_extension %}
+                      {% when 'jpg', 'jpeg', 'png', 'gif' %}
+                        <img
+                          class=""
+                          height="auto"
+                          width="auto"
+                          src="{{ file_url | image_url }}"
+                          alt="{{ file_url.alt | escape }}"
+                        >
+
+                      {% when 'videodrop' %}
+                        <video
+                          autoplay=""
+                          loop=""
+                          playsinline=""
+                          controls=""
+                          preload="metadata"
+                          poster="{{ section_2.video_cover.value | image_url }}"
+                          class="object-cover"
+                        >
+                          <source src="{{ file_url }}" type="video/{{ file_extension }}">
+                          Your browser does not support the video tag.
+                        </video>
+
+                      {% else %}
+                        <p>Unsupported media type.</p>
+                    {% endcase %}
+                  {% endif %}
+                </div>
+              </div>
+              <div id="" class="layout-flex relative h-full col-span-1 lg:col-span-1 flex flex-col"></div>
+              <div id="" class="layout-flex relative col-span-4 lg:col-span-4 flex flex-col justify-evenly h-full">
+                <div class="text-display-medium">{{ section_2.title.value }}</div>
+                <div class="text-heading-small">
+                  {{ section_2.subtitle.value }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

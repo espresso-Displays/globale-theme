@@ -1,35 +1,37 @@
-<div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
-  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-background-0 text-lm-on-background-0 py-[24px] lg:py-[52px]">
-    <div class="content-block w-full h-full">
-      <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
-        <div class="col-span-full py-10 px-8 scroll-mt-10 bg-lm-background-2 rounded-lg">
-          <div class="w-full flex flex-col items-center">
-            <div class="flex flex-col items-center w-full bg-lm-background-2">
-              <div
-                class="trustpilot-widget w-full"
-                data-locale="en-US"
-                data-template-id="5763bccae0a06d08e809ecbb"
-                data-businessunit-id="61afcdbddb33d8ea6bb5b67b"
-                data-style-height="700px"
-                data-style-width="100%"
-                data-theme="light"
-                data-sku="{{ product.metafields.custom.trustpilot_sku.value }}"
-                data-review-languages="en"
-                data-star-color="#00b67a"
-                data-font-family="Work Sans"
-                data-text-color="#000000"
-                data-link-color="#60269E"
-                data-no-reviews="hide"
-                data-fullwidth="true"
-                style="position: relative;"
-              >
-                <a
-                  href="https://www.trustpilot.com/review/espres.so"
-                  target="_blank"
-                  rel="noopener"
+{% if product.metafields.custom.trustpilot_sku.value %}
+  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+    <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-background-0 text-lm-on-background-0 py-[24px] lg:py-[52px]">
+      <div class="content-block w-full h-full">
+        <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
+          <div class="col-span-full py-10 px-8 scroll-mt-10 bg-lm-background-2 rounded-lg">
+            <div class="w-full flex flex-col items-center">
+              <div class="flex flex-col items-center w-full bg-lm-background-2">
+                <div
+                  class="trustpilot-widget w-full"
+                  data-locale="en-US"
+                  data-template-id="5763bccae0a06d08e809ecbb"
+                  data-businessunit-id="61afcdbddb33d8ea6bb5b67b"
+                  data-style-height="700px"
+                  data-style-width="100%"
+                  data-theme="light"
+                  data-sku="{{ product.metafields.custom.trustpilot_sku.value }}"
+                  data-review-languages="en"
+                  data-star-color="#00b67a"
+                  data-font-family="Work Sans"
+                  data-text-color="#000000"
+                  data-link-color="#60269E"
+                  data-no-reviews="hide"
+                  data-fullwidth="true"
+                  style="position: relative;"
                 >
-                  Trustpilot
-                </a>
+                  <a
+                    href="https://www.trustpilot.com/review/espres.so"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Trustpilot
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -37,7 +39,7 @@
       </div>
     </div>
   </div>
-</div>
+{% endif %}
 
 {% schema %}
 {

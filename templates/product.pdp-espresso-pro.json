@@ -67,52 +67,9 @@
     },
     "product-nav": {
       "type": "pdp-product-nav",
-      "blocks": {
-        "nav_item_QXfWHF": {
-          "type": "nav_item",
-          "settings": {
-            "nav_item_title": "Overview",
-            "nav_item_id": "#section-overview"
-          }
-        },
-        "nav_item_k6YcEN": {
-          "type": "nav_item",
-          "settings": {
-            "nav_item_title": "Features",
-            "nav_item_id": "#section-features"
-          }
-        },
-        "nav_item_RDfFHc": {
-          "type": "nav_item",
-          "settings": {
-            "nav_item_title": "Why espresso",
-            "nav_item_id": "#section-whyespresso"
-          }
-        },
-        "nav_item_iWNGY8": {
-          "type": "nav_item",
-          "settings": {
-            "nav_item_title": "Accessories",
-            "nav_item_id": "#section-accessories"
-          }
-        },
-        "nav_item_6XJdNt": {
-          "type": "nav_item",
-          "settings": {
-            "nav_item_title": "Compare",
-            "nav_item_id": "#section-compare"
-          }
-        }
-      },
-      "block_order": [
-        "nav_item_QXfWHF",
-        "nav_item_k6YcEN",
-        "nav_item_RDfFHc",
-        "nav_item_iWNGY8",
-        "nav_item_6XJdNt"
-      ],
-      "settings": {
-      }
+      "block_order": [],
+      "settings": {}
+      
     },
     "section-2": {
       "type": "pdp-overview",
