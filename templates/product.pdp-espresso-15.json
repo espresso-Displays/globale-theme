@@ -36,13 +36,21 @@
             "accordion_title": "Key features",
             "accordion_description": "<ul><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Full HD high-precision panel<\/li><li>300 nits brightness<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
           }
+        },
+        "accordion_item_wtLXJN": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What's in the box",
+            "accordion_description": "<ul><li>espressoDisplay portable touchscreen<\/li><li>1m espresso USB-C to USB-C cable<\/li><li>espresso Stand<\/li><li>Microfibre cleaning cloth<\/li><\/ul>"
+          }
         }
       },
       "block_order": [
         "benefit_item_qizgq7",
         "benefit_item_xzqUpn",
         "benefit_item_DtiAKc",
-        "accordion_item_4mzfTn"
+        "accordion_item_4mzfTn",
+        "accordion_item_wtLXJN"
       ],
       "settings": {
         "selected_product": "",
