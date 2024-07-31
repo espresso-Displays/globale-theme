@@ -10,26 +10,36 @@
 {
   "sections": {
     "section-1": {
-      "type": "custom-main-product"
+      "type": "custom-main-product",
+      "settings": {
+      }
     },
     "variant-section": {
-      "type": "product-variant-section"
+      "type": "product-variant-section",
+      "settings": {
+      }
     },
     "tech-specs": {
-      "type": "product-tech-specs"
+      "type": "product-tech-specs",
+      "settings": {
+      }
     },
     "review": {
-      "type": "product-review"
+      "type": "product-review",
+      "settings": {
+      }
     },
-    "section-faq":{ 
-      "type": "faqs"
+    "section-faq": {
+      "type": "faqs",
+      "settings": {
+      }
     }
   },
   "order": [
-   "section-1",
-   "variant-section",
-   "tech-specs",
-   "review",
-   "section-faq"
+    "section-1",
+    "variant-section",
+    "tech-specs",
+    "review",
+    "section-faq"
   ]
 }
