@@ -110,11 +110,20 @@
             "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.<br><br>Slide the espresso into your backpack, satchel or briefcase.",
             "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-take-more.webp"
           }
+        },
+        "grid_item_GUgDfw": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "More productivity, anywhere.",
+            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-lifestyle-van-life-2x-676x560.webp"
+          }
         }
       },
       "block_order": [
         "grid_item_yGbyyG",
-        "grid_item_VEVEza"
+        "grid_item_VEVEza",
+        "grid_item_GUgDfw"
       ],
       "settings": {
       }
