@@ -113,6 +113,19 @@
     },
     "section-8": {
       "type": "pdp-why-espresso",
+      "blocks": {
+        "grid_item_pyEjGD": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "Designed for people like you.",
+            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-back.webp"
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_pyEjGD"
+      ],
       "settings": {
       }
     },
@@ -134,6 +147,7 @@
     "section-compare": {
       "type": "pdp-compare",
       "settings": {
+        "product_title": ""
       }
     },
     "review": {
