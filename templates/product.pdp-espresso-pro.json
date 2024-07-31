@@ -121,10 +121,37 @@
             "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last.",
             "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-back.webp"
           }
+        },
+        "grid_item_xBLC6D": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "Take more screen, anywhere.",
+            "grid_item_description": "Ultra-sleek at 9 mm thin. Super-lightweight at 1.1 kg.<br><br>Slide the espresso 17 Pro into your backpack, satchel or briefcase.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-portability-2x-676x560.webp"
+          }
+        },
+        "grid_item_E3HJfV": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "More productivity, anywhere.",
+            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-lifestyle-van-life-2x-676x560.webp"
+          }
+        },
+        "grid_item_zJcPLR": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "A display for how you work.",
+            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-vertical-2x-676x560.webp"
+          }
         }
       },
       "block_order": [
-        "grid_item_pyEjGD"
+        "grid_item_pyEjGD",
+        "grid_item_xBLC6D",
+        "grid_item_E3HJfV",
+        "grid_item_zJcPLR"
       ],
       "settings": {
       }
