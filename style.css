@@ -353,5 +353,19 @@
         text-decoration: underline;
         color: blue;
     }
+
+    .metafield-rich_text_field p {
+        text-align: center;
+    }
+
+    .metafield-rich_text_field ul {
+        list-style: disc !important;
+        list-style-position: inside;
+    }
+
+    .metafield-rich_text_field ul li {
+        list-style: disc !important;
+       
+    }
     
   }

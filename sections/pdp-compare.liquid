@@ -2,202 +2,50 @@
   <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-background-0 text-lm-on-background-0 py-[24px] lg:pt-[64px] lg:pb-[32px]">
     <div class="content-block w-full h-full">
       <div
-        id=""
         class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
       >
         <div class="col-span-4 lg:col-span-12 flex flex-col gap-[32px] lg:gap-[32px] py-[32px] lg:py-[64px] px-[16px] lg:px-[48px] rounded-lg bg-lm-background-2">
           <h2 class="text-heading-large text-center py-6">Which display is right for you?</h2>
-          <div class="grid grid-cols-1 lg:grid-cols-4 gap-[16px]">
-            <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
-              <div class="px-4 flex items-center h-[200px]">
-                <div class="image h-full min-h-0 w-full">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-17T-comparison.webp?v=1714957499"
-                    fetchpriority="auto"
-                    alt=""
-                    width=""
-                    height=""
-                    draggable="false"
-                    class="w-full h-full object-contain"
-                  >
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-[16px]">
+            {% for item in product.metafields.custom.compare.value %}
+              <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
+                <div class="px-4 flex items-center h-[200px]">
+                  <div class="image h-full min-h-0 w-full">
+                    <img
+                      src="{{ item.thumbnail | image_url }}"
+                      fetchpriority="auto"
+                      alt=""
+                      width=""
+                      height=""
+                      draggable="false"
+                      class="w-full h-full object-contain"
+                    >
+                  </div>
                 </div>
-              </div>
-              <div class="flex flex-col gap-[8px] lg:gap-[32px]">
-                <div class="text-center text-heading-medium h-[32px] lg:h-[56px]">17 Pro</div>
-                <font class="text-lm-on-background-1 text-center justify-center text-heading-small"
-                  ><span>$1250</span></font
-                >
-                <div class="text-center text-body-medium h-auto lg:h-[72px]">The ultimate pro-grade performance.</div>
-              </div>
-              <div class="flex flex-row justify-center">
-                {% if section.settings.product_title == 'espresso Pro' %}
-                  {% render 'buy-buttons', product: product, button_title: 'Buy now' %}
-                {% else %}
-                  <a
-                    aria-label="Learn more"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-pdp-v3-learn-15 event-pdp-v3-learn-15 event-pdp-v2-learn-15 event-pdp-v3-learn-15 event-pdp-v3-learn-15"
-                    href="/products/espresso-pro"
-                    >Learn more</a
+                <div class="flex flex-col gap-[8px] lg:gap-[32px]">
+                  <div class="text-center text-heading-medium h-[32px] lg:h-[56px]">{{ item.title.value }}</div>
+                  <font class="text-lm-on-background-1 text-center justify-center text-heading-small"
+                    ><span>{{ item.product.value.price | money }}</span></font
                   >
-                {% endif %}
-              </div>
-              <div class="">
-                <div class="text-center py-1">17.3” display</div>
-                <div class="text-center py-1">397 mm x 245 mm</div>
-                <div class="text-center py-1">4K resolution</div>
-                <div class="text-center py-1">450 nits brightness</div>
-                <div class="text-center py-1">LiveTouch</div>
-                <div class="text-center py-1">60Hz refresh rate</div>
-                <div class="text-center py-1">1.07 billion colours</div>
-                <div class="text-center py-1">9 mm thin</div>
-                <div class="text-center py-1">1.1 kg weight</div>
-              </div>
-            </div>
-            <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
-              <div class="px-4 flex items-center h-[200px]">
-                <div class="image h-full min-h-0 w-full">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-15T-comparison.webp?v=1714974257"
-                    fetchpriority="auto"
-                    alt=""
-                    width=""
-                    height=""
-                    draggable="false"
-                    class="w-full h-full object-contain"
-                  >
+                  <div class="text-center text-body-medium h-auto lg:h-[72px]">{{ item.description }}</div>
                 </div>
-              </div>
-              <div class="flex flex-col gap-[8px] lg:gap-[32px]">
-                <div class="text-center text-heading-medium h-[32px] lg:h-[56px]">15 Touch</div>
-                <font class="text-lm-on-background-1 text-center justify-center text-heading-small"
-                  ><span>$749</span></font
-                >
-                <div class="text-center text-body-medium h-auto lg:h-[72px]">
-                  A premium touchscreen to power your work, anywhere.
+                <div class="flex flex-row justify-center">
+                  {% if product.variants.first.id == item.product.value.id %}
+                    {% render 'buy-buttons', product: product, button_title: 'Buy now' %}
+                  {% else %}
+                    <a
+                      aria-label="Learn more"
+                      draggable="false"
+                      class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-pdp-v3-learn-15 event-pdp-v3-learn-15 event-pdp-v2-learn-15 event-pdp-v3-learn-15 event-pdp-v3-learn-15"
+                      href="{{ item.product.value.url }}"
+                      >Learn more</a
+                    >
+                  {% endif %}
                 </div>
+
+                {{ item.specs | metafield_tag }}
               </div>
-              <div class="flex flex-row justify-center">
-                {% if section.settings.product_title == '15 Touch' %}
-                  {% render 'buy-buttons', product: product, button_title: 'Buy now' %}
-                {% else %}
-                  <a
-                    aria-label="Learn more"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-pdp-v3-learn-15 event-pdp-v3-learn-15 event-pdp-v2-learn-15 event-pdp-v3-learn-15 event-pdp-v3-learn-15"
-                    href="/products/espressodisplays-and-stand"
-                    >Learn more</a
-                  >
-                {% endif %}
-              </div>
-              <div class="">
-                <div class="text-center py-1">15.6" display</div>
-                <div class="text-center py-1">358 mm x 256 mm</div>
-                <div class="text-center py-1">1080p resolution</div>
-                <div class="text-center py-1">300 nits brightness</div>
-                <div class="text-center py-1">Touch</div>
-                <div class="text-center py-1">60Hz refresh rate</div>
-                <div class="text-center py-1">16.8 m colours</div>
-                <div class="text-center py-1">5.3 mm thin</div>
-                <div class="text-center py-1">865 g weight</div>
-              </div>
-            </div>
-            <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
-              <div class="px-4 flex items-center h-[200px]">
-                <div class="image h-full min-h-0 w-full">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-13T-comparison.webp?v=1714974257"
-                    fetchpriority="auto"
-                    alt=""
-                    width=""
-                    height=""
-                    draggable="false"
-                    class="w-full h-full object-contain"
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col gap-[8px] lg:gap-[32px]">
-                <div class="text-center text-heading-medium h-[32px] lg:h-[56px]">13 Touch</div>
-                <font class="text-lm-on-background-1 text-center justify-center text-heading-small"
-                  ><span>$669</span></font
-                >
-                <div class="text-center text-body-medium h-auto lg:h-[72px]">
-                  Ultra-portable performance for work on the go.
-                </div>
-              </div>
-              <div class="flex flex-row justify-center">
-                {% if section.settings.product_title == '13 Touch' %}
-                  {% render 'buy-buttons', product: product, button_title: 'Buy now' %}
-                {% else %}
-                  <a
-                    aria-label="Learn more"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-pdp-v3-learn-13 event-pdp-v3-learn-13 event-pdp-v2-learn-13 event-pdp-v3-learn-13 event-pdp-v3-learn-13"
-                    href="/products/espressodisplays-and-stand"
-                    >Learn more</a
-                  >
-                {% endif %}
-              </div>
-              <div class="">
-                <div class="text-center py-1">13.3" display</div>
-                <div class="text-center py-1">308 mm x 228 mm</div>
-                <div class="text-center py-1">1080p resolution</div>
-                <div class="text-center py-1">300 nits brightness</div>
-                <div class="text-center py-1">Touch</div>
-                <div class="text-center py-1">60Hz refresh rate</div>
-                <div class="text-center py-1">16.8 m colours</div>
-                <div class="text-center py-1">5.3 mm thin</div>
-                <div class="text-center py-1">650 g weight</div>
-              </div>
-            </div>
-            <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
-              <div class="px-4 flex items-center h-[200px]">
-                <div class="image h-full min-h-0 w-full">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-13NT-comparison.webp?v=1714974257"
-                    fetchpriority="auto"
-                    alt=""
-                    width=""
-                    height=""
-                    draggable="false"
-                    class="w-full h-full object-contain"
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col gap-[8px] lg:gap-[32px]">
-                <div class="text-center text-heading-medium h-[32px] lg:h-[56px]">13 Non-Touch</div>
-                <font class="text-lm-on-background-1 text-center justify-center text-heading-small"
-                  ><span>$329</span></font
-                >
-                <div class="text-center text-body-medium h-auto lg:h-[72px]">
-                  The essential for portable durability.
-                </div>
-              </div>
-              <div class="flex flex-row justify-center">
-                {% if section.settings.product_title == '13 Non-Touch' %}
-                  {% render 'buy-buttons', product: product, button_title: 'Buy now' %}
-                {% else %}
-                  <a
-                    aria-label="Learn more"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-pdp-v3-learn-13nt event-pdp-v3-learn-13nt event-pdp-v2-learn-13nt event-pdp-v3-learn-13nt event-pdp-v3-learn-13nt"
-                    href="/products/espressodisplays-and-stand?variant=13nt"
-                    >Learn more</a
-                  >
-                {% endif %}
-              </div>
-              <div class="">
-                <div class="text-center py-1">13.3" display</div>
-                <div class="text-center py-1">308 mm x 228 mm</div>
-                <div class="text-center py-1">1080p resolution</div>
-                <div class="text-center py-1">300 nits brightness</div>
-                <div class="text-center py-1">Non-touch</div>
-                <div class="text-center py-1">60Hz refresh rate</div>
-                <div class="text-center py-1">16.8 m colours</div>
-                <div class="text-center py-1">5.3 mm thin</div>
-                <div class="text-center py-1">620 g weight</div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
