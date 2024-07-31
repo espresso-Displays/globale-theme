@@ -11,58 +11,7 @@
   "sections": {
     "section-1": {
       "type": "pdp-main-product",
-      "blocks": {
-        "benefit_item_qizgq7": {
-          "type": "benefit_item",
-          "settings": {
-            "benefit_item_title": "Portable and easy to set up."
-          }
-        },
-        "benefit_item_xzqUpn": {
-          "type": "benefit_item",
-          "settings": {
-            "benefit_item_title": "Connect and start working in seconds."
-          }
-        },
-        "benefit_item_DtiAKc": {
-          "type": "benefit_item",
-          "settings": {
-            "benefit_item_title": "Boost productivity with extra screen space."
-          }
-        },
-        "accordion_item_4mzfTn": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "Key features",
-            "accordion_description": "<ul><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Full HD high-precision panel<\/li><li>300 nits brightness<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
-          }
-        },
-        "accordion_item_wtLXJN": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "What's in the box",
-            "accordion_description": "<ul><li>espressoDisplay portable touchscreen<\/li><li>1m espresso USB-C to USB-C cable<\/li><li>espresso Stand<\/li><li>Microfibre cleaning cloth<\/li><\/ul>"
-          }
-        },
-        "accordion_item_djT4Hn": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "Compatibility",
-            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.<\/p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.<\/p><p>Check full compatibility <a href=\"\/compatibility\">here.<\/a><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_item_qizgq7",
-        "benefit_item_xzqUpn",
-        "benefit_item_DtiAKc",
-        "accordion_item_4mzfTn",
-        "accordion_item_wtLXJN",
-        "accordion_item_djT4Hn"
-      ],
       "settings": {
-        "selected_product": "",
-        "trustpilot_sku": ""
       }
     },
     "product-nav": {
@@ -73,9 +22,6 @@
     "section-2": {
       "type": "pdp-overview",
       "settings": {
-        "text_field_1": "",
-        "text_field_2": "",
-        "text_field_3": ""
       }
     },
     "marquee_block": {
@@ -86,8 +32,6 @@
     "section-7": {
       "type": "two-column-text",
       "settings": {
-        "text_field_1": "",
-        "text_field_2": ""
       }
     },
     "section-8": {
@@ -118,7 +62,6 @@
     "section-12": {
       "type": "pdp-compare",
       "settings": {
-        "product_title": ""
       }
     },
     "review": {

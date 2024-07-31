@@ -683,6 +683,20 @@ html {
   list-style-type: disc;
 }
 
+.accordion-content div ul {
+  list-style-type: disc !important;
+  list-style-position: inside;
+}
+
+.accordion-content div p {
+  margin-bottom: 1rem;
+}
+
+.accordion-content div a {
+  text-decoration: underline;
+  color: blue;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
