@@ -39,12 +39,6 @@
       {%- endif -%}
     {% endcomment %}
 
-    <script
-      defer="defer"
-      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-      type="text/javascript"
-    ></script>
-
     {{ content_for_header }}
 
     {%- liquid
@@ -357,6 +351,12 @@
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
+
+    <script
+      async="false"
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      type="text/javascript"
+    ></script>
 
     <script src="{{ 'custom-add-to-cart.js' | asset_url }}" defer="defer"></script>
 
