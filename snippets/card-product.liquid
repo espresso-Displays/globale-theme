@@ -33,7 +33,10 @@
       assign ratio = 1
     endif
   -%}
-  <div class="layout-flex relative h-full col-span-4 lg:col-span-4 flex flex-col">
+  <div
+    class="layout-flex relative h-full col-span-4 lg:col-span-4 flex flex-col"
+    data-card-product-id="{{ card_product.id }}"
+  >
     <div
       class="overflow-clip border border-neutral-80 rounded-[20px] w-full min-h-[450px] h-full grid grid-col-1 grid-auto-rows items-center"
     >
@@ -93,7 +96,7 @@
         class="bg-lm-background-2 flex flex-col justify-between p-[32px] w-full min-h-[280px]"
       >
         <div class="flex flex-col justify-between gap-[8px] w-full cursor-pointer">
-          <div class="flex items-center justify-between">
+          <div class="card-title flex items-center justify-between">
             <h3
               class="text-heading-small"
             >
@@ -108,7 +111,9 @@
             </h3>
 
             {%- assign price = card_product.selected_or_first_available_variant.price | money_without_currency -%}
-            <span class="text-heading-small flex flex-col lg:flex-row gap-[10px] justify-end">${{ price }}</span>
+            <span class="variant-price text-heading-small flex flex-col lg:flex-row gap-[10px] justify-end"
+              >${{ price -}}
+            </span>
           </div>
           <div class="text-body-small">{{ card_product.description | strip_html }}</div>
         </div>
@@ -122,6 +127,8 @@
                 <button
                   class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if forloop.index0 == 0%}bg-lm-inverse-primary-click{% else %}bg-lm-on-neutral-3{% endif %}"
                   data-variant-id="{{ variant.id }}"
+                  data-variant-price="{{  variant.price }}"
+                  data-parent-id="{{ card_product.id }}"
                 >
                   {{ variant.title }}
                 </button>

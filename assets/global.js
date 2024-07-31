@@ -1289,6 +1289,14 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
       const priceVariant = this.getAttribute('data-variant-price');
       priceSpan.textContent = formatMoney(priceVariant);
     }
+
+    const productId = this.getAttribute('data-parent-id');
+    if (productId) {
+      const cardDiv = document.querySelector(`[data-card-product-id='${productId}']`);
+      const priceVariant = this.getAttribute('data-variant-price');
+      const priceDiv = cardDiv.querySelector('.variant-price');
+      priceDiv.textContent = formatMoney(priceVariant);
+    }
   });
 });
 
