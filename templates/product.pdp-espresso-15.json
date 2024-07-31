@@ -1,59 +1,119 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-    "sections": {
-        "section-1": {
-          "type": "pdp-main-product"
+  "sections": {
+    "section-1": {
+      "type": "pdp-main-product",
+      "blocks": {
+        "benefit_item_qizgq7": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and easy to set up."
+          }
         },
-        "product-nav": {
-          "type": "pdp-product-nav"
-        },
-        "section-2": {
-          "type": "pdp-overview"
-        },
-        "marquee_block": {
-          "type": "marquee"
-        },
-        "section-7": {
-          "type": "two-column-text"
-        },
-        "section-8": {
-          "type": "pdp-why-espresso"
-        },
-        "section-9": {
-          "type": "pdp-accessories"
-        },
-        "section-10": {
-          "type": "pdp-compatibility"
-        },
-        "jot": {
-          "type": "about-jot"
-        },
-        "section-11": {
-          "type": "meet-espresso-flow"
-        },
-        "section-12": {
-          "type": "pdp-compare"
-        },
-        "review": {
-          "type": "product-review"
-        },
-        "section-faq": {
-          "type": "faqs"
+        "benefit_item_xzqUpn": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Connect and start working in seconds."
+          }
         }
+      },
+      "block_order": [
+        "benefit_item_qizgq7",
+        "benefit_item_xzqUpn"
+      ],
+      "settings": {
+        "selected_product": "",
+        "trustpilot_sku": ""
+      }
     },
-    "order": [
-      "section-1",
-      "product-nav",
-      "section-2",
-      "marquee_block",
-      "section-7",
-      "section-8",
-      "section-9",
-      "section-10",
-      "jot",
-      "section-11",
-      "section-12",
-      "review",
-      "section-faq"
-    ]
-  }
-  
+    "product-nav": {
+      "type": "pdp-product-nav",
+      "settings": {
+      }
+    },
+    "section-2": {
+      "type": "pdp-overview",
+      "settings": {
+        "text_field_1": "",
+        "text_field_2": "",
+        "text_field_3": ""
+      }
+    },
+    "marquee_block": {
+      "type": "marquee",
+      "settings": {
+      }
+    },
+    "section-7": {
+      "type": "two-column-text",
+      "settings": {
+        "text_field_1": "",
+        "text_field_2": ""
+      }
+    },
+    "section-8": {
+      "type": "pdp-why-espresso",
+      "settings": {
+      }
+    },
+    "section-9": {
+      "type": "pdp-accessories",
+      "settings": {
+      }
+    },
+    "section-10": {
+      "type": "pdp-compatibility",
+      "settings": {
+      }
+    },
+    "jot": {
+      "type": "about-jot",
+      "settings": {
+      }
+    },
+    "section-11": {
+      "type": "meet-espresso-flow",
+      "settings": {
+      }
+    },
+    "section-12": {
+      "type": "pdp-compare",
+      "settings": {
+        "product_title": ""
+      }
+    },
+    "review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "section-faq": {
+      "type": "faqs",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "section-1",
+    "product-nav",
+    "section-2",
+    "marquee_block",
+    "section-7",
+    "section-8",
+    "section-9",
+    "section-10",
+    "jot",
+    "section-11",
+    "section-12",
+    "review",
+    "section-faq"
+  ]
+}
