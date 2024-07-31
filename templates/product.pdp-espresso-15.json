@@ -23,11 +23,26 @@
           "settings": {
             "benefit_item_title": "Connect and start working in seconds."
           }
+        },
+        "benefit_item_DtiAKc": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Boost productivity with extra screen space."
+          }
+        },
+        "accordion_item_4mzfTn": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Key features",
+            "accordion_description": "<ul><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Full HD high-precision panel<\/li><li>300 nits brightness<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
+          }
         }
       },
       "block_order": [
         "benefit_item_qizgq7",
-        "benefit_item_xzqUpn"
+        "benefit_item_xzqUpn",
+        "benefit_item_DtiAKc",
+        "accordion_item_4mzfTn"
       ],
       "settings": {
         "selected_product": "",
