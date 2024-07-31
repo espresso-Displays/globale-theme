@@ -102,10 +102,18 @@
             "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last.",
             "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-sleek.webp"
           }
+        },
+        "grid_item_VEVEza": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "Take more screen, anywhere.",
+            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.<br><br>Slide the espresso into your backpack, satchel or briefcase."
+          }
         }
       },
       "block_order": [
-        "grid_item_yGbyyG"
+        "grid_item_yGbyyG",
+        "grid_item_VEVEza"
       ],
       "settings": {
       }
