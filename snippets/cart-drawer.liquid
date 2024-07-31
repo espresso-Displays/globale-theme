@@ -90,14 +90,14 @@
               <div class="drawer__cart-items-wrapper ">
                 {%- for item in cart.items -%}
                   <div class="flex flex-col gap-4">
-                    {% if item.image %}
+                    {% if item.product.featured_image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                       {% comment %} <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a> {% endcomment %}
                       <div class="flex flex-col items-center justify-center bg-neutral-90 w-full h-[240px]">
                         <img
                           class="object-cover object-center h-full"
-                          src="{{ item.image | image_url }}"
-                          alt="{{ item.image.alt | escape }}"
+                          src="{{ item.product.featured_image | image_url }}"
+                          alt="{{ item.product.featured_image.alt | escape }}"
                           loading="lazy"
                         >
                       </div>
