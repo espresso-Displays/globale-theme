@@ -6,7 +6,7 @@
       >
         <div class="col-span-4 lg:col-span-12 flex flex-col gap-[32px] lg:gap-[32px] py-[32px] lg:py-[64px] px-[16px] lg:px-[48px] rounded-lg bg-lm-background-2">
           <h2 class="text-heading-large text-center py-6">Which display is right for you?</h2>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-[16px]">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
             {% for item in product.metafields.custom.compare.value %}
               <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
                 <div class="px-4 flex items-center h-[200px]">
@@ -31,7 +31,16 @@
                 </div>
                 <div class="flex flex-row justify-center">
                   {% if product.variants.first.id == item.product.value.id %}
-                    {% render 'buy-buttons', product: product, button_title: 'Buy now' %}
+                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                      <input
+                        type="submit"
+                        value="Buy now"
+                        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                      >
+                    </form>
+
                   {% else %}
                     <a
                       aria-label="Learn more"
@@ -43,7 +52,9 @@
                   {% endif %}
                 </div>
 
-                {{ item.specs | metafield_tag }}
+                <div class="product-specs">
+                  {{ item.specs | metafield_tag }}
+                </div>
               </div>
             {% endfor %}
           </div>

@@ -354,18 +354,11 @@
         color: blue;
     }
 
-    .metafield-rich_text_field p {
-        text-align: center;
-    }
-
-    .metafield-rich_text_field ul {
-        list-style: disc !important;
-        list-style-position: inside;
-    }
-
-    .metafield-rich_text_field ul li {
-        list-style: disc !important;
-       
+   .product-specs .metafield-rich_text_field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
     }
     
   }
