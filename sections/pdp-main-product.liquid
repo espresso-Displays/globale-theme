@@ -26,7 +26,6 @@
                 {% if product.variants.size > 1 %}
                   <div class=" flex items-center gap-4">
                     {% for variant in product.variants %}
-                      {% comment %} <a href="{{ product.url }}?variant={{ variant.id }}"> {% endcomment %}
                       <button
                         draggable="false"
                         type="button"
@@ -36,7 +35,6 @@
                       >
                         {{ variant.title }}
                       </button>
-                      {% comment %} </a> {% endcomment %}
                     {% endfor %}
                   </div>
                 {% else %}

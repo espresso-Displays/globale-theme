@@ -1644,10 +1644,6 @@ html {
   gap: 8px;
 }
 
-.gap-\[25px\] {
-  gap: 25px;
-}
-
 .gap-x-\[16px\] {
   -moz-column-gap: 16px;
        column-gap: 16px;
