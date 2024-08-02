@@ -1,7 +1,6 @@
 {{ 'custom-product-carousel.css' | asset_url | stylesheet_tag }}
-
-{% if product %}
-  <div class="relative flex flex-col gap-1 w-full h-auto max-h-[45vh] lg:max-h-[calc(100vh_-_250px)] select-none overflow-clip">
+<div class="relative flex flex-col gap-1 w-full h-auto max-h-[45vh] lg:max-h-[calc(100vh_-_250px)] select-none overflow-clip">
+  {% if product %}
     <div class="w-full h-full flex gap-[20px] snap-x snap-mandatory overflow-x-auto scrollbar-hide bg-neutral-100">
       <div class="product-carousel">
         <div class="carousel-wrapper h-full">
@@ -11,10 +10,12 @@
                 class="carousel-item relative flex flex-col items-center justify-center snap-center shrink-0 w-full h-full cursor-auto bg-neutral-100"
               >
                 <img
-                  src="{{ image | img_url: 'large' }}"
+                  src="{{ image | image_url }}"
                   alt="{{ product.title }}"
                   class="w-full h-full object-contain overflow-clip origin-top-left pointer-events-none"
                   draggable="false"
+                  height="auto"
+                  width="auto"
                 >
               </div>
             {% endfor %}
@@ -44,18 +45,21 @@
             >
               <img
                 data-index="{{ forloop.index0 }}"
-                src="{{ image | img_url: 'small' }}"
+                src="{{ image | image_url}}"
                 alt="{{ product.title }}"
                 class="w-full h-full max-w-full max-h-full aspect-square object-contain overflow-clip origin-top-left"
                 draggable="false"
+                height="auto"
+                width="auto"
               >
             </div>
           {% endfor %}
         </div>
       </div>
     </div>
-{% else %}
-  <p>Please select a product in the theme editor to display its images in a carousel.</p>
-{% endif %}
+  {% else %}
+    <p>Please select a product in the theme editor to display its images in a carousel.</p>
+  {% endif %}
+</div>
 
-<script src="{{ 'custom-product-carousel.js' | asset_url }}"></script>
+<script defer="defer" src="{{ 'custom-product-carousel.js' | asset_url }}"></script>
