@@ -54,17 +54,17 @@
                 </div>
                 <div class="flex flex-col items-start py-[16px]">
                   <div
-                    className="trustpilot-widget w-full"
+                    class="trustpilot-widget"
                     data-locale="en-US"
                     data-template-id="577258fb31f02306e4e3aaf9"
                     data-businessunit-id="61afcdbddb33d8ea6bb5b67b"
+                    data-star-color="#00b67a"
+                    data-text-color="#000000"
                     data-style-height="24px"
                     data-style-width="100%"
                     data-theme="light"
-                    data-sku="{{ product.metafields.custom.trustpilot_sku.value }}"
-                    data-star-color="#00b67a"
                     data-font-family="Work Sans"
-                    data-text-color="#000000"
+                    data-sku="{{ product.metafields.custom.trustpilot_sku.value }}"
                     data-no-reviews="hide"
                     data-scroll-to-list="true"
                     data-style-alignment="left"
@@ -72,6 +72,7 @@
                     <a
                       href="https://www.trustpilot.com/review/espres.so"
                       target="_blank"
+                      rel="noopener"
                     >
                       Trustpilot
                     </a>

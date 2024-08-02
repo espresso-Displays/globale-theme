@@ -20,35 +20,21 @@
             </div>
             <div class="col-span-4 lg:col-span-3 text-display-small">{{ section.settings.text_field_3 }}</div>
           </div>
-          {% if section.settings.video_file %}
-            <video
-              id="video-espresso-17pdp-4"
-              autoplay=""
-              loop=""
-              playsinline=""
-              controls=""
-              preload="metadata"
-              poster="{{ section.settings.video_poster | image_url }}"
-              class="w-screen lg:w-full"
-              alt="video-espresso-17pdp-4"
-              aria-label="video-espresso-17pdp-4"
-            >
-              <track src="/assets/videos/no_captions.vtt" kind="captions" srclang="en" label="english_captions">
-
-              <source src="{{ section.settings.video_file | video_tag }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          {% if section.settings.video_file.media_type %}
+            {{ section.settings.video_file | video_tag: autoplay: true, loop: true, controls: true }}
           {% endif %}
 
           {% if section.settings.image %}
             <div class="h-full min-h-0 w-full lg:w-full">
               <img
-                src="{{ section.settings.image | img_url: 'large' }}"
+                src="{{ section.settings.image | image_url: 'large' }}"
                 class="w-full h-full object-contain overflow-clip origin-top-left pointer-events-none"
                 draggable="false"
                 class=""
                 fetchpriority="auto"
                 alt="{{ section.settings.image.alt }}"
+                width="auto"
+                height="auto"
               >
             </div>
           {% endif %}
