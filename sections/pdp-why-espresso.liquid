@@ -5,7 +5,7 @@
         id=""
         class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
       >
-        <div class="section group-image-with-info col-span-full flex flex-col gap-[24px] lg:gap-[24px]" id="">
+        <div class="section group-image-with-info col-span-full flex flex-col gap-[24px] lg:gap-[24px]">
           {% for block in section.blocks %}
             {% assign remainder = forloop.index0 | modulo: 2 %}
             <div
@@ -20,10 +20,10 @@
                 <div class="media">
                   <div class="image h-full min-h-0 w-full">
                     <img
-                      alt="display 17 simple aesthetic"
+                      alt="{{ block.settings.grid_item_image.value.alt }}"
                       decoding="async"
-                      loading="eager"
-                      src="{{ block.settings.grid_item_image | img_url: 'large' }}"
+                      loading="lazy"
+                      src="{{ block.settings.grid_item_image | image_url }}"
                       width="100"
                       height="auto"
                       class=""
