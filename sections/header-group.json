@@ -29,9 +29,19 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "custom_liquid_89fcdi": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<selector-root data-id=KH196993 id=\"KH196993\"><\/selector-root>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "custom_liquid_89fcdi"
   ]
 }
