@@ -1,0 +1,45 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "section-1": {
+      "type": "custom-main-product",
+      "settings": {
+      }
+    },
+    "variant-section": {
+      "type": "product-variant-section",
+      "settings": {
+      }
+    },
+    "tech-specs": {
+      "type": "product-tech-specs",
+      "settings": {
+      }
+    },
+    "review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "section-faq": {
+      "type": "faqs",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "section-1",
+    "variant-section",
+    "tech-specs",
+    "review",
+    "section-faq"
+  ]
+}
