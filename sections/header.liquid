@@ -247,19 +247,18 @@
                   {%- for link in section.settings.menu.links -%}
                     {%- if link.links != blank -%}
                       <div class="nav-item h-full bg-neutral-0 relative">
-                        <a
+                        <div
                           draggable="false"
-                          class="relative px-[15px] h-full w-full flex flex-col justify-center hover:text-lm-on-neutral-3-hover hover:pb-[5px] hover:transition-all duration-300 group"
-                          href="{{ link.url }}"
+                          class="relative px-[15px] h-full w-full flex flex-col justify-center hover:text-lm-on-neutral-3-hover hover:pb-[5px] hover:transition-all duration-300 group "
                         >
-                          <li class="whitespace-nowrap">{{ link.title | escape }}</li>
+                          <li class="whitespace-nowrap select-none">{{ link.title | escape }}</li>
                           <span
                             class="absolute -bottom-0 left-1/2 w-0 h-[1px] bg-lm-on-neutral-3-hover group-hover:w-1/2 group-hover:transition-all duration-300"
                           ></span
                           ><span
                             class="absolute -bottom-0 right-1/2 w-0 h-[1px] bg-lm-on-neutral-3-hover group-hover:w-1/2 group-hover:transition-all duration-300"
-                          ></span
-                        ></a>
+                          ></span>
+                        </div>
                         {% if link.links.size > 0 %}
                           <ul
                             class="nav-dropdown absolute bg-neutral-0 p-6 top-[100%] w-[200px] transition-all"
@@ -424,7 +423,7 @@
                 <li class="flex flex-row h-full">
                   <div class="flex flex-row justify-self-end h-full">
                     <div class="items-center flex flex-row justify-self-end h-full pr-[32px]">
-                    <selector-root data-id=KH196993 id="KH196993"></selector-root>
+                      <selector-root data-id="KH196993" id="KH196993"></selector-root>
                     </div>
                     <a
                       href="/cart"
