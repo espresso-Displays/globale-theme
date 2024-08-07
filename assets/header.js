@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 0 && banner) {
       banner.style.position = 'fixed';
       navbar.style.position = 'fixed';
       //document.querySelector('.hero').style.marginTop = '95px';
-    } else {
+    } else if (banner) {
       banner.style.position = 'sticky';
       navbar.style.position = 'sticky';
       //document.querySelector('.hero').style.marginTop = '0px';
