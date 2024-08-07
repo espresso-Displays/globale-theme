@@ -1287,7 +1287,7 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
     const priceSpan = document.querySelector('.product-variant-price-display');
     if (priceSpan) {
       const priceVariant = this.getAttribute('data-variant-price');
-      priceSpan.textContent = formatMoney(priceVariant);
+      priceSpan.textContent = priceVariant;
     }
 
     const productId = this.getAttribute('data-parent-id');
@@ -1295,7 +1295,7 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
       const cardDiv = document.querySelector(`[data-card-product-id='${productId}']`);
       const priceVariant = this.getAttribute('data-variant-price');
       const priceDiv = cardDiv.querySelector('.variant-price');
-      priceDiv.textContent = formatMoney(priceVariant);
+      priceDiv.textContent = priceVariant;
     }
   });
 });

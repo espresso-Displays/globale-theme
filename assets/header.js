@@ -33,26 +33,28 @@ document.addEventListener('DOMContentLoaded', function () {
     navbar = document.querySelector('.header-desktop');
   }
 
+  if (!banner) {
+    navbar.style.top = '0px';
+    navbar.classList.remove('top-[35px]');
+    const productNav = document.querySelector('.product-nav');
+
+    if (productNav) {
+      productNav.classList.remove('top-[95px]');
+      productNav.style.top = '60px';
+    }
+  }
+
   document.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
       if (banner) {
         banner.style.position = 'fixed';
       }
       navbar.style.position = 'fixed';
-      //document.querySelector('.hero').style.marginTop = '95px';
     } else {
       navbar.style.position = 'sticky';
       if (banner) {
         banner.style.position = 'sticky';
-      } else {
-        navbar.classList.remove('top-[35px]');
-        navbar.style.top = '0px';
-
-        document.querySelector('.product-nav').classList.remove('top-[95px]');
-        document.querySelector('.product-nav').style.top = '60px';
       }
-
-      //document.querySelector('.hero').style.marginTop = '0px';
     }
   });
 
