@@ -680,13 +680,15 @@
           class="cart__ctas flex gap-[20px] w-full justify-between items-center bg-lm-background-1 pt-[32px] flex-col"
           {{ block.shopify_attributes }}
         >
-          <a
-            aria-label="Review cart"
-            draggable="false"
-            class=" rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px]  bg-lm-secondary text-lm-on-secondary hover:bg-lm-secondary-hover active:bg-lm-secondary-click w-full lg:w-[275px] h-[48px] px-[16px] py-[8px] text-label-large cursor-pointer event-cart-review-cart"
-            href="/cart"
-            >Review cart</a
-          >
+          {% comment %}
+            <a
+              aria-label="Review cart"
+              draggable="false"
+              class=" rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px]  bg-lm-secondary text-lm-on-secondary hover:bg-lm-secondary-hover active:bg-lm-secondary-click w-full lg:w-[275px] h-[48px] px-[16px] py-[8px] text-label-large cursor-pointer event-cart-review-cart"
+              href="/cart"
+              >Review cart</a
+            >
+          {% endcomment %}
           <button
             type="submit"
             id="CartDrawer-Checkout"
