@@ -134,6 +134,7 @@
     },
     "section-9": {
       "type": "pdp-accessories",
+      "disabled": true,
       "settings": {
       }
     },
