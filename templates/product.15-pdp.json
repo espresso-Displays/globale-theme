@@ -139,6 +139,7 @@
     },
     "section-10": {
       "type": "pdp-compatibility",
+      "disabled": true,
       "settings": {
       }
     },
