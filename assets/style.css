@@ -2148,11 +2148,6 @@ html {
   padding-bottom: 8px;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .\!pt-0 {
   padding-top: 0px !important;
 }
@@ -2483,6 +2478,11 @@ html {
   line-height: 1rem;
 }
 
+.\!text-\[\#FFFFFF\] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .text-\[\#303030\] {
   --tw-text-opacity: 1;
   color: rgb(48 48 48 / var(--tw-text-opacity));
@@ -2553,22 +2553,8 @@ html {
   color: rgb(48 19 79 / var(--tw-text-opacity));
 }
 
-.text-\[\#FFFFFF\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.\!text-\[\#FFFFFF\] {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
-}
-
 .underline {
   text-decoration-line: underline;
-}
-
-.no-underline {
-  text-decoration-line: none;
 }
 
 .\!no-underline {
