@@ -10,18 +10,152 @@
 {
   "sections": {
     "section-1": {
-      "type": "custom-main-product",
+      "type": "pdp-main-product",
+      "blocks": {
+        "benefit_item_E4RFQQ": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and easy to set up."
+          }
+        },
+        "benefit_item_3xxFBL": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Connect and start working in seconds."
+          }
+        },
+        "benefit_item_LFNkPK": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Boost productivity with extra screen space."
+          }
+        },
+        "accordion_item_Q9eP3d": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Key features",
+            "accordion_description": "<ul><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Full HD high-precision panel<\/li><li>300 nits brightness<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
+          }
+        },
+        "accordion_item_D9pdNC": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What's in the box",
+            "accordion_description": "<ul><li>espressoDisplay portable touchscreen<\/li><li>1m espresso USB-C to USB-C cable<\/li><li>espresso Stand<\/li><li>Microfibre cleaning cloth<\/li><\/ul>"
+          }
+        },
+        "accordion_item_9gnrjy": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Compatibility",
+            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.<\/p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.<\/p><p>Check full compatibility <a href=\"https:\/\/au.espres.so\/compatibility\">here.<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_item_E4RFQQ",
+        "benefit_item_3xxFBL",
+        "benefit_item_LFNkPK",
+        "accordion_item_Q9eP3d",
+        "accordion_item_D9pdNC",
+        "accordion_item_9gnrjy"
+      ],
+      "settings": {
+        "selected_product": "",
+        "trustpilot_sku": ""
+      }
+    },
+    "product-nav": {
+      "type": "pdp-product-nav",
       "settings": {
       }
     },
-    "variant-section": {
-      "type": "product-variant-section",
+    "section-2": {
+      "type": "pdp-overview",
       "settings": {
       }
     },
-    "tech-specs": {
-      "type": "product-tech-specs",
+    "marquee_block": {
+      "type": "marquee",
       "settings": {
+      }
+    },
+    "section-7": {
+      "type": "two-column-text",
+      "settings": {
+        "text_field_1": "Sleek portability meets premium.",
+        "text_field_2": "Designed for the modern professional, this ultra-slim and lightweight monitor easily slides into your bag, providing a premium workspace wherever you go.<br><br>Transform any space into a dynamic workstation in seconds."
+      }
+    },
+    "section-8": {
+      "type": "pdp-why-espresso",
+      "blocks": {
+        "grid_item_yGbyyG": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "Designed for people like you.",
+            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-sleek.webp"
+          }
+        },
+        "grid_item_VEVEza": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "Take more screen, anywhere.",
+            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.<br><br>Slide the espresso into your backpack, satchel or briefcase.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-take-more.webp"
+          }
+        },
+        "grid_item_GUgDfw": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "More productivity, anywhere.",
+            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-lifestyle-van-life-2x-676x560.webp"
+          }
+        },
+        "grid_item_rdVnij": {
+          "type": "grid_item",
+          "settings": {
+            "grid_item_title": "A display for how you work.",
+            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espresso-stand-lifestyle-pf.webp"
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_yGbyyG",
+        "grid_item_VEVEza",
+        "grid_item_GUgDfw",
+        "grid_item_rdVnij"
+      ],
+      "settings": {
+      }
+    },
+    "section-9": {
+      "type": "pdp-accessories",
+      "settings": {
+      }
+    },
+    "section-10": {
+      "type": "pdp-compatibility",
+      "settings": {
+      }
+    },
+    "jot": {
+      "type": "about-jot",
+      "settings": {
+      }
+    },
+    "section-11": {
+      "type": "meet-espresso-flow",
+      "settings": {
+      }
+    },
+    "section-12": {
+      "type": "pdp-compare",
+      "settings": {
+        "product_title": ""
       }
     },
     "review": {
@@ -37,8 +171,16 @@
   },
   "order": [
     "section-1",
-    "variant-section",
-    "tech-specs",
+    "product-nav",
+    "section-2",
+    "marquee_block",
+    "section-7",
+    "section-8",
+    "section-9",
+    "section-10",
+    "jot",
+    "section-11",
+    "section-12",
     "review",
     "section-faq"
   ]
