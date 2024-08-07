@@ -35,12 +35,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
-      banner.style.position = 'fixed';
+      if (banner) {
+        banner.style.position = 'fixed';
+      }
       navbar.style.position = 'fixed';
       //document.querySelector('.hero').style.marginTop = '95px';
     } else {
-      banner.style.position = 'sticky';
       navbar.style.position = 'sticky';
+      if (banner) {
+        banner.style.position = 'sticky';
+      } else {
+        navbar.classList.remove('top-[35px]');
+        navbar.style.top = '0px';
+
+        document.querySelector('.product-nav').classList.remove('top-[95px]');
+        document.querySelector('.product-nav').style.top = '60px';
+      }
+
       //document.querySelector('.hero').style.marginTop = '0px';
     }
   });
