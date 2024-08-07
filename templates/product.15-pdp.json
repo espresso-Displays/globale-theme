@@ -73,9 +73,10 @@
     "section-2": {
       "type": "pdp-overview",
       "settings": {
-        "text_field_1": "",
-        "text_field_2": "",
-        "text_field_3": ""
+        "text_field_1": "Designed for you.",
+        "text_field_2": "Built with premium materials. Blending tough aerospace aluminium and hardened glass. Engineered for life on the go.",
+        "text_field_3": "",
+        "video_file": "shopify:\/\/files\/videos\/video-espresso-13-15pdp-2.mp4"
       }
     },
     "marquee_block": {
@@ -97,28 +98,32 @@
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Designed for people like you.",
-            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last."
+            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.Built to last.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-work.webp"
           }
         },
         "grid_item_VEVEza": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Take more screen, anywhere.",
-            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.<br><br>Slide the espresso into your backpack, satchel or briefcase."
+            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.Slide the espresso into your backpack, satchel or briefcase.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-sleek.webp"
           }
         },
         "grid_item_GUgDfw": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "More productivity, anywhere.",
-            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between)."
+            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espresso-13NT-take-more.webp"
           }
         },
         "grid_item_rdVnij": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "A display for how you work.",
-            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation."
+            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation.",
+            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-vertical-2x-676x560.webp"
           }
         }
       },
@@ -128,7 +133,6 @@
         "grid_item_GUgDfw",
         "grid_item_rdVnij"
       ],
-      "disabled": true,
       "settings": {
       }
     },
