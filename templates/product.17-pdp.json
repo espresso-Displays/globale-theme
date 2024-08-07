@@ -156,11 +156,13 @@
     },
     "section-9": {
       "type": "pdp-accessories",
+      "disabled": true,
       "settings": {
       }
     },
     "section-10": {
       "type": "pdp-compatibility",
+      "disabled": true,
       "settings": {
       }
     },
