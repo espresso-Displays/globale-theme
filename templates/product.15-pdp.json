@@ -87,7 +87,7 @@
       "type": "two-column-text",
       "settings": {
         "text_field_1": "Sleek portability meets premium.",
-        "text_field_2": "Designed for the modern professional, this ultra-slim and lightweight monitor easily slides into your bag, providing a premium workspace wherever you go.<br><br>Transform any space into a dynamic workstation in seconds."
+        "text_field_2": "Designed for the modern professional, this ultra-slim and lightweight monitor easily slides into your bag, providing a premium workspace wherever you go.Transform any space into a dynamic workstation in seconds."
       }
     },
     "section-8": {
@@ -128,6 +128,7 @@
         "grid_item_GUgDfw",
         "grid_item_rdVnij"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -143,11 +144,13 @@
     },
     "jot": {
       "type": "about-jot",
+      "disabled": true,
       "settings": {
       }
     },
     "section-11": {
       "type": "meet-espresso-flow",
+      "disabled": true,
       "settings": {
       }
     },
