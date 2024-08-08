@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
 
     <script>
-      const country = "{{localization.country.iso_code}}"
-      if (country === "AU") {
-        // window.location.href = window.location.href.replace("go", "au");
-      }
+      const iso = "{{localization.country.iso_code}}"
+      const available_locales = {{localization.available_countries}}
+      const response = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=dc8c45070f114c5e905b467602f56734');
+      const data = await response.json();
+      let detected_iso = data.country_code2;
+      console.log(available_locales);
+      console.log(detected_iso);
+    
+
     </script>
 
     {%- if settings.favicon != blank -%}
