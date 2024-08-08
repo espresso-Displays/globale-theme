@@ -2129,15 +2129,6 @@ input[type='checkbox'] {
   }
 }
 
-.ge-free-shipping-container {
-  background-color: rgb(var(--color-foreground));
-}
-
-.ge-free-shipping-msg {
-  font-family: "Work Sans";
-  color: white;
-}
-
 .announcement-bar,
 .announcement-bar__announcement {
   color: rgb(var(--color-foreground));
