@@ -21,7 +21,7 @@
         const data = reply.json();
         data.then((info) => {
           let detected_iso = info.country_code2;
-          console.log(available_locales);
+          console.log(iso_list);
           console.log(detected_iso);
         })
       })
