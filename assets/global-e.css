@@ -1,8 +1,9 @@
 .ge-free-shipping-container {
-  background-color: rgb(var(--color-foreground));
+  background-color: #60269E;
 }
 
 .ge-free-shipping-msg {
-  font-family: var(--font-body-family);
-  color: rgb(var(--color-background));
+  font-family: worksans;
+  font-size: 1rem;
+  color: white;
 }
