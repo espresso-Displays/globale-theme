@@ -114,7 +114,7 @@
               >{{ card_product.selected_or_first_available_variant.price | money -}}
             </span>
           </div>
-          <div class="text-body-small">{{ card_product.description | strip_html }}</div>
+          <div class="text-body-small">{{ card_product.metafields.custom.collections_page_summary | strip_html }}</div>
         </div>
         <div
           class="product flex flex-col justify-between flex-wrap-reverse gap-[12px] pt-[24px]"
