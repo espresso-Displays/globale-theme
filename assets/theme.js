@@ -680,10 +680,6 @@ UTI.effect = {
   init: function () {
     var _this = this;
 
-    $('body').on('mouseenter', '.desk-logo', function () {
-      UTI.effect.playlogo();
-    });
-
     setTimeout(function () {
       UTI.effect.playlogo();
     }, 500);
