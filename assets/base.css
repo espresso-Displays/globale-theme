@@ -2129,6 +2129,11 @@ input[type='checkbox'] {
   }
 }
 
+.ge-free-shipping-container {
+  display: none;
+  visibility: hidden;
+}
+
 .announcement-bar,
 .announcement-bar__announcement {
   color: rgb(var(--color-foreground));
