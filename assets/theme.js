@@ -17,8 +17,6 @@ UTI.common = {
     });
     document.documentElement.className += 'ontouchstart' in document.documentElement ? ' touch' : ' no-touch';
 
-    UTI.effect.init();
-
     if ($('.template-index').length && $(window).width() > 1024) {
       UTI.common.loadscrolldesk();
     }
