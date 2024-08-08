@@ -12,13 +12,6 @@
     "pdp_main_product_8q4WbJ": {
       "type": "pdp-main-product",
       "blocks": {
-        "accordion_item_ciMkHK": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "What's in the box?",
-            "accordion_description": "{{ section.settings.selected_product.metafields.custom.what_s_in_the_box | metafield_tag }}"
-          }
-        },
         "accordion_item_Knk9Q9": {
           "type": "accordion_item",
           "settings": {
@@ -28,7 +21,6 @@
         }
       },
       "block_order": [
-        "accordion_item_ciMkHK",
         "accordion_item_Knk9Q9"
       ],
       "settings": {
