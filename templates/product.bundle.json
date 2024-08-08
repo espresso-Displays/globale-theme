@@ -18,10 +18,18 @@
             "accordion_title": "Compatibility",
             "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.<br\/><br\/>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.<\/p>"
           }
+        },
+        "accordion_item_6Ba3UV": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What's in the box?",
+            "accordion_description": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}"
+          }
         }
       },
       "block_order": [
-        "accordion_item_Knk9Q9"
+        "accordion_item_Knk9Q9",
+        "accordion_item_6Ba3UV"
       ],
       "settings": {
         "selected_product": "",
