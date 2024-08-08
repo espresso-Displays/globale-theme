@@ -25,10 +25,10 @@
           console.log(detected_iso);
           if (detected_iso not in iso_list)
           {
-            window.href = window.href.replace("go.", "");
+            window.location.href = window.location.href.replace("go.", "");
           }
           if (detected_iso === "AU") {
-            window.href = window.href.replace("go", "au");
+            window.location.href = window.location.href.replace("go", "au");
           }
         })
       })
