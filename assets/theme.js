@@ -673,44 +673,6 @@ PROJ.ajaxcart = {
 
 var UTI = typeof UTI === 'object' ? UTI : {};
 
-UTI.effect = {
-  VAR: {
-    logoani: false,
-  },
-  init: function () {
-    var _this = this;
-
-    setTimeout(function () {
-      UTI.effect.playlogo();
-    }, 500);
-  },
-  playlogo: function () {
-    if (UTI.effect.VAR.logoani) {
-      return;
-    } else {
-      UTI.effect.VAR.logoani = true;
-      setTimeout(function () {
-        UTI.effect.VAR.logoani = false;
-      }, 2000);
-    }
-
-    var _this = this;
-    var logo = $('.desk-logo svg');
-    var logog = $('.desk-logo svg g');
-
-    var logostart = gsap.timeline({
-      paused: true,
-      defaults: { duration: 2 },
-    });
-
-    TweenMax.to(logog.eq(8), 1, { opacity: 1 });
-    for (var k = 0; k < 8; k++) {
-      TweenMax.fromTo(logog.eq(k), 0.5, { y: -22, delay: k / 10 }, { y: 0, opacity: 1, delay: k / 10 });
-    }
-    TweenMax.fromTo('.mob-logo svg g', 1, { y: 55 }, { y: 0, opacity: 1 });
-  },
-};
-
 /*=== not include
  @prepros-prepend ./vendor/live.js
 
