@@ -110,7 +110,6 @@
               </a>
             </h3>
 
-            {%- assign price = card_product.selected_or_first_available_variant.price | money_without_currency -%}
             <span class="variant-price text-heading-small flex flex-col lg:flex-row gap-[10px] justify-end"
               >{{ card_product.selected_or_first_available_variant.price | money -}}
             </span>
