@@ -9,9 +9,31 @@
 */
 {
   "sections": {
-    "section-1": {
-      "type": "custom-main-product",
+    "pdp_main_product_CepWK4": {
+      "type": "pdp-main-product",
+      "blocks": {
+        "accordion_item_hcgKwD": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Compatibility",
+            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}<\/p>"
+          }
+        },
+        "accordion_item_GMqqwV": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "",
+            "accordion_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_hcgKwD",
+        "accordion_item_GMqqwV"
+      ],
       "settings": {
+        "selected_product": "",
+        "trustpilot_sku": ""
       }
     },
     "variant-section": {
@@ -36,7 +58,7 @@
     }
   },
   "order": [
-    "section-1",
+    "pdp_main_product_CepWK4",
     "variant-section",
     "tech-specs",
     "review",
