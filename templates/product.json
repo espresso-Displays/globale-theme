@@ -22,8 +22,8 @@
         "accordion_item_GMqqwV": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "",
-            "accordion_description": ""
+            "accordion_title": "What's in the box?",
+            "accordion_description": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}"
           }
         }
       },
