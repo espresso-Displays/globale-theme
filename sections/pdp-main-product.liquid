@@ -78,6 +78,20 @@
                     </div>
                   </div>
                 </div>
+                <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
+                  <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
+                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                      <input
+                        type="submit"
+                        value="Add to cart"
+                        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                      >
+                    </form>
+                  </div>
+                </div>
+                
                 <div class="shipping-info text-[#303030] flex flex-col">
                   {% for block in section.blocks %}
                     {% if block.type == 'benefit_item' %}
@@ -110,19 +124,6 @@
                       %}
                     {% endif %}
                   {% endfor %}
-                </div>
-                <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
-                  <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
-                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
-                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
-                      <input
-                        type="submit"
-                        value="Add to cart"
-                        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
-                      >
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>
