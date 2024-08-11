@@ -19,7 +19,7 @@
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}  !bg-lm-neutral-3/3 max-h-[100vh]">
   <div id="CartDrawer" class="cart-drawer w-full h-full relative">
-    <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+    <div id="CartDrawer-Overlay" class="cart-drawer__overlay" onclick="this.closest('cart-drawer').close()" style="background: rgba(0,0,0,0.5)"></div>
     <div
       class="drawer__inner bg-neutral-101 absolute top-0 right-0 w-full lg:w-[465px] transition-all transform h-auto duration-500 w-full bg-lm-on-primary shadow-[-1px_0px_10px_2px_rgba(0,0,0,0.1)] translate-x-full opacity-100"
       role="dialog"
