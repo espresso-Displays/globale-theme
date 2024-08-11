@@ -9,7 +9,7 @@ window.onload = function() {
       let formDiv = hiddenItemDiv.nextElementSibling;
       console.log(formDiv.children)
       for (var j = 0; j < formDiv.children.length; j++) {
-        if (formDiv.children[j].class === "variant-id") {
+        if (formDiv.children[j].getAttribute("class") === "variant-id") {
           console.log(e.target)
         }
       }
