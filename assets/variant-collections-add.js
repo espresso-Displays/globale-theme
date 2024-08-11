@@ -1,6 +1,6 @@
 window.onload = function() {
   var quickAdd = document.getElementsByTagName('collection-variant-button ');
-  quickAdd.forEach((idx, elem) => {
+  quickAdd.foreach((idx, elem) => {
     elem.onclick = function() {
       console.log("clicked");
     }
