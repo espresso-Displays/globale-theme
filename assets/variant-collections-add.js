@@ -7,7 +7,6 @@ window.onload = function() {
       let hiddenItemDiv = quickAdd[i].nextElementSibling;
       let formDiv = hiddenItemDiv.nextElementSibling;
       console.log(formDiv.nodeName)
-      
-
+    }
   }
 }
