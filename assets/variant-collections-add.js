@@ -5,8 +5,12 @@ window.onload = function() {
     quickAdd[i].onclick = function(e) { 
       let buttonDiv = e.target.parentElement;
       let hiddenItemDiv = buttonDiv.nextElementSibling;
+      console.log(hiddenItemDiv);
       let formDiv = hiddenItemDiv.nextElementSibling;
-      console.log(formDiv.nodeName)
+      console.log(formDiv.children)
+      for (var i = 0; i < formDiv.children.length; i++) {
+        console.log(formDiv.children[i])
+      }
     }
   }
 }
