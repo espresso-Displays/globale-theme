@@ -134,11 +134,11 @@
               {% endfor %}
             </div>
           {% else %}
-            <input type="hidden" name="variant-id" value="{{ card_product.selected_or_first_available_variant.first.id }}">
+            <input type="hidden" name="variant-id" value="{{ card_product.variants.first.id }}">
           {% endif %}
 
           <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
-            <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.first.id }}">
+            <input type="hidden" name="id" value="{{ card_product.variants.first.id }}">
             <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
             <input
               type="submit"
