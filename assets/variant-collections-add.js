@@ -8,8 +8,8 @@ window.onload = function() {
       console.log(hiddenItemDiv);
       let formDiv = hiddenItemDiv.nextElementSibling;
       console.log(formDiv.children)
-      for (var i = 0; i < formDiv.children.length; i++) {
-        console.log(formDiv.children[i])
+      for (var j = 0; j < formDiv.children.length; j++) {
+        console.log(formDiv.children[j])
       }
     }
   }
