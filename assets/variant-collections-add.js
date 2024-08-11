@@ -6,6 +6,7 @@ window.onload = function() {
       let buttonDiv = quickAdd[i].parentElement;
       let hiddenItemDiv = quickAdd[i].nextElementSibling;
       let formDiv = hiddenItemDiv.nextElementSibling;
+      console.log(formDiv.nodeName)
       
 
   }
