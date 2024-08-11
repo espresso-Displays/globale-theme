@@ -41,7 +41,7 @@
     }
   {%- endstyle -%}
 {% endcomment %}
-
+<script src="{{ 'variant-collections-add.js' | asset_url }}" defer="defer"></script>
 <div class="section-{{ section.id }}-padding  w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-neutral-1 min-h-[100vh] pb-[108px] py-10">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
