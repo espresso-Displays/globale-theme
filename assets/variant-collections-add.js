@@ -7,21 +7,13 @@ window.onload = function() {
       let buttonDiv = e.target.parentElement;
       let hiddenItemDiv = buttonDiv.nextElementSibling;
       hiddenItemDiv.setAttribute("value", variantId)
-      console.log(hiddenItemDiv);
       let formDiv = hiddenItemDiv.nextElementSibling;
       console.log(formDiv.children)
       for (var j = 0; j < formDiv.children.length; j++) {
         if (formDiv.children[j].getAttribute("class") === "variant-id") {
           formDiv.children[j].setAttribute("value", variantId)
-          console.log(formDiv.children[j])
         }
       }
     }
   }
 }
-
-document.querySelector('form').onsubmit = e => {
-   e.target.submit();
-   e.target.reset();
-   return false;
-};
