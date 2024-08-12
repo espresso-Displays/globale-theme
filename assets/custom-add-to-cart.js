@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', async (e) => {
       console.log("Add to cart clicked");
       e.preventDefault();
-      form.setAttribute('disabled', true);
 
       const submitBtn = form.querySelector(`input[type='submit']`);
 
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
           ],
         };
 
-        submitBtn.setAttribute('disabled', true);
         submitBtn.value = 'Adding to cart...';
 
         // add loading state to submit button
@@ -53,16 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
         await updateCartDrawer();
         document.querySelector('cart-drawer').classList.remove('is-empty');
 
-        form.setAttribute('disabled', false);
-
         // open cart drawer
         openCartDrawer();
       } catch (error) {
         console.log(error);
       }
       submitBtn.value = 'Add to cart';
-      submitBtn.setAttribute('disabled', false);
-      form.setAttribute('disabled', false);
     });
   });
 
