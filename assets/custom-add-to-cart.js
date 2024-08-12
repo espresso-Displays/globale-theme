@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ],
         };
 
+        form.setAttribute("disabled", true);
         submitBtn.setAttribute("disabled", true);
         submitBtn.value = 'Adding to cart...';
 
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } catch (error) {
         console.log(error);
       }
+      form.removeAttribute("disabled");
       submitBtn.removeAttribute("disabled");
       submitBtn.value = 'Add to cart';
       
