@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     form.addEventListener('submit', async (e) => {
-      console.log("Add to cart clicked");
       e.preventDefault();
 
       const submitBtn = form.querySelector(`input[type='submit']`);
