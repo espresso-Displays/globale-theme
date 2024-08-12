@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ],
         };
 
+        submitBtn.setAttribute("disabled", true);
         submitBtn.value = 'Adding to cart...';
 
         // add loading state to submit button
@@ -56,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
       } catch (error) {
         console.log(error);
       }
+      submitBtn.removeAttribute("disabled");
       submitBtn.value = 'Add to cart';
+      
     });
   });
 
