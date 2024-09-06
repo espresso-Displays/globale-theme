@@ -10,7 +10,7 @@
 
     <script>
       const iso = "{{localization.country.iso_code}}"
-      const iso_list = [
+      const iso_list = [ "GB", 
       {% for country in localization.available_countries %}
         "{{country.iso_code}}",
       {% endfor %}
