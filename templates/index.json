@@ -21,22 +21,24 @@
     },
     "category": {
       "type": "main-category",
-      "settings": {}
+      "settings": {
+      }
     },
     "pr": {
-      "type": "main-pr-section"
+      "type": "main-pr-section",
+      "settings": {
+      }
     },
     "video": {
       "type": "main-video-section",
+      "settings": {
+      }
     },
     "feature-icons": {
-      "type": "main-feature-icons"
+      "type": "main-feature-icons",
+      "settings": {
+      }
     },
-    // "marquee_block": {
-    //   "type": "marquee",
-    //   "settings": {
-    //   }
-    // },
     "excellence_block": {
       "type": "excellence",
       "settings": {
@@ -97,7 +99,6 @@
     "pr",
     "video",
     "feature-icons",
-    // "marquee_block",
     "excellence_block",
     "trustpilot",
     "benefit_block",
