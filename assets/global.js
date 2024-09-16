@@ -1348,3 +1348,24 @@ function formatMoney(cents, format = '${{amount}}') {
 
   return formatString.replace(placeholderRegex, value);
 }
+
+const homePageVideoBtn = document.getElementById('main-homepage-video-btn');
+homePageVideoBtn?.addEventListener('click', (event) => {
+  const videoContainer = document.getElementById('home-page-video-container');
+  if (videoContainer.classList.contains('hidden')) {
+    videoContainer.classList.remove('hidden');
+
+    const video = videoContainer.querySelector('video');
+    video?.play();
+  } else {
+    videoContainer.classList.add('hidden');
+  }
+});
+
+const homePageVideoCloseBtn = document.getElementById('close-video-container-btn');
+homePageVideoCloseBtn?.addEventListener('click', (event) => {
+  const videoContainer = document.getElementById('home-page-video-container');
+  const video = videoContainer.querySelector('video');
+  video?.pause();
+  videoContainer?.classList.add('hidden');
+});

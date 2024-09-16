@@ -9,6 +9,44 @@ import { LayoutTW } from './espressoBeans/v1/styles/layout';
 module.exports = {
   content: ['./**/*.liquid'],
   theme: {
+    screens: {
+      // need to add custom breakpoint names for espressoBeans Design system breakpoints
+      // to not lose the standard Tailwind breakpoints, we need to explicitely add them here
+      // and add the espressoBeans breakpoints as well
+      // using theme extend to add espressoBeans breakpoints, would add the new breakpoints to the end of the list, and then the breakpoint order would not be correct
+      // so need to do it this way
+
+      // eb custom breakpoints - mobile-small
+      // 'mobile-small': // less than 375, but no need for a definition for this
+
+      // eb custom breakpoints - mobile
+      mobile: '375px',
+
+      // tailwind standard breakpoints - sm
+      sm: '640px',
+
+      // tailwind standard breakpoints - md
+      md: '768px',
+
+      // tailwind standard breakpoints - lg
+      lg: '1024px',
+
+      // eb custom breakpoints - desktop-small
+      'desktop-small': '1024px',
+
+      // tailwind standard breakpoints - xl
+      xl: '1280px',
+
+      // eb custom breakpoints - desktop
+      desktop: '1280px',
+
+      // tailwind standard breakpoints - 2xl
+      '2xl': '1536px',
+
+      // eb custom breakpoints - desktop-large
+      'desktop-large': '1800px',
+    },
+
     // espressoBeans color styles
     colors: ColorsTW,
 
@@ -21,6 +59,10 @@ module.exports = {
       padding: LayoutTW.padding,
       margin: LayoutTW.margin,
       maxWidth: LayoutTW.maxWidth,
+
+      height: {
+        'screen-safe': 'calc(100vh - env(safe-area-inset-bottom))',
+      },
 
       transitionProperty: {
         height: 'height',
@@ -51,4 +93,5 @@ module.exports = {
       },
     },
   },
+  plugins: [require('@headlessui/tailwindcss'), require('@tailwindcss/container-queries')],
 };

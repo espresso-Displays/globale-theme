@@ -1,0 +1,69 @@
+<div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[680px]">
+  <div class="flex flex-col relative h-full w-full">
+    <div class="background absolute w-full h-full">
+      <div class="image min-h-0 w-full h-full lg:h-full">
+        <img
+          src="{{ 'image-bestportable-desktop.jpeg' | asset_url }}"
+          fetchpriority="auto"
+          alt=""
+          width=""
+          height=""
+          draggable="false"
+          class="h-full w-full object-cover object-center overflow-hidden"
+        >
+      </div>
+    </div>
+    <div class="z-[2] h-full w-full px-[32px] lg:px-[70px]">
+      <div class="flex flex-col gap-[32px] justify-center items-center text-lm-on-background-5 w-full h-full">
+        <h1 class="text-heading-large w-full text-center">The best portable monitor for professionals on the go</h1>
+        <h2 class="text-body-large w-full text-center">
+          Our ultra-thin monitor transforms any location into a productive workspace.
+        </h2>
+        <button
+          draggable="false"
+          id="main-homepage-video-btn"
+          type="button"
+          class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] cursor-pointer event-hp-watch h-[48px]"
+        >
+          <div class="icon flex flex-col items-center">
+            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 0C22.3866 0 0 22.3866 0 50C0 77.6134 22.3866 100 50 100C77.6134 100 100 77.6134 100 50C100 22.3866 77.6134 0 50 0ZM75.055 51.729L38.8467 72.6364C37.5475 73.386 35.9284 72.4465 35.9284 70.9474V29.1325C35.9284 27.6334 37.5475 26.694 38.8467 27.4435L75.065 48.351C76.3542 49.1005 76.3542 50.9794 75.055 51.729Z" fill="#60269E"></path>
+            </svg>
+          </div>
+          Watch
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="home-page-video-container"
+  class="hidden fixed flex flex-wrap inset-0 bg-[rgba(0,0,0,0.8)] place-content-center z-[100] w-full h-full"
+>
+  <div
+    id="close-video-container-btn"
+    class="absolute top-[124px] right-[24px] cursor-pointer bg-neutral-101 p-[12px] rounded-full "
+  >
+    <img height="auto" width="auto" src="{{ 'close.svg' | asset_url }}">
+  </div>
+  <div class="flex place-content-center max-w-[90vw] max-h-[95vh] w-full h-full">
+    <video
+      id="video-homepage-hero"
+      autoplay=""
+      loop=""
+      playsinline=""
+      controls=""
+      preload="metadata"
+      poster=""
+      class="media w-full h-full"
+      alt="video-homepage-hero"
+      aria-label="video-homepage-hero"
+    >
+      <track src="{{ 'no_captions.vtt' | asset_url }}" kind="captions" srclang="en" label="english_captions">
+      Your browser does not support the video tag.
+      <source src="{{ 'video-homepage-hero.webm' | asset_url }}" type="video/webm">
+      <source src="{{ 'video-homepage-hero.mp4' | asset_url }}" type="video/mp4">
+    </video>
+  </div>
+</div>

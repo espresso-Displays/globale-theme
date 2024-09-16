@@ -19,11 +19,24 @@
         "show_text_below": true
       }
     },
-    "marquee_block": {
-      "type": "marquee",
-      "settings": {
-      }
+    "category": {
+      "type": "main-category",
+      "settings": {}
     },
+    "pr": {
+      "type": "main-pr-section"
+    },
+    "video": {
+      "type": "main-video-section",
+    },
+    "feature-icons": {
+      "type": "main-feature-icons"
+    },
+    // "marquee_block": {
+    //   "type": "marquee",
+    //   "settings": {
+    //   }
+    // },
     "excellence_block": {
       "type": "excellence",
       "settings": {
@@ -80,7 +93,11 @@
   },
   "order": [
     "image_banner",
-    "marquee_block",
+    "category",
+    "pr",
+    "video",
+    "feature-icons",
+    // "marquee_block",
     "excellence_block",
     "trustpilot",
     "benefit_block",
