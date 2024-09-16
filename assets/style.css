@@ -1010,6 +1010,10 @@ html {
   z-index: 100;
 }
 
+.z-\[30\] {
+  z-index: 30;
+}
+
 .order-2 {
   order: 2;
 }
