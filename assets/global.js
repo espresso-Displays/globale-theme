@@ -1369,3 +1369,62 @@ homePageVideoCloseBtn?.addEventListener('click', (event) => {
   video?.pause();
   videoContainer?.classList.add('hidden');
 });
+
+let category_carousel_index = 0;
+
+const leftCategoryCarouselBtn = document.getElementById('main-category-left-icon');
+const rightCategoryCarouselBtn = document.getElementById('main-category-right-icon');
+
+leftCategoryCarouselBtn?.addEventListener('click', (event) => {
+  const container = document.querySelector('.home-slider-category');
+  const firstChild = container.children[0];
+  const rect = firstChild.getBoundingClientRect();
+  container.scroll(rect.width * category_carousel_index, 0);
+  if (category_carousel_index - 1 < 0) {
+    category_carousel_index = 2;
+  } else {
+    category_carousel_index--;
+  }
+});
+
+rightCategoryCarouselBtn?.addEventListener('click', (event) => {
+  const container = document.querySelector('.home-slider-category');
+  const firstChild = container.children[0];
+  const rect = firstChild.getBoundingClientRect();
+  container.scroll(rect.width * category_carousel_index, 0);
+  if (category_carousel_index + 1 > 2) {
+    category_carousel_index = 0;
+  } else {
+    category_carousel_index++;
+  }
+});
+
+let pr_carousel_index = 0;
+
+const leftPRCarouselBtn = document.querySelector('.main-pr-left-icon');
+const rightPRCarouselBtn = document.querySelector('.main-pr-right-icon');
+
+leftPRCarouselBtn?.addEventListener('click', (event) => {
+  const container = document.querySelector('.home-slider-pr');
+  const firstChild = container.children[0];
+  const rect = firstChild.getBoundingClientRect();
+  container.scroll(rect.width * pr_carousel_index, 0);
+  if (pr_carousel_index - 1 < 0) {
+    pr_carousel_index = 8;
+  } else {
+    pr_carousel_index--;
+  }
+});
+
+rightPRCarouselBtn?.addEventListener('click', (event) => {
+  console.log('click');
+  const container = document.querySelector('.home-slider-pr');
+  const firstChild = container.children[0];
+  const rect = firstChild.getBoundingClientRect();
+  container.scroll(rect.width * pr_carousel_index, 0);
+  if (pr_carousel_index + 1 < 8) {
+    pr_carousel_index++;
+  } else {
+    pr_carousel_index = 0;
+  }
+});
