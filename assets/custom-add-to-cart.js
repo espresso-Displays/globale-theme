@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
           value: price,
           });
 
-         let timestamp = Math.floor(Date.now() / 1000)
+         let timestamp = Math.floor(Date.now() / 1000);
          window.dataLayer.push({
           event: "product_added_to_cart",
           timestamp: timestamp,
