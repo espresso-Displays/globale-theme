@@ -15,92 +15,64 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('cart-drawer').innerHTML = newBox;
   }
 
-   document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
-     form.addEventListener('submit', async (e) => {
-       e.preventDefault();
+  document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
       const submitBtn = form.querySelector(`input[type='submit']`);
 
-       try {
-         const formData = new FormData(form);
+      try {
+        const formData = new FormData(form);
 
         let id = formData.get('id');
-         let title = formData.get('productTitle');
-         let currency = formData.get('currency');
-         let price = formData.get('price');
+        let title = formData.get('productTitle');
+        let currency = formData.get('currency');
+        let price = formData.get('price');
 
-         let formDataJSON = {
-           items: [
+        let formDataJSON = {
+          items: [
             {
-               id: id,
+              id: id,
               quantity: '1',
-             },
-           ],
-         };
+            },
+          ],
+        };
 
-        form.setAttribute("disabled", true);
-         submitBtn.setAttribute("disabled", true);
-         submitBtn.value = 'Adding to cart...';
+        form.setAttribute('disabled', true);
+        submitBtn.setAttribute('disabled', true);
+        submitBtn.value = 'Adding to cart...';
 
-         // add loading state to submit button
+        // add loading state to submit button
 
-         // submit form with ajax
-        const result =  await fetch('/cart/add', {
-           method: 'post',
-           body: JSON.stringify(formDataJSON),
-           headers: {
-          'Content-Type': 'application/json',
-           },
-       });
-<<<<<<< HEAD
-
-         fbq('track', 'AddToCart', {
-           content_ids: [id],
-           content_name: title,
-          currency: currency,
-          value: price,
-          });
-
-         // update cart drawer
-       await updateCartDrawer();
-         document.querySelector('cart-drawer').classList.remove('is-empty');
-
-=======
-
-         fbq('track', 'AddToCart', {
-           content_ids: [id],
-           content_name: title,
-          currency: currency,
-          value: price,
-          });
-
-         let timestamp = Math.floor(Date.now() / 1000);
-         window.dataLayer.push({
-          event: "product_added_to_cart",
-          timestamp: timestamp,
-          id: timestamp,
-          price: price,
-          currency: currency,
-          product_title: title,
-          quantity: 1,
-          total_cost: price,
+        // submit form with ajax
+        const result = await fetch('/cart/add', {
+          method: 'post',
+          body: JSON.stringify(formDataJSON),
+          headers: {
+            'Content-Type': 'application/json',
+          },
         });
 
-         // update cart drawer
-       await updateCartDrawer();
-         document.querySelector('cart-drawer').classList.remove('is-empty');
+        fbq('track', 'AddToCart', {
+          content_ids: [id],
+          content_name: title,
+          currency: currency,
+          value: price,
+        });
 
->>>>>>> ebc02c22c68c3de66e8d8450d8173220a2391039
-         // open cart drawer
+        // update cart drawer
+        await updateCartDrawer();
+        document.querySelector('cart-drawer').classList.remove('is-empty');
+
+        // open cart drawer
         openCartDrawer();
-       } catch (error) {
+      } catch (error) {
         console.log(error);
-     }
-       form.removeAttribute("disabled");
-       submitBtn.removeAttribute("disabled");
-       submitBtn.value = 'Add to cart';
-      
-     });
+      }
+      form.removeAttribute('disabled');
+      submitBtn.removeAttribute('disabled');
+      submitBtn.value = 'Add to cart';
+    });
   });
 
   document.querySelectorAll('a[href="/cart"]').forEach((a) => {
