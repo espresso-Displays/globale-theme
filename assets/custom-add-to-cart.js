@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
          window.dataLayer.push({
           event: "product_added_to_cart",
           timestamp: Math.floor(Date.now() / 1000),
-          id: event.id,
+          id: Math.floor(Date.now() / 1000),
           price: price,
           currency: currency,
           product_title: title,
