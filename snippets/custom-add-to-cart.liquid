@@ -1,9 +1,25 @@
-<form id="custom-add-to-cart-form" action="/cart/add" method="post" class="">
+{% comment %} <form id="custom-add-to-cart-form" action="/cart/add" method="post" class="">
   <input type="hidden" name="id" value="{{ product.variants.first.id }}">
   <input type="hidden" name="quantity" value="1">
   <button
     type="submit"
     class="z-999 rounded-[5px] text-center  bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-[150px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer "
+  >
+    Add to Cart
+  </button>
+</form>
+ {% endcomment %}
+
+ <form id="custom-add-to-cart-form" action="/cart/add" method="post" class="product-form" data-ajax-enabled="true">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+  <input type="hidden" name="quantity" value="1">
+  
+  <button
+    type="submit"
+    name="add"
+    class="z-999 rounded-[5px] text-center bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-[150px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer"
+    data-add-to-cart
+    aria-label="Add to Cart"
   >
     Add to Cart
   </button>
