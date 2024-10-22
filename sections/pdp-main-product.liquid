@@ -85,7 +85,7 @@
                       <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
                       <input type="hidden" name="productTitle" value="{{ product.title }}" />
                       <input type="hidden" name="currency" value="{{ shop.currency }}" />
-                      <input type="hidden" name="price" value="{{  product.variants.first.price | money  }}" />
+                      <input type="hidden" name="price" value="{{  product.variants.first.price  }}" />
 
                       <input
                         type="submit"
