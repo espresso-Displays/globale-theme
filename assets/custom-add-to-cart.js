@@ -48,8 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
           },
         });
 
-        const data = await result.json();
-        console.log(data);
 
 
         // update cart drawer
