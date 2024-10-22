@@ -1288,7 +1288,9 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
     if (priceSpan) {
       const priceVariant = this.getAttribute('data-variant-price');
       priceSpan.textContent = priceVariant;
+      form.querySelector("input[name='price']").value = priceVariant.replace(/[^0-9\.]+/g, '');
     }
+   
 
     const productId = this.getAttribute('data-parent-id');
     if (productId) {
