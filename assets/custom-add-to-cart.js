@@ -60,6 +60,17 @@ document.addEventListener('DOMContentLoaded', function () {
           value: price,
           });
 
+         window.dataLayer.push({
+          event: "product_added_to_cart",
+          timestamp: Math.floor(Date.now() / 1000),
+          id: event.id,
+          price: price,
+          currency: currency,
+          product_title: title,
+          quantity: 1,
+          total_cost: price,
+        });
+
          // update cart drawer
        await updateCartDrawer();
          document.querySelector('cart-drawer').classList.remove('is-empty');
