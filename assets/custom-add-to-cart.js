@@ -15,63 +15,63 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('cart-drawer').innerHTML = newBox;
   }
 
-  document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  // document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+  //   form.addEventListener('submit', async (e) => {
+  //     e.preventDefault();
 
-      const submitBtn = form.querySelector(`input[type='submit']`);
+  //     const submitBtn = form.querySelector(`input[type='submit']`);
 
-      try {
-        const formData = new FormData(form);
+  //     try {
+  //       const formData = new FormData(form);
 
-        let id = formData.get('id')
+  //       let id = formData.get('id')
 
-        let formDataJSON = {
-          items: [
-            {
-              id: id,
-              quantity: '1',
-            },
-          ],
-        };
+  //       let formDataJSON = {
+  //         items: [
+  //           {
+  //             id: id,
+  //             quantity: '1',
+  //           },
+  //         ],
+  //       };
 
-        form.setAttribute("disabled", true);
-        submitBtn.setAttribute("disabled", true);
-        submitBtn.value = 'Adding to cart...';
+  //       form.setAttribute("disabled", true);
+  //       submitBtn.setAttribute("disabled", true);
+  //       submitBtn.value = 'Adding to cart...';
 
-        // add loading state to submit button
+  //       // add loading state to submit button
 
-        // submit form with ajax
-       const result =  await fetch('/cart/add', {
-          method: 'post',
-          body: JSON.stringify(formDataJSON),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+  //       // submit form with ajax
+  //      const result =  await fetch('/cart/add', {
+  //         method: 'post',
+  //         body: JSON.stringify(formDataJSON),
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //       });
 
-        fbq('track', 'AddToCart', {
-          content_ids: [id],
-          content_name: merchandise.product.title,
-          currency: merchandise.price.currencyCode,
-          value: merchandise.price.amount,
-          });
+  //       fbq('track', 'AddToCart', {
+  //         content_ids: [id],
+  //         content_name: merchandise.product.title,
+  //         currency: merchandise.price.currencyCode,
+  //         value: merchandise.price.amount,
+  //         });
 
-        // update cart drawer
-        await updateCartDrawer();
-        document.querySelector('cart-drawer').classList.remove('is-empty');
+  //       // update cart drawer
+  //       await updateCartDrawer();
+  //       document.querySelector('cart-drawer').classList.remove('is-empty');
 
-        // open cart drawer
-        openCartDrawer();
-      } catch (error) {
-        console.log(error);
-      }
-      form.removeAttribute("disabled");
-      submitBtn.removeAttribute("disabled");
-      submitBtn.value = 'Add to cart';
+  //       // open cart drawer
+  //       openCartDrawer();
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //     form.removeAttribute("disabled");
+  //     submitBtn.removeAttribute("disabled");
+  //     submitBtn.value = 'Add to cart';
       
-    });
-  });
+  //   });
+  // });
 
   document.querySelectorAll('a[href="/cart"]').forEach((a) => {
     a.addEventListener('click', async (e) => {
