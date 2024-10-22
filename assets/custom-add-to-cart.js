@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
         const formData = new FormData(form);
 
+        let id = formData.get('id')
+
         let formDataJSON = {
           items: [
             {
-              id: formData.get('id'),
+              id: id,
               quantity: '1',
             },
           ],
@@ -48,7 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
           },
         });
 
-
+        fbq('track', 'AddToCart', {
+          content_ids: [id],
+          content_name: merchandise.product.title,
+          currency: merchandise.price.currencyCode,
+          value: merchandise.price.amount,
+          });
 
         // update cart drawer
         await updateCartDrawer();
