@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo_eaf27a41-d577-4748-be6b-fd67e7fbd7c4.svg",
+    "logo": "shopify://shop_images/logo_eaf27a41-d577-4748-be6b-fd67e7fbd7c4.svg",
     "logo_width": 200,
-    "favicon": "shopify:\/\/shop_images\/favicon.svg",
+    "favicon": "shopify://shop_images/favicon.svg",
     "type_header_font": "work_sans_n4",
     "heading_scale": 100,
     "type_body_font": "work_sans_n4",

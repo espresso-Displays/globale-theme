@@ -8,22 +8,29 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
 
-     <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-T46VQ493');</script>
-        <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-T46VQ493');
+    </script>
+    <!-- End Google Tag Manager -->
 
     <script>
       const iso = "{{localization.country.iso_code}}"
-      const iso_list = [ "GB", 
+      const iso_list = [ "GB",
       {% for country in localization.available_countries %}
         "{{country.iso_code}}",
       {% endfor %}
       ]
-      
+
       const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=dc8c45070f114c5e905b467602f56734');
       response.then((reply) => {
         const data = reply.json();
@@ -41,27 +48,35 @@
     </script>
 
     <script>
-     window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-     gtag('config', 'GTM-T46VQ493');
-
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'GTM-T46VQ493');
     </script>
 
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-       fbq('init', 1443279482920955);
-      
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 1443279482920955);
     </script>
-    
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -87,9 +102,8 @@
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
-    <script src="{{ 'vender.js' | asset_url }}" defer="defer" ></script>
-    <script src="{{ 'theme.js' | asset_url }}" defer="defer" ></script>
-    
+    <script src="{{ 'vender.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
     {% comment %}
       {%- if settings.animations_reveal_on_scroll -%}
@@ -307,9 +321,8 @@
       } */
     {% endstyle %}
 
-      {% include "globale-js" %}
+    {% include 'globale-js' %}
     {{ 'global-e.css' | asset_url | stylesheet_tag }}
-    
 
     {% comment %} {{ 'base.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
@@ -351,7 +364,6 @@
       src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
       type="text/javascript"
     ></script>
-    
   </head>
 
   <body class="">
@@ -420,8 +432,6 @@
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
-
-
 
     <script src="{{ 'custom-add-to-cart.js' | asset_url }}" defer="defer"></script>
 

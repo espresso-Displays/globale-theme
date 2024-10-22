@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
           'Content-Type': 'application/json',
            },
        });
+<<<<<<< HEAD
 
          fbq('track', 'AddToCart', {
            content_ids: [id],
@@ -64,6 +65,32 @@ document.addEventListener('DOMContentLoaded', function () {
        await updateCartDrawer();
          document.querySelector('cart-drawer').classList.remove('is-empty');
 
+=======
+
+         fbq('track', 'AddToCart', {
+           content_ids: [id],
+           content_name: title,
+          currency: currency,
+          value: price,
+          });
+
+         let timestamp = Math.floor(Date.now() / 1000);
+         window.dataLayer.push({
+          event: "product_added_to_cart",
+          timestamp: timestamp,
+          id: timestamp,
+          price: price,
+          currency: currency,
+          product_title: title,
+          quantity: 1,
+          total_cost: price,
+        });
+
+         // update cart drawer
+       await updateCartDrawer();
+         document.querySelector('cart-drawer').classList.remove('is-empty');
+
+>>>>>>> ebc02c22c68c3de66e8d8450d8173220a2391039
          // open cart drawer
         openCartDrawer();
        } catch (error) {
