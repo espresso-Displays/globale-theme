@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "section-1": {
+        "type": "section-15-main-product",
+        "blocks": {
+          "benefit_item_3CCiMa": {
+            "type": "benefit_item",
+            "settings": {
+              "benefit_item_title": "Portable and easy to set up."
+            }
+          },
+          "benefit_item_z3t3jw": {
+            "type": "benefit_item",
+            "settings": {
+              "benefit_item_title": "Connect and start working in seconds."
+            }
+          },
+          "benefit_item_8iBBpx": {
+            "type": "benefit_item",
+            "settings": {
+              "benefit_item_title": "Boost productivity with extra screen space."
+            }
+          },
+          "accordion_item_B7xWPc": {
+            "type": "accordion_item",
+            "settings": {
+              "accordion_title": "Key features",
+              "accordion_description": "<ul><li>Rich and immersive 4K panel</li><li>Touchscreen display</li><li>Durable aerospace aluminium chassis</li><li>Vibrant 450 nits peak brightness</li><li>1.07 billion colours with 100% DCI-P3</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>Built-in speakers</li></ul>"
+            }
+          },
+          "accordion_item_d3VwDV": {
+            "type": "accordion_item",
+            "settings": {
+              "accordion_title": "What's in the box",
+              "accordion_description": "<ul><li>espresso 17 Pro portable touchscreen</li><li>1m espresso USB-C to USB-C cable</li><li>espresso Stand Pro</li><li>Microfibre cleaning cloth</li></ul>"
+            }
+          },
+          "accordion_item_DjprEA": {
+            "type": "accordion_item",
+            "settings": {
+              "accordion_title": "Compatibility",
+              "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p><p>Check full compatibility <a href=\"https://au.espres.so/compatibility\">here.</a></p>"
+            }
+          }
+        },
+        "block_order": [
+          "benefit_item_3CCiMa",
+          "benefit_item_z3t3jw",
+          "benefit_item_8iBBpx",
+          "accordion_item_B7xWPc",
+          "accordion_item_d3VwDV",
+          "accordion_item_DjprEA"
+        ],
+        "settings": {
+          "selected_product": "espresso-pro",
+          "trustpilot_sku": ""
+        }
+      },
+      "video": {
+        "type": "full-screen-video",
+        "settings": {
+          "video_file": "shopify://files/videos/video-espresso-13-15pdp-2_compressed.mp4"
+        }
+      },
+      "features-1": {
+        "type": "standplus-feat-1"
+      },
+      "features-2": {
+        "type": "standplus-feat-2"
+      },
+     "stand-specs": {
+      "type": "section-15-stand-plus-specs"
+     },
+     "which-stand": {
+        "type": "standplus-which-stand"
+     },
+     "section-faq": {
+        "type": "faqs-updated",
+        "settings": {
+        }
+      },
+      
+    
+      
+    },
+    "order": [
+        "section-1",
+        "video",
+        "features-1",
+        "features-2",
+        "stand-specs",
+        "which-stand",
+        "section-faq",
+     
+    ]
+  }
+  

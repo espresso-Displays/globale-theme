@@ -360,5 +360,8 @@
         align-items: center;
         gap: 0.5rem;
     }
-    
+
+    .accordion-toggle-white:after, .accordion-toggle-white:before, .accordion-toggle-white.collapsed:before, .accordion-toggle-white.collapsed:after  {
+        background-color: white;
+      }
   }

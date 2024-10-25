@@ -1,0 +1,47 @@
+<div class="section relative flex lg:flex-col items-center flex-col-reverse h-full w-full bg-neutral-0">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[32px] desktop-small:pt-[70px] pb-[32px] desktop-small:pb-[70px] bg-neutral-0 text-neutral-101">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div class="col-span-full content-container flex flex-col gap-[32px] lg:gap-[56px]">
+          <div
+            id=""
+            class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-[32px] lg:gap-[24px]"
+          >
+            <h2 class="col-span-full lg:col-span-6 text-display-large">{{ section.settings.title }}</h2>
+            <div class="col-span-full lg:col-span-6 text-body-medium flex flex-col justify-start">
+              {{ section.settings.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Two column title text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "description"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Two column title text",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

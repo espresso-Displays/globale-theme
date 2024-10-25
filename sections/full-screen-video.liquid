@@ -1,0 +1,25 @@
+<div class="w-full h-auto max-h-full max-w-full flex flex-col items-center bg-neutral-0">
+  {% if section.settings.video_file.media_type %}
+    {{ section.settings.video_file | video_tag: autoplay: true, loop: true, controls: true, class: 'w-full' }}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Full Screen Video",
+  "settings": [
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Video File"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Full Screen Video",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

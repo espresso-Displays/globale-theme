@@ -1,194 +1,113 @@
-<div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[500px] flex flex-col items-center">
-  <div class="flex flex-col items-center relative h-full w-full">
-    <div class="background absolute w-full h-full">
-      <div class="image min-h-0 desktop-small:hidden h-full w-full">
-        <img
-          src="{{ 'image-espresso-hero-home-640-ext.jpeg' | asset_url }}"
-          fetchpriority="auto"
-          alt=""
-          width=""
-          height=""
-          draggable="false"
-          class="h-full w-full desktop-small:h-full desktop-small:w-full object-cover object-[70%_50%] desktop-small:object-[50%_50%] overflow-hidden"
-        >
+{% comment %}
+  <div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[500px] flex flex-col items-center">
+    <div class="flex flex-col items-center relative h-full w-full">
+      <div class="background absolute w-full h-full">
+        <div class="image min-h-0 desktop-small:hidden h-full w-full">
+          <img
+            src="{{ 'image-espresso-hero-home-640-ext.jpeg' | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-full desktop-small:h-full desktop-small:w-full object-cover object-[70%_50%] desktop-small:object-[50%_50%] overflow-hidden"
+          >
+        </div>
+        <div class="image min-h-0 w-full hidden desktop-small:block desktop:hidden h-full">
+          <img
+            src="{{ 'image-espresso-hero-home-640.png' | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-auto desktop-small:h-full desktop-small:w-full object-cover object-[70%_50%] desktop-small:object-[50%_50%] overflow-hidden"
+          >
+        </div>
+        <div class="image min-h-0 w-full hidden desktop:block desktop-large:hidden h-full">
+          <img
+            src="{{ 'image-espresso-hero-home-1799.png' | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-full object-cover object-center overflow-hidden"
+          >
+        </div>
+        <div class="image min-h-0 w-full hidden desktop-large:block h-full">
+          <img
+            src="{{ 'image-espresso-hero-home-1800.png' | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-full object-cover object-center overflow-hidden"
+          >
+        </div>
       </div>
-      <div class="image min-h-0 w-full hidden desktop-small:block desktop:hidden h-full">
-        <img
-          src="{{ 'image-espresso-hero-home-640.png' | asset_url }}"
-          fetchpriority="auto"
-          alt=""
-          width=""
-          height=""
-          draggable="false"
-          class="h-full w-auto desktop-small:h-full desktop-small:w-full object-cover object-[70%_50%] desktop-small:object-[50%_50%] overflow-hidden"
-        >
-      </div>
-      <div class="image min-h-0 w-full hidden desktop:block desktop-large:hidden h-full">
-        <img
-          src="{{ 'image-espresso-hero-home-1799.png' | asset_url }}"
-          fetchpriority="auto"
-          alt=""
-          width=""
-          height=""
-          draggable="false"
-          class="h-full w-full object-cover object-center overflow-hidden"
-        >
-      </div>
-      <div class="image min-h-0 w-full hidden desktop-large:block h-full">
-        <img
-          src="{{ 'image-espresso-hero-home-1800.png' | asset_url }}"
-          fetchpriority="auto"
-          alt=""
-          width=""
-          height=""
-          draggable="false"
-          class="h-full w-full object-cover object-center overflow-hidden"
-        >
-      </div>
-    </div>
-    <div class="z-[2] h-full w-full max-w-content-max-width px-[32px] lg:px-[70px]">
-      <div
-        id=""
-        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] desktop:place-content-center desktop:place-items-start"
-      >
+      <div class="z-[2] h-full w-full max-w-content-max-width px-[32px] lg:px-[70px]">
         <div
           id=""
-          class="layout-flex relative h-full col-start-1 desktop-small:col-start-5 desktop:col-start-1 col-span-full desktop-small:col-span-4 desktop:col-span-full content-container flex flex-col justify-start items-center desktop:items-start gap-[16px] py-[20px] desktop-small:py-[48px]"
+          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] desktop:place-content-center desktop:place-items-start"
         >
-          <h1 class="heading text-heading-medium currentColor whitespace-pre-wrap flex flex-row desktop-small:flex-col gap-[10px] desktop-small:gap-[0px]">
-            <span>espresso Pro</span>
-          </h1>
-          <div class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start">
-            <div class="text-center">4K Premium Portable Touchscreen Display.</div>
-          </div>
-          <div class="w-full flex flex-row flex-wrap gap-[20px] desktop-small:gap-[20px] justify-center desktop:justify-start">
-            <a
-              aria-label="Shop Pro"
-              draggable="false"
-              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-hp-v3-learn"
-              href="/products/pro-bundle"
-              >Shop Pro</a
-            >
+          <div
+            id=""
+            class="layout-flex relative h-full col-start-1 desktop-small:col-start-5 desktop:col-start-1 col-span-full desktop-small:col-span-4 desktop:col-span-full content-container flex flex-col justify-start items-center desktop:items-start gap-[16px] py-[20px] desktop-small:py-[48px]"
+          >
+            <h1 class="heading text-heading-medium currentColor whitespace-pre-wrap flex flex-row desktop-small:flex-col gap-[10px] desktop-small:gap-[0px]">
+              <span>espresso Pro</span>
+            </h1>
+            <div class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start">
+              <div class="text-center">4K Premium Portable Touchscreen Display.</div>
+            </div>
+            <div class="w-full flex flex-row flex-wrap gap-[20px] desktop-small:gap-[20px] justify-center desktop:justify-start">
+              <a
+                aria-label="Shop Pro"
+                draggable="false"
+                class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-hp-v3-learn"
+                href="/products/pro-bundle"
+                >Shop Pro</a
+              >
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+{% endcomment %}
+<div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-[rgb(17,17,17)]">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-start p-[20px] md:p-[2.5rem] desktop-large:items-start max-w-content-max-width w-full lg:p-[4.5rem] ">
+    <div class=" flex flex-col gap-4 items-center md:items-start  md:col-span-2 desktop-large:col-span-1  ">
+      <h1 class="heading text-heading-medium currentColor flex flex-row desktop-small:flex-col gap-[10px] desktop-small:gap-[0px] text-center md:text-left text-[#FFFFFF] desktop-large:mt-[2rem] desktop-large:text-heading-large">
+        espresso Black<br>
+        Friday offers
+      </h1>
+      <p class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start  text-[#FFFFFF] desktop-lage:text-subheading-large ">
+        Save 15% on espresso 17 Pro
+      </p>
+      <a
+        aria-label="Shop Pro"
+        draggable="false"
+        class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click  h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-hp-v3-learn  "
+        href="/products/pro-bundle"
+        >Shop 17 Pro</a
+      >
+    </div>
+    <div class="image min-h-0 w-full h-full md:col-span-3 md:flex md:justify-end md:row-start-2 desktop-large:row-start-1 desktop-large:col-span-2 desktop-large:col-start-2   ">
+      <img
+        src="{{ 'espresso-17-pro-monitor.png' | asset_url }}"
+        fetchpriority="auto"
+        alt=""
+        width=""
+        height=""
+        draggable="false"
+        class="h-full w-full object-cover object-center overflow-hidden  md:w-[80%] lg:w-[70%] desktop-large:w-[90%] "
+      >
     </div>
   </div>
 </div>
-{% comment %}
-  <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-neutral-90">
-    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-neutral-90 text-lm-on-background-1 pt-[20px] lg:pt-[48px] overflow-hidden z-[2] w-full h-[400px] lg:h-[440px]">
-      <div class="content-block w-full h-full">
-        <div
-          id=""
-          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] gap-y-[20px] grid-rows-[auto_minmax(0,_1fr)] lg:grid-rows-none lg:auto-rows-fr"
-        >
-          <div
-            id=""
-            class="layout-flex relative h-full col-span-full lg:col-span-4 xl:col-span-3 content-container flex flex-col justify-start items-center lg:items-start text-start gap-[16px] lg:order-last"
-          >
-            <h1 class="heading text-heading-large currentColor whitespace-pre-wrap flex flex-row lg:flex-col gap-[10px] lg:gap-[0px]">
-              <span>espresso</span><span>17</span><span>Pro</span>
-            </h1>
-            <div class="subheading text-subheading-small currentColor flex flex-row flex-wrap gap-[10px] lg:flex-col justify-center lg:justify-start">
-              <div>Performance anywhere.</div>
-              <div>Now in 4K.</div>
-            </div>
-            <div class="w-full flex flex-row flex-wrap gap-[20px] lg:gap-[20px] justify-center lg:justify-start">
-              <a
-                aria-label="Buy now"
-                draggable="false"
-                class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] text-label-medium w-fit h-[48px] cursor-pointer event-hp-v3-buy"
-                href="/products/espresso-pro"
-                >Buy now</a
-              >
-            </div>
-          </div>
-          <div id="" class="layout-flex relative h-full xl:col-span-3 media justify-center hidden xl:flex flex-col">
-            <div class="image h-full min-h-0 w-full flex flex-col justify-center">
-              <img
-                src="{{ 'image-home-hero-v3-02.png' | asset_url }}"
-                alt="espresso displays"
-                width="auto"
-                height="auto"
-                class="w-full h-full object-contain object-bottom"
-              >
-            </div>
-          </div>
-          <div
-            id=""
-            class="layout-flex relative h-full col-span-full lg:col-span-8 xl:col-span-6 media flex flex-col justify-center"
-          >
-            <div class="image h-full min-h-0 w-full">
-              <img
-                src="{{ 'image-home-hero-v3-01.png' | asset_url }}"
-                alt="espresso displays"
-                width="auto"
-                height="auto"
-                class="w-full h-full object-contain object-bottom"
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endcomment %}
-{% comment %}
-  <div class="relative w-full h-full">
-    <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-neutral-100">
-      <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-neutral-100 text-lm-on-background-1 pt-[20px] lg:pt-[48px] overflow-hidden z-[2] w-full h-[400px] lg:h-[440px]">
-        <div class="content-block w-full h-full">
-          <div
-            id=""
-            class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] gap-y-[20px] lg:gap-y-[0px] grid-rows-[auto_minmax(0,_1fr)] lg:grid-rows-none lg:auto-rows-fr"
-          >
-            <div
-              id=""
-              class="layout-flex relative h-full col-span-full lg:col-span-4 xl:col-span-3 content-container flex flex-col justify-start items-center lg:items-start text-center lg:text-start gap-[16px]"
-            >
-              <h1 class="heading text-heading-large currentColor whitespace-pre-wrap">espresso Display 13/15</h1>
-              <div class="subheading text-subheading-small currentColor flex flex-row gap-[10px] lg:flex-col justify-start">
-                <div>Productive twins. Big and small.</div>
-              </div>
-              <div class="w-full flex flex-row flex-wrap gap-[20px] lg:gap-[20px] justify-center lg:justify-start">
-                <a
-                  aria-label="Buy now"
-                  draggable="false"
-                  class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] text-label-medium w-fit h-[48px] cursor-pointer event-hp-v2-buy"
-                  href="/products/espressodisplays"
-                  >Buy now</a
-                >
-              </div>
-            </div>
-            <div
-              id=""
-              class="layout-flex relative h-full col-span-full lg:col-span-8 xl:col-span-9 media flex flex-col justify-center items-center"
-            >
-              <div class="image h-full min-h-0 w-full block lg:hidden">
-                <img
-                  src="{{ 'image-home-hero-v2-01.png' | asset_url }}"
-                  width="auto"
-                  height="auto"
-                  class="w-full h-full object-contain object-bottom"
-                >
-              </div>
-              <div class="image h-full min-h-0 w-full hidden lg:flex flex-col items-center">
-                <img
-                  src="{{ 'image-home-hero-v2-01.png' | asset_url }}"
-                  alt="espresso displays"
-                  width="auto"
-                  height="auto"
-                  class="w-full h-full object-contain object-bottom"
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endcomment %}
 
 {% schema %}
 {
