@@ -68,11 +68,15 @@
     "video": {
       "type": "full-screen-video",
       "settings": {
+        "video_file": "shopify://files/videos/video-espresso-standplus-desktop (1).mp4"
       }
     },
     "features-1": {
       "type": "standplus-feat-1",
       "settings": {
+        "section_standplus_image_1": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
+        "section_standplus_image_2": "shopify://shop_images/image-animation-standplus-plus-mode.gif",
+        "section_standplus_image_3": "shopify://shop_images/image-animation-stand-magnets-pdp.gif"
       }
     },
     "features-2": {
