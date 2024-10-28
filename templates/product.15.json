@@ -79,39 +79,64 @@
     },
     "video": {
       "type": "full-screen-video",
+      "settings": {
+        "video_file": "shopify://files/videos/video-espresso15NT-hero-pdp (1).mp4"
+      }
     },
     "features-1": {
-      "type": "section-15-features-1"
+      "type": "section-15-features-1",
+      "settings": {
+        "section_15_features_image_1": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
+        "section_15_features_image_2": "shopify://shop_images/image-animation-standplus-plus-mode.gif",
+        "section_15_features_image_3": "shopify://shop_images/image-animation-stand-magnets-pdp.gif"
+      }
     },
     "b-carousel": {
-      "type": "brand-carousel"
+      "type": "brand-carousel",
+      "settings": {
+      }
     },
     "features-2": {
-      "type": "section-15-features-2"
+      "type": "section-15-features-2",
+      "settings": {
+      }
     },
     "difference": {
-      "type": "espresso-difference"
+      "type": "espresso-difference",
+      "settings": {
+      }
     },
     "color_calibrate": {
-      "type": "color-calibrate"
+      "type": "color-calibrate",
+      "settings": {
+      }
     },
     "review_carousel": {
-      "type": "review-carousel"
+      "type": "review-carousel",
+      "settings": {
+      }
     },
-   "features-3": {
-    "type": "section-15-features-3"
-   },
-   "meet-espresso": {
-    "type": "meet-espresso-flow-updated"
-   },
-   "display-specs": {
-    "type": "section-15-display-specs"
-   },
-   "stand-specs": {
-    "type": "section-15-stand-plus-specs"
-   },
-   
-   "section-faq": {
+    "features-3": {
+      "type": "section-15-features-3",
+      "settings": {
+      }
+    },
+    "meet-espresso": {
+      "type": "meet-espresso-flow-updated",
+      "settings": {
+      }
+    },
+    "display-specs": {
+      "type": "section-15-display-specs",
+      "settings": {
+      }
+    },
+    "stand-specs": {
+      "type": "section-15-stand-plus-specs",
+      "settings": {
+      }
+    },
+    "section-faq": {
       "type": "faqs-updated",
       "settings": {
       }
@@ -119,11 +144,8 @@
     "section-compare": {
       "type": "pdp-compare-updated",
       "settings": {
-        "product_title": ""
       }
-    },
-  
-    
+    }
   },
   "order": [
     "section-1",
@@ -141,6 +163,6 @@
     "display-specs",
     "stand-specs",
     "section-faq",
-    "section-compare",
+    "section-compare"
   ]
 }
