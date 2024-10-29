@@ -34,7 +34,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Key features",
-            "accordion_description": "<ul><li>Rich and immersive 4K panel</li><li>Touchscreen display</li><li>Durable aerospace aluminium chassis</li><li>Vibrant 450 nits peak brightness</li><li>1.07 billion colours with 100% DCI-P3</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>Built-in speakers</li></ul>"
+            "accordion_description": "<ul><li>Magnetic attachment for Display</li><li>Elevates display for ergonomic viewing</li><li>Variable angle adjustment</li><li>Supports portrait or landscape orientation</li><li>Standard and extended modes</li></ul>"
           }
         },
         "accordion_item_d3VwDV": {
@@ -62,7 +62,7 @@
         "accordion_item_DjprEA"
       ],
       "settings": {
-        "selected_product": "espresso-pro",
+        "selected_product": "espresso-stand-plus",
         "trustpilot_sku": ""
       }
     },
