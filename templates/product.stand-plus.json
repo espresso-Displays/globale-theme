@@ -39,14 +39,14 @@
         },
         "accordion_item_d3VwDV": {
           "type": "accordion_item",
-          "disabled": true,
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "<ul><li>espresso 17 Pro portable touchscreen</li><li>1m espresso USB-C to USB-C cable</li><li>espresso Stand Pro</li><li>Microfibre cleaning cloth</li></ul>"
+            "accordion_description": "<ul><li>espresso Stand+</li></ul>"
           }
         },
         "accordion_item_DjprEA": {
           "type": "accordion_item",
+          "disabled": true,
           "settings": {
             "accordion_title": "Compatibility",
             "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p><p>Check full compatibility <a href=\"https://au.espres.so/compatibility\">here.</a></p>"
