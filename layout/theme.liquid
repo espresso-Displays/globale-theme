@@ -25,7 +25,34 @@
 
     <script>
       const iso = "{{localization.country.iso_code}}"
-      const iso_list = [ "GB",
+      const eu_list =   [`AT`,
+        `BE`,
+        `BG`,
+        `CZ`,
+        `HR`,
+        `DK`,
+        `EE`,
+        `FI`,
+        `FR`,
+        `DE`,
+        `GR`,
+        `HU`,
+        `IE`,
+        `IT`,
+        `LV`,
+        `LT`,
+        `LU`,
+        `MT`,
+        `NL`,
+        `PL`,
+        `PT`,
+        `RO`,
+        `SK`,
+        `SI`,
+        `ES`,
+        `SE`,
+      ];
+      const iso_list = [ "GB",                        
       {% for country in localization.available_countries %}
         "{{country.iso_code}}",
       {% endfor %}
@@ -38,12 +65,14 @@
         const data = reply.json();
         data.then((info) => {
           let detected_iso = info.country_code2;
-          if (redirect_list.includes(detected_iso)) {
-            window.location.href = window.location.href.replace("go", redirect_list[detected_iso])
-          }
-          
           if (detected_iso === "AU") {
             window.location.href = window.location.href.replace("go", "au");
+          }
+          else if (eu_list.includes(detected_iso)) {
+            window.location.href = window.location.href.replace("go", "eu");
+          }
+          else if (redirect_list.includes(detected_iso)) {
+            window.location.href = window.location.href.replace("go", redirect_list[detected_iso])
           }
         })
       })
