@@ -30,7 +30,6 @@
         `BG`,
         `CZ`,
         `HR`,
-        `DK`,
         `EE`,
         `FI`,
         `FR`,
@@ -50,7 +49,6 @@
         `SK`,
         `SI`,
         `ES`,
-        `SE`,
       ];
       const iso_list = [ "GB",                        
       {% for country in localization.available_countries %}
@@ -58,7 +56,7 @@
       {% endfor %}
       ]
 
-      const redirect_list = {SG: 'sg', AU: 'au', NZ: 'nz', GB: 'uk', US: 'us'}
+      const redirect_list = {SG: 'sg', AU: 'au', NZ: 'nz', GB: 'uk', US: 'us', SE: 'se', DK: 'dk'}
 
       const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=0047b8e9372c470d9551c0dbc660f57e');
       response.then((reply) => {
