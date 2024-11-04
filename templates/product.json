@@ -18,10 +18,18 @@
             "accordion_title": "Compatibility",
             "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}</p>"
           }
+        },
+        "accordion_item_fQRRYW": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What's in the box",
+            "accordion_description": "{{ section.settings.selected_product.metafields.custom.what_s_in_the_box | metafield_tag }}"
+          }
         }
       },
       "block_order": [
-        "accordion_item_hcgKwD"
+        "accordion_item_hcgKwD",
+        "accordion_item_fQRRYW"
       ],
       "settings": {
         "selected_product": "",
