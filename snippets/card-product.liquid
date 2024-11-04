@@ -110,8 +110,8 @@
               </a>
             </h3>
 
-            <span class="variant-price text-heading-small flex flex-col lg:flex-row gap-[10px] justify-end"
-              >{{ card_product.selected_or_first_available_variant.price | money -}}
+            <span class="variant-price text-heading-small flex flex-col lg:flex-row gap-[10px] justify-end">
+              {{- card_product.selected_or_first_available_variant.price | money -}}
             </span>
           </div>
           <div class="text-body-small">{{ card_product.metafields.custom.collections_page_summary | strip_html }}</div>
@@ -136,10 +136,17 @@
           {% else %}
             <input type="hidden" class="variant-id" name="variant-id" value="{{ card_product.variants.first.id }}">
           {% endif %}
-            <input type="hidden" name="info" value="{{ card_product.selected_or_first_available_variant.id }}" />
+          <input type="hidden" name="info" value="{{ card_product.selected_or_first_available_variant.id }}">
           <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
             <input type="hidden" class="variant-id" name="id" value="{{ card_product.variants.first.id }}">
             <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+            {% if card_product.title == 'espresso Stand+' %}
+              <a
+                href="{{ card_product.url }}"
+                class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                >Learn more</a
+              >
+            {% endif %}
             <input
               type="submit"
               value="Add to cart"
