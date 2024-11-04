@@ -3147,6 +3147,10 @@ html {
     height: 450px;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:w-\[700px\] {
     width: 700px;
   }
@@ -3165,6 +3169,10 @@ html {
 
   .md\:justify-end {
     justify-content: flex-end;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:p-\[2\.5rem\] {
@@ -3320,6 +3328,10 @@ html {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-auto {
+    height: auto;
   }
 
   .lg\:max-h-\[calc\(100vh_-_250px\)\] {
