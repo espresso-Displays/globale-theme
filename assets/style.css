@@ -1339,6 +1339,10 @@ html {
   height: 100vh;
 }
 
+.h-\[95vh\] {
+  height: 95vh;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
