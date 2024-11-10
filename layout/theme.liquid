@@ -24,7 +24,7 @@
     <!-- End Google Tag Manager -->
 
     <script>
-
+        // This code is bad for local dev because it seems refreshing the page
           const iso = "{{localization.country.iso_code}}"
           const iso_list = [
           {% for country in localization.available_countries %}
@@ -33,13 +33,13 @@
           ]
       const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=dc8c45070f114c5e905b467602f56734');
         response.then((reply) => {
-          console.log(response);
+          console.log(reply);
           const data = reply.json();
           data.then((info) => {
             let detected_iso = info.country_code2;
             if (!iso_list.includes(detected_iso))
             {
-              window.location.href = window.location.href.replace("go.", "");
+              // window.location.href = window.location.href.replace("go.", "");
             }
             if (detected_iso === "AU") {
               window.location.href = window.location.href.replace("go", "au");
