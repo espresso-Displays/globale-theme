@@ -34,6 +34,7 @@
           ]
       const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=dc8c45070f114c5e905b467602f56734');
         response.then((reply) => {
+          console.log(response);
           const data = reply.json();
           data.then((info) => {
             let detected_iso = info.country_code2;
