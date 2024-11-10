@@ -39,7 +39,11 @@
             let detected_iso = info.country_code2;
             if (!iso_list.includes(detected_iso))
             {
-              window.location.href = window.location.href.replace("go.", "au");
+              if (detected_iso === "US") {
+                window.location.href = window.location.href.replace("go.", "us");                                
+              } else {
+                window.location.href = window.location.href.replace("go.", "au");                
+              }
             }
             if (detected_iso === "AU") {
               window.location.href = window.location.href.replace("go", "au");
