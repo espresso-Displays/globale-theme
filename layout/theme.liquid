@@ -27,7 +27,7 @@
         // This code is bad for local dev because it seems refreshing the page
         {% if settings.environment == 'production' %}
           const iso = "{{localization.country.iso_code}}"
-          const iso_list = [ "GB",
+          const iso_list = [
           {% for country in localization.available_countries %}
             "{{country.iso_code}}",
           {% endfor %}
