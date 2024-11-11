@@ -5,9 +5,9 @@
 
 .ge-free-shipping-msg {
   font-family: worksans;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 0.125rem;
-  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.25rem;
+  font-weight: 700;
   color: white;
 }
