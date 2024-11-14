@@ -40,13 +40,15 @@
             if (!iso_list.includes(detected_iso))
             {
               if (detected_iso === "US") {
-                window.location.href = window.location.href.replace("go.", "us");                                
+                window.location.href = window.location.href.replace("go.", "us");
+              } else if (detected_iso === "AU") {
+                // do nothing for now
               } else {
                 window.location.href = window.location.href.replace("go.", "au");                
-              }
+              } 
             }
             if (detected_iso === "AU") {
-              window.location.href = window.location.href.replace("go", "au");
+              /*window.location.href = window.location.href.replace("go", "au");*/
             }
           })
         })
