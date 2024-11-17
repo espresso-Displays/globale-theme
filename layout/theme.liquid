@@ -37,7 +37,9 @@
           data.then((info) => {
             console.log(info);
             let detected_iso = info.country_code2;
-            console.log(iso_list.includes(detected_iso));
+            if (detected_iso === "AU") {
+              window.location.href = window.location.href.replace("go", "au"); 
+            }
             if (!iso_list.includes(detected_iso))
             {
               if (detected_iso === "US") {
@@ -58,6 +60,7 @@
                 window.location.href = window.location.href.replace("go", "eu"); 
               } 
             }
+            
           })
         })
     </script>
