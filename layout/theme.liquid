@@ -40,11 +40,21 @@
             if (!iso_list.includes(detected_iso))
             {
               if (detected_iso === "US") {
-                window.location.href = window.location.href.replace("go.", "us");
+                window.location.href = window.location.href.replace("go", "us");
+              } else if (detected_iso === "GB") {
+                window.location.href = window.location.href.replace("go", "uk");
               } else if (detected_iso === "AU") {
-                window.location.href = window.location.href.replace("go.", "au"); 
+                window.location.href = window.location.href.replace("go", "au"); 
+              } else if (detected_iso === "NZ") {
+                window.location.href = window.location.href.replace("go", "nz");
+              } else if (detected_iso === "SE") {
+                window.location.href = window.location.href.replace("go", "se");
+              } else if (detected_iso === "DK") {
+                window.location.href = window.location.href.replace("go", "dk");
+              } else if (detected_iso === "NO") {
+                window.location.href = window.location.href.replace("go", "no");
               } else {
-                window.location.href = window.location.href.replace("go.", "eu"); 
+                window.location.href = window.location.href.replace("go", "eu"); 
               } 
             }
             if (detected_iso === "AU") {
