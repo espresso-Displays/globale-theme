@@ -42,9 +42,9 @@
               if (detected_iso === "US") {
                 window.location.href = window.location.href.replace("go.", "us");
               } else if (detected_iso === "AU") {
-                // do nothing for now
+                window.location.href = window.location.href.replace("go.", "au"); 
               } else {
-                window.location.href = window.location.href.replace("go.", "au");                
+                window.location.href = window.location.href.replace("go.", "eu"); 
               } 
             }
             if (detected_iso === "AU") {
