@@ -37,6 +37,7 @@
           data.then((info) => {
             console.log(info);
             let detected_iso = info.country_code2;
+            console.log(iso_list.includes(detected_iso));
             if (!iso_list.includes(detected_iso))
             {
               if (detected_iso === "US") {
