@@ -30,14 +30,14 @@
             "{{country.iso_code}}",
           {% endfor %}
           ]
-      const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=5bd4cddc79174ab897f24ded97bbc942');
+      {% comment %} const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=5bd4cddc79174ab897f24ded97bbc942');
         response.then((reply) => {
           const data = reply.json();
           data.then((info) => {
             console.log(info);
             let detected_iso = info.country_code2;
             if (detected_iso === "AU") {
-              window.location.href = window.location.href.replace("go", "au"); 
+              window.location.href = window.location.href.replace("go", "au");
             }
             else if (detected_iso === "JP") {
               window.location.href = "https://ginichi.site/espressodisplays";
@@ -49,7 +49,7 @@
               } else if (detected_iso === "GB") {
                 window.location.href = window.location.href.replace("go", "uk");
               } else if (detected_iso === "AU") {
-                window.location.href = window.location.href.replace("go", "au"); 
+                window.location.href = window.location.href.replace("go", "au");
               } else if (detected_iso === "NZ") {
                 window.location.href = window.location.href.replace("go", "nz");
               } else if (detected_iso === "SE") {
@@ -59,12 +59,12 @@
               } else if (detected_iso === "NO") {
                 // window.location.href = window.location.href.replace("go", "no");
               } else {
-                window.location.href = window.location.href.replace("go", "eu"); 
-              } 
+                window.location.href = window.location.href.replace("go", "eu");
+              }
             }
-            
+
           })
-        })
+        }) {% endcomment %}
     </script>
 
     <script>

@@ -77,34 +77,103 @@
     </div>
   </div>
 {% endcomment %}
-<div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-[rgb(17,17,17)]">
-  <div class="h-[95vh] md:h-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-start p-[20px] md:p-[2.5rem] desktop:items-start max-w-content-max-width w-full lg:p-[4.5rem]  ">
-    <div class=" flex flex-col gap-4 items-center md:items-start  md:col-span-2 desktop:col-span-1 desktop:row-start-1  desktop-large:col-span-1  ">
-      <h1 class="heading text-heading-medium currentColor flex flex-row desktop-small:flex-col gap-[10px] desktop-small:gap-[0px] text-center md:text-left text-[#FFFFFF] desktop-large:mt-[2rem] desktop-large:text-heading-large ">
-        espresso Black<br>
-        Friday offers
-      </h1>
-      <p class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start  text-[#FFFFFF] desktop-lage:text-subheading-large ">
-        Save 15% on espresso 17 Pro
-      </p>
-      <a
-        aria-label="Shop Pro"
-        draggable="false"
-        class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click  h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-hp-v3-learn  "
-        href="/products/pro-bundle"
-        >Shop 17 Pro</a
-      >
+{% comment %}
+  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-[rgb(17,17,17)]">
+    <div class="h-[95vh] md:h-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-start p-[20px] md:p-[2.5rem] desktop:items-start max-w-content-max-width w-full lg:p-[4.5rem]  ">
+      <div class=" flex flex-col gap-4 items-center md:items-start  md:col-span-2 desktop:col-span-1 desktop:row-start-1  desktop-large:col-span-1  ">
+        <h1 class="heading text-heading-medium currentColor flex flex-row desktop-small:flex-col gap-[10px] desktop-small:gap-[0px] text-center md:text-left text-[#FFFFFF] desktop-large:mt-[2rem] desktop-large:text-heading-large ">
+          espresso Black<br>
+          Friday offers
+        </h1>
+        <p class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start  text-[#FFFFFF] desktop-lage:text-subheading-large ">
+          Save 15% on espresso 17 Pro
+        </p>
+        <a
+          aria-label="Shop Pro"
+          draggable="false"
+          class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click  h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-hp-v3-learn  "
+          href="/products/pro-bundle"
+          >Shop 17 Pro</a
+        >
+      </div>
+      <div class="min-h-0 w-full h-full md:col-span-3 md:flex md:justify-end md:row-start-2 desktop:row-start-1 desktop:max-h-[80vh] desktop-large:col-span-2 desktop-large:col-start-2 lg:max-h-[80vh]  ">
+        <img
+          src="{{ 'espresso-17-pro-monitor.png' | asset_url }}"
+          fetchpriority="auto"
+          alt=""
+          width=""
+          height=""
+          draggable="false"
+          class="h-full w-full object-contain object-center  md:w-[80%] lg:w-[90%]  desktop-large:w-[90%] "
+        >
+      </div>
     </div>
-    <div class="min-h-0 w-full h-full md:col-span-3 md:flex md:justify-end md:row-start-2 desktop:row-start-1 desktop:max-h-[80vh] desktop-large:col-span-2 desktop-large:col-start-2 lg:max-h-[80vh]  ">
-      <img
-        src="{{ 'espresso-17-pro-monitor.png' | asset_url }}"
-        fetchpriority="auto"
-        alt=""
-        width=""
-        height=""
-        draggable="false"
-        class="h-full w-full object-contain object-center  md:w-[80%] lg:w-[90%]  desktop-large:w-[90%] "
+  </div>
+{% endcomment %}
+
+<div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[560px] flex flex-col items-center">
+  <div class="flex flex-col items-center relative h-full w-full">
+    <div class="background absolute w-full h-full">
+      <div class="image min-h-0 desktop-small:hidden h-full w-full">
+        <img
+          src="/assets/images/image-home-hero-xmas-mobile.webp"
+          fetchpriority="auto"
+          alt=""
+          width=""
+          height=""
+          draggable="false"
+          class="h-full w-full object-cover object-center overflow-hidden"
+        >
+      </div>
+      <div class="image min-h-0 w-full hidden desktop-small:block desktop:hidden h-full">
+        <img
+          src="/assets/images/image-home-hero-xmas-desktop-small.webp"
+          fetchpriority="auto"
+          alt=""
+          width=""
+          height=""
+          draggable="false"
+          class="h-full w-full object-cover object-center overflow-hidden"
+        >
+      </div>
+      <div class="image min-h-0 w-full hidden desktop:block h-full">
+        <img
+          src="{{ "image-home-hero-xmas-desktop.webp" | asset_url }}"
+          fetchpriority="auto"
+          alt=""
+          width=""
+          height=""
+          draggable="false"
+          class="h-full w-full object-cover object-center overflow-hidden"
+        >
+      </div>
+    </div>
+    <div class="z-[2] h-full w-full max-w-content-max-width px-[32px] lg:px-[70px]">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] desktop-small:place-content-center desktop-small:place-items-center"
       >
+        <div
+          id=""
+          class="layout-flex relative col-start-1 col-span-full content-container w-full h-full flex flex-col justify-center items-center gap-[10px] desktop-small:gap-[16px] py-[32px] desktop-small:py-[70px] text-[#EED890]"
+        >
+          <h1 class="heading currentColor whitespace-pre-wrap flex flex-col items-center text-center text-display-small w-full font-typeface-special">
+            <span>This year's most</span><span>wanted tech</span>
+          </h1>
+          <div class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start">
+            <div class="text-center">Holiday gifts that transform workspaces.</div>
+          </div>
+          <div class="w-full flex flex-row flex-wrap gap-[20px] desktop-small:gap-[20px] justify-center ">
+            <a
+              aria-label="Shop all"
+              draggable="false"
+              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer bg-[#EED890] hover:bg-[#E7C964] active:bg-[#E1B938] text-neutral-00"
+              href="/collections"
+              >Shop all</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

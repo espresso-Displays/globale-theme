@@ -1322,6 +1322,10 @@ html {
   height: 90vh;
 }
 
+.h-\[95vh\] {
+  height: 95vh;
+}
+
 .h-auto {
   height: auto;
 }
@@ -1339,8 +1343,8 @@ html {
   height: 100vh;
 }
 
-.h-\[95vh\] {
-  height: 95vh;
+.h-\[560px\] {
+  height: 560px;
 }
 
 .max-h-0 {
@@ -1855,6 +1859,10 @@ html {
   gap: 8px;
 }
 
+.gap-\[4px\] {
+  gap: 4px;
+}
+
 .gap-x-\[100px\] {
   -moz-column-gap: 100px;
        column-gap: 100px;
@@ -2233,6 +2241,11 @@ html {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-\[\#EED890\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 216 144 / var(--tw-bg-opacity));
 }
 
 .bg-none {
@@ -2928,6 +2941,11 @@ html {
   color: rgb(48 19 79 / var(--tw-text-opacity));
 }
 
+.text-\[\#EED890\] {
+  --tw-text-opacity: 1;
+  color: rgb(238 216 144 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3059,6 +3077,11 @@ html {
   background-color: rgb(207 85 67 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#E7C964\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 201 100 / var(--tw-bg-opacity));
+}
+
 .hover\:fill-\[\#E6E6E6\]\/80:hover {
   fill: rgb(230 230 230 / 0.8);
 }
@@ -3104,6 +3127,11 @@ html {
 .active\:bg-lm-secondary-click:active {
   --tw-bg-opacity: 1;
   background-color: rgb(182 76 61 / var(--tw-bg-opacity));
+}
+
+.active\:bg-\[\#E1B938\]:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 185 56 / var(--tw-bg-opacity));
 }
 
 .active\:fill-\[\#F9F9F9\]\/80:active {
@@ -3173,10 +3201,6 @@ html {
 
   .md\:justify-end {
     justify-content: flex-end;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
   }
 
   .md\:p-\[2\.5rem\] {
@@ -3334,16 +3358,12 @@ html {
     height: 100%;
   }
 
-  .lg\:h-auto {
-    height: auto;
+  .lg\:max-h-\[80vh\] {
+    max-height: 80vh;
   }
 
   .lg\:max-h-\[calc\(100vh_-_250px\)\] {
     max-height: calc(100vh - 250px);
-  }
-
-  .lg\:max-h-\[80vh\] {
-    max-height: 80vh;
   }
 
   .lg\:w-\[1065px\] {
@@ -3538,11 +3558,6 @@ html {
 
   .lg\:rounded-\[20px\] {
     border-radius: 20px;
-  }
-
-  .lg\:object-contain {
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 
   .lg\:p-\[4\.5rem\] {
@@ -3767,6 +3782,14 @@ html {
     flex-direction: column;
   }
 
+  .desktop-small\:place-content-center {
+    place-content: center;
+  }
+
+  .desktop-small\:place-items-center {
+    place-items: center;
+  }
+
   .desktop-small\:justify-start {
     justify-content: flex-start;
   }
@@ -3781,6 +3804,10 @@ html {
 
   .desktop-small\:gap-\[20px\] {
     gap: 20px;
+  }
+
+  .desktop-small\:gap-\[16px\] {
+    gap: 16px;
   }
 
   .desktop-small\:divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -3934,11 +3961,6 @@ html {
   .desktop\:border-neutral-80 {
     --tw-border-opacity: 1;
     border-color: rgb(220 220 220 / var(--tw-border-opacity));
-  }
-
-  .desktop\:object-contain {
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 
   .desktop\:px-\[0px\] {
