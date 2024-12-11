@@ -30,7 +30,7 @@
             "{{country.iso_code}}",
           {% endfor %}
           ]
-      {% comment %} if you are going to turn this off, please turn it back on {% endcomment %}
+      {% comment %} if you are going to turn this off, please turn it back on before finishing the task {% endcomment %}
       const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=5bd4cddc79174ab897f24ded97bbc942');
         response.then((reply) => {
           const data = reply.json();
