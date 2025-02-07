@@ -111,34 +111,92 @@
   </div>
 {% endcomment %}
 
-<div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[560px] flex flex-col items-center">
+{% comment %}
+  <div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[560px] flex flex-col items-center">
+    <div class="flex flex-col items-center relative h-full w-full">
+      <div class="background absolute w-full h-full">
+        <div class="image min-h-0 desktop-small:hidden h-full w-full">
+          <img
+            src="{{ 'image-home-hero-xmas-mobile.jpeg' | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-full object-cover object-center overflow-hidden"
+          >
+        </div>
+        <div class="image min-h-0 w-full hidden desktop-small:block desktop:hidden h-full">
+          <img
+            src="{{ 'image-home-hero-xmas-desktop-small.jpeg' | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-full object-cover object-center overflow-hidden"
+          >
+        </div>
+        <div class="image min-h-0 w-full hidden desktop:block h-full">
+          <img
+            src="{{ "image-home-hero-xmas-desktop.webp" | asset_url }}"
+            fetchpriority="auto"
+            alt=""
+            width=""
+            height=""
+            draggable="false"
+            class="h-full w-full object-cover object-center overflow-hidden"
+          >
+        </div>
+      </div>
+      <div class="z-[2] h-full w-full max-w-content-max-width px-[32px] lg:px-[70px]">
+        <div
+          id=""
+          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] desktop-small:place-content-center desktop-small:place-items-center"
+        >
+          <div
+            id=""
+            class="layout-flex relative col-start-1 col-span-full content-container w-full h-full flex flex-col justify-center items-center gap-[10px] desktop-small:gap-[16px] py-[32px] desktop-small:py-[70px] text-[#EED890]"
+          >
+            <h1 class="heading currentColor whitespace-pre-wrap flex flex-col items-center text-center text-display-small w-full font-typeface-special">
+              <span>This year's most</span><span>wanted tech</span>
+            </h1>
+            <div class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start">
+              <div class="text-center">Holiday gifts that transform workspaces.</div>
+            </div>
+            <div class="w-full flex flex-row flex-wrap gap-[20px] desktop-small:gap-[20px] justify-center ">
+              <a
+                aria-label="Shop all"
+                draggable="false"
+                class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer bg-[#EED890] hover:bg-[#E7C964] active:bg-[#E1B938] text-neutral-00"
+                href="/collections/bundles"
+                >Shop all</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endcomment %}
+
+<div class="bg-lm-background-5 text-lm-on-background-5 w-full h-[500px] desktop-small:h-[930px] flex flex-col items-center">
   <div class="flex flex-col items-center relative h-full w-full">
     <div class="background absolute w-full h-full">
       <div class="image min-h-0 desktop-small:hidden h-full w-full">
         <img
-          src="{{ 'image-home-hero-xmas-mobile.jpeg' | asset_url }}"
+          src="{{'image-home-hero-jan-mobile-small.png' | asset_url }}"
           fetchpriority="auto"
           alt=""
           width=""
           height=""
           draggable="false"
-          class="h-full w-full object-cover object-center overflow-hidden"
+          class="h-full w-full object-cover object-top overflow-hidden"
         >
       </div>
-      <div class="image min-h-0 w-full hidden desktop-small:block desktop:hidden h-full">
+      <div class="image h-full min-h-0 w-full hidden desktop-small:block">
         <img
-          src="{{ 'image-home-hero-xmas-desktop-small.jpeg' | asset_url }}"
-          fetchpriority="auto"
-          alt=""
-          width=""
-          height=""
-          draggable="false"
-          class="h-full w-full object-cover object-center overflow-hidden"
-        >
-      </div>
-      <div class="image min-h-0 w-full hidden desktop:block h-full">
-        <img
-          src="{{ "image-home-hero-xmas-desktop.webp" | asset_url }}"
+          src="{{'image-home-hero-jan-desktop-small.jpeg' | asset_url }}"
           fetchpriority="auto"
           alt=""
           width=""
@@ -151,23 +209,26 @@
     <div class="z-[2] h-full w-full max-w-content-max-width px-[32px] lg:px-[70px]">
       <div
         id=""
-        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] desktop-small:place-content-center desktop-small:place-items-center"
+        class="layout-grid relative col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] desktop-small:place-content-top desktop-small:place-items-center h-full"
       >
         <div
           id=""
-          class="layout-flex relative col-start-1 col-span-full content-container w-full h-full flex flex-col justify-center items-center gap-[10px] desktop-small:gap-[16px] py-[32px] desktop-small:py-[70px] text-[#EED890]"
+          class="layout-flex relative col-start-1 col-span-full content-container w-full h-full flex flex-col justify-center items-center gap-[20px] py-[16px] desktop-small:py-[140px]"
         >
-          <h1 class="heading currentColor whitespace-pre-wrap flex flex-col items-center text-center text-display-small w-full font-typeface-special">
-            <span>This year's most</span><span>wanted tech</span>
-          </h1>
-          <div class="subheading text-subheading-medium currentColor flex flex-row flex-wrap gap-[10px] desktop-small:flex-col justify-center desktop-small:justify-start">
-            <div class="text-center">Holiday gifts that transform workspaces.</div>
+          <div class="flex flex-col text-neutral-00">
+            <h1 class="heading currentColor whitespace-pre-wrap flex flex-col items-center text-center text-heading-large w-full">
+              <span>Your Workspace, Reimagined</span>
+            </h1>
+            <div class="subheading text-heading-medium font-[400] currentColor flex-row flex-wrap gap-[10px] hidden desktop-small:flex desktop-small:flex-col justify-center desktop-small:justify-start">
+              <div class="text-center">Make 2025 your most productive year yet.</div>
+            </div>
           </div>
           <div class="w-full flex flex-row flex-wrap gap-[20px] desktop-small:gap-[20px] justify-center ">
             <a
               aria-label="Shop all"
               draggable="false"
-              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer bg-[#EED890] hover:bg-[#E7C964] active:bg-[#E1B938] text-neutral-00"
+              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap bg-lm-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer text-lm-on-primary"
+              data-discover="true"
               href="/collections/bundles"
               >Shop all</a
             >
