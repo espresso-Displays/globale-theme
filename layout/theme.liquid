@@ -31,7 +31,7 @@
           {% endfor %}
           ]
       {% comment %} if you are going to turn this off, please turn it back on before finishing the task {% endcomment %}
-      {% comment %} const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=5bd4cddc79174ab897f24ded97bbc942');
+      const response = fetch('https://api.ipgeolocation.io/ipgeo?apiKey=5bd4cddc79174ab897f24ded97bbc942');
         response.then((reply) => {
           const data = reply.json();
           data.then((info) => {
@@ -65,7 +65,7 @@
             }
 
           })
-        }) {% endcomment %}
+        })
     </script>
 
     <script>
