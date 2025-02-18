@@ -1218,6 +1218,10 @@ html {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-\[144\/125\] {
+  aspect-ratio: 144/125;
+}
+
 .h-0 {
   height: 0px;
 }
@@ -1377,6 +1381,10 @@ html {
 
 .max-h-none {
   max-height: none;
+}
+
+.max-h-\[1000px\] {
+  max-height: 1000px;
 }
 
 .min-h-0 {
@@ -3918,6 +3926,10 @@ html {
 
   .desktop\:block {
     display: block;
+  }
+
+  .desktop\:flex {
+    display: flex;
   }
 
   .desktop\:hidden {

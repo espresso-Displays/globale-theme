@@ -119,7 +119,8 @@
   "devDependencies": {},
   "scripts": {
     "dev": "npx tailwindcss -i ./style.css -o ./assets/style.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "shopify theme dev --store https://uk-espresso.myshopify.com"
   },
   "keywords": [],
   "author": "",

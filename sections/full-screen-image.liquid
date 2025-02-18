@@ -1,0 +1,52 @@
+<div class="w-full h-auto max-h-full max-w-full flex flex-col items-center bg-neutral-0">
+  <div class="image min-h-0 object-cover desktop:hidden w-full h-full">
+    <img
+      alt="espresso stand plus pro"
+      decoding="async"
+      loading="eager"
+      src="{{ section.settings.image1 | image_url }}"
+      width="100"
+      class=""
+      height="auto"
+      draggable="false"
+      style="width: 100%;"
+    >
+  </div>
+  <div class="image min-h-0 object-cover hidden desktop:flex w-full h-full">
+    <img
+      alt="espresso stand plus pro"
+      decoding="async"
+      loading="eager"
+      src="{{ section.settings.image2 | image_url }}"
+      width="100"
+      class=""
+      height="auto"
+      draggable="false"
+      style="width: 100%;"
+    >
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Full Screen Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image File Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image File Desktop"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Full Screen Image"
+    }
+  ]
+}
+{% endschema %}
