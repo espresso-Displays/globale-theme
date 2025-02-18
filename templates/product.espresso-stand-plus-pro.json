@@ -41,7 +41,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "<ul><li>espresso Stand+</li></ul>"
+            "accordion_description": "<ul><li>espresso Stand+ Pro portable magnetic stand</li></ul>"
           }
         },
         "accordion_item_DjprEA": {
@@ -86,7 +86,10 @@
     },
     "stand-specs": {
       "type": "section-15-stand-plus-pro-specs",
-      "settings": {}
+      "settings": {
+        "image_1": "shopify://shop_images/image-stand-plus-pro-dimensions-side.svg",
+        "image_2": "shopify://shop_images/image-stand-plus-pro-dimensions-top.svg"
+      }
     },
     "section-faq": {
       "type": "faqs-updated",
