@@ -39,11 +39,21 @@
             "subtitle": "Sleek design with a touchscreen",
             "product_link": "shopify://products/espressodisplays"
           }
+        },
+        "card_pakLXQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-home-display15-standplus-front-plus-productphoto.webp",
+            "title": "espresso Display",
+            "subtitle": "Simple, seamless for daily performance.",
+            "product_link": "shopify://products/espressodisplays"
+          }
         }
       },
       "block_order": [
         "card_gcFXJn",
-        "card_LEpWUj"
+        "card_LEpWUj",
+        "card_pakLXQ"
       ],
       "settings": {}
     },
