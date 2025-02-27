@@ -24,6 +24,9 @@
       "settings": {
       }
     },
+    "icon-benefits": {
+      "type": "main-icon-benefits"
+    },
     "pr": {
       "type": "main-pr-section",
       "settings": {
@@ -33,6 +36,12 @@
       "type": "main-video-section",
       "settings": {
       }
+    },
+    "espresso-competitors": {
+      "type": "main-espresso-vs-others"
+    },
+    "discover-espresso": {
+      "type": "main-discover-espresso"
     },
     "feature-icons": {
       "type": "main-feature-icons",
@@ -96,8 +105,11 @@
   "order": [
     "image_banner",
     "category",
-    "pr",
+    "icon-benefits",
     "video",
+    "pr",
+    "espresso-competitors",
+    "discover-espresso",
     "feature-icons",
     "excellence_block",
     "trustpilot",

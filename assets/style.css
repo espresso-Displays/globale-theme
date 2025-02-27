@@ -589,6 +589,13 @@ html {
   font-weight: 700
 }
 
+.text-label-extralarge-heavy {
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  font-weight: 700
+}
+
 .text-label-large {
   font-size: 1.15rem;
   line-height: 1.71rem;
@@ -1002,6 +1009,10 @@ html {
   top: 95px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1106,6 +1117,10 @@ html {
   float: right;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .\!mx-0 {
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -1144,6 +1159,11 @@ html {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mx-\[0px\] {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .mb-2 {
@@ -1190,8 +1210,20 @@ html {
   margin-top: 20px;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -1214,12 +1246,12 @@ html {
   display: none;
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
 .aspect-\[144\/125\] {
   aspect-ratio: 144/125;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-0 {
@@ -1351,8 +1383,16 @@ html {
   height: 100vh;
 }
 
+.h-\[calc\(100cqw\*9\/16\)\] {
+  height: calc(100cqw * 9 / 16);
+}
+
 .max-h-0 {
   max-height: 0px;
+}
+
+.max-h-\[1000px\] {
+  max-height: 1000px;
 }
 
 .max-h-\[100px\] {
@@ -1383,8 +1423,8 @@ html {
   max-height: none;
 }
 
-.max-h-\[1000px\] {
-  max-height: 1000px;
+.max-h-\[50px\] {
+  max-height: 50px;
 }
 
 .min-h-0 {
@@ -1501,6 +1541,10 @@ html {
   width: 100vw;
 }
 
+.w-\[calc\(18cqw\)\] {
+  width: calc(18cqw);
+}
+
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -1567,6 +1611,10 @@ html {
 
 .max-w-none {
   max-width: none;
+}
+
+.max-w-\[50px\] {
+  max-width: 50px;
 }
 
 .flex-1 {
@@ -2049,6 +2097,10 @@ html {
   border-bottom-width: 2px;
 }
 
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
+}
+
 .border-l {
   border-left-width: 1px;
 }
@@ -2058,6 +2110,10 @@ html {
 }
 
 .border-t {
+  border-top-width: 1px;
+}
+
+.border-t-\[1px\] {
   border-top-width: 1px;
 }
 
@@ -2095,18 +2151,29 @@ html {
   border-color: rgb(96 38 158 / var(--tw-border-opacity));
 }
 
+.border-neutral-70 {
+  --tw-border-opacity: 1;
+  border-color: rgb(191 191 191 / var(--tw-border-opacity));
+}
+
 .border-neutral-80 {
   --tw-border-opacity: 1;
   border-color: rgb(220 220 220 / var(--tw-border-opacity));
 }
 
-.border-transparent {
-  border-color: transparent;
+.border-lm-outline-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 112 255 / var(--tw-border-opacity));
 }
 
 .border-t-neutral-80 {
   --tw-border-opacity: 1;
   border-top-color: rgb(220 220 220 / var(--tw-border-opacity));
+}
+
+.border-b-neutral-80 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(220 220 220 / var(--tw-border-opacity));
 }
 
 .bg-\[\#000000\] {
@@ -2200,7 +2267,7 @@ html {
 
 .bg-lm-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(234 93 73 / var(--tw-bg-opacity));
+  background-color: rgb(29 112 255 / var(--tw-bg-opacity));
 }
 
 .bg-lm-transparent {
@@ -2252,8 +2319,9 @@ html {
   background-color: rgb(229 214 245 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
+.bg-lm-inverse-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-none {
@@ -2486,6 +2554,16 @@ html {
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.py-\[25px\] {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.py-\[70px\] {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .\!pt-0 {
@@ -2822,6 +2900,17 @@ html {
   font-weight: 400;
 }
 
+.text-label-extralarge-heavy {
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  font-weight: 700;
+}
+
+.font-\[300\] {
+  font-weight: 300;
+}
+
 .font-\[400\] {
   font-weight: 400;
 }
@@ -2836,6 +2925,10 @@ html {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-\[700\] {
+  font-weight: 700;
 }
 
 .uppercase {
@@ -2944,6 +3037,11 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-neutral-50 {
+  --tw-text-opacity: 1;
+  color: rgb(128 128 128 / var(--tw-text-opacity));
+}
+
 .text-neutral-60 {
   --tw-text-opacity: 1;
   color: rgb(172 172 172 / var(--tw-text-opacity));
@@ -2957,6 +3055,21 @@ html {
 .text-primary-20 {
   --tw-text-opacity: 1;
   color: rgb(48 19 79 / var(--tw-text-opacity));
+}
+
+.text-primary-60 {
+  --tw-text-opacity: 1;
+  color: rgb(151 91 215 / var(--tw-text-opacity));
+}
+
+.text-lm-inverse-on-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(29 112 255 / var(--tw-text-opacity));
+}
+
+.text-neutral-40 {
+  --tw-text-opacity: 1;
+  color: rgb(90 90 90 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3029,6 +3142,29 @@ html {
   transition-timing-function: linear;
 }
 
+@media (min-width: 1024px) {
+  .desktop-small\:text-display-medium {
+    font-size: 2.85rem;
+    line-height: 3.43rem;
+    letter-spacing: 0rem;
+    font-weight: 700
+  }
+
+  .desktop-small\:text-heading-large {
+    font-size: 2rem;
+    line-height: 2.43rem;
+    letter-spacing: 0rem;
+    font-weight: 700
+  }
+
+  .desktop-small\:text-subheading-large-heavy {
+    font-size: 1.5rem;
+    line-height: 2.29rem;
+    letter-spacing: 0rem;
+    font-weight: 700
+  }
+}
+
 @media (min-width: 1800px) {
   .desktop-large\:text-heading-large {
     font-size: 2rem;
@@ -3092,7 +3228,12 @@ html {
 
 .hover\:bg-lm-secondary-hover:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(207 85 67 / var(--tw-bg-opacity));
+  background-color: rgb(20 78 178 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-lm-inverse-secondary-hover:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 240 255 / var(--tw-bg-opacity));
 }
 
 .hover\:fill-\[\#E6E6E6\]\/80:hover {
@@ -3144,7 +3285,12 @@ html {
 
 .active\:bg-lm-secondary-click:active {
   --tw-bg-opacity: 1;
-  background-color: rgb(182 76 61 / var(--tw-bg-opacity));
+  background-color: rgb(15 56 128 / var(--tw-bg-opacity));
+}
+
+.active\:bg-lm-inverse-secondary-click:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 224 255 / var(--tw-bg-opacity));
 }
 
 .active\:fill-\[\#F9F9F9\]\/80:active {
@@ -3637,6 +3783,11 @@ html {
     padding-bottom: 80px;
   }
 
+  .lg\:py-\[35px\] {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
   .lg\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -3731,6 +3882,15 @@ html {
     grid-column-start: 5;
   }
 
+  .desktop-small\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .desktop-small\:mt-\[20px\] {
+    margin-top: 20px;
+  }
+
   .desktop-small\:block {
     display: block;
   }
@@ -3783,6 +3943,10 @@ html {
     flex: 1 1 0%;
   }
 
+  .desktop-small\:flex-shrink-0 {
+    flex-shrink: 0;
+  }
+
   .desktop-small\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3793,6 +3957,10 @@ html {
 
   .desktop-small\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .desktop-small\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .desktop-small\:flex-row {
@@ -3807,8 +3975,16 @@ html {
     place-content: center;
   }
 
+  .desktop-small\:place-items-start {
+    place-items: start;
+  }
+
   .desktop-small\:place-items-center {
     place-items: center;
+  }
+
+  .desktop-small\:items-start {
+    align-items: flex-start;
   }
 
   .desktop-small\:justify-start {
@@ -3829,6 +4005,10 @@ html {
 
   .desktop-small\:gap-\[20px\] {
     gap: 20px;
+  }
+
+  .desktop-small\:gap-\[70px\] {
+    gap: 70px;
   }
 
   .desktop-small\:divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -3874,6 +4054,21 @@ html {
     padding-bottom: 70px;
   }
 
+  .desktop-small\:py-\[0px\] {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .desktop-small\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .desktop-small\:py-\[64px\] {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   .desktop-small\:pb-\[35px\] {
     padding-bottom: 35px;
   }
@@ -3892,6 +4087,27 @@ html {
 
   .desktop-small\:text-left {
     text-align: left;
+  }
+
+  .desktop-small\:text-display-medium {
+    font-size: 2.85rem;
+    line-height: 3.43rem;
+    letter-spacing: 0rem;
+    font-weight: 700;
+  }
+
+  .desktop-small\:text-subheading-large-heavy {
+    font-size: 1.5rem;
+    line-height: 2.29rem;
+    letter-spacing: 0rem;
+    font-weight: 700;
+  }
+
+  .desktop-small\:text-heading-large {
+    font-size: 2rem;
+    line-height: 2.43rem;
+    letter-spacing: 0rem;
+    font-weight: 700;
   }
 }
 
