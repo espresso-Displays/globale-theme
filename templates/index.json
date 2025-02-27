@@ -30,10 +30,20 @@
             "subtitle": "Pro display for a serious workflow",
             "product_link": "shopify://products/espresso-pro"
           }
+        },
+        "card_LEpWUj": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-home-touch15-stand-front-productphoto.webp",
+            "title": "espresso Touch",
+            "subtitle": "Sleek design with a touchscreen",
+            "product_link": "shopify://products/espressodisplays"
+          }
         }
       },
       "block_order": [
-        "card_gcFXJn"
+        "card_gcFXJn",
+        "card_LEpWUj"
       ],
       "settings": {}
     },
