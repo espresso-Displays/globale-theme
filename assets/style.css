@@ -905,6 +905,10 @@ html {
   pointer-events: auto;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -1625,6 +1629,10 @@ html {
   flex-shrink: 0;
 }
 
+.flex-shrink {
+  flex-shrink: 1;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -1701,6 +1709,10 @@ html {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.resize {
+  resize: both;
 }
 
 .snap-x {
@@ -2698,6 +2710,10 @@ html {
   padding-top: 96px;
 }
 
+.pb-\[25px\] {
+  padding-bottom: 25px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3334,6 +3350,10 @@ html {
     display: flex;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:h-\[450px\] {
     height: 450px;
   }
@@ -3350,6 +3370,10 @@ html {
     width: 80%;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3364,6 +3388,11 @@ html {
 
   .md\:p-\[2\.5rem\] {
     padding: 2.5rem;
+  }
+
+  .md\:px-\[48px\] {
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .md\:text-left {
@@ -4148,6 +4177,10 @@ html {
     display: flex;
   }
 
+  .desktop\:grid {
+    display: grid;
+  }
+
   .desktop\:hidden {
     display: none;
   }
@@ -4178,6 +4211,10 @@ html {
 
   .desktop\:shrink {
     flex-shrink: 1;
+  }
+
+  .desktop\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .desktop\:place-content-center {
