@@ -55,11 +55,19 @@
             "poster_image": "shopify://shop_images/slider-image-2.webp",
             "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dtSjEKY62fI?si=ry01ClxtLfB6x_LF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
           }
+        },
+        "slide_FYVVdM": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-3.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/beKk8IUk5XU?si=QBLfLalf1NVdydv9\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
         }
       },
       "block_order": [
         "slide_A3fjTJ",
-        "slide_yLFtgi"
+        "slide_yLFtgi",
+        "slide_FYVVdM"
       ],
       "settings": {}
     },
