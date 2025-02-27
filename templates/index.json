@@ -21,6 +21,20 @@
     },
     "category": {
       "type": "main-category",
+      "blocks": {
+        "card_gcFXJn": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-home-pro17-standpro-front-productphoto_1.webp",
+            "title": "espresso Pro",
+            "subtitle": "Pro display for a serious workflow",
+            "product_link": "shopify://products/espresso-pro"
+          }
+        }
+      },
+      "block_order": [
+        "card_gcFXJn"
+      ],
       "settings": {}
     },
     "icon-benefits": {
