@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -21,85 +21,94 @@
     },
     "category": {
       "type": "main-category",
-      "settings": {
-      }
+      "settings": {}
     },
     "icon-benefits": {
-      "type": "main-icon-benefits"
-    },
-    "pr": {
-      "type": "main-pr-section",
-      "settings": {
-      }
+      "type": "main-icon-benefits",
+      "settings": {}
     },
     "video": {
       "type": "main-video-section",
-      "settings": {
-      }
+      "settings": {}
+    },
+    "pr": {
+      "type": "main-pr-section",
+      "settings": {}
     },
     "espresso-competitors": {
-      "type": "main-espresso-vs-others"
+      "type": "main-espresso-vs-others",
+      "settings": {}
     },
     "discover-espresso": {
-      "type": "main-discover-espresso"
+      "type": "main-discover-espresso",
+      "blocks": {
+        "slide_A3fjTJ": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-1.webp",
+            "video_iframe": ""
+          }
+        },
+        "slide_yLFtgi": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-2.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dtSjEKY62fI?si=ry01ClxtLfB6x_LF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_A3fjTJ",
+        "slide_yLFtgi"
+      ],
+      "settings": {}
     },
     "feature-icons": {
       "type": "main-feature-icons",
-      "settings": {
-      }
+      "settings": {}
     },
     "excellence_block": {
       "type": "excellence",
-      "settings": {
-      }
+      "settings": {}
     },
     "trustpilot": {
       "type": "trustpilot-all",
-      "settings": {
-      }
+      "settings": {}
     },
     "benefit_block": {
       "type": "benefits",
-      "settings": {
-      }
+      "settings": {}
     },
     "about_jot_block": {
       "type": "about-jot",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "espresso_for_mac_block": {
       "type": "espresso-for-mac",
-      "settings": {
-      }
+      "settings": {}
     },
     "markup_documents_block": {
       "type": "markup-documents",
-      "settings": {
-      }
+      "settings": {}
     },
     "virtual_whiteboard_block": {
       "type": "virtual-whiteboard",
-      "settings": {
-      }
+      "settings": {}
     },
     "master_productivity_block": {
       "type": "master-productivity",
-      "settings": {
-      }
+      "settings": {}
     },
     "meet_espresso_flow_block": {
       "type": "meet-espresso-flow",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "compatibility_index_page_block": {
       "type": "compatibility-index-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
@@ -121,5 +130,5 @@
     "master_productivity_block",
     "meet_espresso_flow_block",
     "compatibility_index_page_block"
-  ],
+  ]
 }
