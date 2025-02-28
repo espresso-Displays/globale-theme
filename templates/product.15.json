@@ -61,14 +61,13 @@
         "accordion_item_DjprEA"
       ],
       "settings": {
-        "selected_product": "bfcm-display-bundle",
+        "selected_product": "display-bundle-15",
         "trustpilot_sku": ""
       }
     },
     "product_nav": {
       "type": "product-nav",
-      "settings": {
-      }
+      "settings": {}
     },
     "two-col-text": {
       "type": "two-col-title-text",
@@ -93,58 +92,47 @@
     },
     "b-carousel": {
       "type": "brand-carousel",
-      "settings": {
-      }
+      "settings": {}
     },
     "features-2": {
       "type": "section-15-features-2",
-      "settings": {
-      }
+      "settings": {}
     },
     "difference": {
       "type": "espresso-difference",
-      "settings": {
-      }
+      "settings": {}
     },
     "color_calibrate": {
       "type": "color-calibrate",
-      "settings": {
-      }
+      "settings": {}
     },
     "review_carousel": {
       "type": "review-carousel",
-      "settings": {
-      }
+      "settings": {}
     },
     "features-3": {
       "type": "section-15-features-3",
-      "settings": {
-      }
+      "settings": {}
     },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
-      "settings": {
-      }
+      "settings": {}
     },
     "display-specs": {
       "type": "section-15-display-specs",
-      "settings": {
-      }
+      "settings": {}
     },
     "stand-specs": {
       "type": "section-15-stand-plus-specs",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs-updated",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-compare": {
       "type": "pdp-compare-updated",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
