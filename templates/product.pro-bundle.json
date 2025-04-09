@@ -31,6 +31,10 @@
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
       ],
+      "custom_css": [
+        ".cart-add input {pointer-events: none; background-color: #ccc;}",
+        ".cart-add-no-stock {display: inline !important;}"
+      ],
       "settings": {
         "selected_product": "",
         "trustpilot_sku": ""
