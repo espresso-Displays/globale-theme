@@ -82,7 +82,7 @@
                 </div>
                 <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
                   <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
-                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
+                    <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
                       <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                       <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
                       <input type="hidden" name="productTitle" value="{{ product.title }}">
