@@ -62,7 +62,7 @@
       ],
       "custom_css": [
         ".cart-add input {pointer-events: none; background-color: #ccc;}",
-        ".cart-add-no-stock {display: inline;}"
+        ".cart-add-no-stock {display: inline !important;}"
       ],
       "settings": {
         "selected_product": "espresso-pro",
