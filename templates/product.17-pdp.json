@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "section-1": {
@@ -34,21 +34,21 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Key features",
-            "accordion_description": "<ul><li>Rich and immersive 4K panel<\/li><li>Touchscreen display<\/li><li>Durable aerospace aluminium chassis<\/li><li>Vibrant 450 nits peak brightness<\/li><li>1.07 billion colours with 100% DCI-P3<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable<\/li><li>Built-in speakers<\/li><\/ul>"
+            "accordion_description": "<ul><li>Rich and immersive 4K panel</li><li>Touchscreen display</li><li>Durable aerospace aluminium chassis</li><li>Vibrant 450 nits peak brightness</li><li>1.07 billion colours with 100% DCI-P3</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>Built-in speakers</li></ul>"
           }
         },
         "accordion_item_d3VwDV": {
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "<ul><li>espresso 17 Pro portable touchscreen<\/li><li>1m espresso USB-C to USB-C cable<\/li><li>espresso Stand Pro<\/li><li>Microfibre cleaning cloth<\/li><\/ul>"
+            "accordion_description": "<ul><li>espresso 17 Pro portable touchscreen</li><li>1m espresso USB-C to USB-C cable</li><li>espresso Stand Pro</li><li>Microfibre cleaning cloth</li></ul>"
           }
         },
         "accordion_item_DjprEA": {
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Compatibility",
-            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.<\/p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.<\/p>"
+            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p>"
           }
         }
       },
@@ -60,6 +60,9 @@
         "accordion_item_d3VwDV",
         "accordion_item_DjprEA"
       ],
+      "custom_css": [
+        ".cart-add {display: hidden;}"
+      ],
       "settings": {
         "selected_product": "espresso-pro",
         "trustpilot_sku": ""
@@ -67,8 +70,7 @@
     },
     "product-nav": {
       "type": "pdp-product-nav",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-2": {
       "type": "pdp-overview",
@@ -76,34 +78,29 @@
         "text_field_1": "The world’s most interactive portable display.",
         "text_field_2": "Engineered for your performance. Unlock creative potential and productivity anywhere.",
         "text_field_3": "Now in 4K.",
-        "video_file": "shopify:\/\/files\/videos\/video-espresso-17pdp-4.mp4"
+        "video_file": "shopify://files/videos/video-espresso-17pdp-4.mp4"
       }
     },
     "marquee_block": {
       "type": "marquee",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-3": {
       "type": "pdp-espresso-pro-color",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-4": {
       "type": "pdp-espresso-pro-color-2",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-5": {
       "type": "pdp-live-touch",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-6": {
       "type": "about-jot",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section-7": {
       "type": "two-column-text",
@@ -121,7 +118,7 @@
           "settings": {
             "grid_item_title": "Designed for people like you.",
             "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.Built to last.",
-            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-back.webp"
+            "grid_item_image": "shopify://shop_images/image-espressodisplay17-back.webp"
           }
         },
         "grid_item_xBLC6D": {
@@ -129,7 +126,7 @@
           "settings": {
             "grid_item_title": "Take more screen, anywhere.",
             "grid_item_description": "Ultra-sleek at 9 mm thin. Super-lightweight at 1.1 kg.Slide the espresso 17 Pro into your backpack, satchel or briefcase.",
-            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-portability-2x-676x560.webp"
+            "grid_item_image": "shopify://shop_images/image-espressodisplay17-portability-2x-676x560.webp"
           }
         },
         "grid_item_E3HJfV": {
@@ -137,7 +134,7 @@
           "settings": {
             "grid_item_title": "More productivity, anywhere.",
             "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
-            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-lifestyle-van-life-2x-676x560.webp"
+            "grid_item_image": "shopify://shop_images/image-espressodisplay17-lifestyle-van-life-2x-676x560.webp"
           }
         },
         "grid_item_zJcPLR": {
@@ -145,7 +142,7 @@
           "settings": {
             "grid_item_title": "A display for how you work.",
             "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation.",
-            "grid_item_image": "shopify:\/\/shop_images\/image-espressodisplay17-vertical-2x-676x560.webp"
+            "grid_item_image": "shopify://shop_images/image-espressodisplay17-vertical-2x-676x560.webp"
           }
         }
       },
@@ -155,26 +152,22 @@
         "grid_item_E3HJfV",
         "grid_item_zJcPLR"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "section-9": {
       "type": "pdp-accessories",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section-10": {
       "type": "pdp-compatibility",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section-11": {
       "type": "meet-espresso-flow",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section-compare": {
       "type": "pdp-compare",
@@ -184,13 +177,11 @@
     },
     "review": {
       "type": "product-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
