@@ -88,7 +88,8 @@
                       <input type="hidden" name="productTitle" value="{{ product.title }}">
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
                       <input type="hidden" name="price" value="{{  product.variants.first.price| divided_by: 100  }}">
-
+                      <div style="display: none">
+                      <p class="cart-add-no-stock">Currently out of stock</p></div>
                       <input
                         type="submit"
                         value="Add to cart"
