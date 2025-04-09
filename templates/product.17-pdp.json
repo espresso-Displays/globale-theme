@@ -61,7 +61,8 @@
         "accordion_item_DjprEA"
       ],
       "custom_css": [
-        ".cart-add {display: none;}"
+        ".cart-add input {pointer-events: none; background-color: #ccc;}",
+        ".cart-add-no-stock {display: inline;}"
       ],
       "settings": {
         "selected_product": "espresso-pro",
