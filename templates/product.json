@@ -23,7 +23,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "{{ section.settings.selected_product.metafields.custom.what_s_in_the_box | metafield_tag }}"
+            "accordion_description": "<p>• espresso Stand</p>"
           }
         }
       },
