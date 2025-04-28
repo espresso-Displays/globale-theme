@@ -146,6 +146,8 @@
               value="Add to cart"
               class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
             >
+            {% else %}
+              <div>Out of stock</div>
             {% endif %}
           </form>
         </div>
