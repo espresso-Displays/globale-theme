@@ -62,7 +62,6 @@
                   {% if product.variants.size > 1 %}
                     <div class=" flex items-center gap-4">
                       {% for variant in product.variants %}
-                        {% if variant.title != '15' and product.title == 'Touch Bundle' %}
                           <button
                             draggable="false"
                             type="button"
@@ -73,7 +72,6 @@
                           >
                             {{ variant.title }}
                           </button>
-                        {% endif %}
                       {% endfor %}
                     </div>
                   {% else %}
@@ -83,11 +81,11 @@
                 <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
                   <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
                     <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
-                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                       <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
                       <input type="hidden" name="productTitle" value="{{ product.title }}">
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
-                      <input type="hidden" name="price" value="{{  product.variants.first.price| divided_by: 100  }}">
+                      <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
                       
                       <input
                         type="submit"
