@@ -60,10 +60,7 @@
         "accordion_item_d3VwDV",
         "accordion_item_DjprEA"
       ],
-      "custom_css": [
-        ".cart-add input {pointer-events: none; background-color: #ccc;}",
-        ".cart-add-no-stock {display: inline !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "selected_product": "display-bundle-15",
         "trustpilot_sku": ""
