@@ -79,14 +79,22 @@
                 </div>
                 <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
                   <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
-                    <button
-                      id="display-15-bundle-early-access"
-                      type="button"
-                      aria-label="Get early acccess"
-                      class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
-                    >
-                      Get early access
-                    </button>
+                    <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                      <input type="hidden" name="productTitle" value="{{ product.title }}">
+                      <input type="hidden" name="currency" value="{{ shop.currency }}">
+                      <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
+                      
+                      <input
+                        type="submit"
+                        value="Add to cart"
+                        name="add"
+                        aria-label="Add to Cart"
+                        class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                      >
+                      <p class="cart-add-no-stock" style="display: none;">Currently out of stock</p>
+                    </form>
                   </div>
                 </div>
 
