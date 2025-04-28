@@ -140,7 +140,7 @@
           <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
             <input type="hidden" class="variant-id" name="id" value="{{ card_product.variants.first.id }}">
             <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
-            {% if cart_product.selected_or_first_available_variant.available %}
+            {% if card_product.selected_or_first_available_variant.available %}
             <input
               type="submit"
               value="Add to cart"
