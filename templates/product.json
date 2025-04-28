@@ -23,7 +23,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "{{ section.settings.selected_product.metafields.custom.what_s_in_the_box | metafield_tag }}"
+            "accordion_description": "<p>Mini Display Port to USB-C adapter</p>"
           }
         }
       },
@@ -38,23 +38,19 @@
     },
     "variant-section": {
       "type": "product-variant-section",
-      "settings": {
-      }
+      "settings": {}
     },
     "tech-specs": {
       "type": "product-tech-specs",
-      "settings": {
-      }
+      "settings": {}
     },
     "review": {
       "type": "product-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
