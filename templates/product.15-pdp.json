@@ -67,6 +67,7 @@
     },
     "product-nav": {
       "type": "pdp-product-nav",
+      "disabled": true,
       "settings": {}
     },
     "section-2": {
@@ -79,7 +80,6 @@
     },
     "marquee_block": {
       "type": "marquee",
-      "disabled": true,
       "settings": {}
     },
     "section-7": {
@@ -127,7 +127,6 @@
         "grid_item_GUgDfw",
         "grid_item_rdVnij"
       ],
-      "disabled": true,
       "settings": {}
     },
     "section-9": {
