@@ -64,7 +64,7 @@
                     {% assign file_extension = file_url | split: '.' | last | downcase %}
 
                     {% case file_extension %}
-                      {% when 'jpg', 'jpeg', 'png', 'gif' %}
+                      {% when 'jpg', 'jpeg', 'png', 'gif' , 'webp' %}
                         <img
                           class=""
                           height="auto"
