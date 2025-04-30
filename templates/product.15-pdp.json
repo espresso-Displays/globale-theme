@@ -76,7 +76,8 @@
         "text_field_1": "Designed for you",
         "text_field_2": "Built with premium materials. Blending tough aerospace aluminium and hardened glass. Engineering for life on the go.",
         "text_field_3": "",
-        "video_file": "shopify://files/videos/video-espresso-touch-13-15-pdp.mp4"
+        "video_file": "shopify://files/videos/video-espresso-touch-13-15-pdp.mp4",
+        "video_poster": "shopify://shop_images/image-espresso-touch-13-lifestyle.webp"
       }
     },
     "marquee_block": {
