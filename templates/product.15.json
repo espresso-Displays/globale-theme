@@ -133,6 +133,7 @@
     },
     "section-compare": {
       "type": "pdp-compare-updated",
+      "disabled": true,
       "settings": {}
     }
   },
