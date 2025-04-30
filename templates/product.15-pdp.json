@@ -98,28 +98,32 @@
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Designed for people like you.",
-            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.Built to last."
+            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.Built to last.",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-sleek_webp_632fa845-9cde-4859-9d96-b8405e45f414.jpg"
           }
         },
         "grid_item_VEVEza": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Take more screen, anywhere.",
-            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.<br><br>Slide the espresso into your backpack, satchel or briefcase."
+            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.Slide the espresso into your backpack, satchel or briefcase.",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-take-more_webp_ad6446d4-b7e6-4cce-aef8-b7693209f43b.jpg"
           }
         },
         "grid_item_GUgDfw": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "More productivity, anywhere.",
-            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between)."
+            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-productivity_webp_30f9c85b-47f3-4ede-81ae-f580a2ac9c6f.jpg"
           }
         },
         "grid_item_rdVnij": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "A display for how you work.",
-            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation."
+            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation.",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-work_webp_e0e7495d-4ed0-42a2-9353-040cd13c5310.jpg"
           }
         }
       },
