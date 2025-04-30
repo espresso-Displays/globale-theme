@@ -81,6 +81,7 @@
     },
     "marquee_block": {
       "type": "marquee",
+      "disabled": true,
       "settings": {}
     },
     "section-7": {
@@ -97,7 +98,7 @@
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Designed for people like you.",
-            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last."
+            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.Built to last."
           }
         },
         "grid_item_VEVEza": {
