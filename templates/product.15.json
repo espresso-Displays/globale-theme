@@ -41,7 +41,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "<ul><li>espresso Display portable non-touch screen</li><li>1m espresso USB-C to USB-C cable</li><li>espresso Stand+</li><li>2 x espresso Protector</li><li>Microfibre cleaning cloth</li></ul>"
+            "accordion_description": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}"
           }
         },
         "accordion_item_DjprEA": {
@@ -62,7 +62,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "selected_product": "display-bundle-15",
+        "selected_product": "{{ product }}",
         "trustpilot_sku": ""
       }
     },
