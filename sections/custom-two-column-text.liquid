@@ -1,6 +1,63 @@
+<div id="" class="color-{{ section.settings.color_scheme }} section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] py-[24px] lg:py-[64px]">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div id="" class="layout-flex relative h-full col-span-4 lg:col-span-12 flex flex-col gap-[32px] lg:gap-[72px]">
+          <div
+            id=""
+            class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] gap-y-[32px]"
+          >
+            <h2 class="col-span-4 lg:col-span-6 text-display-medium">
+              {% if section.settings.text_field_1 == blank %}
+                Enter text
+              {% else %}
+                {{ section.settings.text_field_1 }}
+              {% endif %}
+            </h2>
+            <div class="col-start-1 lg:col-start-8 col-span-4 lg:col-span-5 text-body-medium flex flex-col justify-start ">
+              {% if section.settings.text_field_2 == blank %}
+                Enter text
+              {% else %}
+                {{ section.settings.text_field_2 }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Two column text",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "text_field_1",
+      "label": "Text Field 1"
+    },
+    {
+      "type": "text",
+      "id": "text_field_2",
+      "label": "Text Field 2"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom Two column text",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
