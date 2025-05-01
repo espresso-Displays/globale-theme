@@ -1,5 +1,5 @@
-<div id="" class="section relative flex lg:flex-col items-center flex-col-reverse h-full w-full bg-neutral-0">
-  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[16px] desktop-small:pt-[35px] pb-[16px] desktop-small:pb-[35px] bg-neutral-0 text-neutral-101">
+<div id="" class="section color-{{ section.settings.color_scheme }} relative flex lg:flex-col items-center flex-col-reverse h-full w-full">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[16px] desktop-small:pt-[35px] pb-[16px] desktop-small:pb-[35px]">
     <div class="content-block w-full h-full">
       <div
         id=""
@@ -46,31 +46,31 @@
               class="layout-flex relative h-full lg:col-span-12 flex flex-col col-start-1 col-span-full desktop-large:col-span-7"
             >
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Weight</div>
+                <div class="text-subheading-medium-heavy">Weight</div>
                 <div class="text-subheading-medium">570 g</div>
               </div>
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Closed dimensions</div>
+                <div class="text-subheading-medium-heavy">Closed dimensions</div>
                 <div class="text-subheading-medium">120 x 150 x 16 mm</div>
               </div>
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Extended full height</div>
+                <div class="text-subheading-medium-heavy">Extended full height</div>
                 <div class="text-subheading-medium">362 mm</div>
               </div>
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Height from bottom of display to desk</div>
+                <div class="text-subheading-medium-heavy">Height from bottom of display to desk</div>
                 <div class="text-subheading-medium">145-245 mm</div>
               </div>
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Type of attachment to display</div>
+                <div class="text-subheading-medium-heavy">Type of attachment to display</div>
                 <div class="text-subheading-medium">Magnetic</div>
               </div>
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Orientations</div>
+                <div class="text-subheading-medium-heavy">Orientations</div>
                 <div class="text-subheading-medium">Supports portrait and landscape</div>
               </div>
               <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
-                <div class="text-neutral-101 text-subheading-medium-heavy">Material</div>
+                <div class="text-subheading-medium-heavy">Material</div>
                 <div class="text-subheading-medium">Anodised aluminium, silicone rubber, PC ABS</div>
               </div>
             </div>
@@ -95,3 +95,24 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Stand+ Specs",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Stand+ Specs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
