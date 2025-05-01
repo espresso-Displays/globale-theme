@@ -1,4 +1,4 @@
-<div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+<div id="" class="color-{{ settings.color_scheme }} section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
   <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] py-[24px] lg:py-[64px]">
     <div class="content-block w-full h-full">
       <div
@@ -35,6 +35,12 @@
 {
   "name": "Two column text",
   "settings": [
+     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
     {
       "type": "text",
       "id": "text_field_1",
