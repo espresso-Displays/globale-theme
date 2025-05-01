@@ -104,41 +104,7 @@
     const totalCards = cards.length;
 
     function updateCarousel() {
-      {% comment %} if (window.innerWidth < 1024) {
-        // Mobile view
-        cards.forEach((card, index) => {
-          card.classList.toggle('active', index === currentIndex);
-        });
-      } else {
-        // Desktop view
-        cards.forEach((card) => {
-          card.classList.add('active'); // Show all cards
-        });
-      } {% endcomment %}
-    }
-
-    {% comment %} prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
     });
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < totalCards - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-
-    // Update on resize
-    window.addEventListener('resize', () => {
-      updateCarousel();
-    }); {% endcomment %}
-
-    // Initial setup
-    //updateCarousel();
-  });
 </script>
 
 {% schema %}
