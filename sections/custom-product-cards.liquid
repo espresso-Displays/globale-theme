@@ -1,7 +1,7 @@
 <!-- sections/product-cards.liquid -->
 <div class="section color-{{ section.settings.color_scheme }} relative w-full h-full">
-  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-neutral-100">
-    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-neutral-100 text-lm-on-background-1 py-[0px] desktop-small:py-[0px] desktop:px-[0px] overflow-hidden z-[2] w-full h-full">
+  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] py-[0px] desktop-small:py-[0px] desktop:px-[0px] overflow-hidden z-[2] w-full h-full">
       <div class="content-block w-full h-full">
         <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
           <div class="layout-flex relative h-full col-span-full flex flex-row">
@@ -10,7 +10,7 @@
                 <div class="carousel-track h-full flex flex-row items-center justify-start gap-[12px] w-full overflow-y-hidden snap-x snap-mandatory desktop:grid desktop:grid-cols-3 ">
                   {% for block in section.blocks %}
                     <div
-                      class="carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] bg-neutral-90 rounded-[16px] "
+                      class="carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] rounded-[16px] "
                     >
                       <div class="flex flex-col gap-[10px] items-center h-full justify-start">
                         <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full">
