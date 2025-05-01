@@ -8,6 +8,9 @@
             {%  assign mod = section.blocks.size | modulo: 2 %}
             {% if mod == 0  %}
               <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip" style="flex: 50%">
+            {% else %}
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip">
+            {% endif %}            
                 {% for block in section.blocks %}
                   <div>
                     <img
@@ -24,7 +27,7 @@
                   </div>
                 {% endfor %}
               </div>
-            {% endif %}
+
           </div>
         </div>
       </div>
