@@ -179,6 +179,13 @@
         --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
       }
       {% endfor %}
+
+      {{ scheme_classes | prepend: 'body' }} {
+        color: rgba(var(--color-foreground), 1.0);
+        background-color: rgb(var(--color-background));
+      }
+
+      
     {% endstyle %}
 
     {% include 'globale-js' %}
