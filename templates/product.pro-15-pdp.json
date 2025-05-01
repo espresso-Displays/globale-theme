@@ -91,6 +91,15 @@
         "padding_bottom": 0
       }
     },
+    "custom_two_column_text_gCTTkh": {
+      "type": "custom-two-column-text",
+      "name": "Custom Two column text",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "text_field_1": "Comfort and ergonomics.",
+        "text_field_2": "Create a mobile workspace around your needs style with the magnetic Stand+. Elevate the display above your laptop screen, or position side-by-side in landscape or portrait mode."
+      }
+    },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
       "settings": {}
@@ -118,6 +127,7 @@
     "product_nav",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
+    "custom_two_column_text_gCTTkh",
     "meet-espresso",
     "display-specs",
     "stand-specs",
