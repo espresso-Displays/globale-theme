@@ -144,6 +144,38 @@
         "text_field_2": "Wherever the road takes you, have the confidence that you can produce your best work, with the best tools."
       }
     },
+    "image_gallery_GCzFkX": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_KgVtjP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-espresso-pro-15-4-lifestyle.webp"
+          }
+        },
+        "image_gKzMRx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-espresso-pro-15-3-lifestyle.webp"
+          }
+        },
+        "image_kkaLwJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-espresso-pro-15-2-lifestyle.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_KgVtjP",
+        "image_gKzMRx",
+        "image_kkaLwJ"
+      ],
+      "name": "Custom Cards",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
       "settings": {}
@@ -174,6 +206,7 @@
     "custom_two_column_text_gCTTkh",
     "custom_product_cards_4etzKP",
     "custom_two_column_text_VwikEF",
+    "image_gallery_GCzFkX",
     "meet-espresso",
     "display-specs",
     "stand-specs",
