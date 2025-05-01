@@ -158,11 +158,18 @@
           "settings": {
             "image": "shopify://shop_images/image-espresso-pro-15-3-lifestyle.webp"
           }
+        },
+        "image_DyHMML": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-espresso-pro-15-2-lifestyle.webp"
+          }
         }
       },
       "block_order": [
         "image_KgVtjP",
-        "image_gKzMRx"
+        "image_gKzMRx",
+        "image_DyHMML"
       ],
       "name": "Custom Cards",
       "settings": {
