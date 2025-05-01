@@ -10,7 +10,7 @@
                 <div class="carousel-track h-full flex flex-row items-center justify-start gap-[12px] w-full overflow-y-hidden snap-x snap-mandatory desktop:grid desktop:grid-cols-3 ">
                   {% for block in section.blocks %}
                     <div
-                      class="contrast carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] rounded-[16px] "
+                      class="contrast color-{{ section.settings.color_scheme }} carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] rounded-[16px] "
                     >
                       <div class="flex flex-col gap-[10px] items-center h-full justify-start">
                         <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full">
