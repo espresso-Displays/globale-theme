@@ -109,6 +109,7 @@
     },
     "difference": {
       "type": "espresso-difference",
+      "disabled": true,
       "settings": {}
     },
     "color_calibrate": {
@@ -121,6 +122,7 @@
     },
     "features-3": {
       "type": "section-15-features-3",
+      "disabled": true,
       "settings": {}
     },
     "meet-espresso": {
