@@ -7,7 +7,7 @@
           <div class="layout-flex relative h-full col-span-full flex flex-row">
             {%  assign mod = section.blocks.size | modulo: 2 %}
             {% if mod == 0  %}
-              <div class="relative gap-[16px] w-full h-full select-none overflow-clip" style="flex: 50%">
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip" style="flex: 50%">
                 {% for block in section.blocks %}
                   <div>
                     <img
