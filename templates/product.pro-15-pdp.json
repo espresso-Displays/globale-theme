@@ -171,6 +171,28 @@
         "image_gKzMRx",
         "image_DyHMML"
       ],
+      "custom_css": [],
+      "name": "Custom Cards",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "image_gallery_CcpbeR": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_MAk44z": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-espresso-pro-15-lifestyle.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_MAk44z"
+      ],
+      "custom_css": [
+        "{padding-top: 8px; padding-bottom: 48px;}"
+      ],
       "name": "Custom Cards",
       "settings": {
         "color_scheme": ""
@@ -217,6 +239,7 @@
     "custom_product_cards_4etzKP",
     "custom_two_column_text_VwikEF",
     "image_gallery_GCzFkX",
+    "image_gallery_CcpbeR",
     "meet-espresso",
     "section_pro_15_display_specs_yDjHXY",
     "display-specs",
