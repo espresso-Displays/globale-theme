@@ -1,38 +1,29 @@
 <!-- sections/product-cards.liquid -->
 <div class="section color-{{ section.settings.color_scheme }} relative w-full h-full">
   <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
-    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] py-[0px] desktop-small:py-[0px] desktop:px-[0px] overflow-hidden z-[2] w-full h-full">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center z-[2] w-full h-full">
       <div class="content-block w-full h-full">
         <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
           <div class="layout-flex relative h-full col-span-full flex flex-row">
-            <div class="relative flex flex-col gap-[64px] w-full h-full select-none overflow-clip">
-              <div class="carousel-wrapper md:px-[48px] py-[70px] w-full">
-                <div class="carousel-track h-full flex flex-row items-center justify-start gap-[12px] w-full overflow-y-hidden snap-x snap-mandatory desktop:grid desktop:grid-cols-3 ">
-                  {% for block in section.blocks %}
-                    <div
-                      class="color-{{ section.settings.color_scheme }} carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] rounded-[16px] "
+            {%  assign mod = section.blocks.size | modulo: 2 %}
+            {% if mod == 0  %}
+              <div class="relative gap-[16px] w-full h-full select-none overflow-clip" style="flex: 50%">
+                {% for block in section.blocks %}
+                  <div>
+                    <img
+                      src="{{ block.settings.image | img_url: 'master' }}"
+                      loading="lazy"
+                      fetchpriority="high"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      width="100%"
+                      height="100%"
+                      draggable="false"
+                      class="w-full h-full object-contain object-center"
                     >
-                      <div class="flex flex-col gap-[10px] items-center h-full justify-start">
-                        <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full">
-                            <div class="image h-full min-h-0 w-full">
-                              <img
-                                src="{{ block.settings.image | img_url: 'master' }}"
-                                loading="lazy"
-                                fetchpriority="high"
-                                alt="{{ block.settings.image.alt | escape }}"
-                                width="450"
-                                height="372"
-                                draggable="false"
-                                class="w-full h-full object-contain object-center"
-                              >
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
+                  </div>
+                {% endfor %}
               </div>
-            </div>
+            {% endif %}
           </div>
         </div>
       </div>
