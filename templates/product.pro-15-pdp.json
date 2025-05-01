@@ -91,20 +91,14 @@
         "padding_bottom": 0
       }
     },
-    "features-1": {
-      "type": "section-15-features-1",
-      "settings": {
-        "section_15_features_image_1": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
-        "section_15_features_image_2": "shopify://shop_images/image-animation-standplus-plus-mode.gif",
-        "section_15_features_image_3": "shopify://shop_images/image-animation-stand-magnets-pdp.gif"
-      }
-    },
     "b-carousel": {
       "type": "brand-carousel",
+      "disabled": true,
       "settings": {}
     },
     "features-2": {
       "type": "section-15-features-2",
+      "disabled": true,
       "settings": {}
     },
     "difference": {
@@ -114,10 +108,12 @@
     },
     "color_calibrate": {
       "type": "color-calibrate",
+      "disabled": true,
       "settings": {}
     },
     "review_carousel": {
       "type": "review-carousel",
+      "disabled": true,
       "settings": {}
     },
     "features-3": {
@@ -152,7 +148,6 @@
     "product_nav",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
-    "features-1",
     "b-carousel",
     "features-2",
     "difference",
