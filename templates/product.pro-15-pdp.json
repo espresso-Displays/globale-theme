@@ -180,6 +180,13 @@
       "type": "meet-espresso-flow-updated",
       "settings": {}
     },
+    "section_pro_15_display_specs_yDjHXY": {
+      "type": "section-pro-15-display-specs",
+      "name": "Pro 15 Display Specs",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
     "display-specs": {
       "type": "section-15-display-specs",
       "settings": {}
@@ -208,6 +215,7 @@
     "custom_two_column_text_VwikEF",
     "image_gallery_GCzFkX",
     "meet-espresso",
+    "section_pro_15_display_specs_yDjHXY",
     "display-specs",
     "stand-specs",
     "section-faq",
