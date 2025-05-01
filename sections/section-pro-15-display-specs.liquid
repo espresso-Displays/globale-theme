@@ -87,7 +87,7 @@
             </div>
             <div class="h-full w-full flex flex-col items-end col-span-full">
               <a
-                href="{{ section.settings.fileLocation }}"
+                href="{{ section.settings.fileLocation.src | asset_url }}"
                 aria-label="tech spec sheet"
                 target="_blank"
               >
@@ -128,7 +128,7 @@
       "label": "Display Back Image"
     },
     {
-      "type": "url",
+      "type": "image_picker",
       "id": "fileLocation",
       "label": "Tech Specs Sheet"
     }
