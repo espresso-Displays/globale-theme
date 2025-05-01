@@ -158,18 +158,11 @@
           "settings": {
             "image": "shopify://shop_images/image-espresso-pro-15-3-lifestyle.webp"
           }
-        },
-        "image_kkaLwJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image-espresso-pro-15-2-lifestyle.webp"
-          }
         }
       },
       "block_order": [
         "image_KgVtjP",
-        "image_gKzMRx",
-        "image_kkaLwJ"
+        "image_gKzMRx"
       ],
       "name": "Custom Cards",
       "settings": {
@@ -194,7 +187,9 @@
     },
     "stand-specs": {
       "type": "section-15-stand-plus-specs",
-      "settings": {}
+      "settings": {
+        "color_scheme": ""
+      }
     },
     "section-faq": {
       "type": "faqs-updated",
