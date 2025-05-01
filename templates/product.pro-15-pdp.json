@@ -91,36 +91,6 @@
         "padding_bottom": 0
       }
     },
-    "b-carousel": {
-      "type": "brand-carousel",
-      "disabled": true,
-      "settings": {}
-    },
-    "features-2": {
-      "type": "section-15-features-2",
-      "disabled": true,
-      "settings": {}
-    },
-    "difference": {
-      "type": "espresso-difference",
-      "disabled": true,
-      "settings": {}
-    },
-    "color_calibrate": {
-      "type": "color-calibrate",
-      "disabled": true,
-      "settings": {}
-    },
-    "review_carousel": {
-      "type": "review-carousel",
-      "disabled": true,
-      "settings": {}
-    },
-    "features-3": {
-      "type": "section-15-features-3",
-      "disabled": true,
-      "settings": {}
-    },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
       "settings": {}
@@ -148,12 +118,6 @@
     "product_nav",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
-    "b-carousel",
-    "features-2",
-    "difference",
-    "color_calibrate",
-    "review_carousel",
-    "features-3",
     "meet-espresso",
     "display-specs",
     "stand-specs",
