@@ -135,6 +135,15 @@
         "color_scheme": "scheme-3"
       }
     },
+    "custom_two_column_text_VwikEF": {
+      "type": "custom-two-column-text",
+      "name": "Custom Two column text",
+      "settings": {
+        "color_scheme": "",
+        "text_field_1": "The perfect companion for travel.",
+        "text_field_2": "Wherever the road takes you, have the confidence that you can produce your best work, with the best tools."
+      }
+    },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
       "settings": {}
@@ -164,6 +173,7 @@
     "custom_liquid_7HdAb7",
     "custom_two_column_text_gCTTkh",
     "custom_product_cards_4etzKP",
+    "custom_two_column_text_VwikEF",
     "meet-espresso",
     "display-specs",
     "stand-specs",
