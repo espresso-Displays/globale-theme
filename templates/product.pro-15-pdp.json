@@ -93,11 +93,46 @@
     },
     "custom_two_column_text_gCTTkh": {
       "type": "custom-two-column-text",
-      "name": "Custom Two column text",
+      "name": "Comfort and ergonomics",
       "settings": {
         "color_scheme": "scheme-4",
         "text_field_1": "Comfort and ergonomics.",
         "text_field_2": "Create a mobile workspace around your needs style with the magnetic Stand+. Elevate the display above your laptop screen, or position side-by-side in landscape or portrait mode."
+      }
+    },
+    "custom_product_cards_4etzKP": {
+      "type": "custom-product-cards",
+      "blocks": {
+        "card_KeMXGa": {
+          "type": "card",
+          "settings": {
+            "title": "espresso Pro",
+            "subtitle": "Pro display for a serious workflow."
+          }
+        },
+        "card_PRPQYF": {
+          "type": "card",
+          "settings": {
+            "title": "espresso Touch",
+            "subtitle": "Sleek design with touchscreen."
+          }
+        },
+        "card_wJibwy": {
+          "type": "card",
+          "settings": {
+            "title": "espresso Display",
+            "subtitle": "Simple, seamless for daily performance."
+          }
+        }
+      },
+      "block_order": [
+        "card_KeMXGa",
+        "card_PRPQYF",
+        "card_wJibwy"
+      ],
+      "name": "Custom Cards",
+      "settings": {
+        "color_scheme": "scheme-3"
       }
     },
     "meet-espresso": {
@@ -128,6 +163,7 @@
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
     "custom_two_column_text_gCTTkh",
+    "custom_product_cards_4etzKP",
     "meet-espresso",
     "display-specs",
     "stand-specs",
