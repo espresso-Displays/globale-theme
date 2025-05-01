@@ -34,7 +34,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Key features",
-            "accordion_description": "<ul><li>Durable aerospace aluminium chassis</li><li>Full HD high-precision panel</li><li>Factory colour calibrated</li><li>300 nits brightness</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li></ul>"
+            "accordion_description": "<ul><li>Rich and immersive 4K panel</li><li>Touchscreen interactivity for Mac and Windows</li><li>Durable aerospace aluminium chassis</li><li>Super bright 550 nits brightness</li><li>1.07 billion colours (100% Adobe RGB)</li><li>2x USB-C ports with power passthrough</li><li>Powered via a single USB-C cable</li><li>Built-in speakers</li><li>Ergonomic Stand+ that sets up in seconds</li></ul>"
           }
         },
         "accordion_item_d3VwDV": {
@@ -48,7 +48,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Compatibility",
-            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p><p>Check full compatibility <a href=\"https://au.espres.so/compatibility\">here.</a></p>"
+            "accordion_description": "<p>The espresso Displays range is compatible with most major operating systems, laptops, gaming consoles, and software platforms via a USB-C cable included in the box. In some rare cases with specific devices, additional power or adapter cables may be required.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p><p>Check full compatibility <a href=\"https://au.espres.so/compatibility\">here.</a></p>"
           }
         }
       },
@@ -70,17 +70,15 @@
       "type": "product-nav",
       "settings": {}
     },
-    "two-col-text": {
-      "type": "two-col-title-text",
+    "pdp_overview_T9dhd7": {
+      "type": "pdp-overview",
+      "name": "PDP section 2",
       "settings": {
-        "title": "Designed for you.",
-        "description": "Built with premium materials. Blending tough aerospace aluminium and hardened glass.Engineered for life on the go."
-      }
-    },
-    "video": {
-      "type": "full-screen-video",
-      "settings": {
-        "video_file": "shopify://files/videos/video-espresso15NT-hero-pdp (1).mp4"
+        "text_field_1": "The ultimate workflow investment.",
+        "text_field_2": "Crafted for performance and productivity. When your work matters.",
+        "text_field_3": "4K. 1.07B colours. 550 nits brightness.",
+        "video_file": "shopify://files/videos/video-pdp-espresso-pro-15-interview.mp4",
+        "video_poster": "shopify://shop_images/Screenshot_2025-05-01_at_10.22.22_AM.png"
       }
     },
     "features-1": {
@@ -140,8 +138,7 @@
   "order": [
     "section-1",
     "product_nav",
-    "two-col-text",
-    "video",
+    "pdp_overview_T9dhd7",
     "features-1",
     "b-carousel",
     "features-2",
