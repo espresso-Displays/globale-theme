@@ -122,6 +122,7 @@
         "card_wJibwy": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
             "title": "Neodymium magnets.",
             "subtitle": "Magnetically connects to your espresso DIsplay."
           }
@@ -144,6 +145,27 @@
         "color_scheme": "",
         "text_field_1": "The perfect companion for travel.",
         "text_field_2": "Wherever the road takes you, have the confidence that you can produce your best work, with the best tools."
+      }
+    },
+    "image_gallery_CcpbeR": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_MAk44z": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-espresso-pro-15-lifestyle.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_MAk44z"
+      ],
+      "custom_css": [
+        "{padding-top: 16px; padding-bottom: 48px;}"
+      ],
+      "name": "Custom Cards",
+      "settings": {
+        "color_scheme": ""
       }
     },
     "image_gallery_GCzFkX": {
@@ -179,29 +201,12 @@
         "color_scheme": ""
       }
     },
-    "image_gallery_CcpbeR": {
-      "type": "image-gallery",
-      "blocks": {
-        "image_MAk44z": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image-espresso-pro-15-lifestyle.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_MAk44z"
-      ],
-      "custom_css": [
-        "{padding-top: 16px; padding-bottom: 48px;}"
-      ],
-      "name": "Custom Cards",
-      "settings": {
-        "color_scheme": ""
-      }
-    },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
+      "settings": {}
+    },
+    "section-compare": {
+      "type": "pdp-compare-updated",
       "settings": {}
     },
     "section_pro_15_display_specs_yDjHXY": {
@@ -225,10 +230,6 @@
     "section-faq": {
       "type": "faqs-updated",
       "settings": {}
-    },
-    "section-compare": {
-      "type": "pdp-compare-updated",
-      "settings": {}
     }
   },
   "order": [
@@ -238,13 +239,13 @@
     "custom_two_column_text_gCTTkh",
     "custom_product_cards_4etzKP",
     "custom_two_column_text_VwikEF",
-    "image_gallery_GCzFkX",
     "image_gallery_CcpbeR",
+    "image_gallery_GCzFkX",
     "meet-espresso",
+    "section-compare",
     "section_pro_15_display_specs_yDjHXY",
     "display-specs",
     "stand-specs",
-    "section-faq",
-    "section-compare"
+    "section-faq"
   ]
 }
