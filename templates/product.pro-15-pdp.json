@@ -68,11 +68,26 @@
     },
     "pro_15_reviews_ABC": {
       "type": "pro-15-reviews",
+      "disabled": true,
       "name": "Pro 15 Reviews",
-      "settings": {
-      }
+      "settings": {}
     },
-    
+    "main_discover_espresso_dJV4JH": {
+      "type": "main-discover-espresso",
+      "blocks": {
+        "slide_rPd7At": {
+          "type": "slide",
+          "settings": {
+            "video_iframe": "<iframe width=\"500\" height=\"282\" src=\"https://www.youtube.com/embed/YbSPKIP9X3E\" title=\"Portable monitor deep dive: espresso 15 Pro feat. Rob Mulally\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rPd7At"
+      ],
+      "name": "Carousel Slider",
+      "settings": {}
+    },
     "pdp_overview_T9dhd7": {
       "type": "pdp-overview",
       "custom_css": [
@@ -243,6 +258,7 @@
   "order": [
     "section-1",
     "pro_15_reviews_ABC",
+    "main_discover_espresso_dJV4JH",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
     "custom_two_column_text_gCTTkh",
