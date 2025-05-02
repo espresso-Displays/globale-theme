@@ -117,7 +117,9 @@
     },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
-      "settings": {}
+      "settings": {
+        "image_option": "shopify://shop_images/image-espresso-flow-pdp.webp"
+      }
     },
     "display-specs": {
       "type": "section-15-display-specs",
@@ -125,7 +127,9 @@
     },
     "stand-specs": {
       "type": "section-15-stand-plus-specs",
-      "settings": {}
+      "settings": {
+        "color_scheme": ""
+      }
     },
     "section-faq": {
       "type": "faqs-updated",
@@ -134,7 +138,9 @@
     "section-compare": {
       "type": "pdp-compare-updated",
       "disabled": true,
-      "settings": {}
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
   "order": [
