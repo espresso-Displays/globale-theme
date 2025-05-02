@@ -116,6 +116,7 @@
         "card_PRPQYF": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/image-animation-standplus-plus-mode.gif",
             "title": "New Plus mode.",
             "subtitle": "Increase height of your espresso Display above your laptop."
           }
@@ -123,7 +124,7 @@
         "card_wJibwy": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
+            "image": "shopify://shop_images/animation-PDP-valueprop2-productphoto.gif",
             "title": "Neodymium magnets.",
             "subtitle": "Magnetically connects to your espresso DIsplay."
           }
