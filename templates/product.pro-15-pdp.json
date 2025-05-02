@@ -66,6 +66,44 @@
         "trustpilot_sku": ""
       }
     },
+    "custom_review_cards_iBJBgV": {
+      "type": "custom-review-cards",
+      "blocks": {
+        "card_qVAbRy": {
+          "type": "card",
+          "settings": {
+            "title": "TechGuide",
+            "link": "https://www.techguide.com.au/news/computers-news/espresso-reveals-new-15-pro-4k-touchscreen-display-to-take-your-productivity-to-another-level/",
+            "review": "\"Naturally, the espresso 15 Pro is built tough with premium materials so it could handle day-to-day use over the long term.\""
+          }
+        },
+        "card_ejBTXY": {
+          "type": "card",
+          "settings": {
+            "title": "Engadget",
+            "link": "https://www.engadget.com/computing/the-espresso-15-pro-is-a-compact-version-of-our-favorite-portable-monitor-105237176.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAM4PNEPIpAhKAKoM6pQ4Qs0QrHN9wG9KV81DY40p6tJ0IrvlR3GBCYKgHmVy8AWujiy5oPyTSzBkxXwv0-QfAM7LSkCyCfstD4HAbuX6TLFysMHgU5rCfxTj1laLq3QXqZr2tkeuh_dmR7T4QlmsqpJgNP7kHonWy4lhsyzHZb-a",
+            "review": "\"The Espresso 15 Pro is a compact version of our favorite portable monitor.\""
+          }
+        },
+        "card_3Kde7H": {
+          "type": "card",
+          "settings": {
+            "title": "PetaPixel",
+            "link": "https://petapixel.com/2025/01/06/the-espresso-displays-15-pro-portable-monitor-is-brighter-and-lighter/",
+            "review": "\"The Espresso Displays 15 Pro Portable Monitor is Brighter and Lighter\""
+          }
+        }
+      },
+      "block_order": [
+        "card_qVAbRy",
+        "card_ejBTXY",
+        "card_3Kde7H"
+      ],
+      "name": "Custom Review",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "pdp_overview_T9dhd7": {
       "type": "pdp-overview",
       "custom_css": [
@@ -273,6 +311,7 @@
   },
   "order": [
     "section-1",
+    "custom_review_cards_iBJBgV",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
     "main_discover_espresso_dJV4JH",
