@@ -4,7 +4,7 @@
     <div class="section-layout max-w-content-max-width flex flex-col items-center z-[2] w-full h-full">
       <div class="content-block w-full h-full">
         <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
-          <div class="layout-flex relative h-full col-span-full flex flex-row">
+          <div class="layout-flex relative h-full col-span-full flex flex-col desktop-large:flex-row">
             {%  assign mod = section.blocks.size | modulo: 2 %}
             {% if sections.blocks.size == 1 %}
               <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip">              
