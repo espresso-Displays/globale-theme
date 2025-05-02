@@ -80,10 +80,24 @@
           "settings": {
             "video_iframe": "<iframe width=\"500\" height=\"282\" src=\"https://www.youtube.com/embed/YbSPKIP9X3E\" title=\"Portable monitor deep dive: espresso 15 Pro feat. Rob Mulally\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
           }
+        },
+        "slide_UHXd4M": {
+          "type": "slide",
+          "settings": {
+            "video_iframe": "<iframe width=\"500\" height=\"282\" src=\"https://www.youtube.com/embed/xsZphHnKwPI\" title=\"Best Portable Monitor? espresso 15 Pro Review 2025\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "slide_GzHjhr": {
+          "type": "slide",
+          "settings": {
+            "video_iframe": "<iframe width=\"500\" height=\"282\" src=\"https://www.youtube.com/embed/uYNvoReJ8tA\" title=\"The BEST Portable Monitor 2025 - Espresso Display Pro 15\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
         }
       },
       "block_order": [
-        "slide_rPd7At"
+        "slide_rPd7At",
+        "slide_UHXd4M",
+        "slide_GzHjhr"
       ],
       "name": "Carousel Slider",
       "settings": {}
