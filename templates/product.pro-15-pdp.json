@@ -66,12 +66,11 @@
         "trustpilot_sku": ""
       }
     },
-    "product_nav": {
-      "type": "product-nav",
-      "settings": {}
-    },
     "pdp_overview_T9dhd7": {
       "type": "pdp-overview",
+      "custom_css": [
+        "div {padding-bottom: 8px; padding-top: 0px;}"
+      ],
       "name": "PDP section 2",
       "settings": {
         "text_field_1": "The ultimate workflow investment.",
@@ -93,6 +92,9 @@
     },
     "custom_two_column_text_gCTTkh": {
       "type": "custom-two-column-text",
+      "custom_css": [
+        "div {padding-bottom: 0px;}"
+      ],
       "name": "Comfort and ergonomics",
       "settings": {
         "color_scheme": "scheme-3",
@@ -226,13 +228,11 @@
     },
     "section-compare": {
       "type": "pdp-compare-updated",
-      "disabled": true,
       "settings": {}
     }
   },
   "order": [
     "section-1",
-    "product_nav",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
     "custom_two_column_text_gCTTkh",
