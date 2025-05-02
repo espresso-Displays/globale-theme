@@ -4308,6 +4308,16 @@ html {
     padding-bottom: 70px;
   }
 
+  .desktop-large\:flex-\[50\%\] {
+    display: flex;
+    flex: 50%
+  }
+
+  .desktop-large\:flex-\[33\%\] {
+    display: flex;
+    flex: 33%
+  }
+
   .desktop-large\:text-heading-large {
     font-size: 2rem;
     line-height: 2.43rem;
