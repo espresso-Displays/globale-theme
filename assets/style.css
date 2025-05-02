@@ -2862,6 +2862,10 @@ html {
   font-weight: 400;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
