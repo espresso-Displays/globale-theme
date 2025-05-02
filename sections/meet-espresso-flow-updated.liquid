@@ -20,9 +20,10 @@
                     alt="espresso flow productivity software"
                     decoding="async"
                     loading="eager"
-                    src="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=100&amp;crop=center"
-                    srcset="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=200&amp;crop=center 200w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=400&amp;crop=center 400w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=600&amp;crop=center 600w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=800&amp;crop=center 800w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=1000&amp;crop=center 1000w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=1200&amp;crop=center 1200w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=1400&amp;crop=center 1400w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=1600&amp;crop=center 1600w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=1800&amp;crop=center 1800w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=2000&amp;crop=center 2000w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=2200&amp;crop=center 2200w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=2400&amp;crop=center 2400w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=2600&amp;crop=center 2600w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=2800&amp;crop=center 2800w, https://cdn.shopify.com/s/files/1/0636/2772/2984/files/image-espresso-flow-pdp.webp?width=3000&amp;crop=center 3000w"
+                    src="{{ product.images.first.url | asset_url }}"
+                    srcset="{{ product.images.first.src | asset_url }}"
                     width="100"
+                    height="auto"
                     class="rounded-[0px] lg:rounded-[20px] h-auto"
                     draggable="false"
                     style="width: 100%;"
@@ -147,4 +148,20 @@
   </div>
 </div>
 
+{% schema %}
+{
+  "name": "Meet flow updated",
+  "class": "custom",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.multirow.blocks.row.settings.image.label"
+    },
+  ]
+}
+
+  
+
+{% endschema%}
 
