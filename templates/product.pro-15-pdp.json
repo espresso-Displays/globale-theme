@@ -209,12 +209,6 @@
         "image_option": "shopify://shop_images/image-espresso-pro-15-5-pdp.webp"
       }
     },
-    "section-compare": {
-      "type": "pdp-compare-updated",
-      "settings": {
-        "color_scheme": ""
-      }
-    },
     "section_pro_15_display_specs_yDjHXY": {
       "type": "section-pro-15-display-specs",
       "name": "Pro 15 Display Specs",
@@ -229,6 +223,12 @@
     },
     "stand-specs": {
       "type": "section-15-stand-plus-specs",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "section-compare": {
+      "type": "pdp-compare-updated",
       "settings": {
         "color_scheme": ""
       }
@@ -248,10 +248,10 @@
     "image_gallery_CcpbeR",
     "image_gallery_GCzFkX",
     "meet-espresso",
-    "section-compare",
     "section_pro_15_display_specs_yDjHXY",
     "display-specs",
     "stand-specs",
+    "section-compare",
     "section-faq"
   ]
 }
