@@ -66,6 +66,13 @@
         "trustpilot_sku": ""
       }
     },
+    "pro_15_reviews_ABC": {
+      "type": "pro-15-reviews",
+      "name": "Pro 15 Reviews",
+      "settings": {
+      }
+    },
+    
     "pdp_overview_T9dhd7": {
       "type": "pdp-overview",
       "custom_css": [
@@ -235,6 +242,7 @@
   },
   "order": [
     "section-1",
+    "pro_15_reviews_ABC",
     "pdp_overview_T9dhd7",
     "custom_liquid_7HdAb7",
     "custom_two_column_text_gCTTkh",
