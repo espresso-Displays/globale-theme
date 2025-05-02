@@ -4260,6 +4260,25 @@ html {
     padding-top: 48px;
     padding-bottom: 48px;
   }
+  .desktop-large\:flex-\[50\%\] {
+    display: flex;
+    flex: 50%;
+    flex-direction: row !important;
+  }
+
+  .desktop\:flex-\[33\%\] {
+    display: flex;
+    flex: 33%;
+    flex-direction: row !important;
+  }
+
+  .desktop\:text-heading-large {
+    font-size: 2rem;
+    line-height: 2.43rem;
+    letter-spacing: 0rem;
+    font-weight: 700;
+  }
+
 }
 
 @media (min-width: 1800px) {
@@ -4306,24 +4325,5 @@ html {
   .desktop-large\:py-\[70px\] {
     padding-top: 70px;
     padding-bottom: 70px;
-  }
-
-  .desktop-large\:flex-\[50\%\] {
-    display: flex;
-    flex: 50%;
-    flex-direction: row !important;
-  }
-
-  .desktop-large\:flex-\[33\%\] {
-    display: flex;
-    flex: 33%;
-    flex-direction: row !important;
-  }
-
-  .desktop-large\:text-heading-large {
-    font-size: 2rem;
-    line-height: 2.43rem;
-    letter-spacing: 0rem;
-    font-weight: 700;
   }
 }

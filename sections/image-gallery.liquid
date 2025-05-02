@@ -9,9 +9,9 @@
             {% if sections.blocks.size == 1 %}
               <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip">              
             {% elsif mod == 0  %}
-              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip flex-col desktop-large:flex-[50%]">
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip flex-col desktop:flex-[50%]">
             {% else %}
-              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip flex-col desktop-large:flex-[33%]">
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip flex-col desktop:flex-[33%]">
             {% endif %}            
                 {% for block in section.blocks %}
                   <div>
