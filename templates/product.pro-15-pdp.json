@@ -205,7 +205,9 @@
     },
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/image-espresso-pro-15-5-pdp.webp"
+      }
     },
     "section-compare": {
       "type": "pdp-compare-updated",
