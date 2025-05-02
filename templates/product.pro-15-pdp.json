@@ -162,9 +162,7 @@
       "block_order": [
         "image_MAk44z"
       ],
-      "custom_css": [
-        "{padding-top: 16px; padding-bottom: 48px;}"
-      ],
+      "custom_css": [],
       "name": "Custom Cards",
       "settings": {
         "color_scheme": ""
@@ -209,7 +207,9 @@
     },
     "section-compare": {
       "type": "pdp-compare-updated",
-      "settings": {}
+      "settings": {
+        "color_scheme": ""
+      }
     },
     "section_pro_15_display_specs_yDjHXY": {
       "type": "section-pro-15-display-specs",
