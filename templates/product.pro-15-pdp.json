@@ -195,7 +195,9 @@
         "image_gKzMRx",
         "image_DyHMML"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "{padding-top: 16px; padding-bottom: 48px;}"
+      ],
       "name": "Custom Cards",
       "settings": {
         "color_scheme": ""
