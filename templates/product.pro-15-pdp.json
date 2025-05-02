@@ -108,6 +108,7 @@
         "card_KeMXGa": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
             "title": "Packs flat.",
             "subtitle": "Folds down in seconds"
           }
