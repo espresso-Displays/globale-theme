@@ -216,11 +216,6 @@
         "color_scheme": "scheme-1"
       }
     },
-    "display-specs": {
-      "type": "section-15-display-specs",
-      "disabled": true,
-      "settings": {}
-    },
     "stand-specs": {
       "type": "section-15-stand-plus-specs",
       "settings": {
@@ -249,7 +244,6 @@
     "image_gallery_GCzFkX",
     "meet-espresso",
     "section_pro_15_display_specs_yDjHXY",
-    "display-specs",
     "stand-specs",
     "section-compare",
     "section-faq"
