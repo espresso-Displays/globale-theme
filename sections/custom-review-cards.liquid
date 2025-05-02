@@ -16,7 +16,7 @@
                         <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full p-[8px]">
                           <h2 class="text-subheading-medium-heavy">{{ block.settings.review }}</h2>
                           <img src="{{ block.settings.image.url | asset_url }}" height="40" width="100" alt="{{block.settings.image.alt | escape }}"/>
-                          <h3>{{ block.settings.title }}</h3>
+                          <h3 class="text-heading-small text-left">{{ block.settings.title }}</h3>
                           <a href="{{ block.settings.link }}" class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap border-[1px] border-lm-outline-secondary bg-lm-inverse-secondary hover:bg-lm-inverse-secondary-hover active:bg-lm-inverse-secondary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer text-lm-inverse-on-secondary">Read the review</a>
                         </div>
                       </div>
