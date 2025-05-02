@@ -13,8 +13,8 @@
                       class="contrast color-{{ section.settings.color_scheme }} carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] rounded-[16px] "
                     >
                       <div class="flex flex-col gap-[10px] items-center h-full justify-start">
-                        <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full">
-                          <h2>{{ block.settings.review }}</h2>
+                        <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full p-[8px]">
+                          <h2 class="text-subheading-medium-heavy">{{ block.settings.review }}</h2>
                           <img src="{{ block.settings.image.url | asset_url }}" height="40" width="100" alt="{{block.settings.image.alt | escape }}"/>
                           <h3>{{ block.settings.title }}</h3>
                           <a href="{{ block.settings.link }}"><button class="">Read the review</button></a>
