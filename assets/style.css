@@ -4310,13 +4310,14 @@ html {
 
   .desktop-large\:flex-\[50\%\] {
     display: flex;
-    flex: 50%
+    flex: 50%;
+    flex-direction: row !important;
   }
 
   .desktop-large\:flex-\[33\%\] {
     display: flex;
     flex: 33%;
-    flex-direction: column !important;
+    flex-direction: row !important;
   }
 
   .desktop-large\:text-heading-large {
