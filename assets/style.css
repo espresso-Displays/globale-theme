@@ -940,6 +940,9 @@ html {
 .-bottom-0 {
   bottom: -0px;
 }
+.bottom-\[0px\] {
+  bottom: 0px;
+}
 
 .bottom-\[17px\] {
   bottom: 17px;
