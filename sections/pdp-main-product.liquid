@@ -87,6 +87,8 @@
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
                       <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
                       {%  if product.selected_or_first_available_variant.available %}
+                        {{ product.selected_or_first_available_variant.id }}
+                        {{ product.selected_or_first_available_variant.available }}
                       <input
                         type="submit"
                         value="Add to cart"
