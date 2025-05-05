@@ -20,7 +20,7 @@
               <div class="border-y-[1px] border-t-neutral-80">
                 <div class="image h-full min-h-0 w-full">
                   <img
-                    src="{{ section.settings.display1.src | asset_url }}"
+                    src="{{ section.settings.display1 | img_url: 'master' }}"
                     fetchpriority="auto"
                     alt="display 15 dimensions"
                     width=""
@@ -33,7 +33,7 @@
               <div class="border-y-[1px] border-t-neutral-80">
                 <div class="image h-full min-h-0 w-full">
                   <img
-                    src="{{ section.settings.display2.src | asset_url }}"
+                    src="{{ section.settings.display2 | img_url: 'master' }}"
                     fetchpriority="auto"
                     alt="display 15 dimensions"
                     width=""
