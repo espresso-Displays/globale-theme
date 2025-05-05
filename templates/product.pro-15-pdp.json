@@ -72,6 +72,7 @@
         "card_qVAbRy": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/Tech_Guide_logo-1060x400w-600x315w_e3ead8cf-c138-4b84-868f-681165a9036a.png",
             "title": "TechGuide",
             "link": "https://www.techguide.com.au/news/computers-news/espresso-reveals-new-15-pro-4k-touchscreen-display-to-take-your-productivity-to-another-level/",
             "review": "\"Naturally, the espresso 15 Pro is built tough with premium materials so it could handle day-to-day use over the long term.\""
@@ -295,7 +296,7 @@
     "stand-specs": {
       "type": "section-15-stand-plus-specs",
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "scheme-1"
       }
     },
     "section-compare": {
