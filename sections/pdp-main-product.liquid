@@ -62,86 +62,96 @@
                   {% if product.variants.size > 1 %}
                     <div class=" flex items-center gap-4">
                       {% for variant in product.variants %}
-                          <button
-                            draggable="false"
-                            type="button"
-                            class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
-                            data-variant-id="{{ variant.id }}"
-                            data-variant-price="{{ variant.price | money }}"
-                            data-handle="{{ product.handle }}"
-                          >
-                            {{ variant.title }}
-                          </button>
-
-                        
-                        {% endfor %}
+                        <button
+                          draggable="false"
+                          type="button"
+                          class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                          data-variant-id="{{ variant.id }}"
+                          data-variant-price="{{ variant.price | money }}"
+                          data-handle="{{ product.handle }}"
+                        >
+                          {{ variant.title }}
+                        </button>
+                        <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
+                          <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
+                            <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
+                              <input
+                                type="hidden"
+                                name="id"
+                                value="{{ product.selected_or_first_available_variant.id }}"
+                              >
+                              <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                              <input type="hidden" name="productTitle" value="{{ product.title }}">
+                              <input type="hidden" name="currency" value="{{ shop.currency }}">
+                              <input
+                                type="hidden"
+                                name="price"
+                                value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}"
+                              >
+                              {% if variant.available %}
+                                <input
+                                  type="submit"
+                                  value="Add to cart"
+                                  name="add"
+                                  aria-label="Add to Cart"
+                                  class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                                >
+                              {% else %}
+                                <input
+                                  type="submit"
+                                  value="Add to cart"
+                                  name="add"
+                                  aria-label="Add to Cart"
+                                  disabled
+                                  class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] text-lm-on-primary px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                                  style="pointer-events: none; background-color: #ccc;"
+                                >
+                                <p class="cart-add-no-stock">Currently out of stock</p>
+                              {% endif %}
+                            </form>
+                          </div>
+                        </div>
+                      {% endfor %}
                     </div>
-                <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
-                  <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
-                    <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
-                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
-                      <input type="hidden" name="productTitle" value="{{ product.title }}">
-                      <input type="hidden" name="currency" value="{{ shop.currency }}">
-                      <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
-                      {%  if product.selected_or_first_available_variant.available %}
-                      <input
-                        type="submit"
-                        value="Add to cart"
-                        name="add"
-                        aria-label="Add to Cart"
-                        class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
-                      >
-                      {% else %}
-                      <input
-                        type="submit"
-                        value="Add to cart"
-                        name="add"
-                        aria-label="Add to Cart"
-                        disabled
-                        class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] text-lm-on-primary px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
-                        style="pointer-events: none; background-color: #ccc;"
-                      >
-                      <p class="cart-add-no-stock">Currently out of stock</p>
-                      {% endif %}
-                    </form>
-                  </div>
-                </div>
-                {% else %}
+
+                  {% else %}
                     <input type="hidden" name="variant-id" value="{{ product.variants.first.id }}">
 
-                <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
-                  <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
-                    <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
-                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
-                      <input type="hidden" name="productTitle" value="{{ product.title }}">
-                      <input type="hidden" name="currency" value="{{ shop.currency }}">
-                      <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
-                      {%  if product.selected_or_first_available_variant.available %}
-                      <input
-                        type="submit"
-                        value="Add to cart"
-                        name="add"
-                        aria-label="Add to Cart"
-                        class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
-                      >
-                      {% else %}
-                      <input
-                        type="submit"
-                        value="Add to cart"
-                        name="add"
-                        aria-label="Add to Cart"
-                        disabled
-                        class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] text-lm-on-primary px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
-                        style="pointer-events: none; background-color: #ccc;"
-                      >
-                      <p class="cart-add-no-stock">Currently out of stock</p>
-                      {% endif %}
-                    </form>
-                  </div>
-                </div>
-                  
+                    <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
+                      <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
+                        <form class="cart-add collection-quick-add-to-cart" method="post" action="/cart/add">
+                          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                          <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                          <input type="hidden" name="productTitle" value="{{ product.title }}">
+                          <input type="hidden" name="currency" value="{{ shop.currency }}">
+                          <input
+                            type="hidden"
+                            name="price"
+                            value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}"
+                          >
+                          {% if product.selected_or_first_available_variant.available %}
+                            <input
+                              type="submit"
+                              value="Add to cart"
+                              name="add"
+                              aria-label="Add to Cart"
+                              class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                            >
+                          {% else %}
+                            <input
+                              type="submit"
+                              value="Add to cart"
+                              name="add"
+                              aria-label="Add to Cart"
+                              disabled
+                              class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] text-lm-on-primary px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                              style="pointer-events: none; background-color: #ccc;"
+                            >
+                            <p class="cart-add-no-stock">Currently out of stock</p>
+                          {% endif %}
+                        </form>
+                      </div>
+                    </div>
                   {% endif %}
                 </div>
 
