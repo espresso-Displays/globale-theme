@@ -285,14 +285,17 @@
     "meet-espresso": {
       "type": "meet-espresso-flow-updated",
       "settings": {
-        "image_option": "shopify://shop_images/image-espresso-pro-15-5-pdp.webp"
+        "image_option": "shopify://shop_images/image-espresso-flow-pdp-pro_webp.png"
       }
     },
     "section_pro_15_display_specs_yDjHXY": {
       "type": "section-pro-15-display-specs",
       "name": "Pro 15 Display Specs",
       "settings": {
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "display1": "shopify://shop_images/Screenshot_2025-05-05_at_3.47.38_PM.png",
+        "display2": "shopify://shop_images/Screenshot_2025-05-05_at_3.47.50_PM.png",
+        "fileLocation": "shopify://shop_images/spec-sheet-pro-15-EAN-1.png"
       }
     },
     "stand-specs": {
