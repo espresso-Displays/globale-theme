@@ -62,6 +62,7 @@
                   {% if product.variants.size > 1 %}
                     <div class=" flex items-center gap-4">
                       {% for variant in product.variants %}
+                          {% if variant.available %}
                           <button
                             draggable="false"
                             type="button"
@@ -72,6 +73,7 @@
                           >
                             {{ variant.title }}
                           </button>
+                            {% endif %}
                       {% endfor %}
                     </div>
                   {% else %}
@@ -87,8 +89,6 @@
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
                       <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
                       {%  if product.selected_or_first_available_variant.available %}
-                        {{ product.selected_or_first_available_variant.id }}
-                        {{ product.selected_or_first_available_variant.available }}
                       <input
                         type="submit"
                         value="Add to cart"
