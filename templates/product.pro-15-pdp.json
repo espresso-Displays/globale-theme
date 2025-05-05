@@ -81,6 +81,7 @@
         "card_ejBTXY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/Engadget-Logo.wine.png",
             "title": "Engadget",
             "link": "https://www.engadget.com/computing/the-espresso-15-pro-is-a-compact-version-of-our-favorite-portable-monitor-105237176.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAM4PNEPIpAhKAKoM6pQ4Qs0QrHN9wG9KV81DY40p6tJ0IrvlR3GBCYKgHmVy8AWujiy5oPyTSzBkxXwv0-QfAM7LSkCyCfstD4HAbuX6TLFysMHgU5rCfxTj1laLq3QXqZr2tkeuh_dmR7T4QlmsqpJgNP7kHonWy4lhsyzHZb-a",
             "review": "\"The Espresso 15 Pro is a compact version of our favorite portable monitor.\""
@@ -89,6 +90,7 @@
         "card_3Kde7H": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/PetaPixel__logo__svg.png",
             "title": "PetaPixel",
             "link": "https://petapixel.com/2025/01/06/the-espresso-displays-15-pro-portable-monitor-is-brighter-and-lighter/",
             "review": "\"The Espresso Displays 15 Pro Portable Monitor is Brighter and Lighter\""
