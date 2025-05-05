@@ -69,7 +69,6 @@
                             data-variant-id="{{ variant.id }}"
                             data-variant-price="{{ variant.price | money }}"
                             data-handle="{{ product.handle }}"
-                            data-variant-available="{{ variant.available }}"
                           >
                             {{ variant.title }}
                           </button>
@@ -87,7 +86,7 @@
                       <input type="hidden" name="productTitle" value="{{ product.title }}">
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
                       <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
-                      
+                      {%  if product.selected_or_first_available_variant.available %}
                       <input
                         type="submit"
                         value="Add to cart"
@@ -95,7 +94,18 @@
                         aria-label="Add to Cart"
                         class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
                       >
-                      <p class="cart-add-no-stock" style="display: none;">Currently out of stock</p>
+                      {% else %}
+                      <input
+                        type="submit"
+                        value="Add to cart"
+                        name="add"
+                        aria-label="Add to Cart"
+                        disabled
+                        class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] text-lm-on-primary px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                        style="pointer-events: none; background-color: #ccc;"
+                      >
+                      <p class="cart-add-no-stock">Currently out of stock</p>
+                      {% endif %}
                     </form>
                   </div>
                 </div>
