@@ -62,6 +62,7 @@
                   {% if product.variants.size > 1 %}
                     <div class=" flex items-center gap-4">
                       {% for variant in product.variants %}
+                        {% if variant.available %}
                           <button
                             draggable="false"
                             type="button"
@@ -69,10 +70,23 @@
                             data-variant-id="{{ variant.id }}"
                             data-variant-price="{{ variant.price | money }}"
                             data-handle="{{ product.handle }}"
-                            data-variant-available="{{ variant.available }}"
                           >
                             {{ variant.title }}
                           </button>
+                          {% else %}
+                          <button
+                            draggable="false"
+                            type="button"
+                            class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                            data-variant-id="{{ variant.id }}"
+                            data-variant-price="{{ variant.price | money }}"
+                            data-handle="{{ product.handle }}"
+                            disabled
+                          >
+                            {{ variant.title }}
+                          </button>
+                      
+                          {% endif %}
                       {% endfor %}
                     </div>
                   {% else %}
@@ -87,7 +101,7 @@
                       <input type="hidden" name="productTitle" value="{{ product.title }}">
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
                       <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
-                      <div class="available" style="display: none">
+                      {%  if product.selected_or_first_available_variant.available %}
                       <input
                         type="submit"
                         value="Add to cart"
@@ -95,9 +109,7 @@
                         aria-label="Add to Cart"
                         class="cart-add rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
                       >
-                        </div>
-
-                      <div class="unavailable" style="display: none">
+                      {% else %}
                       <input
                         type="submit"
                         value="Add to cart"
@@ -108,11 +120,11 @@
                         style="pointer-events: none; background-color: #ccc;"
                       >
                       <p class="cart-add-no-stock">Currently out of stock</p>
-                      </div>
+                      {% endif %}
                     </form>
                   </div>
                 </div>
-                
+
                 <div class="shipping-info text-[#303030] flex flex-col">
                   {% for block in section.blocks %}
                     {% if block.type == 'benefit_item' %}
