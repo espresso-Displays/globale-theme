@@ -293,8 +293,8 @@
       "name": "Pro 15 Display Specs",
       "settings": {
         "color_scheme": "scheme-1",
-        "display1": "shopify://shop_images/Screenshot_2025-05-05_at_3.47.38_PM.png",
-        "display2": "shopify://shop_images/Screenshot_2025-05-05_at_3.47.50_PM.png",
+        "display1": "shopify://shop_images/image-espresso-15-pro.png",
+        "display2": "shopify://shop_images/image-espresso-15-pro-1.png",
         "fileLocation": "shopify://shop_images/spec-sheet-pro-15-EAN-1.png"
       }
     },
