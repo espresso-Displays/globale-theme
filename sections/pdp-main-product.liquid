@@ -86,7 +86,7 @@
                       <input type="hidden" name="productTitle" value="{{ product.title }}">
                       <input type="hidden" name="currency" value="{{ shop.currency }}">
                       <input type="hidden" name="price" value="{{  product.selected_or_first_available_variant.price| divided_by: 100  }}">
-                      {%  if product.selected_variant.available > 0 %}
+                      {%  if product.selected_variant.available %}
                       <input
                         type="submit"
                         value="Add to cart"
