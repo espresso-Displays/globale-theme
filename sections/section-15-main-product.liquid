@@ -73,8 +73,8 @@
                         </button>
                       {% endfor %}
                     </div>
-                  {% elsif product.metafields.custom.variant_options.count > 1 %}
-                      {% for variant in product.metafields.custom.variant_options %}
+                  {% elsif product.metafields.custom.variant_options.value.count > 1 %}
+                      {% for variant in product.metafields.custom.variant_options.value %}
                         <a href="{{ variant.url }}?variant={{ variant.id }}">
                         <button
                           draggable="false"
