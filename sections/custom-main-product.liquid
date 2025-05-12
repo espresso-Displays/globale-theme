@@ -35,8 +35,9 @@
                         {% comment %} </a> {% endcomment %}
                       {% endfor %}
                     </div>
-                  {% elsif product.metafields.custom.variant_options.size > 1 %}
-                      {% for variant in product.metafields.custom.variant_options %}
+                  {% elsif product.metafields.custom.variant_options.value.count > 1 %}
+                    <div class=" flex items-center gap-4">
+                      {% for variant in product.metafields.custom.variant_options.value %}
                         <a href="{{ variant.url }}?variant={{ variant.id }}">
                         <button
                           draggable="false"
@@ -49,6 +50,7 @@
                         </button>
                         </a>
                       {% endfor %}
+                    </div>
                   {% else %}
                     <input type="hidden" name="variant-id" value="{{ product.variants.first.id }}">
                   {% endif %}
