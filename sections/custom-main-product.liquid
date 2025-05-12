@@ -35,6 +35,20 @@
                         {% comment %} </a> {% endcomment %}
                       {% endfor %}
                     </div>
+                  {% elsif product.metafields.custom.variant_options.size > 1 %}
+                      {% for variant in product.metafields.custom.variant_options %}
+                        {% comment %} <a href="{{ product.url }}?variant={{ variant.id }}"> {% endcomment %}
+                        <button
+                          draggable="false"
+                          type="button"
+                          class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                          data-variant-id="{{ variant.id }}"
+                          data-variant-price="{{ variant.price | money }}"
+                        >
+                          {{ variant.title }}
+                        </button>
+                        {% comment %} </a> {% endcomment %}
+                      {% endfor %}
                   {% else %}
                     <input type="hidden" name="variant-id" value="{{ product.variants.first.id }}">
                   {% endif %}
