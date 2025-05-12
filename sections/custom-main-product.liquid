@@ -37,7 +37,7 @@
                     </div>
                   {% elsif product.metafields.custom.variant_options.size > 1 %}
                       {% for variant in product.metafields.custom.variant_options %}
-                        {% comment %} <a href="{{ product.url }}?variant={{ variant.id }}"> {% endcomment %}
+                        <a href="{{ variant.url }}?variant={{ variant.id }}">
                         <button
                           draggable="false"
                           type="button"
@@ -47,7 +47,7 @@
                         >
                           {{ variant.title }}
                         </button>
-                        {% comment %} </a> {% endcomment %}
+                        </a>
                       {% endfor %}
                   {% else %}
                     <input type="hidden" name="variant-id" value="{{ product.variants.first.id }}">
