@@ -1,0 +1,107 @@
+<div
+  id="section-compare"
+  class="section relative flex lg:flex-col items-center flex-col-reverse h-full w-full bg-neutral-20 text-neutral-100"
+>
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[32px] desktop-small:pt-[70px] pb-[32px] desktop-small:pb-[70px] bg-neutral-20 text-neutral-100">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div class="col-span-4 lg:col-span-12 flex flex-col items-center gap-[32px] lg:gap-[32px] px-[16px] lg:px-[48px] rounded-lg bg-neutral-20">
+          <h2 class="text-center py-6 text-display-small">Which display is right for you?</h2>
+          {% assign metafield_length = product.metafields.custom.compare.value.count %}
+          <div class="grid grid-cols-1 lg:grid-cols-{{ metafield_length }} gap-[30px]">
+            {% for item in product.metafields.custom.compare.value %}
+              <div class="flex flex-col items-center gap-[16px] lg:gap-[32px]">
+                <div class="text-center text-body-small h-auto desktop-small:h-[70px] desktop-large:h-auto px-[1px]">
+                  {{ item.description }}
+                </div>
+                <div class="px-4 flex items-center h-[200px]">
+                  <div class="image h-full min-h-0 w-full">
+                    <img
+                      src="{{ item.thumbnail | image_url }}"
+                      fetchpriority="auto"
+                      alt=""
+                      width=""
+                      height=""
+                      draggable="false"
+                      class="w-full h-full object-contain"
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[8px] lg:gap-[32px]">
+                  <div class="text-center text-heading-medium h-[32px] lg:h-[56px]">{{ item.title.value }}</div>
+                  <font class="text-center justify-center text-heading-small">
+                    <span>{{ item.product.value.price | money }}</span></font
+                  >
+                </div>
+                <div class="flex flex-row justify-center">
+                  {% if product.variants.first.id == item.product.value.id %}
+                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                      <input
+                        type="submit"
+                        value="Buy now"
+                        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                      >
+                    </form>
+
+                  {% else %}
+                    <a
+                      aria-label="Learn more"
+                      draggable="false"
+                      class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap border-[1px] border-lm-outline-primary bg-lm-inverse-primary text-lm-inverse-on-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer event-pdp-v3-learn-15 event-pdp-v3-learn-15 event-pdp-v2-learn-15 event-pdp-v3-learn-15 event-pdp-v3-learn-15"
+                      href="{{ item.product.value.url }}"
+                      >Learn more</a
+                    >
+                  {% endif %}
+                </div>
+
+                <div class="product-specs">
+                  {{ item.specs | metafield_tag }}
+                </div>
+                {% comment %}
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0636/2772/2984/files/Spec_Sheet_13_Touch_1.pdf?v=1729057045"
+                    draggable="false"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-secondary text-lm-on-secondary hover:bg-lm-secondary-hover active:bg-lm-secondary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer event-any-tech-specs-download"
+                    >See all specs</a
+                  >
+                {% endcomment %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Compare",
+  "tag": "section",
+  "class": "custom",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Compare",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    }
+  ]
+}
+{% endschema %}
+

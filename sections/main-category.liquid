@@ -1,161 +1,59 @@
+<!-- sections/product-cards.liquid -->
 <div class="relative w-full h-full">
-  <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-neutral-100">
-    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-neutral-100 text-lm-on-background-1 desktop:px-[0px] overflow-hidden z-[2] w-full h-full">
+  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full bg-neutral-100">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-neutral-100 text-lm-on-background-1 py-[0px] desktop-small:py-[0px] desktop:px-[0px] overflow-hidden z-[2] w-full h-full">
       <div class="content-block w-full h-full">
-        <div
-          id=""
-          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
-        >
-          <div id="" class="layout-flex relative h-full col-span-full flex flex-row">
+        <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
+          <div class="layout-flex relative h-full col-span-full flex flex-row">
             <div class="relative flex flex-col gap-[64px] w-full h-full select-none overflow-clip">
-              <div class="px-[48px] w-full">
-                <div class="home-slider-category h-full flex flex-row items-center justify-start gap-[20px] overflow-x-auto desktop:overflow-hidden w-full overflow-y-hidden snap-x snap-mandatory scrollbar-hide">
-                  <div
-                    id="media-element-0"
-                    class="flex flex-col items-center snap-center shrink-0 relative w-full desktop:w-full desktop:shrink px-[0px] py-[20px] desktop:px-[70px] desktop:py-[48px]"
-                  >
-                    <div class="">
-                      <div class="flex flex-col gap-[10px] items-center h-[422px] desktop:h-auto desktop:min-h-[422px] ">
-                        <div
-                          id=""
-                          class="layout-flex relative col-span-full content-container flex flex-col flex-grow justify-start items-center text-center h-full w-full gap-[14px]"
-                        >
-                          <h2 class="heading text-heading-medium currentColor whitespace-pre-wrap">espresso Display</h2>
-                          <div class="subheading text-subheading-medium currentColor text-center">
-                            Thin and lightweight.
-                          </div>
-                          <div class="w-full flex flex-row flex-wrap gap-[20px] justify-center ">
-                            <a
-                              aria-label="Shop"
-                              draggable="false"
-                              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer event-hp-v2-displays"
-                              href="/products/espressodisplays"
-                              >Shop</a
-                            >
-                          </div>
+              <div class="carousel-wrapper md:px-[48px] py-[70px] w-full">
+                <div class="carousel-track h-full flex flex-row items-center justify-start gap-[12px] w-full overflow-y-hidden snap-x snap-mandatory desktop:grid desktop:grid-cols-3 ">
+                  {% for block in section.blocks %}
+                    <div
+                      class="carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] bg-neutral-90 rounded-[16px] "
+                    >
+                      <div class="flex flex-col gap-[10px] items-center h-full justify-start">
+                        <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full">
+                          <a class="w-full h-full" data-discover="true" href="{{ block.settings.product_link }}">
+                            <div class="image h-full min-h-0 w-full">
+                              <img
+                                src="{{ block.settings.image | img_url: 'master' }}"
+                                loading="lazy"
+                                fetchpriority="high"
+                                alt="{{ block.settings.image.alt | escape }}"
+                                width="450"
+                                height="372"
+                                draggable="false"
+                                class="w-full h-full object-contain object-center"
+                              >
+                            </div>
+                          </a>
                         </div>
-                        <div
-                          id=""
-                          class="layout-flex relative col-span-full media flex flex-col justify-center items-center h-[275px] flex-shrink-0 w-full"
-                        >
-                          <div class="image h-full min-h-0 w-full">
-                            <img
-                              src="{{ 'image-espresso-displays-home.png' | asset_url }}"
-                              loading="eager"
-                              fetchpriority="high"
-                              alt="espresso displays"
-                              width="356"
-                              height="236"
+                        <div class="layout-flex relative h-full col-span-full content-container flex flex-col justify-between items-center text-center w-full gap-[10px]">
+                          <div class="flex flex-col items-center">
+                            <h2 class="heading text-heading-small currentColor ">
+                              {{ block.settings.title }}
+                            </h2>
+                            <div class="subheading text-body-medium currentColor text-center text-neutral-40">
+                              {{ block.settings.subtitle }}
+                            </div>
+                          </div>
+                          {% if block.settings.product_link %}
+                          <div class="w-full flex flex-row flex-wrap gap-[20px] justify-center">
+                            <a
+                              aria-label="Learn more"
                               draggable="false"
-                              class="w-full h-full object-contain object-center"
+                              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] border-[1px] border-lm-outline-secondary bg-lm-inverse-secondary hover:bg-lm-inverse-secondary-hover active:bg-lm-inverse-secondary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer text-lm-inverse-on-secondary"
+                              data-discover="true"
+                              href="{{ block.settings.product_link }}"
+                              >Learn more</a
                             >
                           </div>
+                            {% endif %}
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    id="media-element-1"
-                    class="flex flex-col items-center snap-center shrink-0 relative desktop:w-[33%] w-full desktop:max-w-[500px] flex-shrink-0 desktop:border-l-[1px] desktop:border-neutral-80 px-[0px] py-[20px] desktop:px-[70px] desktop:py-[48px]"
-                  >
-                    <div class="">
-                      <div class="flex flex-col gap-[10px] items-center h-[422px] desktop:h-auto desktop:min-h-[422px] ">
-                        <div
-                          id=""
-                          class="layout-flex relative col-span-full content-container flex flex-col flex-grow justify-start items-center text-center h-full w-full gap-[14px]"
-                        >
-                          <h2 class="heading text-heading-medium currentColor whitespace-pre-wrap">Bundles</h2>
-                          <div class="subheading text-subheading-medium currentColor text-center">Bundle and save!</div>
-                          <div class="w-full flex flex-row flex-wrap gap-[20px] justify-center ">
-                            <a
-                              aria-label="Shop bundles"
-                              draggable="false"
-                              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer event-hp-v2-bundles"
-                              href="/collections/bundles"
-                              >Shop bundles</a
-                            >
-                          </div>
-                        </div>
-                        <div
-                          id=""
-                          class="layout-flex relative col-span-full media flex flex-col justify-center items-center h-[275px] flex-shrink-0 w-full"
-                        >
-                          <div class="image h-full min-h-0 w-full">
-                            <img
-                              src="{{ 'image-espresso-bundles-home.png' | asset_url }}"
-                              loading="eager"
-                              fetchpriority="high"
-                              alt="espresso displays"
-                              width="356"
-                              height="236"
-                              draggable="false"
-                              class="w-full h-full object-contain object-center"
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    id="media-element-2"
-                    class="flex flex-col items-center snap-center shrink-0 relative desktop:w-[33%] w-full desktop:max-w-[500px] flex-shrink-0 desktop:border-l-[1px] desktop:border-neutral-80 px-[0px] py-[20px] desktop:px-[70px] desktop:py-[48px]"
-                  >
-                    <div class="">
-                      <div class="flex flex-col gap-[10px] items-center h-[422px] desktop:h-auto desktop:min-h-[422px] ">
-                        <div
-                          id=""
-                          class="layout-flex relative col-span-full content-container flex flex-col flex-grow justify-start items-center text-center h-full w-full gap-[14px]"
-                        >
-                          <h2 class="heading text-heading-medium currentColor whitespace-pre-wrap">Accessories</h2>
-                          <div class="subheading text-subheading-medium currentColor text-center">
-                            Browse our accessories.
-                          </div>
-                          <div class="w-full flex flex-row flex-wrap gap-[20px] justify-center ">
-                            <a
-                              aria-label="Shop accessories"
-                              draggable="false"
-                              class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer event-hp-v2-accessories"
-                              href="/collections/accessories"
-                              >Shop accessories</a
-                            >
-                          </div>
-                        </div>
-                        <div
-                          id=""
-                          class="layout-flex relative col-span-full media flex flex-col justify-center items-center h-[275px] flex-shrink-0 w-full"
-                        >
-                          <div class="image h-full min-h-0 w-full">
-                            <img
-                              src="{{ 'image-espresso-accessories-home.png' | asset_url }} "
-                              loading="eager"
-                              fetchpriority="high"
-                              alt="espresso displays"
-                              width="356"
-                              height="236"
-                              draggable="false"
-                              class="w-full h-full object-contain object-center"
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex desktop:hidden absolute flex-row items-center justify-between w-full h-full bg-lm-transparent pointer-events-none">
-                <div class="cursor-pointer pointer-events-auto">
-                  <div id="main-category-left-icon" class="icon flex flex-col items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                      <circle cx="20" cy="20" r="20" transform="rotate(180 20 20)" class="fill-[#F2F0F2]/60 hover:fill-[#E6E6E6]/80 active:fill-[#F9F9F9]/80"></circle><path d="M23.875 13L17 19.875L23.875 26.75" stroke-width="1.125" class="stroke-[#5A5A5A]/60 hover:stroke-[#5A5A5A]/80 active:stroke-[#5A5A5A]/80 " stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="cursor-pointer pointer-events-auto">
-                  <div id="main-category-right-icon" class="icon flex flex-col items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                      <circle cx="20" cy="20" r="20" transform="rotate(180 20 20)" class="fill-[#F2F0F2]/60 hover:fill-[#E6E6E6]/80 active:fill-[#F9F9F9]/80"></circle><path d="M17 13L23.875 19.875L17 26.75" stroke-width="1.125" stroke-linejoin="round" class="stroke-[#5A5A5A]/60 hover:stroke-[#5A5A5A]/80 active:stroke-[#5A5A5A]/80 "></path>
-                    </svg>
-                  </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -165,3 +63,162 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Carousel styles */
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .carousel-track {
+    transition: transform 0.5s ease;
+  }
+
+  /* Desktop: Show all cards */
+  @media (min-width: 1024px) {
+    /* Assuming 'desktop' is lg breakpoint */
+
+    .carousel-card {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Mobile: One card at a time */
+  @media (max-width: 1023px) {
+    .carousel-card {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-card.active {
+      display: flex; /* Only active card is visible */
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-card');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+    const totalCards = cards.length;
+
+    function updateCarousel() {
+      {% comment %} if (window.innerWidth < 1024) {
+        // Mobile view
+        cards.forEach((card, index) => {
+          card.classList.toggle('active', index === currentIndex);
+        });
+      } else {
+        // Desktop view
+        cards.forEach((card) => {
+          card.classList.add('active'); // Show all cards
+        });
+      } {% endcomment %}
+    }
+
+    {% comment %} prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < totalCards - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    // Update on resize
+    window.addEventListener('resize', () => {
+      updateCarousel();
+    }); {% endcomment %}
+
+    // Initial setup
+    //updateCarousel();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Cards",
+  "tag": "section",
+  "class": "product-cards-section",
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Product Name"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Product description"
+        },
+        {
+          "type": "url",
+          "id": "product_link",
+          "label": "Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "espresso Pro",
+            "subtitle": "Pro display for a serious workflow.",
+            "product_link": "/products/espresso-pro"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "espresso Touch",
+            "subtitle": "Sleek design with touchscreen.",
+            "product_link": "/products/espresso-touch"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "espresso Display",
+            "subtitle": "Simple, seamless for daily performance.",
+            "product_link": "/products/espresso-display"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

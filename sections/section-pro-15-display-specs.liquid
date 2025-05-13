@@ -1,0 +1,145 @@
+<div
+  id="section-techspecs"
+  class="section color-{{ section.settings.color_scheme }} relative flex lg:flex-col items-center flex-col-reverse h-full w-full"
+>
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[32px] desktop-small:pt-[70px] pb-[16px] desktop-small:pb-[35px]">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div
+          id="section-techspecs"
+          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px] gap-y-[40px]"
+        >
+          <h2 class="col-start-1 col-span-full flex flex-col text-display-medium" id="section-techspecs">
+            Display specs.
+          </h2>
+          <div class="col-span-full flex flex-col gap-[16px]">
+            <div class="grid grid-cols-1 desktop-small:grid-cols-2 desktop-small:divide-x desktop-small:divide-neutral-80">
+              <div class="border-y-[1px] border-neutral-80">
+                <div class="image h-full min-h-0 w-full">
+                  <img
+                    src="{{ section.settings.display1 | img_url: 'master' }}"
+                    fetchpriority="auto"
+                    alt="display 15 dimensions"
+                    width=""
+                    height=""
+                    draggable="false"
+                    class="w-full h-full object-contain"
+                  >
+                </div>
+              </div>
+              <div class="border-y-[1px] border-neutral-80">
+                <div class="image h-full min-h-0 w-full" style="background-color: #eeeeee">
+                  <img
+                    src="{{ section.settings.display2 | img_url: 'master' }}"
+                    fetchpriority="auto"
+                    alt="display 15 dimensions"
+                    width=""
+                    height=""
+                    draggable="false"
+                    class="w-full h-full object-contain"
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              id=""
+              class="layout-flex relative h-full lg:col-span-12 flex flex-col col-start-1 col-span-full desktop-large:col-span-7"
+            >
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Size</div>
+                <div class="text-subheading-medium">360 x 225 x 9.0 mm</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Weight</div>
+                <div class="text-subheading-medium">800 g</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Brightness</div>
+                <div class="text-subheading-medium">550 nits</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Ports</div>
+                <div class="text-subheading-medium">2x USB-C</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Colour space</div>
+                <div class="text-subheading-medium">100% Adobe RGB</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Number of colours</div>
+                <div class="text-subheading-medium">1.07 billion</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Resolution</div>
+                <div class="text-subheading-medium">3840 x 2160p</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Orientations</div>
+                <div class="text-subheading-medium">Supports portrait and landscape</div>
+              </div>
+              <div class="flex flex-col gap-[10px] desktop-small:flex-row desktop-small:justify-between border-b border-neutral-80 py-[12px] px-[40px]">
+                <div class="text-subheading-medium-heavy">Material</div>
+                <div class="text-subheading-medium">Anodised aluminium, 6H hardness glass</div>
+              </div>
+            </div>
+            <div class="h-full w-full flex flex-col items-end col-span-full">
+              <a
+                href="{{ section.settings.fileLocation.src | asset_url }}"
+                aria-label="tech spec sheet"
+                target="_blank"
+              >
+                <button
+                  draggable="false"
+                  type="button"
+                  class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer"
+                >
+                  Download tech spec sheet
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Pro 15 Display Specs",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "display1",
+      "label": "Display Front Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "display2",
+      "label": "Display Back Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "fileLocation",
+      "label": "Tech Specs Sheet"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Pro 15 Display Specs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+

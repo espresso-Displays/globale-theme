@@ -1267,8 +1267,9 @@ if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
 
-document.querySelectorAll('.collection-variant-button').forEach((button) => {
-  button.addEventListener('click', function () {
+const collectionVariantButtons = document.querySelectorAll('.collection-variant-button');
+for (let i = 0; i < collectionVariantButtons.length; i++) {
+  collectionVariantButtons[i].addEventListener('click', async function () {
     const variantId = this.getAttribute('data-variant-id');
     const productElement = this.closest('.product');
     const form = document.querySelector('.collection-quick-add-to-cart');
@@ -1290,7 +1291,6 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
       priceSpan.textContent = priceVariant;
       form.querySelector("input[name='price']").value = priceVariant.replace(/[^0-9\.]+/g, '');
     }
-   
 
     const productId = this.getAttribute('data-parent-id');
     if (productId) {
@@ -1300,7 +1300,7 @@ document.querySelectorAll('.collection-variant-button').forEach((button) => {
       priceDiv.textContent = priceVariant;
     }
   });
-});
+}
 
 // Function to format money according to Shopify's standard
 function formatMoney(cents, format = '${{amount}}') {

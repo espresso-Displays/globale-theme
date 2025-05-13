@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "section-1": {
@@ -25,21 +34,21 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Key features",
-            "accordion_description": "<ul><li>Touchscreen display for 15T and 13T products<\/li><li>Durable aerospace aluminium chassis<\/li><li>Full HD high-precision panel<\/li><li>300 nits brightness<\/li><li>2x USB-C ports with power passthrough<\/li><li>Powered with a single USB-C cable <\/li><li>Built-in speakers for 15T and 13T products<\/li><\/ul>"
+            "accordion_description": "<ul><li>Touchscreen display for 15T and 13T products</li><li>Durable aerospace aluminium chassis</li><li>Full HD high-precision panel</li><li>300 nits brightness</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable </li><li>Built-in speakers for 15T and 13T products</li></ul>"
           }
         },
         "accordion_item_D9pdNC": {
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "<ul><li>espressoDisplay portable touchscreen<\/li><li>1m espresso USB-C to USB-C cable<\/li><li>espresso Stand<\/li><li>Microfibre cleaning cloth<\/li><\/ul>"
+            "accordion_description": "<ul><li>espressoDisplay portable touchscreen</li><li>1m espresso USB-C to USB-C cable</li><li>espresso Stand+</li><li>Microfibre cleaning cloth</li></ul>"
           }
         },
         "accordion_item_9gnrjy": {
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Compatibility",
-            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.<\/p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.<\/p>"
+            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p>"
           }
         }
       },
@@ -58,21 +67,22 @@
     },
     "product-nav": {
       "type": "pdp-product-nav",
-      "settings": {
-      }
+      "disabled": true,
+      "settings": {}
     },
     "section-2": {
       "type": "pdp-overview",
       "settings": {
-        "text_field_1": "",
-        "text_field_2": "",
-        "text_field_3": ""
+        "text_field_1": "Designed for you",
+        "text_field_2": "Built with premium materials. Blending tough aerospace aluminium and hardened glass. Engineering for life on the go.",
+        "text_field_3": "",
+        "video_file": "shopify://files/videos/video-espresso-touch-13-15-pdp.mp4",
+        "video_poster": "shopify://shop_images/image-espresso-touch-13-lifestyle.webp"
       }
     },
     "marquee_block": {
       "type": "marquee",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-7": {
       "type": "two-column-text",
@@ -88,28 +98,32 @@
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Designed for people like you.",
-            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.<br><br>Built to last."
+            "grid_item_description": "Developed by people who care deeply about your experience.  A clean and simple aesthetic that combines durable aerospace aluminium with scratch resistant glass.Built to last.",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-sleek_webp_632fa845-9cde-4859-9d96-b8405e45f414.jpg"
           }
         },
         "grid_item_VEVEza": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "Take more screen, anywhere.",
-            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.<br><br>Slide the espresso into your backpack, satchel or briefcase."
+            "grid_item_description": "Ultra-sleek at 5.3 mm thin. Super-lightweight at 865 g.Slide the espresso into your backpack, satchel or briefcase.",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-take-more_webp_ad6446d4-b7e6-4cce-aef8-b7693209f43b.jpg"
           }
         },
         "grid_item_GUgDfw": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "More productivity, anywhere.",
-            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between)."
+            "grid_item_description": "Supercharge your ability to perform, wherever the road takes you (and everywhere in between).",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-productivity_webp_30f9c85b-47f3-4ede-81ae-f580a2ac9c6f.jpg"
           }
         },
         "grid_item_rdVnij": {
           "type": "grid_item",
           "settings": {
             "grid_item_title": "A display for how you work.",
-            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation."
+            "grid_item_description": "A larger canvas for all your devices. Make it your own with any layout or orientation.",
+            "grid_item_image": "shopify://shop_images/image-espresso-13NT-work_webp_e0e7495d-4ed0-42a2-9353-040cd13c5310.jpg"
           }
         }
       },
@@ -119,32 +133,25 @@
         "grid_item_GUgDfw",
         "grid_item_rdVnij"
       ],
-      "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section-9": {
       "type": "pdp-accessories",
-      "settings": {
-      }
+      "disabled": true,
+      "settings": {}
     },
     "section-10": {
       "type": "pdp-compatibility",
-      "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "jot": {
       "type": "about-jot",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section-11": {
-      "type": "meet-espresso-flow",
-      "disabled": true,
-      "settings": {
-      }
+      "type": "meet-espresso-flow-updated",
+      "settings": {}
     },
     "section-12": {
       "type": "pdp-compare",
@@ -154,13 +161,11 @@
     },
     "review": {
       "type": "product-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

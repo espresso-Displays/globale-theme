@@ -1,0 +1,83 @@
+<!-- sections/product-cards.liquid -->
+<div class="section color-{{ section.settings.color_scheme }} relative w-full h-full">
+  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center z-[2] w-full h-full">
+      <div class="content-block w-full h-full" style="padding-left: 8px; padding-right: 8px">
+        <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
+          <div class="layout-flex relative h-full col-span-full flex flex-col desktop-large:flex-row">
+            {%  assign mod = section.blocks.size | modulo: 2 %}
+            {% if sections.blocks.size == 1 %}
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip">              
+            {% elsif mod == 0  %}
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip flex-col desktop:flex-[50%]">
+            {% else %}
+              <div class="flex relative gap-[16px] w-full h-full select-none overflow-clip flex-col desktop:flex-[33%]">
+            {% endif %}            
+                {% for block in section.blocks %}
+                  <div>
+                    <img
+                      src="{{ block.settings.image | img_url: 'master' }}"
+                      loading="lazy"
+                      fetchpriority="high"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      width="100%"
+                      height="100%"
+                      draggable="false"
+                      class="w-full h-full"
+                      style="border-radius: 20px; object-fit: cover"
+                    >
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Gallery",
+  "tag": "section",
+  "class": "custom",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Cards",
+      "blocks": [
+        {
+          "type": "image",
+        },
+        {
+          "type": "image",
+        },
+        {
+          "type": "image",
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

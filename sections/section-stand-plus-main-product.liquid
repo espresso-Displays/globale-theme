@@ -1,0 +1,246 @@
+{{ 'pdp-accordion.css' | asset_url | stylesheet_tag }}
+
+<div id="section-overview" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+  <div
+    class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px]"
+  >
+    <div class="content-block w-full h-full">
+      <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
+        <div class="layout-flex relative h-full col-span-4 lg:col-span-12 flex flex-col">
+          <div class="text-lm-on-background-1 w-full flex flex-col items-center lg:pt-[64px] lg:pb-[136px]">
+            <div class="flex flex-col lg:flex-row lg:items-start h-full w-full">
+              <div class="w-full lg:w-half lg:max-w-[50%] h-full flex flex-col items-center justify-start pt-[10px] lg:pt-[0px]">
+                {% render 'custom-product-carousel', product: product %}
+              </div>
+              <div class="flex flex-col items-left w-full lg:w-half h-full text-left pt-[24px] lg:pt-[32px] pl-[0px] lg:pl-[90px] gap-[10px] lg:gap-[32px]">
+                <div class="flex flex-col gap-[8px]">
+                  <h1 class="text-heading-large">{{ product.title }}</h1>
+                  <h2 class="text-subheading-large">{{ product.description }}</h2>
+                </div>
+
+                <div class="flex flex-row gap-[24px] items-center">
+                  <div class="flex flex-col gap-[12px] w-[50%]">
+                    <div class="text-heading-large">
+                      <font class="text-lm-on-background-1"
+                        ><span class="product-variant-price-display">
+                          {{ product.selected_or_first_available_variant.price | money }}
+                        </span></font
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-start py-[16px]">
+                    <div
+                      class="trustpilot-widget"
+                      data-locale="en-US"
+                      data-template-id="577258fb31f02306e4e3aaf9"
+                      data-businessunit-id="61afcdbddb33d8ea6bb5b67b"
+                      data-star-color="#00b67a"
+                      data-text-color="#000000"
+                      data-style-height="24px"
+                      data-style-width="100%"
+                      data-theme="light"
+                      data-font-family="Work Sans"
+                      data-sku="{{ product.metafields.custom.trustpilot_sku.value }}"
+                      data-no-reviews="hide"
+                      data-scroll-to-list="true"
+                      data-style-alignment="left"
+                    >
+                      <a
+                        href="https://www.trustpilot.com/review/espres.so"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Trustpilot
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="product flex flex-col justify-between flex-wrap-reverse "
+                  data-product-id="{{ product.id }}"
+                >
+                  {% if product.variants.size > 1 %}
+                    <div class=" flex items-center gap-4">
+                      {% for variant in product.variants %}
+                        <button
+                          draggable="false"
+                          type="button"
+                          class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                          data-variant-id="{{ variant.id }}"
+                          data-variant-price="{{ variant.price | money }}"
+                        >
+                          {{ variant.title }}
+                        </button>
+                      {% endfor %}
+                    </div>
+                  {% else %}
+                    <input type="hidden" name="variant-id" value="{{ product.variants.first.id }}">
+                  {% endif %}
+                </div>
+                {% comment %}
+                  <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
+                    <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
+                      <button
+                        id="stand-plus-early-access"
+                        type="button"
+                        aria-label="Get early acccess"
+                        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                      >
+                        Get early access
+                      </button>
+                    </div>
+                  </div>
+                {% endcomment %}
+                <div class="flex flex-col items-center lg:items-start py-[12px] gap-[8px]">
+                  <div class="flex flex-col lg:flex-row gap-[24px] flex-wrap">
+                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
+                      <input type="hidden" name="productTitle" value="{{ product.title }}">
+                      <input type="hidden" name="currency" value="{{ shop.currency }}">
+                      <input type="hidden" name="price" value="{{  product.variants.first.price| divided_by: 100  }}">
+
+                      <input
+                        type="submit"
+                        value="Add to cart"
+                        name="add"
+                        aria-label="Add to Cart"
+                        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium h-[48px] cursor-pointer w-fit"
+                      >
+                    </form>
+                  </div>
+                </div>
+
+                <div class="shipping-info text-[#303030] flex flex-col">
+                  {% for block in section.blocks %}
+                    {% if block.type == 'benefit_item' %}
+                      <div class="flex flex-row gap-[8px] items-center py-[4px]">
+                        <div class="w-[18px] mr-[8px]">
+                          <div class="icon w-max flex flex-row items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="13"
+                              viewBox="0 0 14 13"
+                              fill="none"
+                            >
+                              <g clip-path="url(#clip0_6587_5608)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.02474L2.58398 5.99056C3.58203 6.56592 4.47526 7.31104 5.2443 8.25326C7.23356 4.95492 9.51904 2.25244 12.0313 0H14C10.4875 3.90218 7.62093 8.08008 5.32861 12.5052C4.1027 9.87679 2.38802 7.66423 0 6.02474Z" fill="#60269E"></path></g><defs><clipPath id="clip0_6587_5608"><rect width="14" height="12.5052" fill="white"></rect></clipPath></defs>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-body-small">{{ block.settings.benefit_item_title }}</div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="text-body-large  border-b border-[#D9D9D9] px-[20px] lg:px-[0px]">
+                  {% for block in section.blocks %}
+                    {% if block.type == 'accordion_item' %}
+                      {% render 'pdp-accordion',
+                        index: forloop.index0,
+                        title: block.settings.accordion_title,
+                        description: block.settings.accordion_description
+                      %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="stand-plus-15-popup"
+  class="fixed hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000000] p-6 z-20 w-[90%] h-auto md:w-[700px] md:h-[450px]"
+>
+  <button class="float-right relative z-30">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="#FFFFFF"
+      class="w-[30px] h-[30px]"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+  </button>
+  <div class="klaviyo-form-STsndM"></div>
+</div>
+
+<script>
+  const button = document.getElementById('stand-plus-early-access');
+  const popup = document.getElementById('stand-plus-15-popup');
+  const closeBtn = popup.querySelector('button');
+  button.addEventListener('click', () => {
+    popup.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popup.classList.add('hidden');
+  });
+</script>
+
+<script src="{{ 'pdp-accordion.js' | asset_url }}" defer="defer"></script>
+<script
+  async
+  type="text/javascript"
+  src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XwRNMM"
+></script>
+
+{% schema %}
+{
+  "name": "Product Info Main",
+  "settings": [
+    {
+      "type": "product",
+      "id": "selected_product",
+      "label": "Select Product"
+    },
+    {
+      "type": "text",
+      "id": "trustpilot_sku",
+      "label": "Trust Pilot SKU"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit_item",
+      "name": "Benefit Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "benefit_item_title",
+          "label": "Benefit Item Title"
+        }
+      ]
+    },
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Accordion Title"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_description",
+          "label": "Accordion Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Info Main",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

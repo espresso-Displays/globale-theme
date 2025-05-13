@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section-1": {
+      "type": "section-15-main-product",
+      "blocks": {
+        "benefit_item_3CCiMa": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Ultra portable and easy to set up."
+          }
+        },
+        "benefit_item_z3t3jw": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Connect and start working in seconds."
+          }
+        },
+        "benefit_item_8iBBpx": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Ergonomic stand for the perfect setup."
+          }
+        },
+        "accordion_item_B7xWPc": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Key features",
+            "accordion_description": "<ul><li>Durable aerospace aluminium chassis</li><li>Full HD high-precision panel</li><li>Factory colour calibrated</li><li>300 nits brightness</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li></ul>"
+          }
+        },
+        "accordion_item_d3VwDV": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What's in the box",
+            "accordion_description": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}"
+          }
+        },
+        "accordion_item_DjprEA": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Compatibility",
+            "accordion_description": "<p>The espresso Display range is compatible with all major operating systems, laptops, gaming consoles and software platforms. espresso Displays connect via a single USB-C cable included in the box.</p><p>We offer adapter cables to support device compatibility for various other connection requirements, which can be purchased separately. Touch functionality and additional power requirements are device dependent.</p><p>Check full compatibility <a href=\"https://au.espres.so/compatibility\">here.</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_item_3CCiMa",
+        "benefit_item_z3t3jw",
+        "benefit_item_8iBBpx",
+        "accordion_item_B7xWPc",
+        "accordion_item_d3VwDV",
+        "accordion_item_DjprEA"
+      ],
+      "custom_css": [],
+      "settings": {
+        "selected_product": "{{ product }}",
+        "trustpilot_sku": ""
+      }
+    },
+    "product_nav": {
+      "type": "product-nav",
+      "settings": {}
+    },
+    "two-col-text": {
+      "type": "two-col-title-text",
+      "settings": {
+        "title": "Designed for you.",
+        "description": "Built with premium materials. Blending tough aerospace aluminium and hardened glass.Engineered for life on the go."
+      }
+    },
+    "video": {
+      "type": "full-screen-video",
+      "settings": {
+        "video_file": "shopify://files/videos/video-espresso15NT-hero-pdp (1).mp4"
+      }
+    },
+    "features-1": {
+      "type": "section-15-features-1",
+      "settings": {
+        "section_15_features_image_1": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
+        "section_15_features_image_2": "shopify://shop_images/image-animation-standplus-plus-mode.gif",
+        "section_15_features_image_3": "shopify://shop_images/image-animation-stand-magnets-pdp.gif"
+      }
+    },
+    "b-carousel": {
+      "type": "brand-carousel",
+      "settings": {}
+    },
+    "features-2": {
+      "type": "section-15-features-2",
+      "settings": {}
+    },
+    "difference": {
+      "type": "espresso-difference",
+      "settings": {}
+    },
+    "color_calibrate": {
+      "type": "color-calibrate",
+      "settings": {}
+    },
+    "review_carousel": {
+      "type": "review-carousel",
+      "settings": {}
+    },
+    "features-3": {
+      "type": "section-15-features-3",
+      "settings": {}
+    },
+    "meet-espresso": {
+      "type": "meet-espresso-flow-updated",
+      "settings": {
+        "image_option": "shopify://shop_images/image-espresso-flow-pdp.webp"
+      }
+    },
+    "display-specs": {
+      "type": "section-15-display-specs",
+      "settings": {}
+    },
+    "stand-specs": {
+      "type": "section-15-stand-plus-specs",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "section-faq": {
+      "type": "faqs-updated",
+      "settings": {}
+    },
+    "section-compare": {
+      "type": "pdp-compare-updated",
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "section-1",
+    "product_nav",
+    "two-col-text",
+    "video",
+    "features-1",
+    "b-carousel",
+    "features-2",
+    "difference",
+    "color_calibrate",
+    "review_carousel",
+    "features-3",
+    "meet-espresso",
+    "display-specs",
+    "stand-specs",
+    "section-faq",
+    "section-compare"
+  ]
+}

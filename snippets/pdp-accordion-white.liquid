@@ -1,0 +1,18 @@
+<button
+  data-index="{{ index }}"
+  class="accordion-button w-full accordion-toggle accordion-toggle-white before:left-[0px] after:left-[0px] lg:before:left-[0px] lg:after:left-[0px] before:w-[10px] after:w-[10px] border-t border-[#D9D9D9] collapsed"
+  type="button"
+  aria-expanded="false"
+>
+  <div class="w-full text-subheading-medium-heavy text-left py-[22px] pl-[30px] lg:pl-[40px] ">
+    {{ title }}
+  </div>
+</button>
+<div
+  data-accordion-index="{{ index }}"
+  class="accordion-content text-body-small ml-[30px] lg:ml-[40px]"
+>
+  <div class="pb-4">
+    {{ description }}
+  </div>
+</div>

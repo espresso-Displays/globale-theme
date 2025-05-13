@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -21,83 +21,170 @@
     },
     "category": {
       "type": "main-category",
-      "settings": {
-      }
+      "blocks": {
+        "card_gcFXJn": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-home-pro17-standpro-front-productphoto_1.webp",
+            "title": "espresso Pro",
+            "subtitle": "Pro display for a serious workflow",
+            "product_link": "shopify://products/espresso-pro"
+          }
+        },
+        "card_LEpWUj": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-home-touch15-stand-front-productphoto.webp",
+            "title": "espresso Touch",
+            "subtitle": "Sleek design with a touchscreen",
+            "product_link": "shopify://products/espressodisplays"
+          }
+        },
+        "card_pakLXQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-home-display15-standplus-front-plus-productphoto.webp",
+            "title": "espresso Display",
+            "subtitle": "Simple, seamless for daily performance.",
+            "product_link": "shopify://products/espresso-display"
+          }
+        }
+      },
+      "block_order": [
+        "card_gcFXJn",
+        "card_LEpWUj",
+        "card_pakLXQ"
+      ],
+      "settings": {}
     },
-    "pr": {
-      "type": "main-pr-section",
-      "settings": {
-      }
+    "icon-benefits": {
+      "type": "main-icon-benefits",
+      "settings": {}
     },
     "video": {
       "type": "main-video-section",
-      "settings": {
-      }
+      "settings": {}
+    },
+    "pr": {
+      "type": "main-pr-section",
+      "settings": {}
+    },
+    "espresso-competitors": {
+      "type": "main-espresso-vs-others",
+      "settings": {}
+    },
+    "discover-espresso": {
+      "type": "main-discover-espresso",
+      "blocks": {
+        "slide_A3fjTJ": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-1.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dtSjEKY62fI?si=RovyOyNX_6zFqVYI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "slide_yLFtgi": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-2.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dtSjEKY62fI?si=ry01ClxtLfB6x_LF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "slide_FYVVdM": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-3.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/beKk8IUk5XU?si=QBLfLalf1NVdydv9\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "slide_4PW7X6": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-4.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gwDW56hAKAY?si=aw6S-z2QTssipca8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "slide_pBxcHq": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-5.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qYUqm3VYX_A?si=Nun1N90zTCl0nq1_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "slide_7QVwEU": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/slider-image-6.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/H_BQMfXOD5E?si=RS4P4DnI3V4pTkfW\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_A3fjTJ",
+        "slide_yLFtgi",
+        "slide_FYVVdM",
+        "slide_4PW7X6",
+        "slide_pBxcHq",
+        "slide_7QVwEU"
+      ],
+      "settings": {}
     },
     "feature-icons": {
       "type": "main-feature-icons",
-      "settings": {
-      }
+      "settings": {}
     },
     "excellence_block": {
       "type": "excellence",
-      "settings": {
-      }
+      "settings": {}
     },
     "trustpilot": {
       "type": "trustpilot-all",
-      "settings": {
-      }
+      "settings": {}
     },
     "benefit_block": {
       "type": "benefits",
-      "settings": {
-      }
+      "settings": {}
     },
     "about_jot_block": {
       "type": "about-jot",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "espresso_for_mac_block": {
       "type": "espresso-for-mac",
-      "settings": {
-      }
+      "settings": {}
     },
     "markup_documents_block": {
       "type": "markup-documents",
-      "settings": {
-      }
+      "settings": {}
     },
     "virtual_whiteboard_block": {
       "type": "virtual-whiteboard",
-      "settings": {
-      }
+      "settings": {}
     },
     "master_productivity_block": {
       "type": "master-productivity",
-      "settings": {
-      }
+      "settings": {}
     },
     "meet_espresso_flow_block": {
       "type": "meet-espresso-flow",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "compatibility_index_page_block": {
       "type": "compatibility-index-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
     "category",
-    "pr",
+    "icon-benefits",
     "video",
+    "pr",
+    "espresso-competitors",
+    "discover-espresso",
     "feature-icons",
     "excellence_block",
     "trustpilot",

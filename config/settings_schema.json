@@ -8,6 +8,21 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Environment",
+    "settings": [
+      {
+        "type": "select",
+        "id": "environment",
+        "label": "Environment",
+        "options": [
+          { "label": "Development", "value": "development" },
+          { "label": "Production", "value": "production" }
+        ],
+        "default": "development"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

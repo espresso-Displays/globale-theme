@@ -1,0 +1,142 @@
+<!-- sections/product-cards.liquid -->
+<div class="section color-{{ section.settings.color_scheme }} relative w-full h-full">
+  <div class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] py-[0px] desktop-small:py-[0px] desktop:px-[0px] overflow-hidden z-[2] w-full h-full">
+      <div class="content-block w-full h-full">
+        <div class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]">
+          <div class="layout-flex relative h-full col-span-full flex flex-row">
+            <div class="relative flex flex-col gap-[64px] w-full h-full select-none overflow-clip">
+              <div class="carousel-wrapper md:px-[48px] py-[70px] w-full">
+                <div class="carousel-track h-full flex flex-row items-center justify-start gap-[12px] w-full overflow-y-hidden snap-x snap-mandatory desktop:grid desktop:grid-cols-3 ">
+                  {% for block in section.blocks %}
+                    <div
+                      class="contrast color-{{ section.settings.color_scheme }} carousel-card flex flex-col items-center snap-center shrink-0 flex-shrink-0 h-full relative w-full desktop:w-full px-[20px] py-[25px] rounded-[16px] "
+                    >
+                      <div class="flex flex-col gap-[10px] items-center h-full justify-start">
+                        <div class="layout-flex relative h-full col-span-full media flex flex-col justify-center items-center desktop-small:h-[400px] desktop-small:flex-shrink-0 w-full p-[8px] gap-[16px]">
+                          <h2 class="text-subheading-medium-heavy text-left">{{ block.settings.review }}</h2>
+                          <img src="{{ block.settings.image | img_url: 'master' }}" height="40" width="100" alt="{{block.settings.image.alt | escape }}" class="text-left"/>
+                          <h3 class="text-heading-small text-left">{{ block.settings.title }}</h3>
+                          <a href="{{ block.settings.link }}" class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap border-[1px] border-lm-outline-secondary bg-lm-inverse-secondary hover:bg-lm-inverse-secondary-hover active:bg-lm-inverse-secondary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer text-lm-inverse-on-secondary">Read the review</a>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Carousel styles */
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .carousel-track {
+    transition: transform 0.5s ease;
+  }
+
+  /* Desktop: Show all cards */
+  @media (min-width: 1024px) {
+    /* Assuming 'desktop' is lg breakpoint */
+
+    .carousel-card {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Mobile: One card at a time */
+  @media (max-width: 1023px) {
+    .carousel-card {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-card.active {
+      display: flex; /* Only active card is visible */
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-card');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+    const totalCards = cards.length;
+
+    function updateCarousel() {
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Product Cards",
+  "tag": "section",
+  "class": "product-cards-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Reviewer Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Review Company",
+          "default": "Reviewer corp."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link to review",
+        },
+        {
+          "type": "text",
+          "id": "review",
+          "label": "Review text",
+          "default": "I really like it"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Review",
+      "blocks": [
+      ]
+    }
+  ]
+}
+{% endschema %}

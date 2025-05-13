@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "pdp_main_product_CepWK4": {
@@ -7,45 +16,41 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Compatibility",
-            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}<\/p>"
+            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}</p>"
           }
         },
-        "accordion_item_GMqqwV": {
+        "accordion_item_fQRRYW": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "",
-            "accordion_description": ""
+            "accordion_title": "What's in the box",
+            "accordion_description": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}"
           }
         }
       },
       "block_order": [
         "accordion_item_hcgKwD",
-        "accordion_item_GMqqwV"
+        "accordion_item_fQRRYW"
       ],
       "settings": {
-        "selected_product": "",
+        "selected_product": "espresso-stand",
         "trustpilot_sku": ""
       }
     },
     "variant-section": {
       "type": "product-variant-section",
-      "settings": {
-      }
+      "settings": {}
     },
     "tech-specs": {
       "type": "product-tech-specs",
-      "settings": {
-      }
+      "settings": {}
     },
     "review": {
       "type": "product-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
