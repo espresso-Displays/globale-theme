@@ -9,8 +9,22 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "section_home_hero_pro_may25": {
+      "type": "section-home-hero-pro-may25",
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "section_home_hero_touch_may25": {
+      "type": "section-home-hero-touch-may25",
       "settings": {
         "color_scheme": "",
         "image_behavior": "none",
@@ -19,86 +33,141 @@
         "show_text_below": true
       }
     },
-    "category": {
-      "type": "main-category",
-      "blocks": {
-        "card_gcFXJn": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image-home-pro17-standpro-front-productphoto_1.webp",
-            "title": "espresso Pro",
-            "subtitle": "Pro display for a serious workflow",
-            "product_link": "shopify://products/espresso-pro"
-          }
-        },
-        "card_LEpWUj": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image-home-touch15-stand-front-productphoto.webp",
-            "title": "espresso Touch",
-            "subtitle": "Sleek design with a touchscreen",
-            "product_link": "shopify://products/espressodisplays"
-          }
-        },
-        "card_pakLXQ": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image-home-display15-standplus-front-plus-productphoto.webp",
-            "title": "espresso Display",
-            "subtitle": "Simple, seamless for daily performance.",
-            "product_link": "shopify://products/espresso-display"
-          }
-        }
-      },
-      "block_order": [
-        "card_gcFXJn",
-        "card_LEpWUj",
-        "card_pakLXQ"
-      ],
+    "section_home_hero_display_may25": {
+      "type": "section-home-hero-display-may25",
+      "settings": {
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    // "image_banner": {
+    //   "type": "image-banner",
+    //   "settings": {
+    //     "color_scheme": "",
+    //     "image_behavior": "none",
+    //     "mobile_content_alignment": "center",
+    //     "stack_images_on_mobile": true,
+    //     "show_text_below": true
+    //   }
+    // },
+    // "category": {
+    //   "type": "main-category",
+    //   "blocks": {
+    //     "card_gcFXJn": {
+    //       "type": "card",
+    //       "settings": {
+    //         "image": "shopify://shop_images/image-home-pro17-standpro-front-productphoto_1.webp",
+    //         "title": "espresso Pro",
+    //         "subtitle": "Pro display for a serious workflow",
+    //         "product_link": "shopify://products/espresso-pro"
+    //       }
+    //     },
+    //     "card_LEpWUj": {
+    //       "type": "card",
+    //       "settings": {
+    //         "image": "shopify://shop_images/image-home-touch15-stand-front-productphoto.webp",
+    //         "title": "espresso Touch",
+    //         "subtitle": "Sleek design with a touchscreen",
+    //         "product_link": "shopify://products/espressodisplays"
+    //       }
+    //     },
+    //     "card_pakLXQ": {
+    //       "type": "card",
+    //       "settings": {
+    //         "image": "shopify://shop_images/image-home-display15-standplus-front-plus-productphoto.webp",
+    //         "title": "espresso Display",
+    //         "subtitle": "Simple, seamless for daily performance.",
+    //         "product_link": "shopify://products/espresso-display"
+    //       }
+    //     }
+    //   },
+    //   "block_order": [
+    //     "card_gcFXJn",
+    //     "card_LEpWUj",
+    //     "card_pakLXQ"
+    //   ],
+    //   "settings": {}
+    // },
+
+     "section_home_espresso_difference": {
+      "type": "section-home-espresso-difference",
       "settings": {}
     },
-    "icon-benefits": {
-      "type": "main-icon-benefits",
+
+
+    "secion_home_video": {
+      "type": "section-home-video",
       "settings": {}
     },
-    "video": {
-      "type": "main-video-section",
+
+     "trustpilot": {
+      "type": "trustpilot-all",
       "settings": {}
     },
-    "pr": {
-      "type": "main-pr-section",
+
+
+    // "pr": {
+    //   "type": "main-pr-section",
+    //   "settings": {}
+    // },
+    // "espresso-competitors": {
+    //   "type": "main-espresso-vs-others",
+    //   "settings": {}
+    // },
+
+    // "feature-icons": {
+    //   "type": "main-feature-icons",
+    //   "settings": {}
+    // },
+    "excellence_block": {
+      "type": "excellence",
       "settings": {}
     },
-    "espresso-competitors": {
-      "type": "main-espresso-vs-others",
-      "settings": {}
-    },
+
+    // "benefit_block": {
+    //   "type": "benefits",
+    //   "settings": {}
+    // },
+    // "about_jot_block": {
+    //   "type": "about-jot",
+    //   "disabled": true,
+    //   "settings": {}
+    // },
+    // "espresso_for_mac_block": {
+    //   "type": "espresso-for-mac",
+    //   "settings": {}
+    // },
+    // "markup_documents_block": {
+    //   "type": "markup-documents",
+    //   "settings": {}
+    // },
+    // "virtual_whiteboard_block": {
+    //   "type": "virtual-whiteboard",
+    //   "settings": {}
+    // },
+    // "master_productivity_block": {
+    //   "type": "master-productivity",
+    //   "settings": {}
+    // },
+    // "meet_espresso_flow_block": {
+    //   "type": "meet-espresso-flow",
+    //   "disabled": true,
+    //   "settings": {}
+    // },
+    // "compatibility_index_page_block": {
+    //   "type": "compatibility-index-page",
+    //   "disabled": true,
+    //   "settings": {}
+    // }
+
     "discover-espresso": {
       "type": "main-discover-espresso",
       "blocks": {
-        "slide_A3fjTJ": {
-          "type": "slide",
-          "settings": {
-            "poster_image": "shopify://shop_images/slider-image-1.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dtSjEKY62fI?si=RovyOyNX_6zFqVYI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-          }
-        },
-        "slide_yLFtgi": {
-          "type": "slide",
-          "settings": {
-            "poster_image": "shopify://shop_images/slider-image-2.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dtSjEKY62fI?si=ry01ClxtLfB6x_LF\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-          }
-        },
-        "slide_FYVVdM": {
-          "type": "slide",
-          "settings": {
-            "poster_image": "shopify://shop_images/slider-image-3.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/beKk8IUk5XU?si=QBLfLalf1NVdydv9\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-          }
-        },
-        "slide_4PW7X6": {
-          "type": "slide",
+        "column1": {
+          "type": "column",
           "settings": {
             "poster_image": "shopify://shop_images/slider-image-4.webp",
             "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gwDW56hAKAY?si=aw6S-z2QTssipca8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -129,72 +198,32 @@
       ],
       "settings": {}
     },
-    "feature-icons": {
-      "type": "main-feature-icons",
-      "settings": {}
-    },
-    "excellence_block": {
-      "type": "excellence",
-      "settings": {}
-    },
-    "trustpilot": {
-      "type": "trustpilot-all",
-      "settings": {}
-    },
-    "benefit_block": {
-      "type": "benefits",
-      "settings": {}
-    },
-    "about_jot_block": {
-      "type": "about-jot",
-      "disabled": true,
-      "settings": {}
-    },
-    "espresso_for_mac_block": {
-      "type": "espresso-for-mac",
-      "settings": {}
-    },
-    "markup_documents_block": {
-      "type": "markup-documents",
-      "settings": {}
-    },
-    "virtual_whiteboard_block": {
-      "type": "virtual-whiteboard",
-      "settings": {}
-    },
-    "master_productivity_block": {
-      "type": "master-productivity",
-      "settings": {}
-    },
-    "meet_espresso_flow_block": {
-      "type": "meet-espresso-flow",
-      "disabled": true,
-      "settings": {}
-    },
-    "compatibility_index_page_block": {
-      "type": "compatibility-index-page",
-      "disabled": true,
-      "settings": {}
-    }
   },
   "order": [
-    "image_banner",
-    "category",
-    "icon-benefits",
-    "video",
-    "pr",
-    "espresso-competitors",
-    "discover-espresso",
-    "feature-icons",
+    "section_home_hero_pro_may25",
+    "section_home_hero_touch_may25",
+    "section_home_hero_display_may25",
+
+
+    "section_home_espresso_difference",
+"secion_home_video",
+
+"trustpilot",
+    // "pr",
+    // "espresso-competitors",
+
+    // "feature-icons",
     "excellence_block",
-    "trustpilot",
-    "benefit_block",
-    "about_jot_block",
-    "espresso_for_mac_block",
-    "markup_documents_block",
-    "virtual_whiteboard_block",
-    "master_productivity_block",
-    "meet_espresso_flow_block",
-    "compatibility_index_page_block"
+
+    // "benefit_block",
+    // "about_jot_block",
+    // "espresso_for_mac_block",
+    // "markup_documents_block",
+    // "virtual_whiteboard_block",
+    // "master_productivity_block",
+    // "meet_espresso_flow_block",
+    // "compatibility_index_page_block"
+
+    "discover-espresso",
   ]
 }
