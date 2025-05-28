@@ -12,6 +12,24 @@
     "pdp_main_product_8q4WbJ": {
       "type": "pdp-main-product",
       "blocks": {
+        "benefit_item_axqJcH": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and easy to set up."
+          }
+        },
+        "benefit_item_XhebEz": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Connect and start working in seconds."
+          }
+        },
+        "benefit_item_DVwmWi": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "30-day risk free trial."
+          }
+        },
         "accordion_item_6Ba3UV": {
           "type": "accordion_item",
           "settings": {
@@ -28,6 +46,9 @@
         }
       },
       "block_order": [
+        "benefit_item_axqJcH",
+        "benefit_item_XhebEz",
+        "benefit_item_DVwmWi",
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
       ],
