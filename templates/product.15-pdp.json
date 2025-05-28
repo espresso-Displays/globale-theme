@@ -30,6 +30,12 @@
             "benefit_item_title": "Boost productivity with extra screen space."
           }
         },
+        "benefit_item_UNLiNB": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "30-day risk free trial."
+          }
+        },
         "accordion_item_Q9eP3d": {
           "type": "accordion_item",
           "settings": {
@@ -56,6 +62,7 @@
         "benefit_item_E4RFQQ",
         "benefit_item_3xxFBL",
         "benefit_item_LFNkPK",
+        "benefit_item_UNLiNB",
         "accordion_item_Q9eP3d",
         "accordion_item_D9pdNC",
         "accordion_item_9gnrjy"
@@ -87,6 +94,7 @@
     "section-7": {
       "type": "two-column-text",
       "settings": {
+        "color_scheme": "",
         "text_field_1": "Sleek portability meets premium.",
         "text_field_2": "Designed for the modern professional, this ultra-slim and lightweight monitor easily slides into your bag, providing a premium workspace wherever you go.Transform any space into a dynamic workstation in seconds."
       }
