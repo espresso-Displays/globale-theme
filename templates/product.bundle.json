@@ -24,6 +24,12 @@
             "benefit_item_title": "Connect and start working in seconds."
           }
         },
+        "benefit_item_Vtdc7P": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Boost productivity with extra screen space."
+          }
+        },
         "benefit_item_N9KnzD": {
           "type": "benefit_item",
           "settings": {
@@ -48,6 +54,7 @@
       "block_order": [
         "benefit_item_iEiYbp",
         "benefit_item_Fmg6Bf",
+        "benefit_item_Vtdc7P",
         "benefit_item_N9KnzD",
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
