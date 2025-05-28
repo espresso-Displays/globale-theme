@@ -30,6 +30,12 @@
             "benefit_item_title": "Boost productivity with extra screen space."
           }
         },
+        "benefit_item_qKh3FF": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "30-day risk free trial."
+          }
+        },
         "accordion_item_B7xWPc": {
           "type": "accordion_item",
           "settings": {
@@ -56,6 +62,7 @@
         "benefit_item_3CCiMa",
         "benefit_item_z3t3jw",
         "benefit_item_8iBBpx",
+        "benefit_item_qKh3FF",
         "accordion_item_B7xWPc",
         "accordion_item_d3VwDV",
         "accordion_item_DjprEA"
@@ -104,6 +111,7 @@
       "type": "two-column-text",
       "disabled": true,
       "settings": {
+        "color_scheme": "",
         "text_field_1": "Tested and optimised to supercharge your apps and software.",
         "text_field_2": "Enhanced touch and pen capability to maximise whiteboarding, collaboration, sketching and illustration on apps like Figma, Mural, Canva, Adobe Photoshop, Adobe Illustrator and more."
       }
