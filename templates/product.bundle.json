@@ -1,17 +1,35 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "pdp_main_product_8q4WbJ": {
       "type": "pdp-main-product",
       "blocks": {
+        "benefit_item_iEiYbp": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and easy to set up."
+          }
+        },
+        "benefit_item_Fmg6Bf": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Connect and start working in seconds."
+          }
+        },
+        "benefit_item_N9KnzD": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "30-day risk free trial."
+          }
+        },
         "accordion_item_6Ba3UV": {
           "type": "accordion_item",
           "settings": {
@@ -23,11 +41,14 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Compatibility",
-            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}<\/p>"
+            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}</p>"
           }
         }
       },
       "block_order": [
+        "benefit_item_iEiYbp",
+        "benefit_item_Fmg6Bf",
+        "benefit_item_N9KnzD",
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
       ],
@@ -38,29 +59,24 @@
     },
     "whats-included": {
       "type": "product-whats-included",
-      "settings": {
-      }
+      "settings": {}
     },
     "check-compatibility": {
       "type": "pdp-compatibility",
-      "settings": {
-      }
+      "settings": {}
     },
     "jot": {
       "type": "about-jot",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "review": {
       "type": "product-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
