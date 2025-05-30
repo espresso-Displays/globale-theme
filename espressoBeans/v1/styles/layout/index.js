@@ -5,6 +5,14 @@
 // layout style definitions
 // ///////////////////////////////
 
+export const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  '2xl': 1536,
+};
+
 const layout_system = {
   // padding
   'es-sys-layout-component-padding': '10px',
@@ -56,7 +64,7 @@ export const offsetBanner = {
 
 export const heightBanner = {
   value: 35,
-  style: 'h-[35px]',
+  style: 'h-[35px] min-h-[35px]',
 };
 
 export const offsetHeader = {
@@ -64,16 +72,57 @@ export const offsetHeader = {
   style: 'top-[35px]',
 };
 
+export const offsetHeaderNoBanner = {
+  value: offsetBanner.value,
+  style: 'top-[0px]',
+};
+
 export const heightHeader = {
   value: 60,
   style: 'h-[60px]',
 };
 
-// height for a full screen height section taking into account banner and header
-export const heightSectionFullScreen = {
-  // value: (100vh)- heightBanner.value + heightHeader.value,
-  // style: 'min-h-[calc(100vh_-_95px)] max-h-[800px]',
-  style: 'min-h-[600px] lg:min-h-[800px]',
+export const offsetHeaderMenu = {
+  value: heightHeader.value,
+  style: 'top-[60px]',
+};
+
+export const offsetOverlayFull = {
+  value: heightBanner.value + heightHeader.value,
+  style: 'top-[95px]',
+};
+
+export const offsetOverlayFullNoBanner = {
+  value: heightHeader.value,
+  style: 'top-[60px]',
+};
+
+export const heightOverlayFull = {
+  // value: 60,
+
+  style: 'h-[calc(100vh_-_95px)]',
+  // style: 'h-[calc(var(h-screen-safe)_-_96px)]',
+  // style: 'h-[calc(100vh_-_env(safe-area-inset-bottom)_-_95px)]',
+};
+
+export const heightOverlayFullNoBanner = {
+  // value: 60,
+  style: 'h-[calc(100vh_-_60px)]',
+  // style: 'h-[calc(100vh_-_env(safe-area-inset-bottom)_-_60px)]',
+};
+
+export const heightMaxMenuDesktop = {
+  // value: 60,
+
+  style: 'max-h-[calc(100vh_-_95px)]',
+  // style: 'h-[calc(var(h-screen-safe)_-_96px)]',
+  // style: 'h-[calc(100vh_-_env(safe-area-inset-bottom)_-_95px)]',
+};
+
+export const heightMaxMenuDesktopNoBanner = {
+  // value: 60,
+  style: 'max-h-[calc(100vh_-_60px)]',
+  // style: 'h-[calc(100vh_-_env(safe-area-inset-bottom)_-_60px)]',
 };
 
 // section navbar
@@ -81,18 +130,54 @@ export const offsetSectionNavBar = {
   value: heightBanner.value + heightHeader.value,
   style: 'top-[95px]',
 };
+export const offsetSectionNavBarNoBanner = {
+  value: heightHeader.value,
+  style: 'top-[60px]',
+};
 export const heightSectionNavBar = {
   value: 60,
   style: 'h-[60px]',
 };
 
+export const offsetMiniCart = {
+  value: heightBanner.value + heightHeader.value,
+  style: 'top-[96px]',
+};
+export const heightMiniCart = {
+  // value: 60,
+  style: 'h-[calc(100vh_-_96px)]',
+};
+
+export const offsetMiniCartNoBanner = {
+  value: heightHeader.value,
+  style: 'top-[60px]',
+};
+export const heightMiniCartNoBanner = {
+  // value: 60,
+  style: 'h-[calc(100vh_-_60px)]',
+};
+
+export const heightMiniCartContent = {
+  // value: 60,
+  style: 'h-[calc(100vh_-_146px)]',
+};
+export const heightMiniCartContentNoBanner = {
+  // value: 60,
+  style: 'h-[calc(100vh_-_110px)]',
+};
+
 export const scrollOffset = {
   value: offsetSectionNavBar.value + heightSectionNavBar.value,
-  style: 'top-[-155px]',
+  style: '-top-[155px]',
+};
+
+export const scrollOffsetNoBanner = {
+  value: offsetSectionNavBarNoBanner.value + heightSectionNavBar.value,
+  style: '-top-[120px]',
 };
 
 export const gridPaddingOffset = {
-  value: {mobile: 16, desktop: 70},
+  value: { mobile: 16, desktop: 70 },
   style: {
     mobile: {
       left: 'relative left-[16px] lg:left-[0px]',
@@ -111,4 +196,55 @@ export const gridSettingsTW = {
   paddingX: 'px-[32px] lg:px-[70px]',
   start: 'col-start-1',
   end: 'col-end-5 lg:col-end-13',
+};
+
+export const paddingYReset = 'pt-[0px] pb-[0px] desktop-small:pt-[0px] desktop-small:pb-[0px]';
+
+export const paddingSectionsY = {
+  top: {
+    full: {
+      value: { mobile: 32, desktop: 70 },
+      style: {
+        mobile: 'pt-[32px]',
+        desktop: 'desktop-small:pt-[70px]',
+      },
+    },
+    half: {
+      value: { mobile: 16, desktop: 35 },
+      style: {
+        mobile: 'pt-[16px]',
+        desktop: 'desktop-small:pt-[35px]',
+      },
+    },
+    none: {
+      value: { mobile: 0, desktop: 0 },
+      style: {
+        mobile: 'pt-[0px]',
+        desktop: 'desktop-small:pt-[0px]',
+      },
+    },
+  },
+  bottom: {
+    full: {
+      value: { mobile: 32, desktop: 70 },
+      style: {
+        mobile: 'pb-[32px]',
+        desktop: 'desktop-small:pb-[70px]',
+      },
+    },
+    half: {
+      value: { mobile: 16, desktop: 35 },
+      style: {
+        mobile: 'pb-[16px]',
+        desktop: 'desktop-small:pb-[35px]',
+      },
+    },
+    none: {
+      value: { mobile: 0, desktop: 0 },
+      style: {
+        mobile: 'pt-[0px]',
+        desktop: 'desktop-small:pt-[0px]',
+      },
+    },
+  },
 };

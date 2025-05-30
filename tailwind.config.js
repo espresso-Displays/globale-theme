@@ -6,8 +6,12 @@ import { ColorsTW } from './espressoBeans/v1/styles/color';
 import { FontsTW } from './espressoBeans/v1/styles/typography';
 import { LayoutTW } from './espressoBeans/v1/styles/layout';
 
+// const { ColorsTW } = require('./espressoBeans/v1/styles/color');
+// const { FontsTW } = require('./espressoBeans/v1/styles/typography');
+// const { LayoutTW } = require('./espressoBeans/v1/styles/layout');
+
 module.exports = {
-  content: ['./**/*.liquid'],
+  content: ['./**/*.{liquid,json}'],
   theme: {
     screens: {
       // need to add custom breakpoint names for espressoBeans Design system breakpoints
