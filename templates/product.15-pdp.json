@@ -15,19 +15,19 @@
         "benefit_item_E4RFQQ": {
           "type": "benefit_item",
           "settings": {
-            "benefit_item_title": "Portable and easy to set up."
+            "benefit_item_title": "Portable and lightweight design – under 2 kg including display and stand."
           }
         },
         "benefit_item_3xxFBL": {
           "type": "benefit_item",
           "settings": {
-            "benefit_item_title": "Connect and start working in seconds."
+            "benefit_item_title": "No charging required – powered directly from your device or outlet."
           }
         },
         "benefit_item_LFNkPK": {
           "type": "benefit_item",
           "settings": {
-            "benefit_item_title": "Boost productivity with extra screen space."
+            "benefit_item_title": "Instant setup – intuitive plug-and-play experience."
           }
         },
         "accordion_item_Q9eP3d": {
@@ -87,6 +87,7 @@
     "section-7": {
       "type": "two-column-text",
       "settings": {
+        "color_scheme": "",
         "text_field_1": "Sleek portability meets premium.",
         "text_field_2": "Designed for the modern professional, this ultra-slim and lightweight monitor easily slides into your bag, providing a premium workspace wherever you go.Transform any space into a dynamic workstation in seconds."
       }
