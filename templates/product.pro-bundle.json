@@ -12,6 +12,24 @@
     "pdp_main_product_8q4WbJ": {
       "type": "pdp-main-product",
       "blocks": {
+        "benefit_item_THhDGc": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and lightweight design – under 2 kg including display and stand."
+          }
+        },
+        "benefit_item_bFkVe8": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "No charging required – powered directly from your device or outlet."
+          }
+        },
+        "benefit_item_NXTH6K": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Instant setup – intuitive plug-and-play experience."
+          }
+        },
         "accordion_item_6Ba3UV": {
           "type": "accordion_item",
           "settings": {
@@ -28,6 +46,9 @@
         }
       },
       "block_order": [
+        "benefit_item_THhDGc",
+        "benefit_item_bFkVe8",
+        "benefit_item_NXTH6K",
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
       ],
