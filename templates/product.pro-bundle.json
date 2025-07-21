@@ -30,6 +30,13 @@
             "benefit_item_title": "Instant setup – intuitive plug-and-play experience."
           }
         },
+        "accordion_item_p3RGFr": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Key features",
+            "accordion_description": "<ul><li>4K 3840 x 2160 at 60 Hz</li><li>Rich and immersive 4K panel</li><li>Touchscreen display</li><li>Durable aerospace aluminium chassis</li><li>Vibrant peak brightness</li><li>1.07 billion colours</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>Built-in speakers</li><li>9 ms Response Time</li><li>Factory colour calibrated</li></ul>"
+          }
+        },
         "accordion_item_6Ba3UV": {
           "type": "accordion_item",
           "settings": {
@@ -49,6 +56,7 @@
         "benefit_item_THhDGc",
         "benefit_item_bFkVe8",
         "benefit_item_NXTH6K",
+        "accordion_item_p3RGFr",
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
       ],
