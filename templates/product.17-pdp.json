@@ -15,13 +15,19 @@
         "benefit_item_3CCiMa": {
           "type": "benefit_item",
           "settings": {
-            "benefit_item_title": "Portable and easy to set up."
+            "benefit_item_title": "Portable and lightweight design – under 2 kg including display and stand."
           }
         },
         "benefit_item_z3t3jw": {
           "type": "benefit_item",
           "settings": {
-            "benefit_item_title": "Connect and start working in seconds."
+            "benefit_item_title": "No charging required – powered directly from your device or outlet."
+          }
+        },
+        "benefit_item_zJqT6Y": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Instant setup – intuitive plug-and-play experience."
           }
         },
         "benefit_item_8iBBpx": {
@@ -55,6 +61,7 @@
       "block_order": [
         "benefit_item_3CCiMa",
         "benefit_item_z3t3jw",
+        "benefit_item_zJqT6Y",
         "benefit_item_8iBBpx",
         "accordion_item_B7xWPc",
         "accordion_item_d3VwDV",
@@ -104,6 +111,7 @@
       "type": "two-column-text",
       "disabled": true,
       "settings": {
+        "color_scheme": "",
         "text_field_1": "Tested and optimised to supercharge your apps and software.",
         "text_field_2": "Enhanced touch and pen capability to maximise whiteboarding, collaboration, sketching and illustration on apps like Figma, Mural, Canva, Adobe Photoshop, Adobe Illustrator and more."
       }
