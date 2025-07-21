@@ -30,12 +30,6 @@
             "benefit_item_title": "Instant setup – intuitive plug-and-play experience."
           }
         },
-        "benefit_item_8iBBpx": {
-          "type": "benefit_item",
-          "settings": {
-            "benefit_item_title": "Ergonomic stand for the perfect setup."
-          }
-        },
         "accordion_item_B7xWPc": {
           "type": "accordion_item",
           "settings": {
@@ -62,7 +56,6 @@
         "benefit_item_9PBP4M",
         "benefit_item_3CCiMa",
         "benefit_item_z3t3jw",
-        "benefit_item_8iBBpx",
         "accordion_item_B7xWPc",
         "accordion_item_d3VwDV",
         "accordion_item_DjprEA"
