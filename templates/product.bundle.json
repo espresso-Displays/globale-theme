@@ -1,17 +1,42 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "pdp_main_product_8q4WbJ": {
       "type": "pdp-main-product",
       "blocks": {
+        "benefit_item_AkjeiV": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Portable and lightweight design – under 2 kg including display and stand."
+          }
+        },
+        "benefit_item_kNKWnF": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "No charging required – powered directly from your device or outlet."
+          }
+        },
+        "benefit_item_bdwb7J": {
+          "type": "benefit_item",
+          "settings": {
+            "benefit_item_title": "Instant setup – intuitive plug-and-play experience."
+          }
+        },
+        "accordion_item_QgTbMe": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Key features",
+            "accordion_description": "<ul><li>1920 x 1080 at 60 Hz</li><li>Touchscreen interactivity for Mac and Windows</li><li>Durable aerospace aluminium chassis</li><li>300 nits brightness</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>Built-in speakers</li><li>Factory colour calibrated</li><li>16.8 Million Colours</li><li>10 to 20 ms Response Time</li></ul>"
+          }
+        },
         "accordion_item_6Ba3UV": {
           "type": "accordion_item",
           "settings": {
@@ -23,11 +48,15 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Compatibility",
-            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}<\/p>"
+            "accordion_description": "<p>{{ product.metafields.custom.compatibility | metafield_tag }}</p>"
           }
         }
       },
       "block_order": [
+        "benefit_item_AkjeiV",
+        "benefit_item_kNKWnF",
+        "benefit_item_bdwb7J",
+        "accordion_item_QgTbMe",
         "accordion_item_6Ba3UV",
         "accordion_item_Knk9Q9"
       ],
@@ -38,29 +67,24 @@
     },
     "whats-included": {
       "type": "product-whats-included",
-      "settings": {
-      }
+      "settings": {}
     },
     "check-compatibility": {
       "type": "pdp-compatibility",
-      "settings": {
-      }
+      "settings": {}
     },
     "jot": {
       "type": "about-jot",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "review": {
       "type": "product-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "section-faq": {
       "type": "faqs",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
