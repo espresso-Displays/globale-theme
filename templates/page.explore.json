@@ -9,117 +9,44 @@
  */
 {
   "sections": {
-    "section_home_hero_pro_may25": {
-      "type": "section-home-hero-pro-may25",
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
+"section-explore-video": {
+      "type": "section-explore-video",
     },
-    "section_home_hero_touch_may25": {
-      "type": "section-home-hero-touch-may25",
-      "settings": {
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
+    "section-explore-models": {
+      "type": "section-explore-models",
     },
-    "section_home_hero_display_may25": {
-      "type": "section-home-hero-display-may25",
-      "settings": {
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
+    "section-explore-usps": {
+      "type": "section-explore-usps",
     },
-
-
-     "section_home_espresso_difference": {
-      "type": "section-home-espresso-difference",
-      "settings": {}
+    "section-explore-sizes": {
+      "type": "section-explore-sizes",
     },
-
-
-    "secion_home_video": {
-      "type": "section-home-video",
-      "settings": {}
+    "section-explore-touch": {
+      "type": "section-explore-touch",
     },
-
-     "trustpilot": {
-      "type": "trustpilot-all",
-      "settings": {}
+    "section-explore-compare": {
+      "type": "section-explore-compare",
     },
-
-
-    "excellence_block": {
-      "type": "excellence",
-      "settings": {}
+    "section-explore-faqs": {
+      "type": "section-explore-faqs",
+    },
+    "section-explore-contact-support": {
+      "type": "section-explore-contact-support",
     },
 
 
 
-    "discover-espresso": {
-      "type": "main-discover-espresso",
-      "blocks": {
-        "column1": {
-          "type": "slide",
-          "settings": {
-            "poster_image": "shopify://shop_images/slider-image-4.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gwDW56hAKAY?si=aw6S-z2QTssipca8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-          }
-        },
-        "slide_pBxcHq": {
-          "type": "slide",
-          "settings": {
-            "poster_image": "shopify://shop_images/slider-image-5.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qYUqm3VYX_A?si=Nun1N90zTCl0nq1_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-          }
-        },
-        "slide_7QVwEU": {
-          "type": "slide",
-          "settings": {
-            "poster_image": "shopify://shop_images/slider-image-6.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/H_BQMfXOD5E?si=RS4P4DnI3V4pTkfW\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-          }
-        }
-      },
-      "block_order": [
-        "slide_A3fjTJ",
-        "slide_yLFtgi",
-        "slide_FYVVdM",
-        "slide_4PW7X6",
-        "slide_pBxcHq",
-        "slide_7QVwEU"
-      ],
-      "settings": {}
-    },
+
+
   },
   "order": [
-    "section_home_hero_pro_may25",
-    "section_home_hero_touch_may25",
-    "section_home_hero_display_may25",
-
-
-    "section_home_espresso_difference",
-"secion_home_video",
-
-"trustpilot",
-
-    "excellence_block",
-
-
-
-    "discover-espresso",
+    "section-explore-video",
+    "section-explore-models",
+"section-explore-usps",
+"section-explore-sizes",
+"section-explore-touch",
+"section-explore-compare",
+"section-explore-faqs",
+"section-explore-contact-support",
   ]
 }
