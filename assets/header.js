@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!expanded) {
         content.classList.remove('invisible');
         content.style.height = 'auto';
-        content.style.maxHeight = '500px';
+        content.style.maxHeight = '550px';
         content.style.opacity = 1;
       } else {
         content.style.maxHeight = '0px';

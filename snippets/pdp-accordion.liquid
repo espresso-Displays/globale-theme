@@ -1,3 +1,8 @@
+{% unless accordion_css_included %}
+  {{ 'pdp-accordion.css' | asset_url | stylesheet_tag }}
+  {% assign accordion_css_included = true %}
+{% endunless %}
+
 <button
   data-index="{{ index }}"
   class="accordion-button w-full accordion-toggle before:left-[0px] after:left-[0px] lg:before:left-[0px] lg:after:left-[0px] before:w-[10px] after:w-[10px] border-t border-[#D9D9D9] collapsed"
