@@ -89,7 +89,7 @@
           "type": "faq",
           "settings": {
             "question": "What is espresso Flow?",
-            "answer": "Flow is our free productivity software that gives you total control of\n          your workspace.\n          <br>\n          <br>\n          <ul classname=\"space-y-4\">\n            <li>Autorotate between portrait and landscape</li>\n            <li>\n              Detect your screen's position with cursor movements using Glide\n            </li>\n            <li>Snap windows between screens</li>\n            <li>Customise your layout</li>\n            <li>Adjust brightness or orientation</li>\n            <li>Manage your pen setup</li>\n          </ul>"
+            "answer": "Flow is our free productivity software that gives you total control of\n          your workspace.\n          <br>\n          <br>\n          <ul style=\"list-style: disc; margin: 10px; padding:10px;>\n            <li>Autorotate between portrait and landscape</li>\n            <li>\n              Detect your screen's position with cursor movements using Glide\n            </li>\n            <li>Snap windows between screens</li>\n            <li>Customise your layout</li>\n            <li>Adjust brightness or orientation</li>\n            <li>Manage your pen setup</li>\n          </ul>\"></ul>"
           }
         },
         "faq_3ULJCp": {
