@@ -42,10 +42,18 @@
             "question": "What is a portable monitor, and why would I need one?",
             "answer": "Let's face it, more screen space is a good thing.\n          <br>\n          <br>\n          One screen can become a major bottleneck for high-performance work and\n          your ability to structure your workflow. If you've ever worked from a\n          single laptop screen, you'll know the pain: juggling tabs, jumping\n          between conference calls, emails, creative apps, documents,\n          spreadsheets, deep creative workflows and more. <br>\n          <br>\n          That's where portable monitors come in. They give you the freedom to\n          bring a second (or even third) screen with you, so you can recreate\n          your desktop setup anywhere, without compromise. <br>\n          <br>\n          We also know that having the freedom to get up, move between work\n          locations, or even set up to get inspired in different locations, can\n          make a world of difference to how you immerse yourself in your work.\n          <br>\n          <br>\n          For business travellers and professionals on the move, compromises to\n          performance when working on the road should be minimal…. that's where\n          espresso Displays come in.\n          <br>\n          <br> In short, more space at your fingertips, anywhere."
           }
+        },
+        "faq_4AfL49": {
+          "type": "faq",
+          "settings": {
+            "question": "Why would I need an espresso Display?",
+            "answer": "Modern work isn't tied to a desk. espresso Displays are made for\n          people who need premium performance from their gear, wherever they go\n          and whatever they do.\n          <br>\n          <br>\n          Our products are designed to set the benchmark for portable monitors.\n          They are well designed, simple to use, built with durable aluminum,\n          and are highly compatible with just about any device or software.\n          <br>\n          <br>\n          Whether you\"re a corporate traveler, content producer on the move,\n          hybrid worker, or digital nomad, you know the value of well designed\n          high quality product and the positive impact it can have on your work.\n          <br>\n          <br>\n          Our products make it easy for high-performers to do great work,\n          anywhere."
+          }
         }
       },
       "block_order": [
-        "faq_VjEgg6"
+        "faq_VjEgg6",
+        "faq_4AfL49"
       ],
       "settings": {}
     },
