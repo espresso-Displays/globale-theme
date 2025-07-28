@@ -75,7 +75,7 @@
           "type": "faq",
           "settings": {
             "question": "Will it work with my Mac or Windows setup?",
-            "answer": "Yes. All espresso Displays work with both macOS and Windows. For best\n          performance on MacBooks, we recommend using a{' '}\n          <link to=\"{Route.CollectionCables}\" classname=\"font-bold\">\n            Thunderbolt port\n          {' '}\n          (look for the lightning bolt symbol). It's fast, smooth, and\n          plug-and-play."
+            "answer": "Yes. All espresso Displays work with both macOS and Windows. For best\n          performance on MacBooks, we recommend using a\n          <a href=\"{Route.CollectionCables}\" class=\"font-bold\">\n            Thunderbolt port </a>\n          (look for the lightning bolt symbol). It's fast, smooth, and\n          plug-and-play."
           }
         },
         "faq_tjG4Ci": {
