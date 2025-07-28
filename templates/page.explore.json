@@ -82,7 +82,7 @@
           "type": "faq",
           "settings": {
             "question": "Do I need to install anything to get started?",
-            "answer": "You can plug it in and start using it straight away. But to unlock\n          full control with brightness, snapping windows, screen layout, touch\n          for Mac, we recommend downloading our free app:{' '}\n          <link to=\"{Route.PdpSoftware}\" classname=\"font-bold\">\n            espresso Flow\n          \n          ."
+            "answer": "You can plug it in and start using it straight away. But to unlock\n          full control with brightness, snapping windows, screen layout, touch\n          for Mac, we recommend downloading our free app:\n          <a href=\"{Route.PdpSoftware}\" class=\"font-bold\">\n            espresso Flow </a>."
           }
         },
         "faq_Yzrhjn": {
