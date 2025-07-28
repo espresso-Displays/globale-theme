@@ -70,6 +70,13 @@
             "question": "How does it connect to my laptop or device?",
             "answer": "With just one USB-C cable. It powers your display and transmits video\n          at once. No clutter, no mess. If your device doesn't support USB-C\n          video, we offer HDMI or DisplayPort adapters too."
           }
+        },
+        "faq_BRczUF": {
+          "type": "faq",
+          "settings": {
+            "question": "Will it work with my Mac or Windows setup?",
+            "answer": "Yes. All espresso Displays work with both macOS and Windows. For best\n          performance on MacBooks, we recommend using a{' '}\n          <link to=\"{Route.CollectionCables}\" classname=\"font-bold\">\n            Thunderbolt port\n          {' '}\n          (look for the lightning bolt symbol). It's fast, smooth, and\n          plug-and-play."
+          }
         }
       },
       "block_order": [
@@ -77,7 +84,8 @@
         "faq_4AfL49",
         "faq_rHkn47",
         "faq_Dd8Fhe",
-        "faq_8dqmbQ"
+        "faq_8dqmbQ",
+        "faq_BRczUF"
       ],
       "settings": {}
     },
