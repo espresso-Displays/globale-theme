@@ -91,6 +91,13 @@
             "question": "What is espresso Flow?",
             "answer": "Flow is our free productivity software that gives you total control of\n          your workspace.\n          <br>\n          <br>\n          <ul classname=\"space-y-4\">\n            <li>Autorotate between portrait and landscape</li>\n            <li>\n              Detect your screen's position with cursor movements using Glide\n            </li>\n            <li>Snap windows between screens</li>\n            <li>Customise your layout</li>\n            <li>Adjust brightness or orientation</li>\n            <li>Manage your pen setup</li>\n          </ul>"
           }
+        },
+        "faq_3ULJCp": {
+          "type": "faq",
+          "settings": {
+            "question": "Is the screen bright enough to use in different lighting?",
+            "answer": "espresso Displays are built for work in a range of environments —\n          offices, cafés, client sites, coworking spaces. Our displays start at\n          300 nits brightness, and move up to 450 and 550 nits respectively\n          across our Pro range.\n          <br>\n          <br>\n          You can read more about brightness and portable monitors on{' '}\n          <link to=\"https://blog.espres.so/posts/portable-monitors-and-display-brightness-levels\" classname=\"underline\">\n            our blog here\n          \n          ."
+          }
         }
       },
       "block_order": [
@@ -101,7 +108,8 @@
         "faq_8dqmbQ",
         "faq_BRczUF",
         "faq_tjG4Ci",
-        "faq_Yzrhjn"
+        "faq_Yzrhjn",
+        "faq_3ULJCp"
       ],
       "settings": {}
     },
