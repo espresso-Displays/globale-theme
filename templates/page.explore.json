@@ -77,6 +77,13 @@
             "question": "Will it work with my Mac or Windows setup?",
             "answer": "Yes. All espresso Displays work with both macOS and Windows. For best\n          performance on MacBooks, we recommend using a{' '}\n          <link to=\"{Route.CollectionCables}\" classname=\"font-bold\">\n            Thunderbolt port\n          {' '}\n          (look for the lightning bolt symbol). It's fast, smooth, and\n          plug-and-play."
           }
+        },
+        "faq_tjG4Ci": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need to install anything to get started?",
+            "answer": "You can plug it in and start using it straight away. But to unlock\n          full control with brightness, snapping windows, screen layout, touch\n          for Mac, we recommend downloading our free app:{' '}\n          <link to=\"{Route.PdpSoftware}\" classname=\"font-bold\">\n            espresso Flow\n          \n          ."
+          }
         }
       },
       "block_order": [
@@ -85,7 +92,8 @@
         "faq_rHkn47",
         "faq_Dd8Fhe",
         "faq_8dqmbQ",
-        "faq_BRczUF"
+        "faq_BRczUF",
+        "faq_tjG4Ci"
       ],
       "settings": {}
     },
