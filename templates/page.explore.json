@@ -98,27 +98,6 @@
             "question": "Is the screen bright enough to use in different lighting?",
             "answer": "espresso Displays are built for work in a range of environments —\n          offices, cafés, client sites, coworking spaces. Our displays start at\n          300 nits brightness, and move up to 450 and 550 nits respectively\n          across our Pro range.\n          <br>\n          <br>\n          You can read more about brightness and portable monitors on{' '}\n          <link to=\"https://blog.espres.so/posts/portable-monitors-and-display-brightness-levels\" classname=\"underline\">\n            our blog here\n          \n          ."
           }
-        },
-        "faq_nQEpkG": {
-          "type": "faq",
-          "settings": {
-            "question": "What kind of color gamuts are available with espresso Displays?",
-            "answer": "Our displays provide a range between 100% sRGB (16.7 million colours),\n          100% Adobe RGB (1.07 billion colors), and 100% DCI-P3 (1.07 billion\n          colors). For consistency out of the box, our displays are color\n          calibrated at the factory, however, they can be calibrated with third\n          party tools like Datacolor.\n          <br>\n          <br>\n          If you're serious about production, you probably already calibrate\n          your displays but you can read more about brightness and portable\n          monitors on{' '}\n          <link to=\"https://blog.espres.so/posts/choosing-the-right-espresso-display-for-color-accuracy\" classname=\"underline\">\n            our blog here\n          \n          ."
-          }
-        },
-        "faq_dWrgph": {
-          "type": "faq",
-          "settings": {
-            "question": "Is espresso Display durable enough for travel?",
-            "answer": "Absolutely. Each display is machined from aluminum, built for\n          performance and protection. It's perfect to slip into any bag or case.\n          You can combine your travel setup with one of our{' '}\n          <link to=\"{Route.CollectionCases}\" classname=\"font-bold\">\n            travel case\n          {' '}\n          or magnetic stands for the most secure, mobile setup possible"
-          }
-        },
-        "faq_f8Jh8t": {
-          "type": "faq",
-          "settings": {
-            "question": "What's the pen experience like?",
-            "answer": "espresso Pen is a great tool for general tasks like sketching,\n          note-taking, markups, light creative work, and more. It's\n          pressure-sensitive, and built with the Microsoft Pen Protocol 2.0.\n          <br>\n          <br>\n          While it's not going to offer the same levels of precision that a\n          dedicated art tablet will, the espresso Pen is ideal for sketching,\n          note-taking, reviewing designs, or presenting ideas on the go."
-          }
         }
       },
       "block_order": [
@@ -130,10 +109,7 @@
         "faq_BRczUF",
         "faq_tjG4Ci",
         "faq_Yzrhjn",
-        "faq_3ULJCp",
-        "faq_nQEpkG",
-        "faq_dWrgph",
-        "faq_f8Jh8t"
+        "faq_3ULJCp"
       ],
       "settings": {}
     },
