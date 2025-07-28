@@ -119,6 +119,13 @@
             "question": "What's the pen experience like?",
             "answer": "espresso Pen is a great tool for general tasks like sketching,\n          note-taking, markups, light creative work, and more. It's\n          pressure-sensitive, and built with the Microsoft Pen Protocol 2.0.\n          <br>\n          <br>\n          While it's not going to offer the same levels of precision that a\n          dedicated art tablet will, the espresso Pen is ideal for sketching,\n          note-taking, reviewing designs, or presenting ideas on the go."
           }
+        },
+        "faq_PgMxfw": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does setup take?",
+            "answer": "Seconds. Unfold your stand. Plug in your USB-C cable. Start working.\n          It's as fast as it looks."
+          }
         }
       },
       "block_order": [
@@ -133,7 +140,8 @@
         "faq_3ULJCp",
         "faq_6ycn8E",
         "faq_XzELT6",
-        "faq_hAXW9Y"
+        "faq_hAXW9Y",
+        "faq_PgMxfw"
       ],
       "settings": {}
     },
