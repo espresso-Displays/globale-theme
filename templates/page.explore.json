@@ -105,6 +105,13 @@
             "question": "What kind of color gamuts are available with espresso Displays?",
             "answer": "Our displays provide a range between 100% sRGB (16.7 million colours),\n          100% Adobe RGB (1.07 billion colors), and 100% DCI-P3 (1.07 billion\n          colors). For consistency out of the box, our displays are color\n          calibrated at the factory, however, they can be calibrated with third\n          party tools like Datacolor.\n          <br>\n          <br>\n          If you're serious about production, you probably already calibrate\n          your displays but you can read more about brightness and portable\n          monitors on{' '}\n          <link to=\"https://blog.espres.so/posts/choosing-the-right-espresso-display-for-color-accuracy\" classname=\"underline\">\n            our blog here\n          \n          ."
           }
+        },
+        "faq_dWrgph": {
+          "type": "faq",
+          "settings": {
+            "question": "Is espresso Display durable enough for travel?",
+            "answer": "Absolutely. Each display is machined from aluminum, built for\n          performance and protection. It's perfect to slip into any bag or case.\n          You can combine your travel setup with one of our{' '}\n          <link to=\"{Route.CollectionCases}\" classname=\"font-bold\">\n            travel case\n          {' '}\n          or magnetic stands for the most secure, mobile setup possible"
+          }
         }
       },
       "block_order": [
@@ -117,7 +124,8 @@
         "faq_tjG4Ci",
         "faq_Yzrhjn",
         "faq_3ULJCp",
-        "faq_nQEpkG"
+        "faq_nQEpkG",
+        "faq_dWrgph"
       ],
       "settings": {}
     },
