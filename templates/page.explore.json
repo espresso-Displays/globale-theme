@@ -98,6 +98,13 @@
             "question": "Is the screen bright enough to use in different lighting?",
             "answer": "espresso Displays are built for work in a range of environments —\n          offices, cafés, client sites, coworking spaces. Our displays start at\n          300 nits brightness, and move up to 450 and 550 nits respectively\n          across our Pro range.\n          <br>\n          <br>\n          You can read more about brightness and portable monitors on{' '}\n          <link to=\"https://blog.espres.so/posts/portable-monitors-and-display-brightness-levels\" classname=\"underline\">\n            our blog here\n          \n          ."
           }
+        },
+        "faq_nQEpkG": {
+          "type": "faq",
+          "settings": {
+            "question": "What kind of color gamuts are available with espresso Displays?",
+            "answer": "Our displays provide a range between 100% sRGB (16.7 million colours),\n          100% Adobe RGB (1.07 billion colors), and 100% DCI-P3 (1.07 billion\n          colors). For consistency out of the box, our displays are color\n          calibrated at the factory, however, they can be calibrated with third\n          party tools like Datacolor.\n          <br>\n          <br>\n          If you're serious about production, you probably already calibrate\n          your displays but you can read more about brightness and portable\n          monitors on{' '}\n          <link to=\"https://blog.espres.so/posts/choosing-the-right-espresso-display-for-color-accuracy\" classname=\"underline\">\n            our blog here\n          \n          ."
+          }
         }
       },
       "block_order": [
@@ -109,7 +116,8 @@
         "faq_BRczUF",
         "faq_tjG4Ci",
         "faq_Yzrhjn",
-        "faq_3ULJCp"
+        "faq_3ULJCp",
+        "faq_nQEpkG"
       ],
       "settings": {}
     },
