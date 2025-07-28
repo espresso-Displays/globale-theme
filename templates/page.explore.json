@@ -112,6 +112,13 @@
             "question": "Is espresso Display durable enough for travel?",
             "answer": "Absolutely. Each display is machined from aluminum, built for\n          performance and protection. It's perfect to slip into any bag or case.\n          You can combine your travel setup with one of our{' '}\n          <link to=\"{Route.CollectionCases}\" classname=\"font-bold\">\n            travel case\n          {' '}\n          or magnetic stands for the most secure, mobile setup possible"
           }
+        },
+        "faq_f8Jh8t": {
+          "type": "faq",
+          "settings": {
+            "question": "What's the pen experience like?",
+            "answer": "espresso Pen is a great tool for general tasks like sketching,\n          note-taking, markups, light creative work, and more. It's\n          pressure-sensitive, and built with the Microsoft Pen Protocol 2.0.\n          <br>\n          <br>\n          While it's not going to offer the same levels of precision that a\n          dedicated art tablet will, the espresso Pen is ideal for sketching,\n          note-taking, reviewing designs, or presenting ideas on the go."
+          }
         }
       },
       "block_order": [
@@ -125,7 +132,8 @@
         "faq_Yzrhjn",
         "faq_3ULJCp",
         "faq_nQEpkG",
-        "faq_dWrgph"
+        "faq_dWrgph",
+        "faq_f8Jh8t"
       ],
       "settings": {}
     },
