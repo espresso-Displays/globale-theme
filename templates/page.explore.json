@@ -56,12 +56,20 @@
             "question": "What does espresso offer that's different from other portable monitors?",
             "answer": "espresso Displays and accessories are carefully crafted products to\n          support how people work on the go. They are built for performance,\n          simplicity and for people who want their tools to work, every time.\n          <br>\n          <br>\n          When it comes to portable monitors, there are a few things to weigh up\n          when choosing the best product for you but to summarise, below is just\n          a snapshot of our core features:\n          <br>\n          <br>\n          <ul classname=\"space-y-4\">\n            <li>\n              <span classname=\"font-bold\">Aluminum & Glass</span>: Each display\n              is crafted from a single sheet of aluminum and fused with hardened\n              glass. It's a simple and effective design for life on the go.\n            </li>\n            <li>\n              <span classname=\"font-bold\">Magnetic & Ergonomic Stand</span>:\n              With a magnetic attachment to the back of the espresso Display,\n              you can set up your monitor in landscape or portrait in seconds.\n              With the addition of our Stand+ design, you can also set up a more\n              ergonomic viewing angle positioned above your laptop screen.\n            </li>\n            <li>\n              <span classname=\"font-bold\">Single Cable Connection</span>: Simple\n              ‘plug and play' with Mac, Windows, iPad, iPhone, Samsung Galaxy\n              via a single USB-C cable. With two ports on the display that\n              deliver power passthrough, you can also charge your device with\n              additional power. We also have adapter cables if your device does\n              not have USB-C connction.\n            </li>\n            <li>\n              <span classname=\"font-bold\">Touch for Mac & Windows</span>:\n              Scroll, pinch and zoom, mark-up, take notes (and more). We offer\n              an interactive experience for your portable monitor experience\n              which makes for better ease of use and workflow.\n            </li>\n            <li>\n              <span classname=\"font-bold\">Our software</span>: We make our own\n              software to ensure the touch and multi-screen experience is\n              seamless. Simple things like auto screen rotation (portrait or\n              landscape), repositioning based on monitor location, and\n              brightness/color control, it's all integrated into espressoFlow.\n            </li>\n            <li>\n              <span classname=\"font-bold\">Global support team</span>: Our\n              support team also hustles to deliver for our customers when they\n              have questions if ever things don't go to plan.\n            </li>\n          </ul>"
           }
+        },
+        "faq_Dd8Fhe": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I choose the right espresso Display for me?",
+            "answer": "<ul classname=\"space-y-4\">\n            <li>\n              <span classname=\"font-bold\">espresso Display 15</span>: a great\n              balance of screen space, durable design, and portability. Our most\n              popular model with the fundamental features that make espresso\n              Displays the best option for people on the move.\n            </li>\n            <li>\n              <span classname=\"font-bold\">espresso Touch 13 & 15</span>: the\n              original range from espresso Displays. Interactive touch brings\n              the Display experience to new levels with everything you need to\n              maximise your potential anywhere, whatever the task.\n            </li>\n            <li>\n              <span classname=\"font-bold\">espresso Pro 15 & 17</span>: maximum\n              screen performance, excellent brightness levels, amazing color\n              range (more than 1 billion!), touch capability, and sleek black\n              matte design.\n            </li>\n          </ul>"
+          }
         }
       },
       "block_order": [
         "faq_VjEgg6",
         "faq_4AfL49",
-        "faq_rHkn47"
+        "faq_rHkn47",
+        "faq_Dd8Fhe"
       ],
       "settings": {}
     },
