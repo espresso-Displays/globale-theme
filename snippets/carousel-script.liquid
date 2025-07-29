@@ -1,0 +1,17 @@
+<script>
+  document.querySelectorAll('.carousel-wrapper').forEach((wrapper) => {
+    const carousel = wrapper.querySelector('.carousel-scroll');
+    const firstChild = carousel.querySelector(':scope > *');
+    const scrollAmount = firstChild ? firstChild.offsetWidth : 0;
+
+    wrapper.querySelectorAll('[data-direction]').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const direction = parseInt(this.getAttribute('data-direction'), 10);
+        carousel.scrollBy({
+          left: direction * scrollAmount,
+          behavior: 'smooth',
+        });
+      });
+    });
+  });
+</script>
