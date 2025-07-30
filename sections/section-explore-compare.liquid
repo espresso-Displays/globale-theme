@@ -51,15 +51,13 @@
                   <div class="text-subheading-small-heavy">Sizes</div>
                   <div class="text-center text-heading-large ">15.6"</div>
                 </div>
+
                 <div class="flex flex-col justify-center items-center gap-[16px] w-full">
-                  <a
-                    aria-label="learn more about Display 15"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap bg-secondary-30 hover:bg-secondary-20 active:bg-secondary-10 w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer text-secondary-100 event-which-display-learn"
-                    data-discover="true"
-                    href="/products/espresso-display?size=15"
-                    >Learn more</a
-                  >
+                  {% render 'button-standard',
+                    label: 'Learn more',
+                    href: '/products/espresso-display',
+                    style: 'filled'
+                  %}
                 </div>
               </div>
               <div
@@ -98,15 +96,9 @@
                   <div class="text-subheading-small-heavy">Sizes</div>
                   <div class="text-center text-heading-large ">13.3" / 15.6"</div>
                 </div>
+
                 <div class="flex flex-col justify-center items-center gap-[16px] w-full">
-                  <a
-                    aria-label="learn more about Touch 13"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap bg-secondary-30 hover:bg-secondary-20 active:bg-secondary-10 w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer text-secondary-100 event-which-display-learn"
-                    data-discover="true"
-                    href="/products/espresso-touch?size=13"
-                    >Learn more</a
-                  >
+                  {% render 'button-standard', label: 'Learn more', href: '/products/espresso-touch', style: 'filled' %}
                 </div>
               </div>
               <div
@@ -145,15 +137,9 @@
                   <div class="text-subheading-small-heavy">Sizes</div>
                   <div class="text-center text-heading-large ">15.6" / 17.3"</div>
                 </div>
+
                 <div class="flex flex-col justify-center items-center gap-[16px] w-full">
-                  <a
-                    aria-label="learn more about Pro 15"
-                    draggable="false"
-                    class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap bg-secondary-30 hover:bg-secondary-20 active:bg-secondary-10 w-[130px] h-[48px] px-[16px] py-[8px] text-label-medium cursor-pointer text-secondary-100 event-which-display-learn"
-                    data-discover="true"
-                    href="/products/espresso-pro?size=15"
-                    >Learn more</a
-                  >
+                  {% render 'button-standard', label: 'Learn more', href: '/products/espresso-pro', style: 'filled' %}
                 </div>
               </div>
             </div>

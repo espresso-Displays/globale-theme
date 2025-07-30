@@ -1,0 +1,198 @@
+<div class="bg-lm-background-2 pt-[16px] desktop-small:pt-[70px] pb-[32px] px-[32px] desktop-small:px-[70px] m-auto h-full w-full">
+  <div class="flex flex-col gap-[24px] bg-lm-background-2 w-full pt-[0px] pb-[16px] px-[0px] m-auto h-full max-w-content-max-width">
+    <div class="title m-auto max-w-[1800px] overflow-hidden">
+      <h2 class="h2 text-heading-medium desktop-small:text-heading-large text-center">
+        What people are saying on YouTube
+      </h2>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-slides">
+        {% for block in section.blocks %}
+          <div class="carousel-slide">
+            <div class="slide-content" style=" border-radius: 20px">
+              {% if block.settings.poster_image %}
+                <img
+                  src="{{ block.settings.poster_image | img_url: 'master' }}"
+                  alt="{{ block.settings.poster_image.alt }}"
+                  class="carousel-poster"
+                  style="border-radius: 20px"
+                >
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'carousel-poster placeholder' }}
+              {% endif %}
+              <div class="video-container" style="display: none;">
+                {% if block.settings.video_iframe %}
+                  {% assign iframe_code = block.settings.video_iframe %}
+                  {% assign src_match = iframe_code | split: 'src="' %}
+                  {% if src_match.size > 1 %}
+                    {% assign src_rest = src_match[1] | split: '"' %}
+                    {% assign src_url = src_rest[0] %}
+                    {% if src_url contains '?' %}
+                      {% assign new_src_url = src_url | append: '&enablejsapi=1' %}
+                    {% else %}
+                      {% assign new_src_url = src_url | append: '?enablejsapi=1' %}
+                    {% endif %}
+                    {% assign new_iframe_code = iframe_code | replace: src_url, new_src_url %}
+                    {{ new_iframe_code }}
+                  {% else %}
+                    {{ iframe_code }}
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% render 'carousel-buttons', classesHidden: 'desktop-small:flex relative' %}
+  </div>
+</div>
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-slides {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  .carousel-slide {
+    flex: 0 0 400px;
+    max-width: 400px;
+    height: 225px; /* 400px * 9/16 = 225px */
+    position: relative;
+    aspect-ratio: 16 / 9;
+  }
+
+  .slide-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+  }
+
+  .carousel-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+
+{% comment %} not using the normal carousel buttons script, as the behaviour on the video carousel is different, so got custom logic here {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slidesContainer = document.querySelector('.carousel-slides');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const posterWidth = 400; // px
+
+    // Carousel navigation buttons
+    document.querySelectorAll('[data-direction]').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const direction = parseInt(this.getAttribute('data-direction'), 10);
+        slidesContainer.scrollBy({
+          left: direction * posterWidth,
+          behavior: 'smooth',
+        });
+      });
+    });
+
+    // Click to play video
+    slides.forEach((slide) => {
+      const poster = slide.querySelector('.carousel-poster');
+      const videoContainer = slide.querySelector('.video-container');
+      const iframe = slide.querySelector('iframe');
+      if (poster && videoContainer) {
+        poster.addEventListener('click', () => {
+          poster.style.display = 'none';
+          videoContainer.style.display = 'block';
+          if (iframe) {
+            // Try to play immediately
+            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+          }
+        });
+      }
+      // Optional: click outside video to close and show poster again
+      if (videoContainer && poster) {
+        videoContainer.addEventListener('click', () => {
+          videoContainer.style.display = 'none';
+          poster.style.display = 'block';
+          if (iframe) {
+            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+          }
+        });
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Carousel Slider",
+  "tag": "section",
+  "class": "carousel-section",
+  "max_blocks": 15,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Video Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "poster_image",
+          "label": "Poster Image"
+        },
+        {
+          "type": "textarea",
+          "id": "video_iframe",
+          "label": "YouTube Iframe Code",
+          "info": "Paste the complete iframe embed code from YouTube"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel Slider",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,38 @@
+<div class="section-nav-desktop product-nav hidden lg:flex  w-full max-w-content-max-w bg-neutral-90 text-lm-on-neutral-1 text-label-small z-[29] shadow-[0px_8px_34px_-8px_rgba(0,0,0,0.1)] top-[95px] h-[60px] border-b border-neutral-60">
+  <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
+    <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] w-full h-full">
+      <div class="content-block w-full h-full">
+        <div
+          class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+        >
+          <div class="layout-flex relative col-span-4 lg:col-span-12 flex flex-row w-full h-[60px]">
+            <div class=" flex flex-row justify-between items-center h-full w-full">
+              {% render 'nav-item', href: '#section-home-products', label: 'Products', classes: '' %}
+              {% render 'nav-item', href: '#section-home-espresso-difference', label: 'Why espresso' %}
+              {% render 'nav-item', href: '#section-reviews', label: 'Customer reviews' %}
+              {% render 'nav-item', href: '#section-home-espresso-usps', label: 'Features' %}
+              {% render 'nav-item', href: '#section-reviews-media', label: 'Media reviews' %}
+              {% render 'nav-item', href: '#section-home-software', label: 'Software' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer="true" src="{{ 'pdp-product-nav.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Home Navigation",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Home Navigation",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

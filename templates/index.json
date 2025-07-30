@@ -9,7 +9,8 @@
  */
 {
   "sections": {
-    "section_home_hero_pro_may25": {
+
+    "section-home-hero-pro-may25": {
       "type": "section-home-hero-pro-may25",
       "settings": {
         "image_overlay_opacity": 40,
@@ -23,7 +24,8 @@
         "show_text_below": false
       }
     },
-    "section_home_hero_touch_may25": {
+
+    "section-home-hero-touch-may25": {
       "type": "section-home-hero-touch-may25",
       "settings": {
         "color_scheme": "",
@@ -33,7 +35,8 @@
         "show_text_below": true
       }
     },
-    "section_home_hero_display_may25": {
+
+    "section-home-hero-display-may25": {
       "type": "section-home-hero-display-may25",
       "settings": {
         "color_scheme": "",
@@ -43,63 +46,19 @@
         "show_text_below": true
       }
     },
-    // "image_banner": {
-    //   "type": "image-banner",
-    //   "settings": {
-    //     "color_scheme": "",
-    //     "image_behavior": "none",
-    //     "mobile_content_alignment": "center",
-    //     "stack_images_on_mobile": true,
-    //     "show_text_below": true
-    //   }
-    // },
-    // "category": {
-    //   "type": "main-category",
-    //   "blocks": {
-    //     "card_gcFXJn": {
-    //       "type": "card",
-    //       "settings": {
-    //         "image": "shopify://shop_images/image-home-pro17-standpro-front-productphoto_1.webp",
-    //         "title": "espresso Pro",
-    //         "subtitle": "Pro display for a serious workflow",
-    //         "product_link": "shopify://products/espresso-pro"
-    //       }
-    //     },
-    //     "card_LEpWUj": {
-    //       "type": "card",
-    //       "settings": {
-    //         "image": "shopify://shop_images/image-home-touch15-stand-front-productphoto.webp",
-    //         "title": "espresso Touch",
-    //         "subtitle": "Sleek design with a touchscreen",
-    //         "product_link": "shopify://products/espressodisplays"
-    //       }
-    //     },
-    //     "card_pakLXQ": {
-    //       "type": "card",
-    //       "settings": {
-    //         "image": "shopify://shop_images/image-home-display15-standplus-front-plus-productphoto.webp",
-    //         "title": "espresso Display",
-    //         "subtitle": "Simple, seamless for daily performance.",
-    //         "product_link": "shopify://products/espresso-display"
-    //       }
-    //     }
-    //   },
-    //   "block_order": [
-    //     "card_gcFXJn",
-    //     "card_LEpWUj",
-    //     "card_pakLXQ"
-    //   ],
-    //   "settings": {}
-    // },
 
-     "section_home_espresso_difference": {
+     "section-home-espresso-difference": {
       "type": "section-home-espresso-difference",
       "settings": {}
     },
 
-
-    "secion_home_video": {
+    "section-home-video": {
       "type": "section-home-video",
+      "settings": {}
+    },
+
+    "section-home-nav": {
+      "type": "section-home-nav",
       "settings": {}
     },
 
@@ -108,122 +67,145 @@
       "settings": {}
     },
 
-
-    // "pr": {
-    //   "type": "main-pr-section",
-    //   "settings": {}
-    // },
-    // "espresso-competitors": {
-    //   "type": "main-espresso-vs-others",
-    //   "settings": {}
-    // },
-
-    // "feature-icons": {
-    //   "type": "main-feature-icons",
-    //   "settings": {}
-    // },
-    "excellence_block": {
-      "type": "excellence",
+    "section-home-use-cases": {
+      "type": "section-home-use-cases",
       "settings": {}
     },
 
-    // "benefit_block": {
-    //   "type": "benefits",
-    //   "settings": {}
-    // },
-    // "about_jot_block": {
-    //   "type": "about-jot",
-    //   "disabled": true,
-    //   "settings": {}
-    // },
-    // "espresso_for_mac_block": {
-    //   "type": "espresso-for-mac",
-    //   "settings": {}
-    // },
-    // "markup_documents_block": {
-    //   "type": "markup-documents",
-    //   "settings": {}
-    // },
-    // "virtual_whiteboard_block": {
-    //   "type": "virtual-whiteboard",
-    //   "settings": {}
-    // },
-    // "master_productivity_block": {
-    //   "type": "master-productivity",
-    //   "settings": {}
-    // },
-    // "meet_espresso_flow_block": {
-    //   "type": "meet-espresso-flow",
-    //   "disabled": true,
-    //   "settings": {}
-    // },
-    // "compatibility_index_page_block": {
-    //   "type": "compatibility-index-page",
-    //   "disabled": true,
-    //   "settings": {}
-    // }
+    "section-home-espresso-usps": {
+      "type": "section-home-espresso-usps",
+      "settings": {}
+    },
 
-    "discover-espresso": {
-      "type": "main-discover-espresso",
+    "section-common-awarded-for-design": {
+      "type": "section-common-awarded-for-design",
+      "settings": {}
+    },
+
+    "section-home-reviews-carousel": {
+      "type": "section-home-reviews-carousel",
+      "settings": {}
+    },
+    "section-home-software":
+    {
+      "type": "section-home-software",
+      "settings": {}
+    },
+
+
+    "section-home-video-carousel": {
+      "type": "section-home-video-carousel",
       "blocks": {
-        "column1": {
+
+        "video-1": {
           "type": "slide",
           "settings": {
-            "poster_image": "shopify://shop_images/slider-image-4.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gwDW56hAKAY?si=aw6S-z2QTssipca8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            "poster_image": "shopify://shop_images/section-home-video-1.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tha3fwZpNmM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
           }
         },
-        "slide_pBxcHq": {
+        "video-2": {
           "type": "slide",
           "settings": {
-            "poster_image": "shopify://shop_images/slider-image-5.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qYUqm3VYX_A?si=Nun1N90zTCl0nq1_\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            "poster_image": "shopify://shop_images/section-home-video-2.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZkE7M0WcodU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
           }
         },
-        "slide_7QVwEU": {
+        "video-3": {
           "type": "slide",
           "settings": {
-            "poster_image": "shopify://shop_images/slider-image-6.webp",
-            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/H_BQMfXOD5E?si=RS4P4DnI3V4pTkfW\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            "poster_image": "shopify://shop_images/section-home-video-3.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/86tPxgY0-D8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-4": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-4.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xsZphHnKwPI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-5": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-5.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vsAZp-Npd6w\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-6": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-6.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/uYNvoReJ8tA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-7": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-7.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbul2GhkFXc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-8": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-8.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tDRh940jTR4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-9": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-9.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/MFGA2El2dRA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-10": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-10.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/u93Ed6tpWuM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+          }
+        },
+        "video-11": {
+          "type": "slide",
+          "settings": {
+            "poster_image": "shopify://shop_images/section-home-video-11.webp",
+            "video_iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/H_BQMfXOD5E\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
           }
         }
       },
       "block_order": [
-        "slide_A3fjTJ",
-        "slide_yLFtgi",
-        "slide_FYVVdM",
-        "slide_4PW7X6",
-        "slide_pBxcHq",
-        "slide_7QVwEU"
+        "video-1",
+        "video-2",
+        "video-3",
+        "video-4",
+        "video-5",
+        "video-6",
+        "video-7",
+        "video-8",
+        "video-9",
+        "video-10",
+        "video-11"
       ],
       "settings": {}
     },
   },
   "order": [
-    "section_home_hero_pro_may25",
-    "section_home_hero_touch_may25",
-    "section_home_hero_display_may25",
+    "section-home-hero-pro-may25",
+    "section-home-hero-touch-may25",
+    "section-home-hero-display-may25",
+    "section-home-espresso-difference",
+    "section-home-video",
+    "section-home-nav",
+    "trustpilot",
+    "section-home-use-cases",
+    "section-home-espresso-usps",
+    "section-common-awarded-for-design",
+    "section-home-reviews-carousel",
+    "section-home-software",
+    "section-home-video-carousel",
 
-
-    "section_home_espresso_difference",
-"secion_home_video",
-
-"trustpilot",
-    // "pr",
-    // "espresso-competitors",
-
-    // "feature-icons",
-    "excellence_block",
-
-    // "benefit_block",
-    // "about_jot_block",
-    // "espresso_for_mac_block",
-    // "markup_documents_block",
-    // "virtual_whiteboard_block",
-    // "master_productivity_block",
-    // "meet_espresso_flow_block",
-    // "compatibility_index_page_block"
-
-    "discover-espresso",
+    // "discover-espresso",
   ]
 }

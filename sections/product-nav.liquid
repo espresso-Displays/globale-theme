@@ -1,4 +1,4 @@
-<div class="section-nav-desktop product-nav hidden lg:flex  w-full max-w-content-max-w bg-lm-background-1 text-lm-on-neutral-1 text-label-medium z-[29] shadow-[0px_8px_34px_-8px_rgba(0,0,0,0.1)] top-[95px] h-[60px]">
+<div class="section-nav-desktop product-nav hidden lg:flex  w-full max-w-content-max-w  text-lm-on-neutral-1 text-label-medium z-[29] shadow-[0px_8px_34px_-8px_rgba(0,0,0,0.1)] top-[95px] h-[60px] border-b border-neutral-60 bg-neutral-90">
   <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
     <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] w-full h-full">
       <div class="content-block w-full h-full">
@@ -7,83 +7,20 @@
         >
           <div class="layout-flex relative col-span-4 lg:col-span-12 flex flex-row w-full h-[60px]">
             <div class=" flex flex-row justify-between items-center h-full w-full">
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#section-overview"> Overview </a>
-                  </div>
-                </div>
-              </div>
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#section-features"> Features </a>
-                  </div>
-                </div>
-              </div>
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#why-espresso"> Why espresso </a>
-                  </div>
-                </div>
-              </div>
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#section-accessories"> Accessories </a>
-                  </div>
-                </div>
-              </div>
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#section-techspecs"> Tech Specs </a>
-                  </div>
-                </div>
-              </div>
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#section-faqs"> FAQs </a>
-                  </div>
-                </div>
-              </div>
-              <div class="h-full bg-lm-background-1 list-none">
-                <div
-                  draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                >
-                  <div class="product-nav-item !mx-0">
-                    <a href="#section-compare"> Compare </a>
-                  </div>
-                </div>
-              </div>
+              {% render 'nav-item', href: '#section-overview', label: 'Overview' %}
+              {% render 'nav-item', href: '#section-features', label: 'Features' %}
+              {% render 'nav-item', href: '#why-espresso', label: 'Why espresso' %}
+              {% render 'nav-item', href: '#section-accessories', label: 'Accessories' %}
+              {% render 'nav-item', href: '#section-techspecs', label: 'Tech Specs' %}
+              {% render 'nav-item', href: '#section-faqs', label: 'FAQs' %}
+              {% render 'nav-item', href: '#section-compare', label: 'Compare' %}
 
               <div class="h-full bg-lm-background-1">
                 <div
                   draggable="false"
                   class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover"
                 >
-                  <div class="product-nav-item !mx-0">
+                  <div class="nav-item !mx-0">
                     <form class="" method="post" action="/cart/add">
                       <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                       <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">

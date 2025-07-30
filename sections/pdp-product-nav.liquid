@@ -1,4 +1,4 @@
-<div class="section-nav-desktop product-nav hidden lg:flex  w-full max-w-content-max-w bg-lm-background-1 text-lm-on-neutral-1 text-label-medium z-[29] shadow-[0px_8px_34px_-8px_rgba(0,0,0,0.1)] top-[95px] h-[60px]">
+<div class="section-nav-desktop product-nav hidden lg:flex  w-full max-w-content-max-w  text-lm-on-neutral-1 text-label-medium z-[29] shadow-[0px_8px_34px_-8px_rgba(0,0,0,0.1)] top-[95px] h-[60px] border-b border-neutral-60 bg-neutral-90">
   <div id="" class="section relative flex lg:flex-col items-center flex-col-reverse w-full h-full">
     <div class="section-layout max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] w-full h-full">
       <div class="content-block w-full h-full">
@@ -8,23 +8,12 @@
           <div class="layout-flex relative col-span-4 lg:col-span-12 flex flex-row w-full h-[60px]">
             <div class=" flex flex-row justify-between items-center h-full w-full">
               {% for metafield in product.metafields.custom.navigation.value %}
-                <div class="h-full bg-lm-background-1 list-none">
-                  <div
-                    draggable="false"
-                    class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover "
-                  >
-                    <div class="product-nav-item !mx-0">
-                      <a href="{{ metafield.html_id.value }}">
-                        {{- metafield.title.value -}}
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                {% render 'nav-item', href: metafield.html_id.value, label: metafield.title.value %}
               {% endfor %}
-              <div class="h-full bg-lm-background-1">
+              <div class="h-full border-b border-neutral-60 bg-neutral-90">
                 <div
                   draggable="false"
-                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-b-2 border-transparent hover:border-lm-on-neutral-1-hover"
+                  class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-neutral-60 hover:border-b-2 border-transparent hover:border-lm-on-neutral-1-hover"
                 >
                   <div class="product-nav-item !mx-0">
                     <form class="" method="post" action="/cart/add">

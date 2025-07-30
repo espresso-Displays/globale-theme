@@ -1,6 +1,11 @@
 <script>
   document.querySelectorAll('.carousel-wrapper').forEach((wrapper) => {
+    // Prevent duplicate listeners by marking each wrapper
+    if (wrapper.__carouselInitialized) return;
+    wrapper.__carouselInitialized = true;
+
     const carousel = wrapper.querySelector('.carousel-scroll');
+    if (!carousel) return;
     const firstChild = carousel.querySelector(':scope > *');
     const scrollAmount = firstChild ? firstChild.offsetWidth : 0;
 

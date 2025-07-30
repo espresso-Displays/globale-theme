@@ -1,4 +1,4 @@
-<div class="flex desktop-small:hidden absolute w-full h-full bg-lm-transparent pointer-events-none flex-row justify-center gap-[48px] items-end carousel-scroll-buttons">
+<div class="flex absolute w-full h-full bg-lm-transparent pointer-events-none flex-row justify-center gap-[48px] items-end carousel-scroll-buttons {{ classesHidden | default: 'desktop-small:hidden'  }}">
   <div class="cursor-pointer pointer-events-auto" data-direction="-1">
     <div class="icon flex flex-col items-center">
       <!-- Left Arrow SVG -->

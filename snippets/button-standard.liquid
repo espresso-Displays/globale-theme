@@ -1,0 +1,18 @@
+{% assign label = label | default: 'Shop now' %}
+{% assign button_style = style | default: 'filled' %}
+
+{% if button_style == 'outlined' %}
+  {% assign button_classes = 'border border-secondary-30 bg-neutral-101 hover:bg-secondary-90 active:bg-secondary-80 text-secondary-40' %}
+{% else %}
+  {% assign button_classes = 'bg-secondary-30 hover:bg-secondary-20 active:bg-secondary-10 text-neutral-101' %}
+{% endif %}
+
+<a
+  aria-label="{{ aria_label | default: label }}"
+  draggable="false"
+  class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer {{ button_classes }}"
+  data-discover="true"
+  href="{{ href | default: '#' }}"
+>
+  {{- label | strip -}}
+</a>
