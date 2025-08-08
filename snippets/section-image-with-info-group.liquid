@@ -1,0 +1,20 @@
+<div
+  class="section group-image-with-info col-span-full flex flex-col gap-[24px] desktop-small:gap-[24px] {{ className }}"
+  id="{{ id }}"
+>
+  {% for section in sections %}
+    {% assign layoutStart = section.layoutStart | default: 'imageLeft' %}
+    {% assign offset = 0 %}
+    {% if layoutStart == 'imageRight' %}
+      {% assign offset = 1 %}
+    {% endif %}
+    {% assign sum = forloop.index0 | plus: offset %}
+    {% assign mod = sum | modulo: 2 %}
+    {% if mod == 0 %}
+      {% assign layout = 'imageLeft' %}
+    {% else %}
+      {% assign layout = 'imageRight' %}
+    {% endif %}
+    {% render 'section-image-with-info-single', section: section, layout: layout %}
+  {% endfor %}
+</div>

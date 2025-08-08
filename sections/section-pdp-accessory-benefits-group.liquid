@@ -1,0 +1,251 @@
+{% comment %}
+  in future will add a script to inject reusable global variables
+{% endcomment %}
+{% comment %} inject:handles {% endcomment %}
+
+{% assign accessory_sections = '' %}
+
+{% case product.handle %}
+  {% when 'espresso-case' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-2-page"|||
+  "media_alt": "espresso case pro"|||
+  "heading": "Slim, Strong, and Lightweight"|||
+  "descriptions": "Made from durable materials with a soft-touch finish, espresso Case adds protection without bulk — so your workspace stays clean and portable."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-5-page"|||
+  "media_alt": "espresso case pro in backpack"|||
+  "heading": "Protection That Moves With You"|||
+  "descriptions": "espresso Case keeps your espresso Display safe wherever work takes you — protecting it from scratches, knocks, and everyday wear during travel or storage."
+}
+'
+    %}
+
+  {% when 'espresso-case-pro' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-2-page"|||
+  "media_alt": "espresso case pro"|||
+  "heading": "Slim, Strong, and Lightweight"|||
+  "descriptions": "Made from durable materials with a soft-touch finish, espresso Case adds protection without bulk — so your workspace stays clean and portable."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-5-page"|||
+  "media_alt": "espresso case pro in backpack"|||
+  "heading": "Protection That Moves With You"|||
+  "descriptions": "espresso Case keeps your espresso Display safe wherever work takes you — protecting it from scratches, knocks, and everyday wear during travel or storage."
+}
+    '
+    %}
+
+  {% when 'espresso-case-nylon' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "video"|||
+  "media_name": "video-espresso-case-nylon"|||
+  "heading": "Complete protection"|||
+  "descriptions": "Magnetic envelope style design, reinforced nylon build, dedicated space to house the espresso Stand, in a form factor that fits easily into any bag. Simply slot your espresso Display (with magnetic Stand attached) into the case, and you’re ready for the road."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-nylon-open"|||
+  "media_alt": "espresso case nylon open"|||
+  "heading": "Built for travel"|||
+  "descriptions": "Reinforced matte grey nylon on the outside, soft microfibre on the inside, finished with espresso’s signature purple accents in stitching, logo, and removal pull-tag."
+}
+    '
+    %}
+
+  {% when 'espresso-pen' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-pen-page"|||
+  "media_alt": "espresso pen draw on display"|||
+  "heading": "Precision You Can Feel"|||
+  "descriptions": "The espresso Pen gives you total control — sketch, write, annotate, or design with smooth, accurate input that feels natural from the first stroke."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-pen-6-page"|||
+  "media_alt": "espresso pen drawing on display"|||
+  "heading": "Long-Lasting Power, Quick to Recharge"|||
+  "descriptions": "The espresso Pen runs for hours on a single charge and powers up fast when you need it. Stay focused on creating, not plugging in."
+}
+    '
+    %}
+
+  {% when 'espresso-stand' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-stand-5-page"|||
+  "media_alt": "espresso stand with display"|||
+  "heading": "Elevate Your Workspace"|||
+  "descriptions": "Designed to hold your espresso Display at the perfect angle and height, the espresso Stand helps you create a more comfortable and flexible setup — wherever you work."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-stand-page"|||
+  "media_alt": "espresso stand setup with display"|||
+  "heading": "Magnetic, No Tools Needed"|||
+  "descriptions": "The display magnetically attaches to the stand in seconds — no screws, clips, or tools. Simply click it into place and start working or presenting instantly."
+}
+    '
+    %}
+
+  {% when 'espresso-mount' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-mount-3-page"|||
+  "media_alt": "espresso mount with display"|||
+  "heading": "Mount Your Display, Your Way"|||
+  "descriptions": "The espresso Mount makes it easy to set up your espresso Display exactly how you want — whether on a desk arm, wall mount, or workspace rig."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-mount-2-page"|||
+  "media_alt": "espresso mount setup attaching display"|||
+  "heading": "Magnetic Attachment, Zero Fuss"|||
+  "descriptions": "The magnetic mounting plate snaps securely onto your espresso Display, giving you a clean, tool-free connection that’s strong, stable, and easy to remove."
+}
+    '
+    %}
+
+  {% when 'usb-c' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-usbc-3-page"|||
+  "media_alt": "espresso usb-c cable single connection"|||
+  "heading": "Fast, Reliable Power and Data"|||
+  "descriptions": "This USB-C cable powers your espresso Display and transfers data — all through a single, simple connection. No extra cables, no fuss."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-usbc-page"|||
+  "media_alt": "espresso usb-c cable connector"|||
+  "heading": "Perfect for espresso Displays"|||
+  "descriptions": "Designed specifically for espresso devices, this cable ensures a seamless setup every time. Just plug it in to power your display, extend your screen, or stay connected on the go."
+}
+    '
+    %}
+
+  {% when 'hdmi' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-6-page"|||
+  "media_alt": "espresso cable hdmi adapter"|||
+  "heading": "Smooth, Sharp Picture"|||
+  "descriptions": "This cable supports high-quality video up to 4K, so everything on your screen looks crisp and clear. It’s fast, reliable, and built to keep your display running smoothly with no lag or dropouts."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-5-page"|||
+  "media_alt": "espresso cable hdmi usb-c adapter"|||
+  "heading": "Built for espresso Displays"|||
+  "descriptions": "Designed to work seamlessly with all espresso Display models, this cable ensures fast, stable, and plug-and-play connectivity with zero configuration needed."
+}
+    '
+    %}
+
+  {% when 'mini-display-port' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-4-page"|||
+  "media_alt": "espresso cable mini dp adapter"|||
+  "heading": "Crisp Display, No Lag"|||
+  "descriptions": "Connect your espresso Display to your device with smooth, high-quality video output. This Mini DisplayPort cable supports fast, stable visuals with no stutter or delay — ideal for work, presentations, or multitasking."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-5-page"|||
+  "media_alt": "espresso cable mini dp usb-c adapter"|||
+  "heading": "Designed for espresso Displays"|||
+  "descriptions": "Built to work flawlessly with espresso Displays and Mini DisplayPort-enabled laptops or desktops. It’s the easiest way to extend your screen and stay productive."
+}
+    '
+    %}
+
+  {% when 'espresso-protector' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-protector-2-page"|||
+  "media_alt": "espresso protector on display"|||
+  "heading": "Protect Your Display, Always"|||
+  "descriptions": "Body: espresso Protector shields your screen from scratches, smudges, and everyday wear — so your display stays clean, clear, and looking like new."
+},{
+  "media_type": "video"|||
+  "media_name": "video-espresso-protector-creator"|||
+  "heading": "Easy to Apply, Bubble-Free"|||
+  "descriptions": "With a perfect-fit cut and straightforward installation process, applying espresso Protector is simple — no bubbles, no residue, just a smooth finish."
+}
+    '
+    %}
+
+  {% when 'espresso-creator' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-creator-6-page"|||
+  "media_alt": "espresso creator on display in use with pen"|||
+  "heading": "A Natural Feel for Digital Creativity"|||
+  "descriptions": "The espresso Creator transforms your espresso Display with a textured surface that feels more like pen on paper — ideal for writing, sketching, or designing with precision."
+},{
+  "media_type": "video"|||
+  "media_name": "video-espresso-protector-creator"|||
+  "heading": "Easy to Apply, Bubble-Free"|||
+  "descriptions": "With a perfect-fit cut and straightforward installation process, applying espresso Protector is simple — no bubbles, no residue, just a smooth finish."
+}
+    '
+    %}
+
+  {% when 'espresso-privacy' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+     {
+  "media_type": "video"|||
+  "media_name": "video-espresso-privacy-screen"|||
+  "heading": "Privacy and Security"|||
+  "descriptions": "Working in public shouldn’t open your confidential information to others. The espresso by Kensington Privacy Screen  keeps sensitive information safe."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-privacy-screen-pro-lifestyle-2"|||
+  "media_alt": "espresso creator on display in use with pen"|||
+  "heading": "Easy On, Easy Off"|||
+  "descriptions": "No adhesives, no fiddling. Just a simple magnetic snap into place. Attach or remove the privacy screen in seconds."
+}
+    '
+    %}
+
+  {% else %}
+    {% assign accessory_sections = '' %}
+{% endcase %}
+
+{% assign accessory_sections = accessory_sections | split: '},' %}
+
+{% capture section_content %}
+  {% render 'section-image-with-info-group',
+    sections: accessory_sections,
+    id: 'accessory-image-info-group',
+    className: 'max-w-content-max-width m-auto'
+  %}
+{% endcapture %}
+
+{% render 'layout-section',
+  id: 'accessory-image-info-group',
+  className: 'bg-primary-40 text-neutral-101 py-[24px] desktop-small:py-[72px]',
+  content: section_content
+%}

@@ -1,0 +1,110 @@
+{% comment %}
+   For now, need to include common/resuable styles in each file, as no way with liquid to import
+  In future will use build scripts to inject and get same functionality as import
+{% endcomment %}
+
+{%- comment -%} Grid and padding settings {%- endcomment -%}
+{%- assign gridCols = 'grid-cols-4 desktop-small:grid-cols-12' -%}
+{%- assign gridGutter = 'gap-x-[8px] desktop-small:gap-x-[20px]' -%}
+{%- assign gridPaddingX = 'px-[32px] desktop-small:px-[70px]' -%}
+{%- assign gridStart = 'col-start-[1]' -%}
+{%- assign gridEnd = 'col-end-5 desktop-small:col-end-13' -%}
+
+{%- assign paddingTopFull = 'pt-[32px] desktop-small:pt-[70px]' -%}
+{%- assign paddingTopHalf = 'pt-[16px] desktop-small:pt-[35px]' -%}
+{%- assign paddingTopNone = 'pt-0 desktop-small:pt-0' -%}
+{%- assign paddingBottomFull = 'pb-[32px] desktop-small:pb-[70px]' -%}
+{%- assign paddingBottomHalf = 'pb-[16px] desktop-small:pb-[35px]' -%}
+{%- assign paddingBottomNone = 'pb-0 desktop-small:pb-0' -%}
+
+{%- comment -%}
+  Usage:
+  {% render 'layout-section',
+    id: 'my-section',
+    heightDefinition: 'background',
+    backgroundMedia: 'image-bg-desktop',
+    backgroundMediaMobile: 'image-bg-mobile',
+    className: 'custom-section',
+    classNameLayoutGrid: 'custom-grid',
+    classNameBackground: 'custom-bg',
+    paddingTopHalf: true,
+    paddingTopNone: false,
+    paddingBottomHalf: false,
+    paddingBottomNone: false,
+    overlay: true,
+    outlines: false,
+    content: my_content
+  %}
+{%- endcomment -%}
+
+{%- assign id = id | default: '' -%}
+{%- assign heightDefinition = heightDefinition | default: '' -%}
+{%- assign backgroundMedia = backgroundMedia | default: '' -%}
+{%- assign backgroundMediaMobile = backgroundMediaMobile | default: '' -%}
+{%- assign className = className | default: '' -%}
+{%- assign classNameLayoutGrid = classNameLayoutGrid | default: '' -%}
+{%- assign classNameBackground = classNameBackground | default: '' -%}
+{%- assign paddingTopHalf = paddingTopHalf | default: false -%}
+{%- assign paddingTopNone = paddingTopNone | default: false -%}
+{%- assign paddingBottomHalf = paddingBottomHalf | default: false -%}
+{%- assign paddingBottomNone = paddingBottomNone | default: false -%}
+{%- assign overlay = overlay | default: false -%}
+{%- assign outlines = outlines | default: false -%}
+{%- assign content = content | default: '' -%}
+
+{%- comment -%} Height definition logic {%- endcomment -%}
+{%- assign backgroundMediaPositionStyles = '' -%}
+{%- assign contentPositionStyles = '' -%}
+{%- if heightDefinition == 'background' -%}
+  {%- assign backgroundMediaPositionStyles = '' -%}
+  {%- assign contentPositionStyles = 'absolute' -%}
+{%- elsif heightDefinition == 'content' -%}
+  {%- assign backgroundMediaPositionStyles = 'absolute top-[0px] left-[0px]' -%}
+  {%- assign contentPositionStyles = '' -%}
+{%- elsif heightDefinition == 'content desktop-small:background' -%}
+  {%- assign backgroundMediaPositionStyles = 'absolute top-[0px] left-[0px] desktop-small:relative desktop-small:top-auto desktop-small:left-auto' -%}
+  {%- assign contentPositionStyles = 'relative desktop-small:absolute' -%}
+{%- elsif heightDefinition == 'background desktop-small:content' -%}
+  {%- assign backgroundMediaPositionStyles = 'desktop-small:absolute desktop-small:top-[0px] desktop-small:left-[0px]' -%}
+  {%- assign contentPositionStyles = 'absolute desktop-small:relative' -%}
+{%- endif -%}
+
+{%- comment -%} Padding logic {%- endcomment -%}
+{%- assign paddingTop = 'py-[24px] desktop-small:py-[72px]' -%}
+{%- assign paddingBottom = '' -%}
+{%- if paddingTopNone == true or paddingTopNone == 'true' -%}
+  {%- assign paddingTop = 'pt-0' -%}
+{%- elsif paddingTopHalf == true or paddingTopHalf == 'true' -%}
+  {%- assign paddingTop = 'pt-[36px] desktop-small:pt-[36px]' -%}
+{%- endif -%}
+{%- if paddingBottomNone == true or paddingBottomNone == 'true' -%}
+  {%- assign paddingBottom = 'pb-0' -%}
+{%- elsif paddingBottomHalf == true or paddingBottomHalf == 'true' -%}
+  {%- assign paddingBottom = 'pb-[36px] desktop-small:pb-[36px]' -%}
+{%- else -%}
+  {%- assign paddingBottom = 'pb-[24px] desktop-small:pb-[72px]' -%}
+{%- endif -%}
+
+<div
+  id="{{ id }}"
+  class="section relative flex desktop-small:flex-col items-center flex-col-reverse w-full h-full {{ className }} {{ classNameBackground }}"
+>
+  {%- if backgroundMedia != blank -%}
+    <div class="section-background {{ backgroundMediaPositionStyles }} w-full h-full {{ classNameBackground }}">
+      <img src="{{ backgroundMedia | asset_url }}" alt="" class="object-cover hidden desktop-small:flex w-full h-full">
+      {%- if backgroundMediaMobile != blank -%}
+        <img
+          src="{{ backgroundMediaMobile | asset_url }}"
+          alt=""
+          class="object-cover flex desktop-small:hidden w-full h-full"
+        >
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center {{ contentPositionStyles }} {{ paddingTop }} {{ paddingBottom }} {{ gridPaddingX }} {% unless backgroundMedia %}{{ className }}{% endunless %}">
+    <div class="content-block w-full h-full">
+      {% render 'layout-grid', overlay: overlay, outlines: outlines, className: classNameLayoutGrid, content: content %}
+    </div>
+  </div>
+</div>

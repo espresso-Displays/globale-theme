@@ -1,0 +1,85 @@
+{% assign section = section | replace: '{', '' | replace: '}', '' | strip %}
+{% assign pairs = section | split: '|||' %}
+{% assign media_type = '' %}
+{% assign media_name = '' %}
+{% assign media_alt = '' %}
+{% assign layout = layout | default: 'imageLeft' %}
+{% assign className = '' %}
+
+{% for pair in pairs %}
+  {% assign key_value = pair | split: ':' %}
+  {% assign key = key_value[0] | strip | remove: '"' %}
+  {% assign value = key_value[1] | strip | remove: '"' %}
+  {% if key == 'media_type' %}
+    {% assign media_type = value %}
+  {% elsif key == 'media_name' %}
+    {% assign media_name = value | strip | remove: '"' | append: '.webp' %}
+  {% elsif key == 'media_alt' %}
+    {% assign media_alt = value %}
+  {% endif %}
+{% endfor %}
+
+{%- comment -%} Layout logic {%- endcomment -%}
+{% if layout == 'imageRight' %}
+  {% assign gridInverse = 'order-first desktop-small:order-last' %}
+  {% assign colStartStyles = 'full desktop-small:half-padded' %}
+  {% assign colSpanStyles = 'full desktop-small:half-padded' %}
+{% else %}
+  {% assign gridInverse = 'order-first desktop-small:order-first' %}
+  {% assign colStartStyles = 'full desktop-small:half-padded' %}
+  {% assign colSpanStyles = 'full desktop-small:half-padded' %}
+{% endif %}
+
+{% capture media_content %}
+  {% if media_type == 'video' %}
+    <video src="{{ media_name | file_url }}" controls></video>
+  {% elsif media_type == 'image' %}
+    <img src="{{ media_name | file_url }}" alt="{{ media_alt }}">
+  {% endif %}
+{% endcapture %}
+
+{% capture text_content %}
+  <h2 class="text-display-small text-left" id="section-techspecs">Tech specs</h2>
+  {% for spec in product.selected_or_first_available_variant.metafields.custom.tech_specs.value %}
+    <div class="lg:col-start-1 lg:col-span-10 text-body-large">{{ spec }}</div>
+  {% endfor %}
+
+  {% if product.selected_or_first_available_variant.metafields.custom.technical_spec_sheet.value != empty %}
+    <div class="h-full w-full flex flex-col items-start col-span-full">
+      <a
+        href="{{ product.selected_or_first_available_variant.metafields.custom.technical_spec_sheet.value }}"
+        draggable="false"
+        rel="noopener noreferrer"
+        target="_blank"
+        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit h-[48px] cursor-pointer"
+        >Download tech spec sheet</a
+      >
+    </div>
+  {% endif %}
+{% endcapture %}
+
+{% capture inner_content %}
+  {% render 'layout-flex',
+    colStart: colStartStyles,
+    colSpan: colSpanStyles,
+    className: 'content-container flex flex-col justify-start gap-[32px] desktop-small:gap-[32px] py-[32px] desktop-small:py-[0px]',
+    content: text_content
+  %}
+{% endcapture %}
+
+{% assign mediaClass = 'media ' | append: gridInverse %}
+
+{% capture grid_content %}
+  {% render 'layout-flex',
+    colSpan: 'full desktop-small:half',
+    className: mediaClass,
+    content: media_content
+  %}
+  {% render 'layout-grid',
+    colSpan: 'full desktop-small:half',
+    className: 'auto-rows-auto',
+    content: inner_content
+  %}
+{% endcapture %}
+
+{% render 'layout-grid', className: 'section image-with-info gap-[16px] ' | append: className, content: grid_content %}

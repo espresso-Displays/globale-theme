@@ -1,0 +1,254 @@
+{% comment %}
+  in future will add a script to inject reusable global variables
+{% endcomment %}
+{% comment %} inject:handles {% endcomment %}
+
+{% assign accessory_sections = '' %}
+
+{% case product.handle %}
+  {% when 'espresso-case' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-4-page"|||
+  "media_alt": "espresso case pro"|||
+  "heading": "Instant Stand, Built Right In"|||
+  "descriptions": "More than just a case — the folding cover transforms into a stable stand in seconds, giving you the perfect angle for work, calls, or creativity on the go."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-6-page"|||
+  "media_alt": "espresso case pro working on desk"|||
+  "heading": "A Perfect Fit for espresso Displays"|||
+  "descriptions": "Designed specifically for espresso Displays, the Case attaches magnetically and aligns perfectly — giving you peace of mind and a polished look wherever you set up."
+}
+'
+    %}
+
+  {% when 'espresso-case-pro' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-4-page"|||
+  "media_alt": "espresso case pro"|||
+  "heading": "Instant Stand, Built Right In"|||
+  "descriptions": "More than just a case — the folding cover transforms into a stable stand in seconds, giving you the perfect angle for work, calls, or creativity on the go."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-6-page"|||
+  "media_alt": "espresso case pro working on desk"|||
+  "heading": "A Perfect Fit for espresso Displays"|||
+  "descriptions": "Designed specifically for espresso Displays, the Case attaches magnetically and aligns perfectly — giving you peace of mind and a polished look wherever you set up."
+}
+    '
+    %}
+
+  {% when 'espresso-case-nylon' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-nylon-back"|||
+  "media_alt": "espresso case nylon back"|||
+  "heading": "For business people"|||
+  "descriptions": "Built for business professionals who travel and want a customised case to protect their espresso Displays."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-nylon-front"|||
+  "media_alt": "espresso case nylon front"|||
+  "heading": "Simple and Stylish"|||
+  "descriptions": "Protective padding, easy-access magnetic lid, and integrated cable management.\nEverything where it should be."
+}
+    '
+    %}
+
+  {% when 'espresso-pen' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-pen-2-page"|||
+  "media_alt": "espresso pen sketching"|||
+  "heading": "Fine-Tuned for espresso Displays"|||
+  "descriptions": "Built to work perfectly with espresso Displays, it features pressure sensitivity and palm rejection for a fluid, paper-like experience on screen."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-pen-5-page"|||
+  "media_alt": "espresso pen markup"|||
+  "heading": "Lightweight. Durable. Always Ready."|||
+  "descriptions": "Crafted from high-quality materials, the espresso Pen is designed for daily use and travel — compact, sturdy, and ready to go wherever you are."
+}
+    '
+    %}
+
+  {% when 'espresso-stand' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-stand-4-page"|||
+  "media_alt": "espresso stand travel airport"|||
+  "heading": "Solid Build. Smooth Finish."|||
+  "descriptions": "The espresso Stand offers lasting strength without the bulk. It’s engineered to handle daily use — at home or on the move."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-stand-2-page"|||
+  "media_alt": "espresso stand with display on desk"|||
+  "heading": "Built for espresso Displays"|||
+  "descriptions": "Custom-fit for espresso Display models, the stand ensures a secure hold and seamless alignment — keeping your screen stable, stylish, and always ready for action."
+}
+    '
+    %}
+
+  {% when 'espresso-mount' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-mount-4-page"|||
+  "media_alt": "espresso mount VESA plate"|||
+  "heading": "Universal VESA Compatibility"|||
+  "descriptions": "Built with a standard 75mm x 75mm VESA plate, the espresso Mount works with most monitor arms and stands — so you can create your ideal setup with the gear you already have."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-mount-page"|||
+  "media_alt": "espresso mount plate"|||
+  "heading": "Slim, Durable, and Seamless"|||
+  "descriptions": "Precision-engineered from lightweight aluminium, the Mount adds minimal bulk while blending perfectly with your display — keeping your workspace sharp and clutter-free."
+}
+    '
+    %}
+
+  {% when 'usb-c' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-usbc-4-page"|||
+  "media_alt": "espresso usb-c cable single connection"|||
+  "heading": "Lightweight and Travel-Ready"|||
+  "descriptions": "Slim, durable, and tangle-free — this cable fits effortlessly in your bag or case. Ideal for hybrid work, travel setups, or keeping your desk clean and clutter-free."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-usbc-2-page"|||
+  "media_alt": "espresso usb-c cable single connection clean"|||
+  "heading": "Built to Withstand Daily Use"|||
+  "descriptions": "Reinforced ends and a flexible design mean this cable can handle everyday wear without fraying or losing performance — so you&#39;re always ready to plug in and go."
+}
+    '
+    %}
+
+  {% when 'hdmi' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-7-page"|||
+  "media_alt": "esprsso cable no tangling"|||
+  "heading": "Travel-Ready, Tangle-Free"|||
+  "descriptions": "Slim, flexible, and built to move. This cable fits easily in your bag and resists tangling, making it the ideal companion for hybrid work and digital nomads."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-2-page"|||
+  "media_alt": "espresso cable robust"|||
+  "heading": "Engineered to Last"|||
+  "descriptions": "With reinforced insulation and durable construction, this HDMI cable is made to handle daily wear — keeping your workspace reliable and clutter-free."
+}
+    '
+    %}
+
+  {% when 'mini-display-port' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-3-page"|||
+  "media_alt": "espresso cable adaptor lightweight"|||
+  "heading": "Lightweight and Portable"|||
+  "descriptions": "Compact and easy to pack, this cable fits neatly into your bag or workspace setup — so you can plug in and get going wherever work takes you."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-cable-page"|||
+  "media_alt": "esprsso cable mini dp durable"|||
+  "heading": "Durable, Day After Day"|||
+  "descriptions": "With a reinforced build and flexible design, this cable is made to last — resisting kinks, frays, and everyday wear while keeping your display connection solid."
+}
+    '
+    %}
+
+  {% when 'espresso-protector' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-protector-6-page"|||
+  "media_alt": "espresso protector on display"|||
+  "heading": "Clear View, Comfortable Use"|||
+  "descriptions": "espresso Protector reduces glare and reflections, making your display easier to see in bright or changing light — while keeping touch gestures smooth and responsive."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-creator-1-page"|||
+  "media_alt": "espresso protector included pieces"|||
+  "heading": "Made for espresso Displays"|||
+  "descriptions": "espresso Protector is precisely cut to fit your espresso Display — preserving screen clarity, touch responsiveness, and the sleek look of your setup."
+}
+    '
+    %}
+
+  {% when 'espresso-creator' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+      {
+        "media_type": "image"|||
+  "media_name": "image-espresso-creator-thumb"|||
+  "media_alt": "espresso creator on display"|||
+  "heading": "Anti-Glare, Pro Clarity"|||
+  "descriptions": "The matte finish cuts reflections and softens harsh light, reducing eye strain without compromising screen visibility — whether you&#39;re working indoors or on the move."
+},{
+  "media_type": "video"|||
+  "media_name": "video-espresso-protector-creator"|||
+  "heading": "Easy to Apply, Bubble-Free"|||
+  "descriptions": "With a perfect-fit cut and straightforward installation process, applying espresso Protector is simple — no bubbles, no residue, just a smooth finish."
+}
+    '
+    %}
+
+  {% when 'espresso-privacy' %}
+    {% assign accessory_sections = accessory_sections
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-privacy-screen-pro-lifestyle"|||
+  "media_alt": "espresso protector on display"|||
+  "heading": "Comfortable Viewing"|||
+  "descriptions": "A built-in blue light filter to reduce eye strain, so you can stay focused longer. Ideal for long days at work, wherever work takes you."
+},{
+  "media_type": "image"|||
+  "media_name": "image-espresso-privacy-screen"|||
+  "media_alt": "espresso protector included pieces"|||
+  "heading": "Durable & Touch-Ready"|||
+  "descriptions": "The scratch-resistant surface stands up to daily wear while staying responsive to touch and pen input."
+}
+    '
+    %}
+
+  {% else %}
+    {% assign accessory_sections = '' %}
+{% endcase %}
+
+{% assign accessory_sections = accessory_sections | split: '},' %}
+
+{% capture section_content %}
+  {% render 'section-image-with-info-group',
+    sections: accessory_sections,
+    id: 'accessory-image-info-group',
+    className: 'max-w-content-max-width m-auto'
+  %}
+{% endcapture %}
+
+{% render 'layout-section',
+  id: 'accessory-image-info-group',
+  className: 'bg-primary-90 text-neutral-00 py-[24px] desktop-small:py-[72px]',
+  content: section_content
+%}

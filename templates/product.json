@@ -36,14 +36,23 @@
         "trustpilot_sku": ""
       }
     },
-    "variant-section": {
-      "type": "product-variant-section",
+    "section-pdp-accessory-benefits-group": {
+      "type": "section-pdp-accessory-benefits-group",
       "settings": {}
     },
-    "tech-specs": {
-      "type": "product-tech-specs",
+    "section-pdp-accessory-tech-specs": {
+      "type": "section-pdp-accessory-tech-specs",
       "settings": {}
     },
+     "section-pdp-accessory-usecases": {
+      "type": "section-pdp-accessory-usecases",
+      "settings": {}
+    },
+    // "variant-section": {
+    //   "type": "product-variant-section",
+    //   "settings": {}
+    // },
+
     "review": {
       "type": "product-review",
       "settings": {}
@@ -55,8 +64,11 @@
   },
   "order": [
     "pdp_main_product_CepWK4",
-    "variant-section",
-    "tech-specs",
+    "section-pdp-accessory-benefits-group",
+    "section-pdp-accessory-tech-specs",
+    "section-pdp-accessory-usecases",
+    // "variant-section",
+
     "review",
     "section-faq"
   ]

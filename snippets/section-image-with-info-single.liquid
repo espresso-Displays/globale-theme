@@ -1,0 +1,130 @@
+{%- comment -%}
+  Parses a flat string like:
+  {
+    "media_type": "image",
+    "media_name": "image-espresso-stand-5-page",
+    "media_alt": "espresso stand with display",
+    "heading": "Elevate Your Workspace",
+    "description": "Designed to hold your espresso Display at the perfect angle and height..."
+  }
+{%- endcomment -%}
+
+{% assign section = section | replace: '{', '' | replace: '}', '' | strip %}
+{% assign pairs = section | split: '|||' %}
+{% assign media_type = '' %}
+{% assign media_name = '' %}
+{% assign media_alt = '' %}
+{% assign heading = '' %}
+{% assign subheading = '' %}
+{% assign descriptions = '' %}
+{% assign ctas = '' %}
+{% assign callout_group = '' %}
+{% assign layout = layout | default: 'imageLeft' %}
+{% assign className = '' %}
+
+{% for pair in pairs %}
+  {% assign key_value = pair | split: ':' %}
+  {% assign key = key_value[0] | strip | remove: '"' %}
+  {% assign value = key_value[1] | strip | remove: '"' %}
+  {% if key == 'media_type' %}
+    {% assign media_type = value %}
+  {% elsif key == 'media_name' %}
+    {% assign media_name = value | strip | remove: '"' | append: '.webp' %}
+  {% elsif key == 'media_alt' %}
+    {% assign media_alt = value %}
+  {% elsif key == 'heading' %}
+    {% assign heading = value %}
+  {% elsif key == 'subheading' %}
+    {% assign subheading = value %}
+  {% elsif key == 'descriptions' %}
+    {% assign descriptions = value | split: '||' %}
+  {% elsif key == 'ctas' %}
+    {% assign ctas = value | split: ',' %}
+  {% elsif key == 'callout_group' %}
+    {% assign callout_group = value | split: ',' %}
+  {% endif %}
+{% endfor %}
+
+{%- comment -%} Layout logic {%- endcomment -%}
+{% if layout == 'imageRight' %}
+  {% assign gridInverse = 'order-first desktop-small:order-last' %}
+  {% assign colStartStyles = 'full desktop-small:half-padded' %}
+  {% assign colSpanStyles = 'full desktop-small:half-padded' %}
+{% else %}
+  {% assign gridInverse = 'order-first desktop-small:order-first' %}
+  {% assign colStartStyles = 'full desktop-small:half-padded' %}
+  {% assign colSpanStyles = 'full desktop-small:half-padded' %}
+{% endif %}
+
+{% capture media_content %}
+  {% if media_type == 'video' %}
+    <video src="{{ media_name | file_url }}" controls></video>
+  {% elsif media_type == 'image' %}
+    <img src="{{ media_name | file_url }}" alt="{{ media_alt }}">
+  {% endif %}
+{% endcapture %}
+
+{% capture text_content %}
+  {% if heading %}
+    <h3 class="heading text-heading-large currentColor whitespace-pre-wrap">{{ heading }}</h3>
+  {% endif %}
+  {% if subheading %}
+    <h4 class="subheading text-subheading-medium currentColor">{{ subheading }}</h4>
+  {% endif %}
+  {% if descriptions %}
+    <div class="description text-body-medium currentColor whitespace-pre-wrap flex flex-col gap-[20px]">
+      {% for desc in descriptions %}
+        <div class="whitespace-pre-wrap">{{ desc }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if callout_group %}
+    <div class="callout-group flex gap-4">
+      {% for callout in callout_group %}
+        {% assign callout_parts = callout | split: '|' %}
+        <div class="callout flex items-center gap-2">
+          {% if callout_parts[1] %}
+            <img src="{{ callout_parts[1] | asset_url }}" alt="" class="icon w-4 h-4" />
+          {% endif %}
+          <span>{{ callout_parts[0] }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if ctas %}
+    <div class="flex flex-col items-center desktop-small:items-start w-full gap-[20px]">
+      {% for cta in ctas %}
+        {% assign cta_parts = cta | split: '|' %}
+        <a href="{{ cta_parts[1] }}" class="btn btn-{{ cta_parts[2] | default: 'primary' }}">
+          {{ cta_parts[0] }}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endcapture %}
+
+{% capture inner_content %}
+  {% render 'layout-flex',
+    colStart: colStartStyles
+    colSpan: colSpanStyles
+    className: 'content-container flex flex-col justify-center gap-[32px] desktop-small:gap-[32px] py-[32px] desktop-small:py-[0px]',
+    content: text_content
+  %}
+{% endcapture %}
+
+{% assign mediaClass = 'media ' | append: gridInverse %}
+
+{% capture grid_content %}
+  {% render 'layout-flex',
+    colSpan: 'full desktop-small:half',
+    className: mediaClass,
+    content: media_content
+  %}
+  {% render 'layout-grid',
+   colSpan: 'full desktop-small:half',
+    className: 'auto-rows-auto',
+    content: inner_content
+  %}
+{% endcapture %}
+
+{% render 'layout-grid', className: 'section image-with-info gap-[16px] ' | append: className, content: grid_content %}

@@ -1,0 +1,153 @@
+{% comment %}
+  in future will add a script to inject reusable global variables
+{% endcomment %}
+{% comment %} inject:handles {% endcomment %}
+
+{% assign accessory_section = '' %}
+
+{% case product.handle %}
+  {% when 'espresso-case' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+{
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-pro-thumb-tech-specs"|||
+  "media_alt": "espresso case pro"
+}
+'
+    %}
+
+  {% when 'espresso-case-pro' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-pro-thumb-tech-specs"|||
+  "media_alt": "espresso case pro"
+}
+    '
+    %}
+
+  {% when 'espresso-case-nylon' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-case-nylon-thumb-tech-specs"|||
+  "media_alt": "espresso case nylon"
+}
+    '
+    %}
+
+  {% when 'espresso-pen' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-pen-thumb-tech-specs"|||
+  "media_alt": "espresso pen"
+}
+    '
+    %}
+
+  {% when 'espresso-stand' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-stand-thumb-tech-specs"|||
+  "media_alt": "espresso stand"
+}
+    '
+    %}
+
+  {% when 'espresso-mount' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-mount-thumb-tech-specs"|||
+  "media_alt": "espresso mount"
+}
+    '
+    %}
+
+  {% when 'usb-c' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-usbc-thumb-tech-specs"|||
+  "media_alt": "espresso usb-c"
+}
+    '
+    %}
+
+  {% when 'hdmi' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-hdmi-thumb-tech-specs"|||
+  "media_alt": "espresso hdmi"
+}
+    '
+    %}
+
+  {% when 'mini-display-port' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+     {
+  "media_type": "image"|||
+  "media_name": "image-espresso-minidp-thumb-tech-specs"|||
+  "media_alt": "espresso minidp"
+}
+    '
+    %}
+
+  {% when 'espresso-protector' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-protector-15-thumb-tech-specs"|||
+  "media_alt": "espresso creator on display in use with pen"
+}
+    '
+    %}
+
+  {% when 'espresso-creator' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+      {
+  "media_type": "image"|||
+  "media_name": "image-espresso-creator-thumb-tech-specs"|||
+  "media_alt": "espresso creator"
+}
+    '
+    %}
+
+  {% when 'espresso-privacy' %}
+    {% assign accessory_section = accessory_section
+      | append: '
+    {
+  "media_type": "image"|||
+  "media_name": "image-espresso-privacy-screen-pro-thumb-tech-specs"|||
+  "media_alt": "espresso creator"
+}
+    '
+    %}
+
+  {% else %}
+    {% assign accessory_section = '' %}
+{% endcase %}
+
+{% capture section_content %}
+  {% render 'section-tech-specs-with-image', section: accessory_section %}
+{% endcapture %}
+
+{% render 'layout-section',
+  id: 'accessory-image-info-group',
+  className: 'bg-neutral-95 text-neutral-00 py-[24px] desktop-small:py-[72px]',
+  content: section_content
+%}

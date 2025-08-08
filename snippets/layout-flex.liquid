@@ -1,0 +1,167 @@
+{% comment %}
+   For now, need to include common/resuable styles in each file, as no way with liquid to import
+  In future will use build scripts to inject and get same functionality as import
+{% endcomment %}
+
+{%- comment -%} Grid and padding settings {%- endcomment -%}
+{%- assign gridCols = 'grid-cols-4 desktop-small:grid-cols-12' -%}
+{%- assign gridGutter = 'gap-x-[8px] desktop-small:gap-x-[20px]' -%}
+{%- assign gridPaddingX = 'px-[32px] desktop-small:px-[70px]' -%}
+{%- assign gridStart = 'col-start-[1]' -%}
+{%- assign gridEnd = 'col-end-5 desktop-small:col-end-13' -%}
+
+{%- assign paddingTopFull = 'pt-[32px] desktop-small:pt-[70px]' -%}
+{%- assign paddingTopHalf = 'pt-[16px] desktop-small:pt-[35px]' -%}
+{%- assign paddingTopNone = 'pt-0 desktop-small:pt-0' -%}
+{%- assign paddingBottomFull = 'pb-[32px] desktop-small:pb-[70px]' -%}
+{%- assign paddingBottomHalf = 'pb-[16px] desktop-small:pb-[35px]' -%}
+{%- assign paddingBottomNone = 'pb-0 desktop-small:pb-0' -%}
+
+{% comment %} {% render 'styles-global' %} {% endcomment %}
+
+{%- comment -%}
+  Usage:
+  {% render 'layout-flex',
+    id: 'my-flex',
+    colStart: 'full',
+    colSpan: 'half',
+    outlines: true,
+    overlay: true,
+    className: 'custom-class',
+    content: my_content
+  %}
+{%- endcomment -%}
+
+{%- assign id = id | default: '' -%}
+{%- assign colStart = colStart | default: '' -%}
+{%- assign colSpan = colSpan | default: 'full' -%}
+{%- assign outlines = outlines | default: false -%}
+{%- assign className = className | default: '' -%}
+{%- assign overlay = overlay | default: false -%}
+
+{%- assign colStartClass = '' -%}
+{%- assign colSpanClass = '' -%}
+
+{% comment %}
+  equivalent to hydrogen getColStartStyle function
+{% endcomment %}
+
+{%- assign colStartClass = '' -%}
+{%- case colStart -%}
+  {%- when '1', 1 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[1]' -%}
+  {%- when '2', 2 -%}
+    {%- assign colStartClass = 'col-start-[2] desktop-small:col-start-[2]' -%}
+  {%- when '3', 3 -%}
+    {%- assign colStartClass = 'col-start-[3] desktop-small:col-start-[3]' -%}
+  {%- when '4', 4 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[4]' -%}
+  {%- when '5', 5 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[5]' -%}
+  {%- when '6', 6 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[6]' -%}
+  {%- when '7', 7 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[7]' -%}
+  {%- when '8', 8 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[8]' -%}
+  {%- when '9', 9 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[9]' -%}
+  {%- when '10', 10 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[10]' -%}
+  {%- when '11', 11 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[11]' -%}
+  {%- when '12', 12 -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[12]' -%}
+  {%- when '2and1' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[2]' -%}
+  {%- when 'left-quarter' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[1]' -%}
+  {%- when 'left-half' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[1]' -%}
+  {%- when 'right-quarter' -%}
+    {%- assign colStartClass = 'col-start-[4] desktop-small:col-start-[7]' -%}
+  {%- when 'right-half' -%}
+    {%- assign colStartClass = 'col-start-[3] desktop-small:col-start-[6]' -%}
+  {%- when 'full' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[1]' -%}
+  {%- when 'full desktop-small:half-padded' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[2]' -%}
+  {%- when 'full desktop-small:half-padded-right' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[1]' -%}
+  {%- when 'full-padded desktop-small:half-padded' -%}
+    {%- assign colStartClass = 'col-start-[2] desktop-small:col-start-[2]' -%}
+  {%- when 'full desktop-small:half-centered' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[4]' -%}
+  {%- when 'full desktop-small:full-padded-small' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[3]' -%}
+  {%- when 'full desktop-small:full-padded-large' -%}
+    {%- assign colStartClass = 'col-start-[1] desktop-small:col-start-[2]' -%}
+  {%- else -%}
+    {%- assign colStartClass = colStart -%}
+{%- endcase -%}
+
+{% comment %}
+  equivalent to hydrogen getColSpanStyle function
+{% endcomment %}
+{%- assign colSpanClass = '' -%}
+{%- case colSpan -%}
+  {%- when '1', 1 -%}
+    {%- assign colSpanClass = 'col-span-1 desktop-small:col-span-1' -%}
+  {%- when '2', 2 -%}
+    {%- assign colSpanClass = 'col-span-2 desktop-small:col-span-2' -%}
+  {%- when '3', 3 -%}
+    {%- assign colSpanClass = 'col-span-3 desktop-small:col-span-3' -%}
+  {%- when '4', 4 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-4' -%}
+  {%- when '5', 5 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-5' -%}
+  {%- when '6', 6 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-6' -%}
+  {%- when '7', 7 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-7' -%}
+  {%- when '8', 8 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-8' -%}
+  {%- when '9', 9 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-9' -%}
+  {%- when '10', 10 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-10' -%}
+  {%- when '11', 11 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-11' -%}
+  {%- when '12', 12 -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-12' -%}
+  {%- when 'quarter' -%}
+    {%- assign colSpanClass = 'col-span-1 desktop-small:col-span-3' -%}
+  {%- when 'full desktop-small:quarter' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-3' -%}
+  {%- when 'half' -%}
+    {%- assign colSpanClass = 'col-span-2 desktop-small:col-span-6' -%}
+  {%- when 'full desktop-small:half' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-6' -%}
+  {%- when 'full desktop-small:half-padded' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-4' -%}
+  {%- when 'full desktop-small:half-padded-right' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-5' -%}
+  {%- when 'full-padded desktop-small:half-padded' -%}
+    {%- assign colSpanClass = 'col-span-2 desktop-small:col-span-4' -%}
+  {%- when 'three-quarter' -%}
+    {%- assign colSpanClass = 'col-span-3 desktop-small:col-span-9' -%}
+  {%- when 'full desktop-small:full-padded-small' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-8' -%}
+  {%- when 'full desktop-small:full-padded-large' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-10' -%}
+  {%- when 'full' -%}
+    {%- assign colSpanClass = 'col-span-4 desktop-small:col-span-12' -%}
+  {%- else -%}
+    {%- assign colSpanClass = colSpan -%}
+{%- endcase -%}
+
+{%- assign flexStyles = colStartClass
+  | append: ' '
+  | append: colSpanClass
+  | append: ' flex flex-col relative h-full '
+  | append: className
+-%}
+
+<div id="{{ id }}" class="layout-flex {{ flexStyles }}">
+  {{ content }}
+</div>
