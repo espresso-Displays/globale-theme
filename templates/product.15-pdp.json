@@ -152,7 +152,9 @@
     },
     "section-11": {
       "type": "meet-espresso-flow-updated",
-      "settings": {}
+      "settings": {
+        "image_option": "shopify://shop_images/image-espresso-flow-pdp.webp"
+      }
     },
     "section-12": {
       "type": "pdp-compare",
