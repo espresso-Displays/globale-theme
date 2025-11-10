@@ -23,6 +23,7 @@ const layout_system = {
 
   // max content width
   'es-sys-layout-content-width-max': '1800px',
+  'es-sys-layout-background-width-max': '2560px',
 
   // header height
   'es-sys-layout-header-height': '65px',
@@ -41,6 +42,7 @@ export const LayoutTW = {
 
   maxWidth: {
     'content-max-width': layout_system['es-sys-layout-content-width-max'],
+    'background-max-width': layout_system['es-sys-layout-background-width-max'],
   },
 
   height: {
