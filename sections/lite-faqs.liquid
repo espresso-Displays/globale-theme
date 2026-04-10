@@ -6,30 +6,23 @@
           <div class="layout-flex relative h-full col-span-4 flex flex-col lg:col-start-2 lg:col-span-10 gap-[32px] lg:gap-[48px]">
             <h2 class="text-heading-large text-center">FAQs</h2>
 
-            {% assign group_open = false %}
-            {% for block in section.blocks %}
-              {% if block.type == 'subsection' %}
-                {% if group_open %}
+            <div class="faq-content px-[20px] lg:px-[0px]">
+              {% for block in section.blocks %}
+                {% if block.type == 'subsection' %}
+                  <h3 class="text-subheading-large pt-[32px] pb-[16px] first:pt-[0px]">{{ block.settings.title }}</h3>
+                {% elsif block.type == 'faq' %}
+                  {% assign next_block = section.blocks[forloop.index] %}
+                  <div class="faq-item{% unless next_block.type == 'faq' %} border-b border-[#D9D9D9] mb-[32px]{% endunless %}">
+                    {% render 'pdp-accordion',
+                      index: forloop.index0,
+                      title: block.settings.question,
+                      description: block.settings.answer
+                    %}
                   </div>
-                  {% assign group_open = false %}
                 {% endif %}
-                <h3 class="text-subheading-large px-[20px] lg:px-[0px]">{{ block.settings.title }}</h3>
-                <div class="faq-group text-body-large border-b border-[#D9D9D9] px-[20px] lg:px-[0px]">
-                {% assign group_open = true %}
-              {% elsif block.type == 'faq' %}
-                <div class="faq-item">
-                  {% render 'pdp-accordion',
-                    index: forloop.index0,
-                    title: block.settings.question,
-                    description: block.settings.answer
-                  %}
-                </div>
-              {% endif %}
-              {% if forloop.last and group_open %}
-                </div>
-                {% assign group_open = false %}
-              {% endif %}
-            {% endfor %}
+              {% endfor %}
+            </div>
+
           </div>
         </div>
       </div>
