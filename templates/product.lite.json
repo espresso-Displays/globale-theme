@@ -100,8 +100,7 @@
       }
     },
     "display-specs": {
-      "type": "section-15-display-specs",
-      "disabled": true,
+      "type": "section-lite-specs",
       "settings": {}
     },
     "stand-specs": {
