@@ -34,14 +34,14 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Key features",
-            "accordion_description": "<ul><li>15.6\" 16:9 LCD Panel</li><li>1920 x 1080 at 60 Hz</li><li>Durable aerospace aluminium chassis</li><li>Factory colour calibrated</li><li>300 nits brightness</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>16.8 Million Colours</li><li>10 to 20 ms Response Time</li></ul>"
+            "accordion_description": "<ul><li>15.6\" 16:9 LCD Panel</li><li>1920 x 1080 at 60 Hz</li><li>Durable premium plastic chassis</li><li>Factory colour calibrated</li><li>400 nits brightness</li><li>2x USB-C ports with power passthrough</li><li>Powered with a single USB-C cable</li><li>16.8 Million Colours</li><li>10 to 20 ms Response Time</li></ul>"
           }
         },
         "accordion_item_d3VwDV": {
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What's in the box",
-            "accordion_description": "{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}"
+            "accordion_description": "<p>{{ product.metafields.custom.what_s_in_the_box | metafield_tag }}</p>"
           }
         },
         "accordion_item_DjprEA": {
@@ -133,9 +133,9 @@
     },
     "faq-header": {
       "type": "faq-section",
-      "blocks": {},
-      "block_order": [],
-      "settings": { "title": "FAQs" }
+      "settings": {
+        "title": "FAQs"
+      }
     },
     "faq-product-basics": {
       "type": "faq-section",
@@ -162,8 +162,14 @@
           }
         }
       },
-      "block_order": ["faq_pb_1", "faq_pb_2", "faq_pb_3"],
-      "settings": { "title": "Product Basics" }
+      "block_order": [
+        "faq_pb_1",
+        "faq_pb_2",
+        "faq_pb_3"
+      ],
+      "settings": {
+        "title": "Product Basics"
+      }
     },
     "faq-display": {
       "type": "faq-section",
@@ -190,8 +196,14 @@
           }
         }
       },
-      "block_order": ["faq_dp_1", "faq_dp_2", "faq_dp_3"],
-      "settings": { "title": "Display & Performance" }
+      "block_order": [
+        "faq_dp_1",
+        "faq_dp_2",
+        "faq_dp_3"
+      ],
+      "settings": {
+        "title": "Display & Performance"
+      }
     },
     "faq-design": {
       "type": "faq-section",
@@ -218,8 +230,14 @@
           }
         }
       },
-      "block_order": ["faq_db_1", "faq_db_2", "faq_db_3"],
-      "settings": { "title": "Design & Build" }
+      "block_order": [
+        "faq_db_1",
+        "faq_db_2",
+        "faq_db_3"
+      ],
+      "settings": {
+        "title": "Design & Build"
+      }
     },
     "faq-compat": {
       "type": "faq-section",
@@ -253,8 +271,15 @@
           }
         }
       },
-      "block_order": ["faq_co_1", "faq_co_2", "faq_co_3", "faq_co_4"],
-      "settings": { "title": "Compatibility" }
+      "block_order": [
+        "faq_co_1",
+        "faq_co_2",
+        "faq_co_3",
+        "faq_co_4"
+      ],
+      "settings": {
+        "title": "Compatibility"
+      }
     },
     "faq-setup": {
       "type": "faq-section",
@@ -281,8 +306,14 @@
           }
         }
       },
-      "block_order": ["faq_su_1", "faq_su_2", "faq_su_3"],
-      "settings": { "title": "Setup & Ease of Use" }
+      "block_order": [
+        "faq_su_1",
+        "faq_su_2",
+        "faq_su_3"
+      ],
+      "settings": {
+        "title": "Setup & Ease of Use"
+      }
     },
     "faq-power": {
       "type": "faq-section",
@@ -316,8 +347,15 @@
           }
         }
       },
-      "block_order": ["faq_pw_1", "faq_pw_2", "faq_pw_3", "faq_pw_4"],
-      "settings": { "title": "Power & Connectivity" }
+      "block_order": [
+        "faq_pw_1",
+        "faq_pw_2",
+        "faq_pw_3",
+        "faq_pw_4"
+      ],
+      "settings": {
+        "title": "Power & Connectivity"
+      }
     },
     "faq-support": {
       "type": "faq-section",
@@ -337,8 +375,13 @@
           }
         }
       },
-      "block_order": ["faq_rs_1", "faq_rs_2"],
-      "settings": { "title": "Reliability & Support" }
+      "block_order": [
+        "faq_rs_1",
+        "faq_rs_2"
+      ],
+      "settings": {
+        "title": "Reliability & Support"
+      }
     },
     "section-compare": {
       "type": "pdp-compare-updated",
