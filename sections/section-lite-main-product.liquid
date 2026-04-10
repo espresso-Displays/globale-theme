@@ -165,6 +165,21 @@
       </div>
     </div>
   </div>
+
+  <script type="application/json" class="variant-gallery-data">
+    {
+      {% for variant in product.variants %}
+        "{{ variant.id }}": [
+          {% assign imgs = variant.metafields.custom.gallery_images.value %}
+          {% if imgs and imgs.size > 0 %}
+            {% for img in imgs %}
+              "{{ img | image_url }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ]{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+  </script>
 </div>
 
 <div
@@ -192,22 +207,10 @@
   type="text/javascript"
   src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XwRNMM"
 ></script>
-<script>
-  const button = document.getElementById('display-15-bundle-early-access');
-  const popup = document.getElementById('display-bundle-15-popup');
-  const closeBtn = popup.querySelector('button');
-  button.addEventListener('click', () => {
-    popup.classList.remove('hidden');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    popup.classList.add('hidden');
-  });
-</script>
 
 {% schema %}
 {
-  "name": "Product Info Main",
+  "name": "Product Info Main (Lite)",
   "settings": [
     {
       "type": "product",
@@ -251,7 +254,7 @@
   ],
   "presets": [
     {
-      "name": "Product Info Main",
+      "name": "Product Info Main (Lite)",
       "category": "Custom"
     }
   ]

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   carousels.forEach((carousel) => {
     const prevButton = carousel.parentElement.querySelector('.carousel-button.prev');
     const nextButton = carousel.parentElement.querySelector('.carousel-button.next');
-    const thumbnails = document.querySelectorAll('.thumbnail-item img');
+    const thumbnailContainer = carousel.closest('.product-carousel').parentElement.parentElement.querySelector('.thumbnails');
     let index = 0;
 
     function showSlide(i) {
@@ -16,11 +16,62 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       carousel.style.transform = `translateX(${-index * 100}%)`;
 
-      thumbnails.forEach((thumb) => {
+      const thumbImgs = thumbnailContainer ? thumbnailContainer.querySelectorAll('img') : [];
+      thumbImgs.forEach((thumb) => {
         thumb.style.borderWidth = '0px';
       });
-      thumbnails[index].style.borderWidth = '2px';
-      thumbnails[index].classList.add('border-lm-primary');
+      if (thumbImgs[index]) {
+        thumbImgs[index].style.borderWidth = '2px';
+        thumbImgs[index].classList.add('border-lm-primary');
+      }
+    }
+
+    function attachThumbnailListeners() {
+      const thumbImgs = thumbnailContainer ? thumbnailContainer.querySelectorAll('img') : [];
+      thumbImgs.forEach((thumbnail, i) => {
+        thumbnail.addEventListener('click', function () {
+          index = i;
+          showSlide(index);
+        });
+      });
+    }
+
+    function buildCarousel(imageUrls, altText) {
+      // Rebuild carousel items
+      carousel.innerHTML = '';
+      imageUrls.forEach((url) => {
+        const item = document.createElement('div');
+        item.className = 'carousel-item relative flex flex-col items-center justify-center snap-center shrink-0 w-full h-full cursor-auto bg-neutral-100';
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = altText || '';
+        img.className = 'w-full h-full object-contain overflow-clip origin-top-left pointer-events-none';
+        img.draggable = false;
+        img.height = 'auto';
+        img.width = 'auto';
+        item.appendChild(img);
+        carousel.appendChild(item);
+      });
+
+      // Rebuild thumbnails
+      if (thumbnailContainer) {
+        thumbnailContainer.innerHTML = '';
+        imageUrls.forEach((url) => {
+          const thumbWrapper = document.createElement('div');
+          thumbWrapper.className = 'thumbnail-item cursor-pointer h-full max-h-full aspect-square flex-shrink-0 border-none relative border-lm-primary';
+          const thumbImg = document.createElement('img');
+          thumbImg.src = url;
+          thumbImg.alt = altText || '';
+          thumbImg.className = 'w-full h-full max-w-full max-h-full aspect-square object-contain overflow-clip origin-top-left';
+          thumbImg.draggable = false;
+          thumbWrapper.appendChild(thumbImg);
+          thumbnailContainer.appendChild(thumbWrapper);
+        });
+        attachThumbnailListeners();
+      }
+
+      index = 0;
+      showSlide(0);
     }
 
     prevButton.addEventListener('click', function () {
@@ -33,29 +84,40 @@ document.addEventListener('DOMContentLoaded', function () {
       showSlide(index);
     });
 
-    thumbnails.forEach((thumbnail, i) => {
-      thumbnail.addEventListener('click', function () {
-        index = i;
-        showSlide(index);
-      });
-    });
+    attachThumbnailListeners();
 
     // Initialize the first thumbnail as active
-    thumbnails[index].style.borderWidth = '2px';
-    thumbnails[0].classList.add('border-lm-primary');
+    const initialThumbs = thumbnailContainer ? thumbnailContainer.querySelectorAll('img') : [];
+    if (initialThumbs[0]) {
+      initialThumbs[0].style.borderWidth = '2px';
+      initialThumbs[0].classList.add('border-lm-primary');
+    }
 
-    // Switch to variant image when a variant button is clicked
+    // Variant gallery switching (only active when .variant-gallery-data is present)
+    const dataScript = document.querySelector('.variant-gallery-data');
+    if (!dataScript) return;
+
+    const variantImages = JSON.parse(dataScript.textContent);
+    const altText = carousel.querySelector('img') ? carousel.querySelector('img').alt : '';
+
+    // Show the initially selected variant's images on page load
+    const selectedBtn = document.querySelector('.collection-variant-button.bg-lm-inverse-primary-click');
+    if (selectedBtn) {
+      const initialVariantId = selectedBtn.getAttribute('data-variant-id');
+      const initialUrls = variantImages[initialVariantId];
+      if (initialUrls && initialUrls.length > 0) {
+        buildCarousel(initialUrls, altText);
+      }
+    }
+
+    // Swap images when a variant button is clicked
     document.querySelectorAll('.collection-variant-button').forEach((btn) => {
       btn.addEventListener('click', function () {
-        const imageId = this.getAttribute('data-variant-image-id');
-        if (!imageId) return;
-        const items = carousel.querySelectorAll('.carousel-item');
-        items.forEach((item, i) => {
-          if (item.getAttribute('data-image-id') === imageId) {
-            index = i;
-            showSlide(index);
-          }
-        });
+        const variantId = this.getAttribute('data-variant-id');
+        const urls = variantImages[variantId];
+        if (urls && urls.length > 0) {
+          buildCarousel(urls, altText);
+        }
       });
     });
   });

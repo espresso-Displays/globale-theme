@@ -8,7 +8,6 @@
             {% for image in product.images %}
               <div
                 class="carousel-item relative flex flex-col items-center justify-center snap-center shrink-0 w-full h-full cursor-auto bg-neutral-100"
-                data-image-id="{{ image.id }}"
               >
                 <img
                   src="{{ image | image_url }}"
@@ -43,7 +42,6 @@
           {% for image in product.images %}
             <div
               class="thumbnail-item cursor-pointer h-full max-h-full aspect-square flex-shrink-0 border-none relative border-lm-primary"
-              data-image-id="{{ image.id }}"
             >
               <img
                 data-index="{{ forloop.index0 }}"
