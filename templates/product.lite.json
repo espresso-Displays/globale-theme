@@ -132,7 +132,200 @@
       }
     },
     "section-faq": {
-      "type": "faqs-updated",
+      "type": "lite-faqs",
+      "blocks": {
+        "sub_product_basics": {
+          "type": "subsection",
+          "settings": { "title": "Product Basics" }
+        },
+        "faq_pb_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Lite 15 a good first portable monitor?",
+            "answer": "Yes. Lite 15 was designed specifically for people buying their first portable monitor. It delivers the essentials that matter most: brightness, colour accuracy, durability, and ease of use… without unnecessary complexity."
+          }
+        },
+        "faq_pb_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Why is Lite 15 called \"Lite\"?",
+            "answer": "Lite reflects the simplified design and accessible price point. It focuses on the essential features most people need for productivity, while maintaining the quality standards espresso products are known for."
+          }
+        },
+        "faq_pb_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Lite 15 only for travel?",
+            "answer": "No. While it's ideal for working on the go, many customers use Lite 15 as a permanent second screen at home, in the office, or in shared workspaces."
+          }
+        },
+        "sub_display": {
+          "type": "subsection",
+          "settings": { "title": "Display & Performance" }
+        },
+        "faq_dp_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Is 1080p enough on a 15-inch screen?",
+            "answer": "Yes. At 15 inches, 1080p provides sharp text, comfortable scaling, and efficient performance across laptops and mobile devices. It's a practical resolution for everyday productivity."
+          }
+        },
+        "faq_dp_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Lite 15 good for photo editing or creative work?",
+            "answer": "Lite 15's 100% sRGB coverage makes it reliable for everyday creative tasks, presentations, and content review. Professionals who require wider colour gamuts such as DCI-P3 or Adobe RGB may prefer the Pro series."
+          }
+        },
+        "faq_dp_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 work well in bright environments?",
+            "answer": "Yes. The 400-nit brightness makes Lite 15 easy to use in typical work environments like cafés, airports, coworking spaces, and offices."
+          }
+        },
+        "sub_design": {
+          "type": "subsection",
+          "settings": { "title": "Design & Build" }
+        },
+        "faq_db_1": {
+          "type": "faq",
+          "settings": {
+            "question": "How much does Lite 15 weigh?",
+            "answer": "Lite 15 is designed to stay highly portable and easy to carry in a backpack or laptop bag while still feeling solid and durable."
+          }
+        },
+        "faq_db_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Is the magnetic Stand+ stable?",
+            "answer": "Yes. Stand+ uses espresso's magnetic mounting system and a rigid folding design to provide a stable and ergonomic viewing angle on almost any desk or table."
+          }
+        },
+        "faq_db_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Lite 15 durable enough for daily travel?",
+            "answer": "Yes. Lite 15 was designed for real-world mobility and tested for everyday use in backpacks, carry-on luggage, and work bags."
+          }
+        },
+        "sub_compat": {
+          "type": "subsection",
+          "settings": { "title": "Compatibility" }
+        },
+        "faq_co_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 work with MacBook?",
+            "answer": "Yes. Lite 15 works seamlessly with MacBook and macOS using a single USB-C cable."
+          }
+        },
+        "faq_co_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 work with Windows laptops?",
+            "answer": "Yes. Most modern Windows laptops with USB-C display output support Lite 15 with a single cable connection."
+          }
+        },
+        "faq_co_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 work with iPad or tablets?",
+            "answer": "Many tablets with USB-C display output (including iPad models with USB-C) can use Lite 15 as an external display."
+          }
+        },
+        "faq_co_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 work with gaming consoles?",
+            "answer": "Devices that support USB-C display output can connect directly. Consoles that require HDMI may need an adapter."
+          }
+        },
+        "sub_setup": {
+          "type": "subsection",
+          "settings": { "title": "Setup & Ease of Use" }
+        },
+        "faq_su_1": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does it take to set up?",
+            "answer": "Typically under 30 seconds. Connect the USB-C cable, place the display on Stand+, and you're ready to work."
+          }
+        },
+        "faq_su_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need to install any software?",
+            "answer": "No. Lite 15 works immediately as a plug-and-play display. espressoFlow software is optional and adds extra productivity and adjustment features."
+          }
+        },
+        "faq_su_3": {
+          "type": "faq",
+          "settings": {
+            "question": "What is espressoFlow?",
+            "answer": "espressoFlow is optional software that unlocks advanced features such as automatic rotation, touch controls (on supported models), and improved screen management."
+          }
+        },
+        "sub_power": {
+          "type": "subsection",
+          "settings": { "title": "Power & Connectivity" }
+        },
+        "faq_pw_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 need its own power supply?",
+            "answer": "No. On supported devices, Lite 15 draws power directly through the USB-C connection."
+          }
+        },
+        "faq_pw_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Can Lite 15 be powered from a wall charger or battery pack?",
+            "answer": "Yes. A compatible USB-C power source can power the display when needed."
+          }
+        },
+        "faq_pw_3": {
+          "type": "faq",
+          "settings": {
+            "question": "What cable comes in the box?",
+            "answer": "Lite 15 includes a high-quality USB-C cable designed for both power and display connectivity."
+          }
+        },
+        "faq_pw_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Lite 15 work with espresso accessories?",
+            "answer": "Yes. Lite 15 is designed to work with the broader espresso ecosystem, including cases, stands, and Charge."
+          }
+        },
+        "sub_support": {
+          "type": "subsection",
+          "settings": { "title": "Reliability & Support" }
+        },
+        "faq_rs_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Where is Lite 15 supported?",
+            "answer": "Lite 15 is backed by espresso's global support network and a two-year warranty."
+          }
+        },
+        "faq_rs_2": {
+          "type": "faq",
+          "settings": {
+            "question": "What happens if something goes wrong?",
+            "answer": "espresso's support team provides troubleshooting, replacements where necessary, and fast customer service globally."
+          }
+        }
+      },
+      "block_order": [
+        "sub_product_basics", "faq_pb_1", "faq_pb_2", "faq_pb_3",
+        "sub_display", "faq_dp_1", "faq_dp_2", "faq_dp_3",
+        "sub_design", "faq_db_1", "faq_db_2", "faq_db_3",
+        "sub_compat", "faq_co_1", "faq_co_2", "faq_co_3", "faq_co_4",
+        "sub_setup", "faq_su_1", "faq_su_2", "faq_su_3",
+        "sub_power", "faq_pw_1", "faq_pw_2", "faq_pw_3", "faq_pw_4",
+        "sub_support", "faq_rs_1", "faq_rs_2"
+      ],
       "settings": {}
     },
     "section-compare": {
