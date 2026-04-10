@@ -43,5 +43,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize the first thumbnail as active
     thumbnails[index].style.borderWidth = '2px';
     thumbnails[0].classList.add('border-lm-primary');
+
+    // Switch to variant image when a variant button is clicked
+    document.querySelectorAll('.collection-variant-button').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const imageId = this.getAttribute('data-variant-image-id');
+        if (!imageId) return;
+        const items = carousel.querySelectorAll('.carousel-item');
+        items.forEach((item, i) => {
+          if (item.getAttribute('data-image-id') === imageId) {
+            index = i;
+            showSlide(index);
+          }
+        });
+      });
+    });
   });
 });
