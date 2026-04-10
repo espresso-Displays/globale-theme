@@ -62,15 +62,31 @@
                   {% if product.variants.size > 1 %}
                     <div class=" flex items-center gap-4">
                       {% for variant in product.variants %}
-                        <button
-                          draggable="false"
-                          type="button"
-                          class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
-                          data-variant-id="{{ variant.id }}"
-                          data-variant-price="{{ variant.price | money }}"
-                        >
-                          {{ variant.title }}
-                        </button>
+                        {% if variant.available %}
+                          <button
+                            draggable="false"
+                            type="button"
+                            class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                            data-variant-id="{{ variant.id }}"
+                            data-variant-price="{{ variant.price | money }}"
+                          >
+                            {{ variant.title }}
+                          </button>
+                        {% else %}
+                          <div>
+                            <button
+                              draggable="false"
+                              type="button"
+                              class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if product.selected_or_first_available_variant.id == variant.id %}bg-lm-inverse-primary-click{% endif %}"
+                              data-variant-id="{{ variant.id }}"
+                              data-variant-price="{{ variant.price | money }}"
+                              disabled
+                              style="pointer-events: none; background-color: #ddd; border-color: #ccc; color: #ccc"
+                            >
+                              {{ variant.title }}
+                            </button>
+                          </div>
+                        {% endif %}
                       {% endfor %}
                     </div>
                   {% elsif product.metafields.custom.variant_options.value.count > 1 %}
