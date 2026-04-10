@@ -131,6 +131,12 @@
         "color_scheme": ""
       }
     },
+    "faq-header": {
+      "type": "faq-section",
+      "blocks": {},
+      "block_order": [],
+      "settings": { "title": "FAQs" }
+    },
     "faq-product-basics": {
       "type": "faq-section",
       "blocks": {
@@ -357,6 +363,7 @@
     "meet-espresso",
     "display-specs",
     "stand-specs",
+    "faq-header",
     "faq-product-basics",
     "faq-display",
     "faq-design",
