@@ -1,0 +1,32 @@
+<div
+  id="section-faqs"
+  class="section relative flex lg:flex-col items-center flex-col-reverse h-full w-full bg-neutral-0"
+>
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] pt-[16px] desktop-small:pt-[35px] pb-[32px] desktop-small:pb-[70px] bg-neutral-0 text-neutral-101">
+    <div class="content-block w-full h-full">
+      <div
+        id=""
+        class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+      >
+        <div
+          id=""
+          class="layout-flex relative h-full lg:col-span-12 flex flex-col col-start-1 col-span-full gap-[22px]"
+        >
+          <h2 class="text-display-medium text-left">FAQs</h2>
+
+          <div class="faq-section">
+            {% for faq in product.metafields.custom.faq.value %}
+              <div class="faq-item">
+                {% render 'pdp-accordion-white',
+                  index: forloop.index0,
+                  title: faq.question.value,
+                  description: faq.answer.value
+                %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
