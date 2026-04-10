@@ -66,37 +66,14 @@
         "trustpilot_sku": ""
       }
     },
-    "product_nav": {
-      "type": "product-nav",
-      "settings": {}
-    },
-    "two-col-text": {
-      "type": "two-col-title-text",
-      "settings": {
-        "title": "Designed for you.",
-        "description": "Built with premium materials. Blending tough aerospace aluminium and hardened glass.Engineered for life on the go."
-      }
-    },
-    "video": {
-      "type": "full-screen-video",
-      "settings": {
-        "video_file": "shopify://files/videos/video-espresso15NT-hero-pdp (1).mp4"
-      }
-    },
-    "features-1": {
-      "type": "section-15-features-1",
-      "settings": {
-        "section_15_features_image_1": "shopify://shop_images/image-animation-stand-collapse-pdp.gif",
-        "section_15_features_image_2": "shopify://shop_images/image-animation-standplus-plus-mode.gif",
-        "section_15_features_image_3": "shopify://shop_images/image-animation-stand-magnets-pdp.gif"
-      }
-    },
     "b-carousel": {
       "type": "brand-carousel",
+      "disabled": true,
       "settings": {}
     },
     "features-2": {
       "type": "section-15-features-2",
+      "disabled": true,
       "settings": {}
     },
     "difference": {
@@ -113,6 +90,7 @@
     },
     "features-3": {
       "type": "section-15-features-3",
+      "disabled": true,
       "settings": {}
     },
     "meet-espresso": {
@@ -123,6 +101,7 @@
     },
     "display-specs": {
       "type": "section-15-display-specs",
+      "disabled": true,
       "settings": {}
     },
     "stand-specs": {
@@ -393,10 +372,6 @@
   },
   "order": [
     "section-1",
-    "product_nav",
-    "two-col-text",
-    "video",
-    "features-1",
     "b-carousel",
     "features-2",
     "difference",
