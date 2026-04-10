@@ -131,13 +131,9 @@
         "color_scheme": ""
       }
     },
-    "section-faq": {
-      "type": "lite-faqs",
+    "faq-product-basics": {
+      "type": "faq-section",
       "blocks": {
-        "sub_product_basics": {
-          "type": "subsection",
-          "settings": { "title": "Product Basics" }
-        },
         "faq_pb_1": {
           "type": "faq",
           "settings": {
@@ -158,11 +154,14 @@
             "question": "Is Lite 15 only for travel?",
             "answer": "No. While it's ideal for working on the go, many customers use Lite 15 as a permanent second screen at home, in the office, or in shared workspaces."
           }
-        },
-        "sub_display": {
-          "type": "subsection",
-          "settings": { "title": "Display & Performance" }
-        },
+        }
+      },
+      "block_order": ["faq_pb_1", "faq_pb_2", "faq_pb_3"],
+      "settings": { "title": "Product Basics" }
+    },
+    "faq-display": {
+      "type": "faq-section",
+      "blocks": {
         "faq_dp_1": {
           "type": "faq",
           "settings": {
@@ -183,11 +182,14 @@
             "question": "Does Lite 15 work well in bright environments?",
             "answer": "Yes. The 400-nit brightness makes Lite 15 easy to use in typical work environments like cafés, airports, coworking spaces, and offices."
           }
-        },
-        "sub_design": {
-          "type": "subsection",
-          "settings": { "title": "Design & Build" }
-        },
+        }
+      },
+      "block_order": ["faq_dp_1", "faq_dp_2", "faq_dp_3"],
+      "settings": { "title": "Display & Performance" }
+    },
+    "faq-design": {
+      "type": "faq-section",
+      "blocks": {
         "faq_db_1": {
           "type": "faq",
           "settings": {
@@ -208,11 +210,14 @@
             "question": "Is Lite 15 durable enough for daily travel?",
             "answer": "Yes. Lite 15 was designed for real-world mobility and tested for everyday use in backpacks, carry-on luggage, and work bags."
           }
-        },
-        "sub_compat": {
-          "type": "subsection",
-          "settings": { "title": "Compatibility" }
-        },
+        }
+      },
+      "block_order": ["faq_db_1", "faq_db_2", "faq_db_3"],
+      "settings": { "title": "Design & Build" }
+    },
+    "faq-compat": {
+      "type": "faq-section",
+      "blocks": {
         "faq_co_1": {
           "type": "faq",
           "settings": {
@@ -240,11 +245,14 @@
             "question": "Does Lite 15 work with gaming consoles?",
             "answer": "Devices that support USB-C display output can connect directly. Consoles that require HDMI may need an adapter."
           }
-        },
-        "sub_setup": {
-          "type": "subsection",
-          "settings": { "title": "Setup & Ease of Use" }
-        },
+        }
+      },
+      "block_order": ["faq_co_1", "faq_co_2", "faq_co_3", "faq_co_4"],
+      "settings": { "title": "Compatibility" }
+    },
+    "faq-setup": {
+      "type": "faq-section",
+      "blocks": {
         "faq_su_1": {
           "type": "faq",
           "settings": {
@@ -265,11 +273,14 @@
             "question": "What is espressoFlow?",
             "answer": "espressoFlow is optional software that unlocks advanced features such as automatic rotation, touch controls (on supported models), and improved screen management."
           }
-        },
-        "sub_power": {
-          "type": "subsection",
-          "settings": { "title": "Power & Connectivity" }
-        },
+        }
+      },
+      "block_order": ["faq_su_1", "faq_su_2", "faq_su_3"],
+      "settings": { "title": "Setup & Ease of Use" }
+    },
+    "faq-power": {
+      "type": "faq-section",
+      "blocks": {
         "faq_pw_1": {
           "type": "faq",
           "settings": {
@@ -297,11 +308,14 @@
             "question": "Does Lite 15 work with espresso accessories?",
             "answer": "Yes. Lite 15 is designed to work with the broader espresso ecosystem, including cases, stands, and Charge."
           }
-        },
-        "sub_support": {
-          "type": "subsection",
-          "settings": { "title": "Reliability & Support" }
-        },
+        }
+      },
+      "block_order": ["faq_pw_1", "faq_pw_2", "faq_pw_3", "faq_pw_4"],
+      "settings": { "title": "Power & Connectivity" }
+    },
+    "faq-support": {
+      "type": "faq-section",
+      "blocks": {
         "faq_rs_1": {
           "type": "faq",
           "settings": {
@@ -317,16 +331,8 @@
           }
         }
       },
-      "block_order": [
-        "sub_product_basics", "faq_pb_1", "faq_pb_2", "faq_pb_3",
-        "sub_display", "faq_dp_1", "faq_dp_2", "faq_dp_3",
-        "sub_design", "faq_db_1", "faq_db_2", "faq_db_3",
-        "sub_compat", "faq_co_1", "faq_co_2", "faq_co_3", "faq_co_4",
-        "sub_setup", "faq_su_1", "faq_su_2", "faq_su_3",
-        "sub_power", "faq_pw_1", "faq_pw_2", "faq_pw_3", "faq_pw_4",
-        "sub_support", "faq_rs_1", "faq_rs_2"
-      ],
-      "settings": {}
+      "block_order": ["faq_rs_1", "faq_rs_2"],
+      "settings": { "title": "Reliability & Support" }
     },
     "section-compare": {
       "type": "pdp-compare-updated",
@@ -351,7 +357,13 @@
     "meet-espresso",
     "display-specs",
     "stand-specs",
-    "section-faq",
+    "faq-product-basics",
+    "faq-display",
+    "faq-design",
+    "faq-compat",
+    "faq-setup",
+    "faq-power",
+    "faq-support",
     "section-compare"
   ]
 }
