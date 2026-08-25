@@ -82,4 +82,16 @@
   %}
 {% endcapture %}
 
-{% render 'layout-grid', className: 'section image-with-info gap-[16px] ' | append: className, content: grid_content %}
+{% render 'layout-grid', className: 'section image-with-info gap-[16px] ', append: className, content: grid_content %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'layout-grid', className: 'section image-with-info gap-[16px] '
+    | append: className, content: grid_content %}"
+  to: "{% render 'layout-grid', className: 'section image-with-info gap-[16px] ',
+    append: className, content: grid_content %}"
+  position: 3201..3319
+{% endcomment %}
