@@ -1,7 +1,7 @@
-<div class="section-{{ section.id }}-padding  w-full h-full max-w-content-max-width flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-neutral-1 min-h-[100vh] pb-[108px] py-10">
+<div class="section-{{ section.id }}-padding  w-full h-full max-w-content-max-width mx-auto flex flex-col items-center px-[32px] lg:px-[70px] bg-lm-neutral-1 min-h-[100vh] pb-[108px] py-10">
   {%- paginate collection.products by section.settings.products_per_page -%}
     <div
-      class=""
+      class="w-full"
       id="ProductGridContainer"
       {% if settings.animations_reveal_on_scroll %}
         data-cascade
@@ -23,14 +23,14 @@
         </div>
       {%- else -%}
         <div
-          class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+          class="collection w-full{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
         >
           <div class="loading-overlay gradient"></div>
           <div
             id="product-grid"
             data-id="{{ section.id }}"
 
-            class="layout-grid relative h-full col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 gap-8 auto-rows-max gap-x-[8px] lg:gap-x-[20px]"
+            class="relative h-full flex flex-wrap justify-center gap-y-8 gap-x-[8px] lg:gap-x-[20px] [&>*]:w-full lg:[&>*]:w-[calc((100%-40px)/3)]"
           >
             {% assign skip_card_product_styles = false %}
             {%- for product in collection.products -%}
