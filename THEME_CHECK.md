@@ -1,6 +1,6 @@
 # Theme Check cleanup
 
-Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Current: 82 errors, 278 warnings.
+Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Current: 82 errors, 17 warnings.
 
 | Severity | Check | Baseline | Now | Status |
 |---|---|---|---|---|
@@ -15,8 +15,8 @@ Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Cu
 | warning | OrphanedSnippet | 13 | 1 | Done (`handles.liquid` kept) |
 | warning | RemoteAsset | 7 | 5 | Won't fix (Global-e / third-party) |
 | warning | LiquidComplexity | 1 | 1 | Won't fix (stock Dawn `facets`) |
-| warning | UnusedAssign | 53 | 53 | Low priority |
-| warning | VariableName | 217 | 215 | Low priority |
+| warning | UnusedAssign | 53 | 7 | Done (remaining are stock Dawn; `handles.liquid` ignored) |
+| warning | VariableName | 217 | — | Disabled in `.theme-check.yml` (camelCase is house style) |
 
 ## Done
 
@@ -26,6 +26,8 @@ Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Cu
 - [x] HardcodedRoutes: `/cart/add`, `/cart`, `/`, `/collections/...`, `/account/login` → `routes.*` in header, footer, image-banner, main-register, card-product, custom-add-to-cart and all custom main-product / nav / compare sections.
 - [x] DeprecatedFilter: `img_url: 'master'` → `image_url: width: 3840` (8 sections).
 - [x] OrphanedSnippet: deleted 12 snippets that were referenced only from commented-out Dawn header/drawer code or not at all: `custom-add-to-cart`, `globale-checkout-css`, `globale-checkout-js`, `country-localization`, `language-localization`, `header-dropdown-menu`, `header-mega-menu`, `header-search`, `icon-account`, `icon-hamburger`, `quick-order-product-row`, `social-icons`. `handles.liquid` is kept as the source for the `inject:handles` build step.
+- [x] UnusedAssign: removed unused shared grid/padding variables from `layout-flex`, `layout-grid` and `layout-section`; `snippets/handles.liquid` ignored in `.theme-check.yml`.
+- [x] VariableName: disabled in `.theme-check.yml`.
 - [x] DeprecatedTag: `{% include 'globale-js' %}` → `{% render 'globale-js' %}` in `layout/theme.liquid`.
 
 ## To do
