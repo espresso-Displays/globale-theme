@@ -17,7 +17,9 @@ npm run watch:css
 shopify theme check # lint (Theme Check; config in .theme-check.yml)
 ```
 
-There are no tests. CI (`.github/workflows/ci.yml`) runs Theme Check and Lighthouse CI.
+There are no tests. CI (`.github/workflows/ci.yml`) runs Theme Check only. It doesn't block deploys: Shopify's GitHub integration syncs `main` to the theme on every push regardless of CI.
+
+The Lighthouse CI job was removed on 2026-10-08. Its secrets were from 2024, pointed at an unknown store, and didn't match the names the workflow read, so it was auditing the password page. To bring it back, re-add `shopify/lighthouse-ci-action` against a known store with fresh secrets (store domain, Theme Access token, storefront password if protected).
 
 ## Styling
 
