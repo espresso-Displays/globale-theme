@@ -1,8 +1,3 @@
-{% comment %}
-   For now, need to include common/resuable styles in each file, as no way with liquid to import
-  In future will use build scripts to inject and get same functionality as import
-{% endcomment %}
-
 {%- comment -%} Grid and padding settings {%- endcomment -%}
 {%- assign gridPaddingX = 'px-[32px] desktop-small:px-[70px]' -%}
 
@@ -15,12 +10,8 @@
   Usage:
   {% render 'layout-section',
     id: 'my-section',
-    heightDefinition: 'background',
-    backgroundMedia: 'image-bg-desktop',
-    backgroundMediaMobile: 'image-bg-mobile',
     className: 'custom-section',
     classNameLayoutGrid: 'custom-grid',
-    classNameBackground: 'custom-bg',
     paddingTopHalf: true,
     paddingTopNone: false,
     paddingBottomHalf: false,
@@ -32,12 +23,8 @@
 {%- endcomment -%}
 
 {%- assign id = id | default: '' -%}
-{%- assign heightDefinition = heightDefinition | default: '' -%}
-{%- assign backgroundMedia = backgroundMedia | default: '' -%}
-{%- assign backgroundMediaMobile = backgroundMediaMobile | default: '' -%}
 {%- assign className = className | default: '' -%}
 {%- assign classNameLayoutGrid = classNameLayoutGrid | default: '' -%}
-{%- assign classNameBackground = classNameBackground | default: '' -%}
 {%- assign paddingTopHalf = paddingTopHalf | default: false -%}
 {%- assign paddingTopNone = paddingTopNone | default: false -%}
 {%- assign paddingBottomHalf = paddingBottomHalf | default: false -%}
@@ -45,23 +32,6 @@
 {%- assign overlay = overlay | default: false -%}
 {%- assign outlines = outlines | default: false -%}
 {%- assign content = content | default: '' -%}
-
-{%- comment -%} Height definition logic {%- endcomment -%}
-{%- assign backgroundMediaPositionStyles = '' -%}
-{%- assign contentPositionStyles = '' -%}
-{%- if heightDefinition == 'background' -%}
-  {%- assign backgroundMediaPositionStyles = '' -%}
-  {%- assign contentPositionStyles = 'absolute' -%}
-{%- elsif heightDefinition == 'content' -%}
-  {%- assign backgroundMediaPositionStyles = 'absolute top-[0px] left-[0px]' -%}
-  {%- assign contentPositionStyles = '' -%}
-{%- elsif heightDefinition == 'content desktop-small:background' -%}
-  {%- assign backgroundMediaPositionStyles = 'absolute top-[0px] left-[0px] desktop-small:relative desktop-small:top-auto desktop-small:left-auto' -%}
-  {%- assign contentPositionStyles = 'relative desktop-small:absolute' -%}
-{%- elsif heightDefinition == 'background desktop-small:content' -%}
-  {%- assign backgroundMediaPositionStyles = 'desktop-small:absolute desktop-small:top-[0px] desktop-small:left-[0px]' -%}
-  {%- assign contentPositionStyles = 'absolute desktop-small:relative' -%}
-{%- endif -%}
 
 {%- comment -%} Padding logic {%- endcomment -%}
 {%- assign paddingTop = 'py-[24px] desktop-small:py-[72px]' -%}
@@ -81,22 +51,9 @@
 
 <div
   id="{{ id }}"
-  class="section relative flex desktop-small:flex-col items-center flex-col-reverse w-full h-full {{ className }} {{ classNameBackground }}"
+  class="section relative flex desktop-small:flex-col items-center flex-col-reverse w-full h-full {{ className }}"
 >
-  {%- if backgroundMedia != blank -%}
-    <div class="section-background {{ backgroundMediaPositionStyles }} w-full h-full {{ classNameBackground }}">
-      <img src="{{ backgroundMedia | asset_url }}" alt="" class="object-cover hidden desktop-small:flex w-full h-full">
-      {%- if backgroundMediaMobile != blank -%}
-        <img
-          src="{{ backgroundMediaMobile | asset_url }}"
-          alt=""
-          class="object-cover flex desktop-small:hidden w-full h-full"
-        >
-      {%- endif -%}
-    </div>
-  {%- endif -%}
-
-  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center {{ contentPositionStyles }} {{ paddingTop }} {{ paddingBottom }} {{ gridPaddingX }} {% unless backgroundMedia %}{{ className }}{% endunless %}">
+  <div class="section-layout w-full h-full max-w-content-max-width flex flex-col items-center {{ paddingTop }} {{ paddingBottom }} {{ gridPaddingX }} {{ className }}">
     <div class="content-block w-full h-full">
       {% render 'layout-grid', overlay: overlay, outlines: outlines, className: classNameLayoutGrid, content: content %}
     </div>

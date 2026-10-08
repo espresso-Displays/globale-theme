@@ -60,7 +60,12 @@
   {% if media_type == 'video' %}
     <video src="{{ media_name | file_url }}" controls></video>
   {% elsif media_type == 'image' %}
-    <img src="{{ media_name | file_url }}" alt="{{ media_alt }}">
+    <img
+      src="{{ media_name | file_url }}"
+      alt="{{ media_alt }}"
+      width="{{ images[media_name].width }}"
+      height="{{ images[media_name].height }}"
+    >
   {% endif %}
 {% endcapture %}
 

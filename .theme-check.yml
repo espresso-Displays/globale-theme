@@ -4,6 +4,3 @@ TemplateLength:
   enabled: false
 VariableName:
   enabled: false
-UnusedAssign:
-  ignore:
-    - snippets/handles.liquid
