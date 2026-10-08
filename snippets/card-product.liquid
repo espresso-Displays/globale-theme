@@ -96,12 +96,13 @@
           class="product flex flex-col justify-between flex-wrap-reverse gap-[12px] pt-[24px]"
           data-product-id="{{ card_product.id }}"
         >
+          {%- assign default_variant = card_product.selected_or_first_available_variant -%}
           {% if card_product.variants.size > 1 %}
             <div class="flex flex-row gap-[8px]">
               {% for variant in card_product.variants %}
                 {% if variant.available %}
                 <button
-                  class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if forloop.index0 == 0%}bg-lm-inverse-primary-click{% else %}bg-lm-on-neutral-3{% endif %}"
+                  class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if variant.id == default_variant.id %}bg-lm-inverse-primary-click{% else %}bg-lm-on-neutral-3{% endif %}"
                   data-variant-id="{{ variant.id }}"
                   data-variant-price="{{  variant.price | money }}"
                   data-parent-id="{{ card_product.id }}"
@@ -110,7 +111,7 @@
                 </button>
                 {% else %}
                 <button
-                  class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if forloop.index0 == 0%}bg-lm-inverse-primary-click{% else %}bg-lm-on-neutral-3{% endif %}"
+                  class="collection-variant-button rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] border-[1px] border-lm-outline-primary hover:bg-lm-inverse-primary-hover active:bg-lm-inverse-primary-click px-[16px] py-[8px] w-fit h-[48px] cursor-pointer text-body-small text-primary-20 {% if variant.id == default_variant.id %}bg-lm-inverse-primary-click{% else %}bg-lm-on-neutral-3{% endif %}"
                   data-variant-id="{{ variant.id }}"
                   data-variant-price="{{  variant.price | money }}"
                   data-parent-id="{{ card_product.id }}"
@@ -125,11 +126,11 @@
               {% endfor %}
             </div>
           {% else %}
-            <input type="hidden" class="variant-id" name="variant-id" value="{{ card_product.variants.first.id }}">
+            <input type="hidden" class="variant-id" name="variant-id" value="{{ default_variant.id }}">
           {% endif %}
           <input type="hidden" name="info" value="{{ card_product.selected_or_first_available_variant.id }}">
           <form class="collection-quick-add-to-cart" method="post" action="{{ routes.cart_add_url }}">
-            <input type="hidden" class="variant-id" name="id" value="{{ card_product.variants.first.id }}">
+            <input type="hidden" class="variant-id" name="id" value="{{ default_variant.id }}">
             <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
             {% if card_product.selected_or_first_available_variant.available %}
             <input
