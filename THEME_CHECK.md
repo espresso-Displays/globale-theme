@@ -1,13 +1,13 @@
 # Theme Check cleanup
 
-Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Current: 82 errors, 17 warnings.
+Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Current: 6 errors, 17 warnings.
 
 | Severity | Check | Baseline | Now | Status |
 |---|---|---|---|---|
 | error | LiquidHTMLSyntaxError | 1 | 0 | Done |
 | error | ValidSchemaTranslations | 2 | 0 | Done |
 | error | ValidSchema | 1 | 0 | Done |
-| error | ImgWidthAndHeight | 82 | 82 | To do |
+| error | ImgWidthAndHeight | 82 | 6 | In progress |
 | warning | HardcodedRoutes | 19 | 0 | Done |
 | warning | DeprecatedFilter | 9 | 0 | Done |
 | warning | DeprecatedTag | 1 | 0 | Done |
@@ -28,36 +28,17 @@ Run with `shopify theme check`. Baseline 2026-10-07: 86 errors, 324 warnings. Cu
 - [x] OrphanedSnippet: deleted 12 snippets that were referenced only from commented-out Dawn header/drawer code or not at all: `custom-add-to-cart`, `globale-checkout-css`, `globale-checkout-js`, `country-localization`, `language-localization`, `header-dropdown-menu`, `header-mega-menu`, `header-search`, `icon-account`, `icon-hamburger`, `quick-order-product-row`, `social-icons`. `handles.liquid` is kept as the source for the `inject:handles` build step.
 - [x] UnusedAssign: removed unused shared grid/padding variables from `layout-flex`, `layout-grid` and `layout-section`; `snippets/handles.liquid` ignored in `.theme-check.yml`.
 - [x] VariableName: disabled in `.theme-check.yml`.
+- [x] ImgWidthAndHeight: added `height` to the 76 hard-coded `cdn.shopify.com` images (17 sections), scaled from each tag's existing `width` using the original image's dimensions.
 - [x] DeprecatedTag: `{% include 'globale-js' %}` → `{% render 'globale-js' %}` in `layout/theme.liquid`.
 
 ## To do
 
-### ImgWidthAndHeight (82)
+### ImgWidthAndHeight (6)
 
-`<img>` tags without `width` and `height` attributes, which causes layout shift. Set them to the image's intrinsic size (CSS still controls the rendered size).
+Images whose source is only known at runtime:
 
-- [ ] `sections/section-explore-sizes.liquid` (12)
-- [ ] `sections/section-explore-touch.liquid` (7)
-- [ ] `sections/section-common-awarded-for-design.liquid` (6)
-- [ ] `sections/standplus-feat-2.liquid` (6)
-- [ ] `sections/section-15-features-2.liquid` (6)
-- [ ] `sections/standplus-pro-feat-2.liquid` (6)
-- [ ] `sections/section-home-use-cases.liquid` (5)
-- [ ] `sections/pro-15-feature-tiles.liquid` (4)
-- [ ] `sections/section-explore-usps.liquid` (4)
-- [ ] `sections/section-home-espresso-usps.liquid` (4)
-- [ ] `sections/section-explore-compare.liquid` (3)
-- [ ] `sections/section-explore-models.liquid` (3)
-- [ ] `sections/standplus-which-stand.liquid` (3)
-- [ ] `sections/section-15-features-3.liquid` (3)
-- [ ] `snippets/layout-section.liquid` (2)
-- [ ] `sections/standplus-feat-1.liquid` (2)
-- [ ] `sections/color-calibrate.liquid` (1)
-- [ ] `sections/main-discover-espresso.liquid` (1)
-- [ ] `sections/section-home-software.liquid` (1)
-- [ ] `sections/section-home-video-carousel.liquid` (1)
-- [ ] `snippets/section-image-with-info-single.liquid` (1)
-- [ ] `snippets/section-tech-specs-with-image.liquid` (1)
+- [ ] `sections/main-discover-espresso.liquid`, `sections/section-home-video-carousel.liquid`: poster images from an image picker. Add `width="{{ image.width }}" height="{{ image.height }}"`.
+- [ ] `snippets/layout-section.liquid` (2, background `asset_url`), `snippets/section-image-with-info-single.liquid`, `snippets/section-tech-specs-with-image.liquid` (`file_url` from section data). Liquid can't read dimensions from a file name: pass them in, or silence with `theme-check-disable`.
 
 ### UndefinedObject (3)
 
