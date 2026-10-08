@@ -17,7 +17,7 @@
                           <a class="w-full h-full" data-discover="true" href="{{ block.settings.product_link }}">
                             <div class="image h-full min-h-0 w-full">
                               <img
-                                src="{{ block.settings.image | img_url: 'master' }}"
+                                src="{{ block.settings.image | image_url: width: 3840 }}"
                                 loading="lazy"
                                 fetchpriority="high"
                                 alt="{{ block.settings.image.alt | escape }}"

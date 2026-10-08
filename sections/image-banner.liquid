@@ -169,7 +169,7 @@
                 aria-label="Shop all"
                 draggable="false"
                 class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer bg-[#EED890] hover:bg-[#E7C964] active:bg-[#E1B938] text-neutral-00"
-                href="/collections/bundles"
+                href="{{ routes.collections_url }}/bundles"
                 >Shop all</a
               >
             </div>
@@ -230,7 +230,7 @@
                 draggable="false"
                 class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap bg-lm-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer text-lm-on-primary"
                 data-discover="true"
-                href="/collections/bundles"
+                href="{{ routes.collections_url }}/bundles"
                 >Shop all</a
               >
             </div>
@@ -264,13 +264,13 @@
               draggable="false"
               class="z-999 rounded-[5px] flex flex-row text-center items-center justify-center gap-[4px] whitespace-pre-wrap bg-lm-secondary hover:bg-lm-secondary-hover active:bg-lm-secondary-click px-[16px] py-[8px] text-label-medium w-fit min-w-[85px] h-[48px] cursor-pointer text-lm-on-secondary"
               data-discover="true"
-              href="/collections/bundles"
+              href="{{ routes.collections_url }}/bundles"
               >Shop all</a
             >
           </div>
         </div>
         <div class="flex flex-col items-center justify-center w-full h-full">
-          <a data-discover="true" href="/collections/bundles">
+          <a data-discover="true" href="{{ routes.collections_url }}/bundles">
             <div class="image h-full min-h-0 w-full">
               <img
                 src="{{'image-home-hero-mar25.png' | asset_url}}"

@@ -38,7 +38,7 @@
                 </div>
                 <div class="flex flex-row justify-center">
                   {% if product.variants.first.id == item.product.value.id %}
-                    <form class="collection-quick-add-to-cart" method="post" action="/cart/add">
+                    <form class="collection-quick-add-to-cart" method="post" action="{{ routes.cart_add_url }}">
                       <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                       <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
                       <input

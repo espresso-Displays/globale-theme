@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('cart-drawer').innerHTML = newBox;
   }
 
-  document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+  document.querySelectorAll(`form[action="${window.routes.cart_add_url}"]`).forEach((form) => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // add loading state to submit button
 
         // submit form with ajax
-        const result = await fetch('/cart/add', {
+        const result = await fetch(window.routes.cart_add_url, {
           method: 'post',
           body: JSON.stringify(formDataJSON),
           headers: {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelectorAll('a[href="/cart"]').forEach((a) => {
+  document.querySelectorAll(`a[href="${window.routes.cart_url}"]`).forEach((a) => {
     a.addEventListener('click', async (e) => {
       e.preventDefault();
       openCartDrawer();

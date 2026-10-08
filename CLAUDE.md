@@ -37,4 +37,4 @@ There are no tests. CI (`.github/workflows/ci.yml`) runs Theme Check and Lightho
 
 ## Global-e
 
-`snippets/globale-js.liquid` (included in `theme.liquid`) sets `GLBE_PARAMS` (merchant ID, operated countries, and so on). `assets/global-e.css` holds the Global-e-specific styles. `snippets/globale-checkout-*.liquid` isn't rendered from anywhere in the theme. The `.ge-hide` class hides elements from Global-e shoppers.
+`snippets/globale-js.liquid` (rendered in `theme.liquid`) sets `GLBE_PARAMS` (merchant ID, operated countries, and so on). `assets/global-e.css` holds the Global-e-specific styles. The `.ge-hide` class hides elements from Global-e shoppers.

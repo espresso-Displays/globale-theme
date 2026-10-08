@@ -13,7 +13,7 @@
             <div class="slide-content" style=" border-radius: 20px">
               {% if block.settings.poster_image %}
                 <img
-                  src="{{ block.settings.poster_image | img_url: 'master' }}"
+                  src="{{ block.settings.poster_image | image_url: width: 3840 }}"
                   alt="{{ block.settings.poster_image.alt }}"
                   class="carousel-poster"
                   style="border-radius: 20px"

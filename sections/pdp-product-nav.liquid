@@ -16,7 +16,7 @@
                   class="cursor-pointer relative px-[15px] h-full w-full flex flex-col justify-center group text-lm-on-neutral-1-hover pb-[5px] transition-all duration-300 border-neutral-60 hover:border-b-2 border-transparent hover:border-lm-on-neutral-1-hover"
                 >
                   <div class="product-nav-item !mx-0">
-                    <form class="" method="post" action="/cart/add">
+                    <form class="" method="post" action="{{ routes.cart_add_url }}">
                       <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                       <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1">
                       <input
