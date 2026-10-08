@@ -30,8 +30,18 @@
   {% assign colSpanStyles = 'full desktop-small:half-padded' %}
 {% endif %}
 
+{% assign current_variant = product.selected_or_first_available_variant %}
+
 {% capture media_content %}
-  {% if media_type == 'video' %}
+  {% if variant_media and current_variant.featured_media %}
+    <img
+      class="tech-spec-image"
+      src="{{ current_variant.featured_media | image_url: width: 1600 }}"
+      alt="{{ media_alt }}"
+      width="{{ current_variant.featured_media.preview_image.width }}"
+      height="{{ current_variant.featured_media.preview_image.height }}"
+    >
+  {% elsif media_type == 'video' %}
     <video src="{{ media_name | file_url }}" controls></video>
   {% elsif media_type == 'image' %}
     <img src="{{ media_name | file_url }}" alt="{{ media_alt }}">
@@ -40,22 +50,23 @@
 
 {% capture text_content %}
   <h2 class="text-display-small text-left" id="section-techspecs">Tech specs</h2>
-  {% for spec in product.selected_or_first_available_variant.metafields.custom.tech_specs.value %}
-    <div class="lg:col-start-1 lg:col-span-10 text-body-large">{{ spec }}</div>
-  {% endfor %}
+  <div class="tech-spec-list contents">
+    {% for spec in current_variant.metafields.custom.tech_specs.value %}
+      <div class="lg:col-start-1 lg:col-span-10 text-body-large">{{ spec }}</div>
+    {% endfor %}
+  </div>
 
-  {% if product.selected_or_first_available_variant.metafields.custom.technical_spec_sheet.value != empty %}
-    <div class="h-full w-full flex flex-col items-start col-span-full">
-      <a
-        href="{{ product.selected_or_first_available_variant.metafields.custom.technical_spec_sheet.value }}"
-        draggable="false"
-        rel="noopener noreferrer"
-        target="_blank"
-        class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit h-[48px] cursor-pointer"
-        >Download tech spec sheet</a
-      >
-    </div>
-  {% endif %}
+  {% assign spec_sheet = current_variant.metafields.custom.technical_spec_sheet.value %}
+  <div class="tech-spec-sheet h-full w-full flex flex-col items-start col-span-full{% if spec_sheet == blank %} hidden{% endif %}">
+    <a
+      href="{{ spec_sheet }}"
+      draggable="false"
+      rel="noopener noreferrer"
+      target="_blank"
+      class="rounded-[5px] flex flex-row text-center items-center justify-center gap-[16px] whitespace-pre-wrap bg-lm-primary text-lm-on-primary hover:bg-lm-primary-hover active:bg-lm-primary-click px-[16px] py-[8px] text-label-medium w-fit h-[48px] cursor-pointer"
+      >Download tech spec sheet</a
+    >
+  </div>
 {% endcapture %}
 
 {% capture inner_content %}
@@ -83,6 +94,55 @@
 {% endcapture %}
 
 {% render 'layout-grid', className: 'section image-with-info gap-[16px] ', append: className, content: grid_content %}
+
+{% if product.variants.size > 1 %}
+  <script type="application/json" class="variant-spec-data">
+    {
+      {%- for variant in product.variants -%}
+        "{{ variant.id }}": {
+          "specs": {{ variant.metafields.custom.tech_specs.value | json }},
+          "sheet": {{ variant.metafields.custom.technical_spec_sheet.value | json }},
+          "image": {% if variant_media and variant.featured_media %}{{ variant.featured_media | image_url: width: 1600 | json }}{% else %}null{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dataScript = document.querySelector('.variant-spec-data');
+      if (!dataScript) return;
+      const variants = JSON.parse(dataScript.textContent);
+      const list = document.querySelector('.tech-spec-list');
+      const sheet = document.querySelector('.tech-spec-sheet');
+      const image = document.querySelector('.tech-spec-image');
+
+      document.querySelectorAll('.collection-variant-button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const data = variants[btn.getAttribute('data-variant-id')];
+          if (!data) return;
+
+          if (list && Array.isArray(data.specs)) {
+            list.replaceChildren(
+              ...data.specs.map((spec) => {
+                const row = document.createElement('div');
+                row.className = 'lg:col-start-1 lg:col-span-10 text-body-large';
+                row.textContent = spec;
+                return row;
+              })
+            );
+          }
+
+          if (sheet) {
+            sheet.classList.toggle('hidden', !data.sheet);
+            if (data.sheet) sheet.querySelector('a').href = data.sheet;
+          }
+
+          if (image && data.image) image.src = data.image;
+        });
+      });
+    });
+  </script>
+{% endif %}
 {% comment %}
 
 This file has been rewritten to preserve the original behavior.

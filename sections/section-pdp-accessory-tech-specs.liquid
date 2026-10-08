@@ -4,6 +4,7 @@
 {% comment %} inject:handles {% endcomment %}
 
 {% assign accessory_section = '' %}
+{% assign variant_media = false %}
 
 {% case product.handle %}
   {% when 'espresso-case' %}
@@ -73,6 +74,7 @@
     %}
 
   {% when 'usb-c' %}
+    {% assign variant_media = true %}
     {% assign accessory_section = accessory_section
       | append: '
       {
@@ -143,7 +145,7 @@
 {% endcase %}
 
 {% capture section_content %}
-  {% render 'section-tech-specs-with-image', section: accessory_section %}
+  {% render 'section-tech-specs-with-image', section: accessory_section, variant_media: variant_media %}
 {% endcapture %}
 
 {% render 'layout-section',

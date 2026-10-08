@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
         img.alt = altText || '';
         img.className = 'w-full h-full object-contain overflow-clip origin-top-left pointer-events-none';
         img.draggable = false;
-        img.height = 'auto';
-        img.width = 'auto';
         item.appendChild(img);
         carousel.appendChild(item);
       });
@@ -91,6 +89,28 @@ document.addEventListener('DOMContentLoaded', function () {
     if (initialThumbs[0]) {
       initialThumbs[0].style.borderWidth = '2px';
       initialThumbs[0].classList.add('border-lm-primary');
+    }
+
+    // Scroll to the selected variant's image (only active when .variant-slide-data is present)
+    const slideScript = document.querySelector('.variant-slide-data');
+    if (slideScript) {
+      const variantSlides = JSON.parse(slideScript.textContent);
+      const goToVariant = (variantId) => {
+        const slide = variantSlides[variantId];
+        if (typeof slide === 'number') {
+          index = slide;
+          showSlide(index);
+        }
+      };
+
+      const selectedVariantBtn = document.querySelector('.collection-variant-button.bg-lm-inverse-primary-click');
+      if (selectedVariantBtn) goToVariant(selectedVariantBtn.getAttribute('data-variant-id'));
+
+      document.querySelectorAll('.collection-variant-button').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          goToVariant(this.getAttribute('data-variant-id'));
+        });
+      });
     }
 
     // Variant gallery switching (only active when .variant-gallery-data is present)
