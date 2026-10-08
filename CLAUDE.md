@@ -23,7 +23,7 @@ The Lighthouse CI job was removed on 2026-10-08. Its secrets were from 2024, poi
 
 ## Styling
 
-- Tailwind is compiled from `assets/tailwind.css` into `assets/style.css`. `layout/theme.liquid` loads that file directly. `assets/style.css` is generated and committed: rebuild it after you add Tailwind classes, or the classes won't exist in production. The root-level `style.css` is not used by the build.
+- Tailwind is compiled from `assets/tailwind.css` into `assets/style.css`. `layout/theme.liquid` loads that file directly. `assets/style.css` is generated and committed: rebuild it after you add Tailwind classes, or the classes won't exist in production.
 - Tailwind scans `./**/*.{liquid,json}`. Class strings have to appear literally somewhere in those files; classes built from concatenated fragments won't be generated.
 - `tailwind.config.js` takes colors, fonts, type scales, padding, margin and max-width tokens from `espressoBeans/v1/styles/`. Colors **replace** Tailwind's defaults (they don't extend them). Use espressoBeans breakpoints alongside the Tailwind ones: `mobile` (375), `desktop-small` (1024), `desktop` (1280), `desktop-large` (1800).
 - Dawn's component CSS (`assets/component-*.css`, `base.css`) still exists for the legacy Dawn sections. `base.css` is commented out in `theme.liquid`.
@@ -35,7 +35,6 @@ The Lighthouse CI job was removed on 2026-10-08. Its secrets were from 2024, poi
 - Layout primitives live in `snippets/layout-section.liquid`, `layout-grid.liquid` and `layout-flex.liquid`. They take content captured with `{% capture %}` and passed as `content:`. Liquid has no imports, so shared grid and padding class variables are **duplicated** at the top of files that need them.
 - Reusable pieces include `carousel-buttons` + `carousel-script` (horizontal scroll carousels), `icon` (generic icon snippet), `button-standard`, `pdp-accordion*`, and `section-image-with-info-*`.
 - Content data is often hard-coded in the section instead of coming from metafields or settings. Sections switch on `product.handle` with `{% case %}`, build a pseudo-JSON string with `|||` as the field separator, then parse it by `split: '},'` / `split: '|||'`. Follow this pattern when you extend those sections.
-- Product and collection handles are centralised in `snippets/handles.liquid`. Sections that need them contain the placeholder `{% comment %} inject:handles {% endcomment %}`. `inject-handles.js` is meant to inline them via a `src/` → `dist/` build, but `src/` and `dist/` don't exist yet, so the placeholder is currently inert.
 
 ## Global-e
 
